@@ -145,10 +145,10 @@
     <ClCompile Include="utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="utilities.cpp">
+    <ClInclude Include="winapi.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="winapi.cpp">
+    </ClInclude>
+    <ClCompile Include="utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

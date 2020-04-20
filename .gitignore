@@ -125,5 +125,8 @@ Thumbs.db
 /pcre8.dll
 /zlib.dll
 
+# CMakeFiles
+/CMakeFiles/
+
 # .vscode
 .vscode/*
