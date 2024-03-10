@@ -7,7 +7,7 @@
 //============================================================
 
 //= Prontera City ============================================
-prontera,156,358,0	warp	prt_cas_B#prt_cas_A	1,1,prt_cas,216,146
+prontera,156,360,0	warp	prt005	4,2,prt_castle,102,20
 
 //= Prontera Castle ===========================================
 prt_cas,216,142,0	warp	prt_cas_A#prt_cas_B	1,1,prontera,156,354
