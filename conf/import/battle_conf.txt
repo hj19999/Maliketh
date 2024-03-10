@@ -1,0 +1,11 @@
+// All custom options from conf/battle goes here.
+// Use this file for keep your original configs untouched for future revert-back purposes.
+
+//===================================
+// VIP system
+//===================================
+// Storage slot increase. Setting to 0 will disable.
+// Give more storage slots above the MIN_STORAGE limit.
+// Note: MIN_STORAGE + vip_storage_increase cannot exceed MAX_STORAGE.
+// Default: 300
+vip_storage_increase: 200
