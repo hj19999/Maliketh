@@ -1052,3 +1052,6 @@ star_in
 // - Other/Extra maps -
 //======================================================================================
 celestiaj
+doubrius
+firstcity
+verdant_prontera
