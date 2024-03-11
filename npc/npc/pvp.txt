@@ -1,0 +1,26 @@
+doubrius,56,92,4	script	PVP	469,{
+if( select("Room 1 (Ranked) ["+getmapusers("pvp_n_1-5")+"/100]:Cancel") == 1 ){
+		warp "pvp_n_1-5",0,0;
+announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
+		end;
+ 
+
+}
+end;
+}
+ 
+
+ 
+// Mapflags
+pvp_n_1-5	mapflag	pvp
+pvp_n_1-5	mapflag	noreturn
+pvp_n_1-5	mapflag	nowarp
+pvp_n_1-5	mapflag	noteleport
+pvp_n_1-3	mapflag	pvp
+pvp_n_1-3	mapflag	noreturn
+pvp_n_1-3	mapflag	nowarp
+pvp_n_1-3	mapflag	noteleport
+pvp_n_1-4	mapflag	pvp
+pvp_n_1-4	mapflag	noreturn
+pvp_n_1-4	mapflag	nowarp
+pvp_n_1-4	mapflag	noteleport

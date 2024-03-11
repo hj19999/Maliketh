@@ -1,0 +1,319 @@
+doubrius,56,84,4	script	Leveling Board	857,{ 
+mes "[ Leveling Board ]";
+mes "Welcome to leveling board , This board give you misison in your level range .";next;
+mes "There is 4 Level Range:- .";
+mes "-From Level 10 to 30.";
+mes "-From Level 30 to 70.";
+mes "-From Level 70 to 99.";
+mes "-Level 99 ( Max Level ).";next;
+if(!#ques) {
+	                      set #ques, 1;
+						  cutin "162elena_01",2;
+	                      mes "[ Lena ]";
+						  mes "Hello , Welcome to leveling board, you need to know some information about quest.";next;
+						  mes "[ Lena ]";
+						  mes "When you take quest from this board the quest will appear in quest list press (alt + q) to see the quest list.";next;
+						  mes "[ Lena ]";						
+						  mes "Hope this help you , see you later";next;
+						  cutin "", 255;
+						  
+						  						}											
+                         if ( BaseLevel > 69 ) { // Level 70 - 99
+                                    mes "Your level range is between 70 - 99 ";	
+                            switch(select("Anolian Hunt:Raydric Hunt:Medusa  Hunt:Anubis Hunt:cancle")) {
+							
+							case 1:
+							if (checkquest(65019,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65019;
+						    end;
+							
+							case 2:
+							if (checkquest(65020,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65020;
+						    end;
+							case 3:
+							if (checkquest(65017,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65017;
+						    end;
+							
+							case 4:
+							if (checkquest(65018,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65018;
+						    end;	
+
+							
+							case 12:
+							end;	
+							}
+                         }
+
+
+
+							
+                         if ( BaseLevel > 29  ) { // Level 30 - 70
+                                    mes "Your level range is between 30 - 70 ";	
+                            switch(select("Elder Willow Hunt:Orc Zombie Hunt:Sandman Hunt:Argiope Hunt:Harpy Hunt:Goat Hunt:Injustice Hunt:Rybio Hunt:Roween Hunt:Petite Hunt:Desert Wolf Hunt:cancle")) {
+							
+							case 1:
+							if (checkquest(65006,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65006;
+						    end;
+							
+							case 2:
+							if (checkquest(65007,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65007;
+						    end;
+
+							case 3:
+							if (checkquest(65008,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65008;
+						    end;
+							
+							case 4:
+							if (checkquest(65009,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65009;
+						    end;
+							
+							case 5:
+							if (checkquest(65010,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65010;
+						    end;
+							
+							case 6:
+							if (checkquest(65011,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65011;
+						    end;
+							
+							case 7:
+							if (checkquest(65012,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65012;
+						    end;
+							
+							case 8:
+							if (checkquest(65013,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65013;
+						    end;
+							
+							case 9:
+							if (checkquest(65014,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65014;
+						    end;
+							
+							case 10:
+							if (checkquest(65015,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65015;
+						    end;
+							
+							case 11:
+							if (checkquest(65016,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65016;
+						    end;
+							
+							case 12:
+							end;	
+							}
+                         }
+
+
+                            mes "Your level range is between 10 - 30 ";	
+							mes "Select the mission you want . ";		
+							switch(select("Willow Hunt:Rocker Hunt:Spore Hunt:Peco Peco Hunt:Muka Hunt:Andre Hunt:cancle")) {
+							case 1:
+							if (checkquest(65000,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65000;
+						    end;
+							
+							
+							case 2:
+							if (checkquest(65001,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65001;
+						    end;
+							
+
+							case 3:
+							if (checkquest(65002,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65002;
+						    end;
+							
+							
+							
+							
+							case 4:
+							if (checkquest(65003,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65003;
+						    end;
+							
+							
+							
+							case 5:
+							if (checkquest(65004,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65004;
+						    end;
+							
+							
+							
+							
+							case 6:
+							if (checkquest(65005,HUNTING) == 1) {
+							mes "[Leveling Board]";
+		                    mes "You take this mission .";
+							end;
+							}
+							else
+							mes "[Leveling Boardn]";
+		                    mes "Go Hunt .";
+		                    setquest 65005;
+						    end;
+							
+							
+							
+							
+							case 7:
+							end;					
+                         
+                         }						 
+
+
+
+
+}							
