@@ -64,7 +64,7 @@ if ( getmonsterinfo( killedrid, MOB_MVPEXP )) {
 
 	
 }
-doubrius,27,53,4	script	MVP Ladder#Euphy	856,{
+doubrius,27,53,6	script	MVP Ladder#Euphy	856,{
 	mes "[Rank MVP]";
 	mes "Hello.";
 	mes "What are you doing here";
