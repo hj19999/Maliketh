@@ -1,4 +1,4 @@
-doubrius,56,103,3	script	Buff NPC	403,{
+doubrius,40,61,3	script	Buff NPC	403,{
 mes "[ Buff NPC ]";
 mes "Hello Select time you want for Buff ";next;
 switch(select("1 Day:1 Week:1 Month")) {

@@ -1,4 +1,4 @@
-doubrius,56,98,5	script	Kafra Employee#main	114,{
+doubrius,46,43,5	script	Kafra Employee#main	894,{
 	cutin "kafra_04",2;
 	mes "[Kafra Employee]";
 	mes "Welcome!";

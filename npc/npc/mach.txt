@@ -1,4 +1,4 @@
-doubrius,56,96,6	script	Lucky Machine	562,{
+doubrius,53,61,6	script	Lucky Machine	562,{
 
 mes "Hello if you give me 5 M Zeny i will give you a random item :-. ";
 
