@@ -1,4 +1,4 @@
-doubrius,48,45,6	script	Instance Mission	1002,{
+doubrius,47,54,6	script	Instance Mission	618,{
 
              switch(select("Instance Group 1:Instance Group 2:Take all Instance Mission:Open Shop:Nothing")) {
 

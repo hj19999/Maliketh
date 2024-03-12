@@ -47,7 +47,7 @@
 //= [Happy] 
 // 	Email: http://hercules.ws/board/user/164-happy/
 //============================================================
-doubrius,27,50,6	script	PvP Rank	620,{
+doubrius,27,50,6	script	PvP Rank	656,{
 	mes "[Ladder Event]";
 OnPvpLadder:
 	mes "Ranking";

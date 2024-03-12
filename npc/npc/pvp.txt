@@ -1,4 +1,4 @@
-doubrius,31,45,6	script	PVP	469,{
+doubrius,31,45,6	script	PVP	686,{
 if( select("Room 1 (Ranked) ["+getmapusers("pvp_n_1-5")+"/100]:Cancel") == 1 ){
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
