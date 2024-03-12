@@ -6,7 +6,7 @@ if (checkquest(65019,HUNTING) == 2) {
 		                    erasequest 65019;
 							getexp 120000000,120000000;
 							getitem 599,100;
-							getitem 66502,30;
+							getitem 56002,30;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -14,7 +14,7 @@ if (checkquest(65020,HUNTING) == 2) {
 		                    erasequest 65020;
 							getexp 120000000,120000000;
 							getitem 599,100;
-							getitem 66502,30;							
+							getitem 56002,30;							
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -22,7 +22,7 @@ if (checkquest(65017,HUNTING) == 2) {
 		                    erasequest 65017;
 							getexp 120000000,120000000;
 							getitem 599,100;
-							getitem 66502,30;							
+							getitem 56002,30;							
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -30,7 +30,7 @@ if (checkquest(65018,HUNTING) == 2) {
 		                    erasequest 65018;
 							getexp 120000000,120000000;
 							getitem 599,100;
-							getitem 66502,30;
+							getitem 56002,30;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -40,7 +40,7 @@ if (checkquest(65006,HUNTING) == 2) {
 		                    erasequest 65006;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -48,7 +48,7 @@ if (checkquest(65007,HUNTING) == 2) {
 		                    erasequest 65007;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -56,7 +56,7 @@ if (checkquest(65008,HUNTING) == 2) {
 		                    erasequest 65008;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -64,7 +64,7 @@ if (checkquest(65009,HUNTING) == 2) {
 		                    erasequest 65009;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -72,7 +72,7 @@ if (checkquest(65010,HUNTING) == 2) {
 		                    erasequest 65010;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -80,7 +80,7 @@ if (checkquest(65011,HUNTING) == 2) {
 		                    erasequest 65011;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -88,7 +88,7 @@ if (checkquest(65012,HUNTING) == 2) {
 		                    erasequest 65012;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -96,7 +96,7 @@ if (checkquest(65013,HUNTING) == 2) {
 		                    erasequest 65013;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -104,7 +104,7 @@ if (checkquest(65014,HUNTING) == 2) {
 		                    erasequest 65014;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -112,7 +112,7 @@ if (checkquest(65015,HUNTING) == 2) {
 		                    erasequest 65015;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -120,7 +120,7 @@ if (checkquest(65016,HUNTING) == 2) {
 		                    erasequest 65016;
 							getexp 10000000,10000000;
 							getitem 599,100;
-							getitem 66502,20;
+							getitem 56002,20;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -130,7 +130,7 @@ if (checkquest(65000,HUNTING) == 2) {
 		                    erasequest 65000;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -138,7 +138,7 @@ if (checkquest(65001,HUNTING) == 2) {
 		                    erasequest 65001;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -146,7 +146,7 @@ if (checkquest(65002,HUNTING) == 2) {
 		                    erasequest 65002;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -154,7 +154,7 @@ if (checkquest(65003,HUNTING) == 2) {
 		                    erasequest 65003;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -162,7 +162,7 @@ if (checkquest(65004,HUNTING) == 2) {
 		                    erasequest 65004;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
@@ -170,7 +170,7 @@ if (checkquest(65005,HUNTING) == 2) {
 		                    erasequest 65005;
 							getexp 400000,400000;
 							getitem 598,100;
-							getitem 66502,10;
+							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
