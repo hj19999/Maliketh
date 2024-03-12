@@ -13463,7 +13463,7 @@
 56002,Quest_Coin,Quest Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
 56003,PassTicket,Pass Ticket,3,10,,0,,,,,,,,,,,,,{},{},{}
 56004,Season1Coin,Season 1 Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
-56005,PassBox,Pass Box,10,10,,0,,,,,,,,,,,,,{      callfunc ( "BASSB" ) ;},{},{}
+56005,PassBox,Pass Box,10,10,,0,,,,,,,,,,,,,{      callfunc ( "BASSB" ) ;},{callfunc ( "BASSB" ) ;},{}
 50001,S1Day1,Day1,3,10,,0,,,,,,,,,,,,,{},{},{}
 50002,S1Day2,Day2,3,10,,0,,,,,,,,,,,,,{},{},{}
 50003,S1Day3,Day3,3,10,,0,,,,,,,,,,,,,{},{},{}
