@@ -126,7 +126,7 @@ function Restrict {
 // --------------------------------------------------
 	Towns:
 // --------------------------------------------------
-menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
+menu	"Main Town",T1,"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
     	"Brasilis",T6, "Comodo",T7, "Dewata",T8, "Eclage",T9, "Einbech",T10, 
     	"Einbroch",T11, "El Dicastes",T12, "Geffen",T13, "Kunlun",T14, "Hugel",T15,
     	"Izlude",T16, "Jawaii",T17, "Lasagna",T18, "Lighthalzen",T19, "Luoyang",T20,
@@ -180,6 +180,7 @@ T34: Go("thor_camp",246,68);
 T35: Go("umbala",97,153);
 T36: Go("veins",216,123);
 T37: Go("yuno",157,51);
+T38: Go("doubrius",46,42);
 
 // --------------------------------------------------
 	Fields:
