@@ -1,0 +1,12 @@
+function	script	BASSB	{
+if( countitem(56003) ) {
+mes "You Have Active Pass ";
+end;
+}
+else
+	delitem 56005,1;
+	getitem 56003,1;
+end;
+
+
+}

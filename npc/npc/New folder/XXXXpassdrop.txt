@@ -1,0 +1,16 @@
+//-	script	Poring_Coin	-1,{
+
+//OnNPCKillEvent:
+
+//if ( rand( 100 ) <= 40 ) {
+//if( countitem(60000) ) {
+//.@item_id = F_Rand( 60002 );
+//}
+//if ( checkidle() <= 3 ) {
+//getitem .@item_id,1;
+//}
+//}
+
+//end;
+//}
+
