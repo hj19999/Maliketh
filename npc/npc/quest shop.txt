@@ -26,7 +26,7 @@
 //	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
 doubrius,35,41,6	script	Quest Shop#1	997,{ callfunc "qshop",1,2,3; }
-doubrius,35,35,6	script	MVP Shop#1	656,{ callfunc "qshop",4; }
+doubrius,35,35,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
 
 
 // Script Core
