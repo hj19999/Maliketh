@@ -1,4 +1,4 @@
-payon,121,229,5	script	Weekly Quest	751,{
+doubrius,51,45,5	script	Weekly Quest	751,{
 
         mes " [Weekly Quest] ";
 		mes "Which quest you want ? ";
