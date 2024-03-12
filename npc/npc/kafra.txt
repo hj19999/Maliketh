@@ -1,4 +1,4 @@
-doubrius,46,43,5	script	Kafra Employee#main	894,{
+doubrius,52,51,5	script	Kafra Employee#main	894,{
 	cutin "kafra_04",2;
 	mes "[Kafra Employee]";
 	mes "Welcome!";
@@ -8,7 +8,7 @@ doubrius,46,43,5	script	Kafra Employee#main	894,{
 	mes "with its excellent service. So";
 	mes "what can I do for you today?";
 	callfunc "F_Kafra",5,1,1,0,0;
-	savepoint "doubrius",144,238,1,1;
+	savepoint "doubrius",46,43,1,1;
 	callfunc "F_KafEnd",0,1,"at the Prontera Culverts";
 
 }
