@@ -124,7 +124,8 @@ if(!#ques) {
 							case 9:
 							end;							
 							
-                            }								
+                            }	
+}							
 					if ( BaseLevel > 129 ) { // Level 130 - 160
                                     mes "Your level range is between 130 - 160 ";	
                             switch(select("Tatacho Hunt:Dolomedes Hunt:Antler Scaraba Hunt:Rake Scaraba Hunt:cancle")) {
@@ -180,7 +181,8 @@ if(!#ques) {
 							case 5:
 							end;							
 							
-                            }	
+                            }
+}							
 if ( BaseLevel > 98 ) { // Level 99 - 130
                                     mes "Your level range is between 99 - 130 ";	
                             switch(select("Anolian Hunt:Raydric Hunt:Magmaring Hunt:Vanberk Hunt:Isilla Hunt:Centipede Larva Hunt:Hillslion Hunt:Centipede Hunt:cancle")) {
@@ -284,7 +286,8 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							case 9:
 							end;							
 							
-}							
+}	
+}						
                          if ( BaseLevel > 69 ) { // Level 70 - 99
                                     mes "Your level range is between 70 - 99 ";	
                             switch(select("Argiope Hunt:Harpy Hunt:Goat Hunt:Injustice Hunt:Rybio Hunt:Roween Hunt:Petite Hunt:Desert Wolf Hunt:Medusa  Hunt:Dark Priest Hunt:cancle")) {
