@@ -56,11 +56,6 @@ Body:
     Targets:
       - Mob: GRIM_REAPER_ANKOU
         Count: 1
-  - Id: 65002
-    Title: CHARLESTON 3 Hunt
-    Targets:
-      - Mob: CHARLESTON3
-        Count: 1
   - Id: 65003
     Title: Evil Fanatics Hunt
     Targets:
@@ -80,11 +75,6 @@ Body:
     Title: LOST DRAGON Hunt
     Targets:
       - Mob: LOST_DRAGON
-        Count: 1
-  - Id: 65007
-    Title: Heart Hunter Ebel Hunt
-    Targets:
-      - Mob: EP16_2_H_HUNTER_EV
         Count: 1
   - Id: 65008
     Title: Celine Kimi Hunt
@@ -136,21 +126,11 @@ Body:
     Targets:
       - Mob: BAPHOMET_I
         Count: 1
-  - Id: 65018
-    Title: Stefan.J.E.Wolf Hunt
-    Targets:
-      - Mob: AS_RAGGED_GOLEM
-        Count: 1
   - Id: 65019
     Title: Despair God Morroc Hunt
     Targets:
       - Mob: MM_MOROCC_ADT
-        Count: 1
-  - Id: 65020
-    Title: YSF01 Seyren Hunt
-    Targets:
-      - Mob: EP16_2_SEYREN
-        Count: 1        
+        Count: 1       
   - Id: 1001
     Title: Job Change to Acolyte
   - Id: 1002
