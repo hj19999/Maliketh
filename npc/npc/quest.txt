@@ -361,8 +361,7 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setqu
-							est 65019;
+		                    setquest 65019;
 						    end;	
 							
 							case 7:
