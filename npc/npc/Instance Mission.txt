@@ -170,7 +170,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							}
 							else
 							end;							
-}
+
 
 			case 7://Nidhoggur's Nest
 							if (checkquest(65011,HUNTING) == 2) {
@@ -279,7 +279,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							}
 							else
 							end;
-	
+}	
         case 2:
 		callshop "Hunting_Quest_Shop",1;
 		end;							
