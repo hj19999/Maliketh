@@ -15,8 +15,8 @@
 -	script	#mvp_kill	-1,{
 
 OnInit:
-	setarray .p_rwd, 909,1;	// Party reward <item>,<amount>
-	setarray .s_rwd, 909,1;	// Solo reward <item>,<amount>
+	setarray .p_rwd, 56001,1;	// Party reward <item>,<amount>
+	setarray .s_rwd, 56001,1;	// Solo reward <item>,<amount>
 	.chance = 100;	// Drop rate chances %
 	.gm = 50;  // Prevents gm level and above to trigger the event
 	// MVP Map list

@@ -46,6 +46,226 @@ Header:
 Body:
   - Id: 1000
     Title: Transcend
+  - Id: 64000
+    Title: WILOW Hunt
+    Targets:
+      - Mob: WILOW
+        Count: 10  
+  - Id: 64001
+    Title: ROCKER Hunt
+    Targets:
+      - Mob: ROCKER
+        Count: 10  
+  - Id: 64002
+    Title: SPORE Hunt
+    Targets:
+      - Mob: SPORE
+        Count: 10  
+  - Id: 64003
+    Title: PECOPECO Hunt
+    Targets:
+      - Mob: PECOPECO
+        Count: 10  
+  - Id: 64004
+    Title: MUKA Hunt
+    Targets:
+      - Mob: MUKA
+        Count: 10  
+  - Id: 64005
+    Title: ANDRE Hunt
+    Targets:
+      - Mob: ANDRE
+        Count: 10  
+  - Id: 64006
+    Title: ELDER WILOW Hunt
+    Targets:
+      - Mob: ELDER_WILOW
+        Count: 20
+  - Id: 64007
+    Title: ORC Warrior Hunt
+    Targets:
+      - Mob: ORK_WARRIOR
+        Count: 20
+  - Id: 64008
+    Title: Orc ZOMBIE Hunt
+    Targets:
+      - Mob: ORC_ZOMBIE
+        Count: 20
+  - Id: 64009
+    Title: Orc Skeleton Hunt
+    Targets:
+      - Mob: ORC_SKELETON
+        Count: 20
+  - Id: 64010
+    Title: Pirate Skeleton Hunt
+    Targets:
+      - Mob: PIRATE_SKEL
+        Count: 20
+  - Id: 64011
+    Title: Hode Hunt
+    Targets:
+      - Mob: HODE
+        Count: 20
+  - Id: 64012
+    Title: Frilldora Hunt
+    Targets:
+      - Mob: FRILLDORA
+        Count: 20
+  - Id: 64013
+    Title: Sandman Hunt
+    Targets:
+      - Mob: SAND_MAN
+        Count: 20
+  - Id: 64014
+    Title: Argiope Hunt
+    Targets:
+      - Mob: ARGIOPE
+        Count: 20
+  - Id: 64015
+    Title: Harpy Hunt
+    Targets:
+      - Mob: HARPY
+        Count: 20
+  - Id: 64016
+    Title: Goat Hunt
+    Targets:
+      - Mob: GOAT
+        Count: 20
+  - Id: 64017
+    Title: Injustice Hunt
+    Targets:
+      - Mob: INJUSTICE
+        Count: 20
+  - Id: 64018
+    Title: Rybio Hunt
+    Targets:
+      - Mob: RYBIO
+        Count: 20
+  - Id: 64019
+    Title: Roween Hunt
+    Targets:
+      - Mob: ROWEEN
+        Count: 20 
+  - Id: 64020
+    Title: Petite Hunt
+    Targets:
+      - Mob: PETIT
+        Count: 20
+  - Id: 64021
+    Title: Desert Wolf Hunt
+    Targets:
+      - Mob: DESERT_WOLF
+        Count: 20
+  - Id: 64022
+    Title: Medusa  Hunt
+    Targets:
+      - Mob: MEDUSA
+        Count: 20   
+  - Id: 64023
+    Title: Dark Priest Hunt
+    Targets:
+      - Mob: DARK_PRIEST
+        Count: 20
+  - Id: 64024
+    Title: Anolian Hunt
+    Targets:
+      - Mob: ANOLIAN
+        Count: 30
+  - Id: 64025
+    Title: Raydric Hunt
+    Targets:
+      - Mob: RAYDRIC
+        Count: 30
+  - Id: 64026
+    Title: Magmaring Hunt
+    Targets:
+      - Mob: MAGMARING
+        Count: 30
+  - Id: 64027
+    Title: Vanberk Hunt
+    Targets:
+      - Mob: VANBERK
+        Count: 30
+  - Id: 64028
+    Title: Isilla Hunt
+    Targets:
+      - Mob: ISILLA
+        Count: 30
+  - Id: 64029
+    Title: Centipede Larva Hunt
+    Targets:
+      - Mob: CENTIPEDE_LARVA
+        Count: 30
+  - Id: 64030
+    Title: Hillslion Hunt
+    Targets:
+      - Mob: HILLSRION
+        Count: 30   
+  - Id: 64031
+    Title: Centipede Hunt
+    Targets:
+      - Mob: CENTIPEDE
+        Count: 30  
+  - Id: 64032
+    Title: Tatacho Hunt
+    Targets:
+      - Mob: TATACHO
+        Count: 30   
+  - Id: 64033
+    Title: Dolomedes Hunt
+    Targets:
+      - Mob: DOLOMEDES
+        Count: 30 
+  - Id: 64034
+    Title: Antler Scaraba Hunt
+    Targets:
+      - Mob: ANTLER_SCARABA
+        Count: 30 
+  - Id: 64035
+    Title: Rake Scaraba Hunt
+    Targets:
+      - Mob: RAKE_SCARABA
+        Count: 30      
+  - Id: 64036
+    Title: Big Bell Hunt
+    Targets:
+      - Mob: BIG_BELL
+        Count: 30  
+  - Id: 64037
+    Title: Antique Book Hunt
+    Targets:
+      - Mob: ANTIQUE_BOOK
+        Count: 30  
+  - Id: 64038
+    Title: Cenere Hunt
+    Targets:
+      - Mob: CENERE
+        Count: 30  
+  - Id: 64039
+    Title: Faithful Manager Hunt
+    Targets:
+      - Mob: FAITHFUL_MANAGER
+        Count: 30  
+  - Id: 64040
+    Title: Blue Lichtern Hunt
+    Targets:
+      - Mob: LICHTERN_B
+        Count: 30  
+  - Id: 64041
+    Title: Yellow Lichtern  Hunt
+    Targets:
+      - Mob: LICHTERN_Y
+        Count: 30
+  - Id: 64042
+    Title: Red Lichtern Hunt
+    Targets:
+      - Mob: LICHTERN_R
+        Count: 30
+  - Id: 64043
+    Title: Green Lichtern Hunt
+    Targets:
+      - Mob: LICHTERN_G
+        Count: 30        
   - Id: 65000
     Title: Captain Ferlock Hunt
     Targets:

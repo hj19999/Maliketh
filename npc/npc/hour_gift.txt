@@ -144,7 +144,7 @@ end;
 
 Hourly_Rewads:
 	//put the Hourly Rewards here
-	#HourlyRewards += 2;
+	#HourlyRewards += 1;
 	//getitem 905,1; //	if you want to add items as reward you can add them here like that
 	//getexp 10000,5000; //	if you wanna add exp as reward add them here like that
 	//if(#Hourly_Rewads_Check == 5){getitem 905,1;} //	like this you can add reward for Xhr and this reward will be given for that X in this example 5 mean that the player did pass 5hr
