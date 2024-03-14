@@ -22,28 +22,28 @@
 
 
 
-4,2576,1200   // Adventurer's Backpack [1]
-4,2168,1300   // Immune Shield [1]
-4,5286,1100   // Pecopeco Hairband
-4,5800,1200   // Blush of Groom
-4,18561,1200  // Black Feather Beret
-4,5376,1100   // Flying Evil Wing
-4,2589,2000   // Fallen Angel Wings
-4,2202,1500   // Sunglasses [1]
-4,5325,900    // Robo Eye
-4,5377,1100   // Gentleman's Pipe
-4,18539,1000   // Skull Cap [1] 
-4,5462,800    // Spiked Scarf
-4,5463,800     // Rainbow Scarf 
-4,5359,800       // Airship Captain's Hat
-4,5361,1000      // Gangster Scarf
-4,5389,1000      // Angel Spirit
-4,5490,900       // Anubis Helm
-4,5481,900     // Hermode Cap
-4,5403,900     // Fish In Mouth
-4,5155,900      // Father's White Moustache 
-4,5388,800       // Snake Head Hat [1]
-4,5597,700      // Bubble Gum In Mouth
+0,2576,1200   // Adventurer's Backpack [1]
+0,2168,1300   // Immune Shield [1]
+0,5286,1100   // Pecopeco Hairband
+0,5800,1200   // Blush of Groom
+0,18561,1200  // Black Feather Beret
+0,5376,1100   // Flying Evil Wing
+0,2589,2000   // Fallen Angel Wings
+0,2202,1500   // Sunglasses [1]
+0,5325,900    // Robo Eye
+0,5377,1100   // Gentleman's Pipe
+0,18539,1000   // Skull Cap [1] 
+0,5462,800    // Spiked Scarf
+0,5463,800     // Rainbow Scarf 
+0,5359,800       // Airship Captain's Hat
+0,5361,1000      // Gangster Scarf
+0,5389,1000      // Angel Spirit
+0,5490,900       // Anubis Helm
+0,5481,900     // Hermode Cap
+0,5403,900     // Fish In Mouth
+0,5155,900      // Father's White Moustache 
+0,5388,800       // Snake Head Hat [1]
+0,5597,700      // Bubble Gum In Mouth
 
 
 

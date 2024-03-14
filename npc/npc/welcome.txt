@@ -1,0 +1,22 @@
+	-	script	welcom	 1,{
+OnPCLoginEvent:
+	                if(!#welc) {
+	                      set #welc, 1;
+	                      cutin "162elena_01",2;
+						  		if(JobLevel < 10) {set JobLevel,10;}
+						  		if(BaseLevel < 10) {set BaseLevel,10;}
+	                      mes "[ Lena ]";
+						  mes "Welcome to Maliketh Ragnarok Online You are now one of our community.";next;
+						  mes "[ Lena ]";
+						  mes "Now , I have some gift for you .";next;
+						  getitem 12323,1000;
+						  getitem 598,500;
+						  mes "[ Lena ]";
+                          mes "Hope you have fun in our server, see you later.";	
+						  close2;
+cutin "", 255;
+end;
+}
+}
+
+
