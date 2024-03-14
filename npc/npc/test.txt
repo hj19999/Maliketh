@@ -1,0 +1,25 @@
+prontera,150,150,0	script	NPC A	100,{
+	mes "Test..";
+	close2;
+	if ( done_walking ) end; // trigger only once, cannot be triggered twice per character..
+	donpcevent "NPC B::OnNPCWalk";
+	sleep2 1000; // 1 sec delay before player walks
+	unitwalk getcharid(3), 160, 158;
+	done_walking = true; // sets done walking here..
+	end;
+}
+
+prontera,150,152,0	script	NPC B	100,{
+	mes "Test";
+	close;
+OnNPCWalk:
+	npcspeed 200;
+	npcwalkto 160,160;
+	sleep 5000; // pause for 5 sec.. then..
+	npcwalkto .x, .y; // walk back to orig position
+	end;
+
+OnInit:
+	getmapxy .map$, .x, .y, BL_NPC, strnpcinfo(0); // save orig position
+	end;
+}
