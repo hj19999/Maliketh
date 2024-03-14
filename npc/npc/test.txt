@@ -1,4 +1,4 @@
-prontera,156,177,5    script    kdjfhkshf2    100,{
+prontera,156,177,5    script    kdjfhkshf2    560,{
    end;
 OnInit:
    .@interval = 5;
