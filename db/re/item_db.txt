@@ -10948,7 +10948,7 @@
 20302,C_Beelzebub_Crown,Costume Beelzebub Crown,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,1343,{},{},{}
 20303,C_Mandragora_Cap,Costume Mandragora Cap,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,402,{},{},{}
 20304,C_Raccoon_Hat,Costume Raccoon Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,118,{},{},{}
-20307,C_Beginner_Cap,Costume Beginner Cap,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1348,{},{},{}
+20307,C_Beginner_Cap,Costume Beginner Cap,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,1348,{ if (BaseLevel < 100) { bonus bHit,30-(3*(BaseLevel/10)); bonus bMaxHP,1000-(100*(BaseLevel/10)); bonus bMaxSP,200-(20*(BaseLevel/10)); bonus bVariableCastrate,-10+(BaseLevel/10); bonus bHealPower,150-(10*(BaseLevel/10)); bonus bHealPower2,10*(BaseLevel/10); bonus bAddItemHealRate,10*(BaseLevel/10); } },{},{}
 20311,C_Magical_Booster,Costume Magical Booster,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,873,{},{},{}
 20312,C_Barons_Evil_Eye,Costume Baron's Evil Eye,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,989,{},{},{}
 20313,C_CD_in_Mouth,Costume CD in Mouth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,815,{},{},{}

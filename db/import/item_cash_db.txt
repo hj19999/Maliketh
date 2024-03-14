@@ -21,7 +21,7 @@
 
 
 
-
+0,50011,2000
 0,2576,1200   // Adventurer's Backpack [1]
 0,2168,1300   // Immune Shield [1]
 0,5286,1100   // Pecopeco Hairband
