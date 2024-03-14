@@ -447,8 +447,8 @@ function	Get_Job_Equip	{
 			case Job_Mage:
 				getitem 1602,1;	break;	//	Rod [4]
 			case Job_Archer:
-				getitem 1705,1;	break;	//	Composite Bow [4]
-				getitem 1750,500;	break;	//	Composite Bow [4]
+				getitem 1705,1;  	//	Composite Bow [4]
+				getitem 1750,500;break;	//	Composite Bow [4]
 			case Job_Acolyte:
 				getitem 1505,1;	break;	//	Mace [4]
 			case Job_Merchant:
