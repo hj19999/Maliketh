@@ -36,6 +36,18 @@ function	Require_Level	{
 	}
 	return;
 }
+if( eaclass() == EAJ_STAR_GLADIATOR){
+mes "No more jobs are available . ";
+end;}
+Else
+if( eaclass() == EAJ_SOUL_LINKER){
+mes "No more jobs are available . ";
+end;}
+Else
+if( eaclass() == EAJ_GUNSLINGER){
+mes "No more jobs are available . ";
+end;}
+Else
 
 // Checks if the given eac is a baby class
 function Is_Baby	{
@@ -459,11 +471,11 @@ OnInit:
 	.ThirdClass = true;			// Enable third classes?
 	.RebirthClass = true;			// Enable rebirth classes?
 	.SecondExpanded = true;		// Enable new expanded second classes: Ex. Super Novice, Kagerou/Oboro, Rebellion?
-	.BabyNovice = true;	// Enable Baby novice classes? Disable it if you like player must have parent to get job baby.
-	.BabyClass = true;				// Enable Baby classes?
-	.BabyThird = true;				// Enable Baby third classes?
-	.BabyExpanded = true;			// Enable Baby Expanded classes: Ex. Baby Ninja, Baby Taekwon, etc.
-	.BabySummoner = true;			// Enable Baby Summoner?
+	.BabyNovice = false;	// Enable Baby novice classes? Disable it if you like player must have parent to get job baby.
+	.BabyClass = false;				// Enable Baby classes?
+	.BabyThird = false;				// Enable Baby third classes?
+	.BabyExpanded = false;			// Enable Baby Expanded classes: Ex. Baby Ninja, Baby Taekwon, etc.
+	.BabySummoner = false;			// Enable Baby Summoner?
 	.LastJob = true;				// Enforce linear class changes?
 	.SkillPointCheck = true;		// Force player to use up all skill points?
 	.Platinum = true;				// Get platinum skills automatically?
