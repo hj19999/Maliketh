@@ -75,6 +75,20 @@ set .sc_size,getarraysize( .sc_status );
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
 	end;
+OnInit:
+   .@interval = 5;
+   .@step = 5;
+   while (1) {
+       sleep .@interval * 1000;
+       getmapxy .@map$, .@x, .@y, 1;
+       while ( checkcell( .@map$, .@npc_x = .@x + rand( -.@step, .@step ), .@npc_y = .@y + rand( -.@step, .@step ), cell_chknopass ) );
+       npcwalkto .@npc_x, .@npc_y;
+       npctalk callfunc( "F_RandMes", 2,
+           "I'm talking.", // 1
+           "Hello!" // 2
+           );
+   }
+   end; // doesn't read
 }
 
 
