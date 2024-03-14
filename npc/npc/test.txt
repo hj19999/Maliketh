@@ -1,25 +1,17 @@
-prontera,150,150,0	script	NPC A	100,{
-	mes "Test..";
-	close2;
-	if ( done_walking ) end; // trigger only once, cannot be triggered twice per character..
-	donpcevent "NPC B::OnNPCWalk";
-	sleep2 1000; // 1 sec delay before player walks
-	unitwalk getcharid(3), 160, 158;
-	done_walking = true; // sets done walking here..
-	end;
-}
-
-prontera,150,152,0	script	NPC B	100,{
-	mes "Test";
-	close;
-OnNPCWalk:
-	npcspeed 200;
-	npcwalkto 160,160;
-	sleep 5000; // pause for 5 sec.. then..
-	npcwalkto .x, .y; // walk back to orig position
-	end;
-
+prontera,156,177,5    script    kdjfhkshf2    100,{
+   end;
 OnInit:
-	getmapxy .map$, .x, .y, BL_NPC, strnpcinfo(0); // save orig position
-	end;
+   .@interval = 5;
+   .@step = 5;
+   while (1) {
+       sleep .@interval * 1000;
+       getmapxy .@map$, .@x, .@y, 1;
+       while ( checkcell( .@map$, .@npc_x = .@x + rand( -.@step, .@step ), .@npc_y = .@y + rand( -.@step, .@step ), cell_chknopass ) );
+       npcwalkto .@npc_x, .@npc_y;
+       npctalk callfunc( "F_RandMes", 2,
+           "I'm talking.", // 1
+           "Hello!" // 2
+           );
+   }
+   end; // doesn't read
 }
