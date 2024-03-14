@@ -101,9 +101,5 @@ OnInit:	setcell "doubrius",120,43,183,15,cell_novending,1;     // A
 doubrius	mapflag	sakura
 doubrius	mapflag	town
 doubrius	mapflag	nobranch
-doubrius	mapflag	nobaseexp
-doubrius	mapflag	nojobexp
-doubrius	mapflag	nomobloot
-doubrius	mapflag	nomvploot
 doubrius,0,0,0,0	boss_monster	Aliza	1737,3,0,0,0
 doubrius,0,0,0,0	boss_monster	Alice	1275,2,0,0,0

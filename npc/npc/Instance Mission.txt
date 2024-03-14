@@ -4,7 +4,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 
                 case 1:
 
-                        switch(select("Devil's Tower:Endless Tower:Geffen Magic Tournament:Ghost Palace:Hazy Forest:Horror Toy Factory:Nidhoggur's Nest:Old Glast Heim:Sara's Memory:Sealed Shrine:Cancel")) {
+                        switch(select("Devil's Tower:Endless Tower:Geffen Magic Tournament:Hazy Forest:Horror Toy Factory:Nidhoggur's Nest:Old Glast Heim:Sara's Memory:Sealed Shrine:Cancel")) {
 					
 							
 
@@ -90,35 +90,8 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							else
 							end;
 
-						case 4://Ghost Palace
-							//if (checkquest(65008,HUNTING) == 2) {
-		                    //mes "[Instance Mission]";
-		                    //mes "You have complete this mission and that is your reward .";
-		                    //erasequest 65008;
-		                    //Instance_POINTS += 3;
-		                    //end;
-                            //}
-							//if (checkquest(65008,HUNTING) == 1) {
-							//mes "[Instance Mission]";
-		                    //mes "Do not waste time go and this complete mission .";
-							//end;
-							//}
-							//else
-							//mes "[Instance Mission]";
-		                    //mes "Are you sure that you want to start this mission ? .";
-							//mes "This Mission reward is^ff0000 6 Instance Point^000000 .";
-							//if( select("yes:no") == 1 ){
-							//mes "[Instance Mission]";
-		                    //mes "Mission Start .";
-		                    //setquest 65008;
-						    //end;
-							//}
-							//else
-							//end;
-							mes "Coming soon .";
-							end;
 
-						case 5://Hazy Forest
+						case 4://Hazy Forest
 							if (checkquest(65006,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff00003 Instance Point^000000 .";
@@ -145,7 +118,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							end;
 
 
-						case 6://Horror Toy Factory
+						case 5://Horror Toy Factory
 							if (checkquest(65008,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff00006 Instance Point^000000 .";
@@ -172,7 +145,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							end;							
 
 
-			case 7://Nidhoggur's Nest
+			case 6://Nidhoggur's Nest
 							if (checkquest(65011,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff000025 Instance Point^000000 .";
@@ -199,7 +172,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							end;
 
 
-			case 8://Old Glast Heim
+			case 7://Old Glast Heim
 							if (checkquest(65013,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff00006 Instance Point^000000 .";
@@ -228,7 +201,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 
 
 
-			case 9://Sara's Memory
+			case 8://Sara's Memory
 							if (checkquest(65016,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff00003 Instance Point^000000 .";
@@ -254,7 +227,7 @@ doubrius,60,36,4	script	Instance Mission	618,{
 							else
 							end;	
 
-			case 10://Sealed Shrine
+			case 9://Sealed Shrine
 							if (checkquest(65017,HUNTING) == 2) {
 		                    mes "[Instance Mission]";
 		                    mes "Congratulations You have complete your mission and you get ^ff00005 Instance Point^000000 .";
