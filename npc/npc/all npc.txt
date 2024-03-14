@@ -593,7 +593,7 @@ OnInit:
 	set .SkillPointCheck,0;		// Force player to use up all skill points? (1: yes / 0: no)
 	set .Platinum,1;			// Get platinum skills automatically? (1: yes / 0: no)
 
-	set .EnrichedRefine,0;					// Allow enriched refiner option? (1: yes / 0: no)
+	set .EnrichedRefine,1;					// Allow enriched refiner option? (1: yes / 0: no)
 	setarray .RP[0],2000,50,200,5000,20000;	// Zeny for armor, lv1, lv2, lv3, lv4 refines
 
 	setarray .SexChangeF[0],2213,1,1558,1,7152,50;	// Items to turn into Female (ID,Count)
