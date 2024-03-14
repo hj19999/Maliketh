@@ -11,7 +11,7 @@
 //== sex changer, identifier, healer, buffer, and repairman.
 //============================================================
 
-skycity,137,177,6	script	All-in-One NPC	625,{
+doubrius,49,41,6	script	All-in-One NPC	625,{
 function Get_Platinum; function Equip_Menu; function Cm;
 
 	if (getarraysize(.OnClick)) {
