@@ -18,7 +18,7 @@
 //= 1.7 Removed re-roll behavior. [Secret]
 //============================================================
 
-payon,157,146,6	script	Suhnbi#cash	85,{
+doubrius,41,31,6	script	Suhnbi#cash	928,{
 	disable_items;
 	mes "[Suhnbi]";
 	mes "I am the Armsmith";
