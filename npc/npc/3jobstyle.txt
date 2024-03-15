@@ -1,4 +1,4 @@
-doubrius,51,46,5	script	3rd Body Style	666,{
+doubrius,43,57,5	script	3rd Body Style	667,{
 
 	mes "[3rd body style]";
 	mes "Hello do you want to change your body style ?";
