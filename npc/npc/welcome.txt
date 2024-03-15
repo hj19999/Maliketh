@@ -12,6 +12,8 @@ OnPCLoginEvent:
 						  getitem 12323,1000;
 						  getitem 598,500;
 						  getitem 12324,20;
+						  getitem 12208,1;
+						  getitem 14533,1;
 						  getitem 20307,1;
 						  mes "[ Lena ]";
                           mes "Hope you have fun in our server, see you later.";	
