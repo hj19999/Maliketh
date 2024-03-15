@@ -1,6 +1,6 @@
 	-	script	welcom	 1,{
 OnPCLoginEvent:
-	                if(!#welc) {
+	                if(!#weflc) {
 	                      set #welc, 1;
 	                      cutin "162elena_01",2;
 						  		if(JobLevel < 10) {set JobLevel,10;}
