@@ -148,7 +148,7 @@ alberta_in,16,56,3	duplicate(MightyHammer)	Mighty Hammer#alb	826
 yuno_in01,171,18,3	duplicate(MightyHammer)	Mighty Hammer#yuno	826
 ein_in01,22,82,3	duplicate(MightyHammer)	Mighty Hammer#ein	826
 lhz_in02,280,19,3	duplicate(MightyHammer)	Mighty Hammer#lhz	826
-doubrius,44,31,3	duplicate(MightyHammer)	Mighty Hammer#dou	826
+doubrius,44,29,3	duplicate(MightyHammer)	Mighty Hammer#dou	928
 
 // iRO NPC locations:
 // payon,174,133,4	duplicate(MightyHammer)	Mighty Hammer#im	826
@@ -317,4 +317,4 @@ alberta_in,18,56,3	duplicate(Basta)	Basta#alberta	826
 yuno_in01,173,18,3	duplicate(Basta)	Basta#yuno	826
 ein_in01,24,82,3	duplicate(Basta)	Basta#einbroch	826
 lhz_in02,280,17,3	duplicate(Basta)	Basta#lighthalzen	826
-doubrius,47,31,3	duplicate(Basta)	Basta#dou	826
+doubrius,47,29,3	duplicate(Basta)	Basta#dou	928
