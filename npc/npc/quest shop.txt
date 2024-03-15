@@ -26,8 +26,8 @@
 //	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
 //============================================================
 doubrius,35,41,6	script	Quest Shop#1	997,{ callfunc "qshop",1; }
-doubrius,35,41,6	script	Event Shop#1	997,{ callfunc "qshop",2; }
-doubrius,35,41,6	script	Ramadan Pass Shop#1	997,{ callfunc "qshop",3; }
+doubrius,51,43,6	script	Event Shop#1	997,{ callfunc "qshop",2; }
+doubrius,51,40,6	script	Ramadan Pass Shop#1	997,{ callfunc "qshop",3; }
 doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
 
 
