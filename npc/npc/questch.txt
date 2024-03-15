@@ -248,7 +248,7 @@ if (checkquest(64023,HUNTING) == 2) {
 // ----------------------------- Level 40 - 70 -----------------------------
 if (checkquest(64006,HUNTING) == 2) {
 		                    erasequest 64006;
-							getexp 150000,150000;
+							getexp 200000,200000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -256,7 +256,7 @@ if (checkquest(64006,HUNTING) == 2) {
 }
 if (checkquest(64007,HUNTING) == 2) {
 		                    erasequest 64007;
-							getexp 150000,150000;
+							getexp 200000,200000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -264,7 +264,7 @@ if (checkquest(64007,HUNTING) == 2) {
 }
 if (checkquest(64008,HUNTING) == 2) {
 		                    erasequest 64008;
-							getexp 150000,150000;
+							getexp 200000,200000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -272,7 +272,7 @@ if (checkquest(64008,HUNTING) == 2) {
 }
 if (checkquest(64009,HUNTING) == 2) {
 		                    erasequest 64009;
-							getexp 150000,150000;
+							getexp 200000,200000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -280,7 +280,7 @@ if (checkquest(64009,HUNTING) == 2) {
 }
 if (checkquest(64010,HUNTING) == 2) {
 		                    erasequest 64010;
-							getexp 300000,300000;
+							getexp 400000,400000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -288,7 +288,7 @@ if (checkquest(64010,HUNTING) == 2) {
 }
 if (checkquest(64011,HUNTING) == 2) {
 		                    erasequest 64011;
-							getexp 300000,300000;
+							getexp 400000,400000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -296,7 +296,7 @@ if (checkquest(64011,HUNTING) == 2) {
 }
 if (checkquest(64012,HUNTING) == 2) {
 		                    erasequest 64012;
-							getexp 500000,500000;
+							getexp 600000,600000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -304,17 +304,17 @@ if (checkquest(64012,HUNTING) == 2) {
 }
 if (checkquest(64013,HUNTING) == 2) {
 		                    erasequest 64013;
-							getexp 500000,500000;
+							getexp 600000,600000;
 							getitem 599,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
                             mes "Mission Complete";
 }
-// ----------------------------- Level 10 - 30 -----------------------------
+// ----------------------------- Level 10 - 40 -----------------------------
 
 if (checkquest(64000,HUNTING) == 2) {
 		                    erasequest 64000;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -322,7 +322,7 @@ if (checkquest(64000,HUNTING) == 2) {
 }
 if (checkquest(64001,HUNTING) == 2) {
 		                    erasequest 64001;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -330,7 +330,7 @@ if (checkquest(64001,HUNTING) == 2) {
 }
 if (checkquest(64002,HUNTING) == 2) {
 		                    erasequest 64002;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -338,7 +338,7 @@ if (checkquest(64002,HUNTING) == 2) {
 }
 if (checkquest(64003,HUNTING) == 2) {
 		                    erasequest 64003;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -346,7 +346,7 @@ if (checkquest(64003,HUNTING) == 2) {
 }
 if (checkquest(64004,HUNTING) == 2) {
 		                    erasequest 64004;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";
@@ -354,7 +354,7 @@ if (checkquest(64004,HUNTING) == 2) {
 }
 if (checkquest(64005,HUNTING) == 2) {
 		                    erasequest 64005;
-							getexp 100000,100000;
+							getexp 125000,125000;
 							getitem 598,100;
 							getitem 56002,10;
 							mes "[Leveling Board]";

@@ -305,7 +305,7 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 						    end;
 							
 							case 2:
-							if (checkquest(65015,HUNTING) == 1) {
+							if (checkquest(64015,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -313,11 +313,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65015;
+		                    setquest 64015;
 						    end;
 							
 							case 3:
-							if (checkquest(65016,HUNTING) == 1) {
+							if (checkquest(64016,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -325,11 +325,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65016;
+		                    setquest 64016;
 						    end;
 							
 							case 4:
-							if (checkquest(65017,HUNTING) == 1) {
+							if (checkquest(64017,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -337,11 +337,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65017;
+		                    setquest 64017;
 						    end;
 							
 							case 5:
-							if (checkquest(65018,HUNTING) == 1) {
+							if (checkquest(64018,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -349,11 +349,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65018;
+		                    setquest 64018;
 						    end;
 							
 							case 6:
-							if (checkquest(65019,HUNTING) == 1) {
+							if (checkquest(64019,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -361,11 +361,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65019;
+		                    setquest 64019;
 						    end;	
 							
 							case 7:
-							if (checkquest(65020,HUNTING) == 1) {
+							if (checkquest(64020,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -373,11 +373,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65020;
+		                    setquest 64020;
 						    end;
 							
 							case 8:
-							if (checkquest(65021,HUNTING) == 1) {
+							if (checkquest(64021,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -385,11 +385,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65021;
+		                    setquest 64021;
 						    end;	
 							
 							case 9:
-							if (checkquest(65022,HUNTING) == 1) {
+							if (checkquest(64022,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -397,11 +397,11 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65022;
+		                    setquest 64022;
 						    end;
 							
 							case 10:
-							if (checkquest(65023,HUNTING) == 1) {
+							if (checkquest(64023,HUNTING) == 1) {
 							mes "[Leveling Board]";
 		                    mes "You take this mission .";
 							end;
@@ -409,7 +409,7 @@ if ( BaseLevel > 98 ) { // Level 99 - 130
 							else
 							mes "[Leveling Boardn]";
 		                    mes "Go Hunt .";
-		                    setquest 65023;
+		                    setquest 64023;
 						    end;								
 
 							
