@@ -13463,7 +13463,7 @@
 56002,Quest_Coin,Quest Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
 56003,PassTicket,Ramadan Pass Ticket,3,10,,0,,,,,,,,,,,,,{},{},{}
 56004,Season_Ramadan_Coin,Ramadan ketupat,3,10,,0,,,,,,,,,,,,,{},{},{}
-56005,PassBox,Ramadan Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 56003,1; },{},{}
+56005,PassBox,Ramadan Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56003,1,Bound_Account;},{},{}
 50011,bodystyle,Body Style Ticket,3,0,,0,,,,,,,,,,,,,{},{},{}
 //50001,S1Day1,Day1,3,10,,0,,,,,,,,,,,,,{},{},{}
 //50002,S1Day2,Day2,3,10,,0,,,,,,,,,,,,,{},{},{}
