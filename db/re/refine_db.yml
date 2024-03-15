@@ -56,38 +56,38 @@ Armor:
     - Level: 5
       NormalChance: 60
       EnrichedChance: 100
-      EventNormalChance: 60
-      EventEnrichedChance: 100
+      EventNormalChance: 100
+      EventEnrichedChance: 95
       Bonus: 200
     - Level: 6
       NormalChance: 40
       EnrichedChance: 100
-      EventNormalChance: 40
-      EventEnrichedChance: 100
+      EventNormalChance: 100
+      EventEnrichedChance: 80
       Bonus: 200
     - Level: 7
       NormalChance: 40
       EnrichedChance: 100
-      EventNormalChance: 40
-      EventEnrichedChance: 100
+      EventNormalChance: 100
+      EventEnrichedChance: 80
       Bonus: 200
     - Level: 8
       NormalChance: 25
       EnrichedChance: 50
       EventNormalChance: 20
-      EventEnrichedChance: 100
+      EventEnrichedChance: 50
       Bonus: 200
     - Level: 9
       NormalChance: 20
       EnrichedChance: 40
-      EventNormalChance: 20
-      EventEnrichedChance: 100
+      EventNormalChance: 100
+      EventEnrichedChance: 50
       Bonus: 300
     - Level: 10
       NormalChance: 14
       EnrichedChance: 25
-      EventNormalChance: 9
-      EventEnrichedChance: 100
+      EventNormalChance: 100
+      EventEnrichedChance: 35
       Bonus: 300
     - Level: 11
       NormalChance: 100
