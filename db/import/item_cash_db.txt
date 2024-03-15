@@ -36,12 +36,11 @@
 0,5462,800    // Spiked Scarf
 0,5463,800     // Rainbow Scarf 
 0,5359,800       // Airship Captain's Hat
-0,5361,1000      // Gangster Scarf
 0,5389,1000      // Angel Spirit
 0,5490,900       // Anubis Helm
 0,5481,900     // Hermode Cap
 0,5403,900     // Fish In Mouth
-0,5155,900      // Father's White Moustache 
+0,5155,1100      // Father's White Moustache 
 0,5388,800       // Snake Head Hat [1]
 0,5597,700      // Bubble Gum In Mouth
 
@@ -50,9 +49,13 @@
 
 5,14545,150  // Battle Manual X3
 5,12412,250  // HE Bubble Gum
-5,12411,75  // HE Battle Manual 
 5,7776,100  // Gym Pass
 5,13710,900  // Gym Pass Box
+5,7040,35   // Megaphone
+5,12214,35  // Convex Mirror
+5,12212,30  // Giant Fly Wing
+5,12910,250   // Giant Fly Wing Box
+5,12210,175    // Gum
 5,12903,140      // Box Food +10
 5,12904,140      // Box Food +10
 5,12905,140      // Box Food +10
@@ -76,7 +79,11 @@
 7,16396,90  // HD Elunium 10 Box
 7,6240,810  // HD Oridecon
 7,16394,810  // HD Oridecon 10 Box
-7,7621,30   // Token of Siegfried
-7,12922,250 // Token of Siegfried Box 
+7,6225,95   //HD Carnium
+7,16261,850 //HD Carnium 10 Box
+7,6226,95    //HD Bradium
+7,16260,850  //HD Bradium 10 Box
+7,7621,55   // Token of Siegfried
+7,12922,500 // Token of Siegfried Box 
 
 

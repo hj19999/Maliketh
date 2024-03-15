@@ -13462,7 +13462,7 @@
 56001,Mvp_Coinnn,MVP Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
 56002,Quest_Coin,Quest Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
 56003,PassTicket,Pass Ticket,3,10,,0,,,,,,,,,,,,,{},{},{}
-56004,Season1Coin,Season 1 Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
+56004,Season_Ramadan_Coin,Season Ramadan Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
 56005,PassBox,Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 56003,1; },{},{}
 50011,bodystyle,Body Style Ticket,3,0,,0,,,,,,,,,,,,,{},{},{}
 //50001,S1Day1,Day1,3,10,,0,,,,,,,,,,,,,{},{},{}
