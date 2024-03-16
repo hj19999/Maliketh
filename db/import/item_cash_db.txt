@@ -53,7 +53,7 @@
 5,12412,250  // HE Bubble Gum
 5,7776,100  // Gym Pass
 5,13710,900  // Gym Pass Box
-5,7040,35   // Megaphone
+5,12221,35   // Megaphone
 5,12214,35  // Convex Mirror
 5,12212,30  // Giant Fly Wing
 5,12910,250   // Giant Fly Wing Box

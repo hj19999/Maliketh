@@ -28,9 +28,6 @@ if (#AspersioBuff > gettimetick(2)){
 if (#ImpositioBuff > gettimetick(2)){
 			sc_start SC_IMPOSITIO,1200000,5;
 			}	
-if (#KyrieBuff > gettimetick(2)){
-			sc_start SC_KYRIE,1200000,10;
-			}	
 if (#MagnificatBuff > gettimetick(2)){
 			sc_start SC_MAGNIFICAT,1200000,5;
 			}	

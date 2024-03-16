@@ -5,7 +5,7 @@ switch(select("1 Day:1 Week:1 Month")) {
 case 1:
 mes "[ Buff NPC ]";
 mes "Hello , Which Buff you want ? each buff cost 8000000 Zeny .";next;
-switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Day^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Day^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Kyrie Eleison ^E806061 Day^000000 ^2FFF3E"+Time2Str(#KyrieBuff)+"^000000:Magnificat ^E806061 Day^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Day^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
+switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Day^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Day^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Magnificat ^E806061 Day^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Day^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
 
 .@cost = 8000000;
 .@daycd = 86400;
@@ -65,19 +65,6 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
                                 end;
                  case 5:
 
-                         if (#KyrieBuff > gettimetick(2)){
-                                mes "You have this buff";
-                                end;}
-                         if(Zeny > .@cost) {
-                                Zeny -= .@cost;
-                                mes " Done . ";
-                                #KyrieBuff = gettimetick(2) + .@daycd;
-                                end; }
-                         else
-                                mes " You Don't have zeny ";
-                                end;	
-                 case 6:
-
                          if (#MagnificatBuff > gettimetick(2)){
                                 mes "You have this buff";
                                 end;}
@@ -90,7 +77,7 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
                                 mes " You Don't have zeny ";
                                 end;								
 
-                 case 7:
+                 case 6:
 
                          if (#GloriaBuff > gettimetick(2)){
                                 mes "You have this buff";
@@ -108,7 +95,7 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
 case 2:
 mes "[ Buff NPC ]";
 mes "Hello , Which Buff you want ? each buff cost 40 M Zeny for 1 Week .";next;
-switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Week^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Week^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Kyrie Eleison ^E806061 Week^000000 ^2FFF3E"+Time2Str(#KyrieBuff)+"^000000:Magnificat ^E806061 Week^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Week^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
+switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Week^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Week^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Magnificat ^E806061 Week^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Week^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
 
 .@weekcost = 40000000;
 .@weekcd = 604800;
@@ -168,19 +155,6 @@ switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+
                                 end;
                  case 5:
 
-                         if (#KyrieBuff > gettimetick(2)){
-                                mes "You have this buff";
-                                end;}
-                         if(Zeny > .@weekcost) {
-                                Zeny -= .@weekcost;
-                                mes " Done . ";
-                                #KyrieBuff = gettimetick(2) + .@weekcd;
-                                end; }
-                         else
-                                mes " You Don't have zeny ";
-                                end;	
-                 case 6:
-
                          if (#MagnificatBuff > gettimetick(2)){
                                 mes "You have this buff";
                                 end;}
@@ -193,7 +167,7 @@ switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+
                                 mes " You Don't have zeny ";
                                 end;								
 
-                 case 7:
+                 case 6:
 
                          if (#GloriaBuff > gettimetick(2)){
                                 mes "You have this buff";
@@ -212,7 +186,7 @@ switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+
 case 3:
 mes "[ Buff NPC ]";
 mes "Hello , Which Buff you want ? each buff cost 160 M Zeny for 1 Month .";next;
-switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Month^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Month^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Kyrie Eleison ^E806061 Month^000000 ^2FFF3E"+Time2Str(#KyrieBuff)+"^000000:Magnificat ^E806061 Month^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Month^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
+switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"^000000:kahii  ^E806061 Month^000000 ^2FFF3E"+Time2Str(#KahiiBuff)+"^000000:Aspersio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AspersioBuff)+"^000000:Impositio Manus ^E806061 Month^000000 ^2FFF3E"+Time2Str(#ImpositioBuff)+"^000000:Magnificat ^E806061 Month^000000 ^2FFF3E"+Time2Str(#MagnificatBuff)+"^000000:Gloria ^E806061 Month^000000 ^2FFF3E"+Time2Str(#GloriaBuff)+"^000000")) {
 
 .@monthcost = 160000000;
 .@monthcd = 2592000;
@@ -269,21 +243,8 @@ switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)
                                 end; }
                          else
                                 mes " You Don't have zeny ";
-                                end;
-                 case 5:
-
-                         if (#KyrieBuff > gettimetick(2)){
-                                mes "You have this buff";
-                                end;}
-                         if(Zeny > .@monthcost) {
-                                Zeny -= .@monthcost;
-                                mes " Done . ";
-                                #KyrieBuff = gettimetick(2) + .@Monthcd;
-                                end; }
-                         else
-                                mes " You Don't have zeny ";
                                 end;	
-                 case 6:
+                 case 5:
 
                          if (#MagnificatBuff > gettimetick(2)){
                                 mes "You have this buff";
@@ -297,7 +258,7 @@ switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)
                                 mes " You Don't have zeny ";
                                 end;								
 
-                 case 7:
+                 case 6:
 
                          if (#GloriaBuff > gettimetick(2)){
                                 mes "You have this buff";
