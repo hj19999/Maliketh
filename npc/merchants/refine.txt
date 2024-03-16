@@ -542,12 +542,6 @@ yuno_in01,171,21,4	script	Lambert	88,{
 	callfunc "refinemain","Lambert",0;
 	end;
 }
-skycity,162,157,4	script	Hollgrehenn	85,{
-	callfunc "refinemain","Hollgrehenn",1;
-OnInit:
-	waitingroom "Normal Refiner",0;
-	end;
-}
 
 lhz_in02,282,20,7	script	Fulerr	869,{
 	callfunc "refinemain","Fulerr",0;

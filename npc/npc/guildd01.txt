@@ -1,6 +1,0 @@
-gld_dun03_2,0,0	monster	Dark Axe Kobold	2284,13,5000
-gld_dun03_2,0,0	monster	Dark Hammer Kobold	2285,23,5000
-gld_dun03_2,0,0	monster	Dark Mace Kobold	2286,23,5000
-gld_dun03_2,0,0	monster	Dark Kobold Archer	2287,23,5000
-gld_dun03_2,0,0	monster	Kobold Leader	1296,1,14400000,7200000
-gld_dun03_2,0,0,0,0	boss_monster	Atroce	1785,1,28800000,600000,1

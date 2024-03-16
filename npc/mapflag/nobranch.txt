@@ -352,6 +352,5 @@ spl_in02	mapflag	nobranch
 2012rwc_06	mapflag	nobranch
 2012rwc_07	mapflag	nobranch
 2012rwc_08	mapflag	nobranch
-skycity	mapflag	nobranch
 
 //evt_zombie	mapflag	nobranch

@@ -13,7 +13,6 @@
 //= 1.1 Renewal split. [Euphy]
 //============================================================
 
-skycity	mapflag	town
 prontera	mapflag	town
 izlude	mapflag	town
 moc_ruins	mapflag	town

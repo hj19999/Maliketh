@@ -17,7 +17,6 @@
 //============================================================
 
 // Towns ====================
-skycity	mapflag	nopenalty
 ayo_in01	mapflag	nopenalty
 ayo_in02	mapflag	nopenalty
 alb_ship	mapflag	nopenalty
