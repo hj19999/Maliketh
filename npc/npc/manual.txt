@@ -3,7 +3,7 @@ doubrius,53,61,6	script	Battle Manual	120,{
 	if (ExpBonusGiven) { mes .@name$,"Iam sorry i give you battle manual come after 24 hour  " ; close; }
 	if (BaseLevel >= 130) { mes .@name$,"I give battle manual to lvl 130 and less " ; close; }
 	mes .@name$,"Hello i can give you battle manual every 24 hour to lvl 130 and less " ; next;
-	mes .@name$,"do you want to use it now ?"," ~ ^0000fflasts 1 hours^000000"," ~ ^ff0000only available under the level 130^000000" ; next;
+	mes .@name$,"do you want to use it now ?"," ~ ^0000fflasts 30 Min^000000"," ~ ^ff0000only available under the level 130^000000" ; next;
 	if (select("no:yes") == 1) close;
 	ExpBonusGiven = 1;
 	sc_start SC_EXPBOOST,1*60*30*1000,50;
