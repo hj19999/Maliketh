@@ -28,7 +28,6 @@ menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
     	" ~ Fields",Fields,
     	" ~ Dungeons",Dungeons,
     	" ~ Guild Castles",Castles,
-    	" ~ Guild Dungeons",Guild_Dungeons,
     	" ~ Instances",Instances,
     	" ~ Special Areas",Special;
 
