@@ -3,7 +3,7 @@
 //===== By: ==================================================
 //= rAthena Dev Team
 //===== Last Updated: ========================================
-//= 20200104
+//= 20160213
 //===== Description: =========================================
 //= Reference for monster level 10 skills.
 //============================================================
@@ -12,12 +12,7 @@ When a monster uses a level 10 skill on Aegis, it will be much stronger than the
 normal player version. On rAthena we reflect this by giving the monster a skill
 level above the maximum player level.
 The following lists explains the skill specialities and the corresponding level
-which needs to be put for these skills in the mob_skill_db.
-
-Note: The "SkillDatabase::parseNode" template has a linear determination feature
-where it will attempt to fill the values from the last level defined to MAX_SKILL_LEVEL.
-If it can't determine a trend it will fill with the last level defined.
-
+you need to put for these skills in the mob_skill_db.
 -------------------------------------------------------------------------------
 Skill | rAthena Lv | Explanation
 -------------------------------------------------------------------------------
