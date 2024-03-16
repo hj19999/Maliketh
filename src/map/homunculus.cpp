@@ -239,10 +239,8 @@ int hom_vaporize(struct map_session_data *sd, int flag)
 	//Delete timers when vaporized.
 	hom_hungry_timer_delete(hd);
 	hd->homunculus.vaporize = flag ? flag : HOM_ST_REST;
-	if (battle_config.hom_setting&HOMSET_RESET_REUSESKILL_VAPORIZED) {
-		hd->blockskill.clear();
-		hd->blockskill.shrink_to_fit();
-	}
+	if (battle_config.hom_setting&HOMSET_RESET_REUSESKILL_VAPORIZED)
+		memset(hd->blockskill, 0, sizeof(hd->blockskill));
 	clif_hominfo(sd, sd->hd, 0);
 	hom_save(hd);
 	return unit_remove_map(&hd->bl, CLR_OUTSIGHT);
@@ -1606,7 +1604,7 @@ void read_homunculus_expdb(void)
 		if (fp == NULL) {
 			if (i != 0)
 				continue;
-			ShowError("read_homunculus_expdb: Can't read %s\n",line);
+			ShowError("Can't read %s\n",line);
 			return;
 		}
 		while (fgets(line, sizeof(line), fp) && j < MAX_LEVEL) {
@@ -1618,7 +1616,7 @@ void read_homunculus_expdb(void)
 				break;
 		}
 		if (hexptbl[MAX_LEVEL - 1]) { // Last permitted level have to be 0!
-			ShowWarning("read_homunculus_expdb: Reached max level in %s [%d]. Remaining lines were not read.\n ",path,MAX_LEVEL);
+			ShowWarning("read_hexptbl: Reached max level in %s [%d]. Remaining lines were not read.\n ",path,MAX_LEVEL);
 			hexptbl[MAX_LEVEL - 1] = 0;
 		}
 		fclose(fp);
