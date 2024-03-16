@@ -6,7 +6,7 @@ passwd: p1
 // NOTE: Do not use spaces or any of these characters which are not allowed in
 //       Windows filenames \/:*?"<>|
 //       ... or else guild emblems won't work client-side!
-server_name: Mola Ragnarok Online
+server_name: rAthena
 
 // Login Server IP
 // The character server connects to the login server using this IP address.
