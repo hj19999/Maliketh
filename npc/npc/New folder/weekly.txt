@@ -1,0 +1,92 @@
+doubrius,51,45,5	script	Weekly Quest	751,{
+
+        mes " [Weekly Quest] ";
+		mes "Which quest you want ? ";
+		mes "Note :-";
+		mes "- you can do this quest 1 time every week .";
+		mes "- you can do this quest 1 time for all your account .";next;
+		switch(select("Instance Weekly mission:Monster Hunt:Collect item:Cancel")) {
+                    case 1:// Instance Weekly mission
+							if(getd("$QuestI_"+get_unique_id())){
+							message strcharinfo(0),"Quest already done in another account.";
+		                    end;
+	                        }
+							if (checkquest(80000,HUNTING) == 2) {
+		                    mes "[Weekly Quest]";
+		                    mes "Congratulations You have complete your mission and you get ^ff00003 10 Weekly Coin^000000 .";
+		                    erasequest 80000;
+		                    getitem 60086,10;
+						  setd "$QuestI_"+get_unique_id(),getcharid(0);
+		                    end;
+                            }
+							if (checkquest(80000,HUNTING) == 1) {
+							mes "[Weekly Quest]";
+		                    mes "Do not waste time go and this complete mission .";
+							end;
+							}
+							else
+							mes "[Weekly Quest]";
+		                    mes "In this mission you should complete instance 3 time .";
+							mes "This week the instance is :-^ff0000 Old Glast Hiem ^000000.";
+							mes "Reward :-^ff0000 10 Weekly coin ^000000.";next;
+							if( select("yes:no") == 1 ){
+							mes "[Weekly Quest]";
+		                    mes "Mission Start .";
+		                    setquest 80000;
+							set #weeklyIone,1;
+						    end;
+							}
+							else
+							end;
+							
+					case 2:// Monster Hunt
+							if(getd("$QuestH_"+get_unique_id())){
+							message strcharinfo(0),"Quest already done in another account.";
+		                    end;
+	                        }
+							mes "[Weekly Quest]";
+		                    mes "In this mission you should hunt 2 monster ";
+							mes "Reward :-^ff0000 10 Weekly coin ^000000.";next;
+							if( select("yes:no") == 1 ){
+							mes "[Weekly Quest]";
+		                    mes "Mission Start .";
+		                    setquest callfunc("F_Rand",80025,80026,80027,80028,80029,80030);
+							set #weeklyHone,1;
+							setd "$QuestH_"+get_unique_id(),getcharid(0);
+						    end;
+							}
+							else
+							end;
+					case 3://Colloct item
+					
+							if(getd("$QuestC_"+get_unique_id())){
+							message strcharinfo(0),"Quest already done in another account.";
+							end;
+							}					
+							mes "[Weekly Quest]";
+		                    mes "I will give you 2 random mission this mission reward :-";
+							mes "-^ff0000 1 Blacksmith's Blessing + 2 Weekly Coin^000000 .";
+							mes "Note :- ^ff0000 You can see your quest by press alt+u ^000000.";next;
+							if( select("yes:no") == 1 ){
+							mes "[Weekly Quest]";
+		                    mes "Mission Start .";
+		                    setquest callfunc("F_Rand",80001,80002,80003,80004,80005,80006,80007,80008,80009,80010,80011,80012);
+							setquest callfunc("F_Rand",80013,80014,80015,80016,80017,80018,80019,80020,80021,80022,80023,80024);
+							set #weeklyCone,1;
+							setd "$QuestC_"+get_unique_id(),getcharid(0);
+						    end;
+							}
+							else
+							end;
+					case 4:
+					        end;
+							}
+	}
+
+
+
+
+
+
+
+                        

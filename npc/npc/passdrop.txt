@@ -1,0 +1,16 @@
+-	script	passdrop	-1,{
+
+OnNPCKillEvent:
+if ( rand( 100 ) <= 10 ) {
+if ( checkidle() <= 3 ) {
+getitem 56004,1;
+}
+}
+if( countitem(56003) ) {
+if ( checkidle() <= 3 ) {
+getitem 56004,1;
+}
+}
+}
+
+

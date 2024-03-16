@@ -1,0 +1,147 @@
+-	script	weekch	-1,{
+
+OnNPCKillEvent:
+if (countitem(60300) > 34) {
+if (checkquest(80001) == 1) {
+		                    erasequest 80001;
+                            dispbottom "You have Complete Collect Mission 1";
+}
+if (checkquest(80002) == 1) {
+		                    erasequest 80002;
+                            dispbottom "You have Complete Collect Mission 2";
+}
+if (checkquest(80003) == 1) {
+		                    erasequest 80003;
+                            dispbottom "You have Complete Collect Mission 3";
+}
+if (checkquest(80004) == 1) {
+		                    erasequest 80004;
+                            dispbottom "You have Complete Collect Mission 4";
+}
+if (checkquest(80005) == 1) {
+		                    erasequest 80005;
+                            dispbottom "You have Complete Collect Mission 5";
+}
+if (checkquest(80006) == 1) {
+		                    erasequest 80006;
+                            dispbottom "You have Complete Collect Mission 6";
+}
+if (checkquest(80007) == 1) {
+		                    erasequest 80007;
+                            dispbottom "You have Complete Collect Mission 7";
+}
+if (checkquest(80008) == 1) {
+		                    erasequest 80008;
+                            dispbottom "You have Complete Collect Mission 8";
+}
+if (checkquest(80009) == 1) {
+		                    erasequest 80009;
+                            dispbottom "You have Complete Collect Mission 9";
+}
+if (checkquest(80010) == 1) {
+		                    erasequest 80010;
+                            dispbottom "You have Complete Collect Mission 10";
+}
+if (checkquest(80011) == 1) {
+		                    erasequest 80011;
+                            dispbottom "You have Complete Collect Mission 11";
+}
+if (checkquest(80012) == 1) {
+		                    erasequest 80012;
+                            dispbottom "You have Complete Collect Mission 12";
+}}
+if (countitem(60301) > 34) {
+if (checkquest(80013) == 1) {
+		                    erasequest 80013;
+                            dispbottom "You have Complete Collect Mission 13";
+}
+if (checkquest(80014) == 1) {
+		                    erasequest 80014;
+                            dispbottom "You have Complete Collect Mission 14";
+}
+if (checkquest(80015) == 1) {
+		                    erasequest 80015;
+                            dispbottom "You have Complete Collect Mission 15";
+}
+if (checkquest(80016) == 1) {
+		                    erasequest 80016;
+                            dispbottom "You have Complete Collect Mission 16";
+}
+if (checkquest(80017) == 1) {
+		                    erasequest 80017;
+                            dispbottom "You have Complete Collect Mission 17";
+}
+if (checkquest(80018) == 1) {
+		                    erasequest 80018;
+                            dispbottom "You have Complete Collect Mission 18";
+}
+if (checkquest(80019) == 1) {
+		                    erasequest 80019;
+                            dispbottom "You have Complete Collect Mission 19";
+}
+if (checkquest(80020) == 1) {
+		                    erasequest 80020;
+                            dispbottom "You have Complete Collect Mission 20";
+}
+if (checkquest(80021) == 1) {
+		                    erasequest 80021;
+                            dispbottom "You have Complete Collect Mission 21";
+}
+if (checkquest(80022) == 1) {
+		                    erasequest 80022;
+                            dispbottom "You have Complete Collect Mission 22";
+}
+if (checkquest(80023) == 1) {
+		                    erasequest 80023;
+                            dispbottom "You have Complete Collect Mission 23";
+}
+if (checkquest(80024) == 1) {
+		                    erasequest 80024;
+                            dispbottom "You have Complete Collect Mission 24";
+}}
+if (countitem(60301) > 34 & countitem(60300) > 34) {
+							getitem 60086,2;
+							getitem 6635,1;
+				            delitem 60301,35;
+			                delitem 60300,35;
+							}
+if (checkquest(80025,HUNTING) == 2) {
+		                    erasequest 80025;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+if (checkquest(80026,HUNTING) == 2) {
+		                    erasequest 80026;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+if (checkquest(80027,HUNTING) == 2) {
+		                    erasequest 80027;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+if (checkquest(80028,HUNTING) == 2) {
+		                    erasequest 80028;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+if (checkquest(80029,HUNTING) == 2) {
+		                    erasequest 80029;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+if (checkquest(80030,HUNTING) == 2) {
+		                    erasequest 80030;
+		                    getitem 60086,5;
+							mes "[Weekly Quest]";
+                            mes "You have Complete Hunt Mission";
+}
+end;
+
+}
+

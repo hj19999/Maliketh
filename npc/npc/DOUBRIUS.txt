@@ -1,0 +1,105 @@
+//===================================================================
+//	NOVENDING
+-	script	novending	-1,{
+OnInit:	setcell "doubrius",120,43,183,15,cell_novending,1;     // A
+	setcell "doubrius",144,85,175,78,cell_novending,1;     // B
+	setcell "doubrius",144,77,167,77,cell_novending,1;
+	setcell "doubrius",144,76,166,76,cell_novending,1;
+	setcell "doubrius",144,75,165,75,cell_novending,1;
+	setcell "doubrius",144,74,164,74,cell_novending,1;
+	setcell "doubrius",144,73,163,73,cell_novending,1;
+	setcell "doubrius",144,72,162,72,cell_novending,1;
+	setcell "doubrius",144,71,161,56,cell_novending,1;
+	setcell "doubrius",127,125,152,122,cell_novending,1;     // C
+	setcell "doubrius",127,121,151,121,cell_novending,1;
+	setcell "doubrius",127,120,150,120,cell_novending,1;
+	setcell "doubrius",127,119,149,119,cell_novending,1;
+	setcell "doubrius",127,118,148,118,cell_novending,1;
+	setcell "doubrius",127,117,147,117,cell_novending,1;
+	setcell "doubrius",127,116,146,116,cell_novending,1;
+	setcell "doubrius",127,115,145,115,cell_novending,1;
+	setcell "doubrius",127,114,144,114,cell_novending,1;
+	setcell "doubrius",127,113,143,113,cell_novending,1;
+	setcell "doubrius",127,112,142,112,cell_novending,1;
+	setcell "doubrius",127,111,141,111,cell_novending,1;
+	setcell "doubrius",127,110,140,110,cell_novending,1;
+	setcell "doubrius",127,109,139,109,cell_novending,1;
+	setcell "doubrius",127,108,138,108,cell_novending,1;
+	setcell "doubrius",127,107,137,107,cell_novending,1;
+	setcell "doubrius",127,106,136,106,cell_novending,1;
+	setcell "doubrius",127,105,135,105,cell_novending,1;
+	setcell "doubrius",127,104,134,104,cell_novending,1;
+	setcell "doubrius",127,103,133,103,cell_novending,1;
+	setcell "doubrius",127,102,132,102,cell_novending,1;
+	setcell "doubrius",127,101,131,101,cell_novending,1;
+	setcell "doubrius",127,100,130,100,cell_novending,1;
+	setcell "doubrius",127,99,129,99,cell_novending,1;
+	setcell "doubrius",69,125,125,102,cell_novending,1;     // D
+	setcell "doubrius",103,101,125,101,cell_novending,1;
+	setcell "doubrius",104,100,125,100,cell_novending,1;
+	setcell "doubrius",105,99,125,99,cell_novending,1;
+	setcell "doubrius",69,183,96,158,cell_novending,1;     // E
+	setcell "doubrius",97,183,97,159,cell_novending,1;
+	setcell "doubrius",98,183,98,160,cell_novending,1;
+	setcell "doubrius",99,183,99,161,cell_novending,1;
+	setcell "doubrius",100,183,100,162,cell_novending,1;
+	setcell "doubrius",101,183,101,163,cell_novending,1;
+	setcell "doubrius",102,183,102,164,cell_novending,1;
+	setcell "doubrius",103,183,103,165,cell_novending,1;
+	setcell "doubrius",104,183,127,166,cell_novending,1;
+	setcell "doubrius",104,183,127,166,cell_novending,1;
+	setcell "doubrius",128,183,128,165,cell_novending,1;
+	setcell "doubrius",129,183,129,164,cell_novending,1;
+	setcell "doubrius",130,183,130,163,cell_novending,1;
+	setcell "doubrius",131,183,131,162,cell_novending,1;
+	setcell "doubrius",132,183,132,161,cell_novending,1;
+	setcell "doubrius",133,183,133,160,cell_novending,1;
+	setcell "doubrius",134,183,134,159,cell_novending,1;
+	setcell "doubrius",135,183,135,158,cell_novending,1;
+	setcell "doubrius",136,183,136,157,cell_novending,1;
+	setcell "doubrius",137,183,137,156,cell_novending,1;
+	setcell "doubrius",138,183,138,155,cell_novending,1;
+	setcell "doubrius",139,183,139,154,cell_novending,1;
+	setcell "doubrius",140,183,140,153,cell_novending,1;
+	setcell "doubrius",141,183,141,152,cell_novending,1;
+	setcell "doubrius",142,183,142,151,cell_novending,1;
+	setcell "doubrius",143,183,182,150,cell_novending,1;
+	setcell "doubrius",11,127,11,89,cell_novending,1;	// F
+	setcell "doubrius",11,88,11,88,cell_novending,1;
+	setcell "doubrius",11,87,11,87,cell_novending,1;
+	setcell "doubrius",11,86,11,86,cell_novending,1;
+	setcell "doubrius",11,85,11,85,cell_novending,1;
+	setcell "doubrius",11,84,11,84,cell_novending,1;
+	setcell "doubrius",11,83,11,83,cell_novending,1;
+	setcell "doubrius",11,82,11,82,cell_novending,1;
+	setcell "doubrius",11,81,11,81,cell_novending,1;
+	setcell "doubrius",11,80,11,80,cell_novending,1;
+	setcell "doubrius",11,79,11,79,cell_novending,1;
+	setcell "doubrius",11,78,11,78,cell_novending,1;
+	setcell "doubrius",11,77,11,77,cell_novending,1;
+	setcell "doubrius",11,76,11,76,cell_novending,1;
+	setcell "doubrius",11,75,11,75,cell_novending,1;
+	setcell "doubrius",11,74,11,74,cell_novending,1;
+	setcell "doubrius",11,73,11,50,cell_novending,1;
+	setcell "doubrius",11,49,11,49,cell_novending,1;
+	setcell "doubrius",11,48,11,48,cell_novending,1;
+	setcell "doubrius",11,47,11,47,cell_novending,1;
+	setcell "doubrius",11,46,11,46,cell_novending,1;
+	setcell "doubrius",11,45,11,45,cell_novending,1;
+	setcell "doubrius",11,44,11,44,cell_novending,1;
+	setcell "doubrius",11,43,11,43,cell_novending,1;
+	setcell "doubrius",11,42,11,12,cell_novending,1;
+	setcell "doubrius",69,67,107,48,cell_novending,1;     // G
+	setcell "doubrius",70,47,107,47,cell_novending,1;
+	setcell "doubrius",71,46,107,44,cell_novending,1;
+	setcell "doubrius",71,35,107,33,cell_novending,1;
+	setcell "doubrius",70,32,107,32,cell_novending,1;
+	setcell "doubrius",69,31,107,12,cell_novending,1; end;}
+
+//===================================================================
+//	TOWN
+doubrius	mapflag	sakura
+doubrius	mapflag	town
+doubrius	mapflag	nobranch
+doubrius,0,0,0,0	boss_monster	Aliza	1737,3,0,0,0
+doubrius,0,0,0,0	boss_monster	Alice	1275,2,0,0,0
