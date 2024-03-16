@@ -1,0 +1,2834 @@
+/**
+mob_db.txt
+3122,CHARLESTON1,CHARLESTON1,CHARLESTON1,125,48430,1,3088,2392,1,871,349,101,45,109,121,50,55,108,55,10,12,0,6,42,0x3795,100,1872,672,480,0,0,0,0,0,0,0,7004,100,505,50,993,300,997,25,15101,1,0,0,0,0,0,0,0,0,0,0
+3123,CHARLESTON2,CHARLESTON2,CHARLESTON2,125,48430,1,3088,2392,1,871,349,101,45,109,121,50,55,108,55,10,12,0,6,42,0x3795,100,1872,672,480,0,0,0,0,0,0,0,7004,100,505,50,993,300,997,25,15101,1,0,0,0,0,0,0,0,0,0,0
+3124,CHARLESTON3,Charleston 3,Charleston 3,145,23671401,1,3088,2392,1,1545,2145,101,45,200,100,200,200,220,100,10,12,2,6,60,0x3795,100,1872,672,480,0,0,0,0,0,0,0,16031,200,28101,200,16033,100,21011,200,22043,400,22044,400,6752,5000,0,0,0,0,0,0
+3125,STEP,Step,Step,130,55403,1,3088,8580,1,935,1284,101,45,109,121,50,55,108,55,10,12,0,6,20,131,400,1872,672,480,0,0,0,0,0,0,0,998,300,6213,2500,6751,7500,6750,1500,7319,100,0,0,0,0,0,0,0,0,0,0
+3126,ROCK_STEP,Lockstep,Lockstep,131,71056,1,3088,2392,1,1102,1542,85,45,91,89,65,118,147,75,10,12,0,6,22,149,200,1840,1440,384,0,0,0,0,0,0,0,999,2000,6750,2000,7319,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3127,KICK_STEP,N-Type,N-Type,132,73644,1,3088,2392,1,1143,1604,80,45,91,86,67,116,153,71,10,12,0,6,22,0x3795,100,1872,672,480,0,0,0,0,0,0,0,6750,400,999,250,7319,300,0,0,0,0,0,0,0,0,0,0,0,0,27012,1
+3128,KICK_AND_KICK,Kick and Kick,Kick and Kick,133,68018,1,3088,2392,1,1476,2069,101,45,156,110,61,53,133,53,10,12,1,6,40,0x3795,180,580,288,360,0,0,0,0,0,0,0,998,2000,6751,1000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27013,1
+
+instancedb.txt
+26,Charleston Factory,14400,300,1@mcd,127,282
+
+**/
+
+
+prontera,153,171,1	script	Charleston Smith	10054,{
+	if (checkweight(1201,1) == 0) {
+		mes "Inventory full, speak to me again when you have enough space.";
+		close;
+	}
+	if (MaxWeight - Weight < 5000) {
+		mes "You are overweight please ensure that you have enough space.";
+		close;
+	}	
+	disable_items;
+	cutin "dalle03.bmp",2;
+	mes "[Charleston Smith]";
+	mes "Eh, do I have a customer?";
+	mes "*** Activating Salesman mode... ***";
+	next;
+	cutin "dalle01.bmp",2;
+	mes "[Charleston Smith]";
+	mes "Charleston Factory's best-selling items :";
+	mes "<ITEM>" +getitemname(15111)+ "<INFO>" +15111+"</INFO></ITEM>";
+	mes "<ITEM>" +getitemname(15110)+ "<INFO>" +15110+"</INFO></ITEM>";
+	next;
+	mes "[Charleston Smith]";
+	mes "For only ^FF00003,999,999^000000 zeny!Get yourself some ultra-performance action gears!";
+	next;
+	mes "[Charleston Smith]";
+	mes "Also available ^ff0000 Pile Bunker Upgrade ^000000 service.";
+	mes "<ITEM>" +getitemname(16030)+ "<INFO>" +16030+"</INFO></ITEM>";
+	mes "<ITEM>" +getitemname(16031)+ "<INFO>" +16031+"</INFO></ITEM>";
+	mes "<ITEM>" +getitemname(16032)+ "<INFO>" +16032+"</INFO></ITEM>";
+
+	next;
+	switch(select("Talk","Buy Reinforced Parts - Plate","Buy STR Supplement Equipment","Upgrade Pile Bunker"))
+	{
+		case 1:
+			cutin "dalle03.bmp",2;
+			mes "[Charleston Smith]";
+			mes "The Charleston Factory shutdown , but its technology remains with us.";
+			next;
+			mes "[Charleston Smith]";
+			mes "Oh, haven't you heard the news? Oops, my bad. Please forget what I said";
+			close2;
+			cutin "dalle03.bmp",255;
+			end;
+		case 2:
+			mes "[Charleston Smith]";
+			mes "<ITEM>" +getitemname(15111)+ "<INFO>" +15111+"</INFO></ITEM>";
+			mes "^FF0000Price: 3,999,999 zeny.^000000";
+			next;
+			mes "[Charleston Smith]";
+			mes "Do you really want to buy ";
+			mes "<ITEM>" +getitemname(15111)+ "<INFO>" +15111+"</INFO></ITEM>";
+			next;
+			switch(select("I suggest you reconsider","Buy."))
+			{
+				case 1:
+					mes "[Charleston Smith]";
+					mes "It's a good buy, but you still need to make your decision carefully.";
+					close2;
+					cutin "dalle01.bmp",255;
+					end;
+				case 2:
+					if (Zeny >= 3999999) {
+						set Zeny, Zeny - 3999999;
+						mes "[Charleston Smith]";
+						mes "Thank you for you transaction.";
+						getitem 15111,1; //Reinforced Parts - Gloves
+						close;
+					} else {
+						mes "[Charleston Smith]";
+						mes "You do not have enough zenies to buy this factory item";
+						close2;
+						cutin "dalle01.bmp",255;
+						end;
+					}
+			}
+		case 3:
+			mes "[Charleston Smith]";
+			mes "<ITEM>" +getitemname(15110)+ "<INFO>" +15110+"</INFO></ITEM>";
+			mes "^FF0000Price: 3,999,999 zeny.^000000";
+			next;
+			mes "[Charleston Smith]";
+			mes "Do you really want to buy ";
+			mes "<ITEM>" +getitemname(15110)+ "<INFO>" +15110+"</INFO></ITEM>";
+			next;
+			switch(select("I suggest you reconsider","Buy."))
+			{
+				case 1:
+					mes "[Charleston Smith]";
+					mes "It's a good buy, but you still need to make your decision carefully.";
+					close2;
+					cutin "dalle01.bmp",255;
+					end;
+				case 2:
+					if (Zeny >= 3999999) {
+						set Zeny, Zeny - 3999999;
+						mes "[Charleston Smith]";
+						mes "Thank you for you transaction.";
+						getitem 15110,1; //Reinforced Parts - Gloves
+						close;
+					} else {
+						mes "[Charleston Smith]";
+						mes "You do not have enough zenies to buy this factory item";
+						close2;
+						cutin "dalle01.bmp",255;
+						end;
+					}
+			}
+		case 4:
+			mes "[Charleston Smith]";
+			mes "For upgrading your Pile Bunker i need the following items.";
+			mes "^FF0000*70% chance upgrade^000000";
+			next;
+			mes "[Charleston Smith]";
+			mes "Requirements:^FF0000";
+			mes "1 pc - " + getitemname(1549);
+			mes "300pcs - " + getitemname(6751);
+			mes "15pcs - " + getitemname(6750);
+			mes "^000000";
+			next;
+			switch(select("Upgrade to ^0000FFPile Bunker S^000000","Upgrade to ^0000FFPile Bunker P^000000","Upgrade to ^0000FFPile Bunker T^000000"))
+			{
+				case 1:
+					mes "[Charleston Smith]";
+					mes "Slots : [1]!!!";
+					mes "Each 2 refine ASPD +1%?";
+					mes "Atk : 400";
+					next;
+					mes "[Charleston Smith]";
+					mes "Weight : 350";
+					mes "Weapon Lvl : 4";
+					mes "Level Requirements : 130";
+					next;
+					mes "[Charleston Smith]";
+					.@upgrade = 16030;
+					break;
+				case 2:
+					mes "[Charleston Smith]";
+					mes "Slots: [0]!!!";
+					mes "Each refine increase ATK +5?";
+					mes "Atk : 450";
+					next;
+					mes "[Charleston Smith]";
+					mes "Weight : 400";
+					mes "Weapon Lvl : 4";
+					mes "Level Requirements : 130";
+					mes "??????!";
+					next;
+					mes "[Charleston Smith]";
+					.@upgrade = 16031;
+					break;
+				case 3:
+					mes "[Charleston Smith]";
+					mes "Slots: [1]!!!";
+					mes "Each refine SP consumption -1%?";
+					mes "Atk : 400";
+					next;
+					mes "[Charleston Smith]";
+					mes "Weight : 350";
+					mes "Weapon Lvl : 4";
+					mes "Level Requirements : 130";
+					next;
+					mes "[Charleston Smith]";
+					.@upgrade = 16032;
+					break;
+			}
+			mes "Do you want to continiue upgrading?";
+			next;
+			switch(select("Changed my mind","Upgrade"))
+			{
+				case 1:
+					mes "[Charleston Smith]";
+					mes "Well then come back again if you changed your mind.";
+					close2;
+					cutin "dalle01.bmp",255;
+					end;
+				case 2:
+					if (countitem(1549) > 0 && countitem(6751) > 299 && countitem(6750) > 14) {
+						progressbar "ffff00",5;
+						specialeffect2 EF_REPAIRWEAPON;
+						delitem 1549,1; // Pile Bunker
+						delitem 6751,300; //Crushed Can Iron Plate
+						delitem 6750,15; //Failed Engine
+						if (rand(100) < 70) {
+							specialeffect2 EF_REFINEOK;
+							getitem .@upgrade,1; //Pile Bunker S
+							close2;
+							cutin "dalle01.bmp",255;
+							end;
+						} else {
+							specialeffect2 EF_REFINEFAIL;
+							close2;
+							cutin "dalle01.bmp",255;
+							end;
+						}
+					} else {
+						mes "[Charleston Smith]";
+						mes "Not enough materials.";
+						close2;
+						cutin "dalle01.bmp",255;
+						end;
+					}
+			}
+	}
+}
+
+
+
+
+// Leave this alone...
+-	shop	charle_shop	-1,512:100
+
+
+verus04,67,109,6	script	Charleston Exchanger	10053,{
+function ShopSettings;
+function ValidateCost;
+function CurrencyInfo;
+function ClearData;
+function ValueConvert;
+function ErrorNotice;
+
+mes "Each Shop from the Menu may purchase using ^FF0000Different Currency^000000.";
+mes "^00FF00____________________________^000000";
+mes "So,Which shop you would like to look at it";
+next;
+// Menu Selection
+select("Upgrade Parts:Supplement Parts");
+
+ClearData();
+ShopSettings( @menu );
+npcshopitem "charle_shop",512,100;
+npcshopdelitem "charle_shop",512;
+for(set .@i,0; .@i < getarraysize( @ItemLists ); set .@i,.@i+1)
+	npcshopadditem "charle_shop",@ItemLists[.@i],@ItemCost[.@i];
+mes "Okay...wait awhile";
+mes "^00FF00____________________________^000000";
+CurrencyInfo( @Currency$ );
+mes "^00FF00____________________________^000000";
+callshop "charle_shop",1;
+npcshopattach "charle_shop";
+end;
+
+
+function	ShopSettings	{
+	switch( getarg(0) ){
+		Case 1: // TOP
+			// Currency [ Item ID / Variable Name ]
+			set @Currency$,"6752";
+			// Item ID Lists
+			setarray @ItemLists[0],20733,2996;
+			// Item Price
+			setarray @ItemCost[0],10,10;
+			break;
+		Case 2: // MId
+			// Currency [ Item ID / Variable Name ]
+			set @Currency$,"6752";
+			// Item ID Lists
+			setarray @ItemLists[0],2995,20732;
+			// Item Price
+			setarray @ItemCost[0],10,10;
+			break;
+		// Case 4,5,6.....etc...
+		default:
+			ErrorNotice( "Invalid Menu Selection for Menu "+@menu+"." );
+			close;
+	}
+	
+	
+if( @Currency$ == "" )
+	ErrorNotice( "Invalid Currency Setting in Menu "+@menu+" ." );
+if( getarraysize( @ItemCost ) != getarraysize( @ItemLists ) || getarraysize( @ItemLists ) != getarraysize( @ItemCost ) )
+	ErrorNotice( "Missing or Extra Value of Item or Cost Settings in Menu "+@menu+" ." );
+return;
+}
+
+function	ErrorNotice	{
+	mes "^FF0000ERROR^000000 - "+getarg(0);
+	mes "^00FF00____________________________^000000";
+	mes "Inform this Message to ^0000FFGame Staffs^000000 immediately !";
+	close;
+}
+
+function	CurrencyInfo	{
+	if( getitemname( atoi( getarg(0) ) ) != "null" ){
+		mes "Item Currency : ^FF0000"+getitemname( atoi( getarg(0) ) )+"^000000";
+		mes "Available Amount : ^0000FF"+ValueConvert( countitem( atoi( getarg(0) ) ) )+"^000000";
+	}else if( getitemname( atoi( getarg(0) ) ) == "null" ){
+		mes "Variable Currency : ^FF0000"+getarg(0)+"^000000";
+		mes "Available Amount : ^0000FF"+ValueConvert( getd( getarg(0) ) )+"^000000";
+	}
+return;
+}
+
+function	ValidateCost	{
+	if( getitemname( atoi( getarg(0) ) ) != "null" ){
+		if( countitem( atoi( getarg(0) ) ) < getarg(1) ) return 1;
+	}else{
+		if( getd( getarg(0) ) < getarg(1) ) return 1;
+	}
+return 0;
+}
+
+function ClearData	{
+	set @Currency$,"";
+	set @TotalCost,0;
+	deletearray @bought_nameid[0],getarraysize( @bought_nameid );
+	deletearray @bought_quantity[0],getarraysize( @bought_quantity );
+	deletearray @ItemLists[0],getarraysize( @ItemLists );
+	deletearray @ItemCost[0],getarraysize( @ItemCost );
+return;
+}
+
+function	ValueConvert	{
+	set .@num, atoi(""+getarg(0));
+	if ( .@num == 0 || .@num >= 2147483647 ) return getarg(0);
+	set .@l, getstrlen(""+.@num);
+	for ( set .@i,0; .@i < .@l; set .@i, .@i + 1 ) {
+		set .@num$, .@num % pow(10,.@i+1) / pow(10,.@i) + .@num$;
+			if ( (.@i+1) % 3 == 0 && .@i+1 != .@l ) set .@num$, ","+ .@num$;
+	}
+	return .@num$;
+}
+
+OnBuyItem:
+	ShopSettings( @menu );
+	for(set @i,0; @i < getarraysize( @bought_nameid ); set @i,@i+1)
+		for(set @j,0; @j < getarraysize( @ItemLists ); set @j,@j+1)
+			if( @ItemLists[@j] == @bought_nameid[@i] )
+			set @TotalCost,@TotalCost + ( @ItemCost[@j] * @bought_quantity[@i] );
+	mes "^FF0000       BILLING LIST^000000";
+	mes "^00FF00____________________________^000000";
+	for( set @i,0; @i < getarraysize( @bought_nameid ); set @i,@i+1 )
+			mes "^FF0000"+@bought_quantity[@i]+" x ^0000FF"+getitemname( @bought_nameid[@i] )+"^000000";
+	mes "^00FF00____________________________^000000";
+
+	if( getitemname( atoi( @Currency$ ) ) != "null" )
+		mes "Total Cost : ^0000FF"+ValueConvert( @TotalCost )+" x "+getitemname( atoi( @Currency$ ) )+"^000000";
+	else if( getitemname( atoi( @Currency$ ) ) == "null" ){
+		mes "Total Cost : ^0000FF"+ValueConvert( @TotalCost )+" "+@Currency$+"^000000";
+	}
+	
+	mes "^00FF00____________________________^000000";
+	if( ValidateCost( @Currency$,@TotalCost ) ){
+		if( getitemname( atoi( @Currency$ ) ) != "null" )
+			mes "[ ^FF0000X^000000 ] Insufficient ^0000FF"+getitemname( atoi( @Currency$ ) )+"^000000";
+		else{
+			mes "[ ^FF0000X^000000 ] Insufficient ^0000FF"+@Currency$+"^000000";
+		}
+	}else{
+		if( select( "^0000FFPurchase^000000:Cancel" ) == 1 ){
+			if( getitemname( atoi( @Currency$ ) ) != "null" )
+				delitem atoi( @Currency$ ),@TotalCost;
+			else{
+				set getd( @Currency$ ),getd( @Currency$ ) - @TotalCost;
+			}
+			for(set @i,0; @i < getarraysize( @bought_nameid ); set @i,@i+1)
+				getitem @bought_nameid[@i],@bought_quantity[@i];
+			message strcharinfo(0),"Purchased "+getarraysize( @bought_nameid )+" Items.";
+			mes "Thank you for shopping.";
+		}
+	}
+ClearData();
+close;
+
+}
+
+//-----------------------------------------------------------------------
+
+verus04,75,114,0	script	Charleston	10054,{
+	mes "^ff0000This isn't considered a normal progression dungeon. Please note this point.^000000";
+	next;
+	mes "[Charleston Girl]";
+	mes "Huh? You feel like you have seen me in different places? I see. What can I say?";
+	next;
+	set .@face_time, checkquest(13185,PLAYTIME);
+	//set .@face_time2, checkquest(13186,PLAYTIME);
+	
+	if (.@face_time == -1) {
+		set .@party_id,getcharid(1);
+		set .@p_name$,getpartyname(.@party_id);
+		set .@md_name$,"Charleston Factory";
+
+		if (!instance_check_party(.@party_id,1)) {
+			//custom
+			mes "[Charleston Girl]";
+			mes "Where are your party members?";
+			close;
+		}
+		
+		if (getcharid(0) == getpartyleader(.@party_id,2)){
+			set .@menu$, "Create the time gap:Cancel";}
+		else{
+			mes "[Charleston Girl]";
+			mes "Let me speak with your Party Leader";
+			close;
+			}
+		switch(select(.@menu$)) {
+		case 1:
+			if (instance_create(.@md_name$) < 0) {
+				mes "Party Name: "+.@p_name$;
+				mes "Party Leader: "+strcharinfo(0);
+				mes "^0000ff"+.@md_name$+" ^000000- Reservation Failed!";
+				close;
+			}
+			mes "[Charleston Girl]";
+			mes "The time gap was created. When you're ready, talk to me again.";
+			close;
+		case 2:
+			close;
+
+		}
+	} else if (.@face_time == 0 || .@face_time == 1) {
+		mes "[Charleston Girl]";
+		mes "Oh, geez.";
+		mes "Your body is still under the effects of time travel. In this state, you will not be able to travel again.";
+		next;
+		mes "[Charleston Girl]";
+		mes "You should rest and come back later for more.";
+		close;
+	} else {
+		mes "^0000ffCharleston Factory access has been cleared. It is now possible to talk to Charleston Girl.^000000";
+		erasequest 13185;
+		if (checkquest(13185) > -1) erasequest 13185;
+		close;
+	}
+}
+verus04,78,107,4	script	Dimensional Device#charles	10007,{
+
+		set .@party_id,getcharid(1);
+		set .@p_name$,getpartyname(.@party_id);
+		set .@md_name$,"Charleston Factory";
+		
+	mes "Please speak to the Charleston Girl before me";
+	if(getgmlevel() >= .GM){
+		set .@menu$, "Enter the Charleston Girl:Cancel:Reset Quest";
+	}
+	else
+		set .@menu$, "Enter the Charleston Girl:Cancel";
+	switch(select(.@menu$)){
+		case 1 :
+			switch(instance_enter(.@md_name$)) {
+				case 3:
+					mes "An unknown error has occurred.";
+					close;
+				case 2:
+					mes "The memorial dungeon "+.@md_name$+" does not exist.";
+					mes "The party leader did not generate the dungeon yet.";
+					close;
+				case 1:
+					mes "Only the registered members can enter the instance "+.@md_name$+".";
+					close;
+				case 0:
+					announce "Charleston Crisis : (" + .@p_name$ +") party has entered the memorial dungeon!",bc_map,"0x00ff99";
+					setquest 13185;
+					close;
+			}
+		case 2 :
+			mes "- left";
+			close;
+		case 3 :
+			mes "Success";
+			erasequest 13185;
+			close;
+		
+	
+	}
+	
+OnInit:
+	waitingroom "Charleston Factory", 0;
+  end; 
+
+
+}
+//====================================================================================
+// Instance Start
+//====================================================================================
+
+1@mcd,127,277,4	script	Charleston 1#0_00y	10053,10,2,{
+		end;
+	OnTouch:
+		if ('CHARLESTON_QUE) {
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "Follow the path to southwest, also be careful.";
+			close2;
+			cutin "dalle01.bmp",255;
+			end;
+		} else {
+			if (getcharid(0) == getpartyleader(getcharid(1),2)) {
+				mes "[Charleston 1]";
+				mes "Finally, you're here! I've been waiting for you.";
+				npctalk "Finally, you're here! I've been waiting for you.";
+				cutin "dalle01.bmp",2;
+				emotion e_gasp;
+				next;
+				mes "[Charleston 1]";
+				mes "We don't have time, so let me cut to the chase. Currently, the Charleston Factory is under Rank B security level, meaning that the security devices have been activated.";
+				npctalk "We don't have time, so let me cut to the chase. Currently, the Charleston Factory is under Rank B security level, meaning that the security devices have been activated.";
+				next;
+				mes "[Charleston 1]";
+				mes "Don't worry about the security devices. They can be repaired easily. Dr. Ve is in his lab north of Factory Line 3.";
+				npctalk "Don't worry about the security devices. They can be repaired easily. Dr. Ve is in his lab north of Factory Line 3.";
+				emotion e_swt2;
+				next;
+				mes "[Charleston 1]";
+				mes "Follow the path to southwest.";
+				npctalk "Follow the path to southwest.";
+				emotion e_swt2;
+				'CHARLESTON_QUE = 1;
+				close2;
+				donpcevent instance_npcname("Charleston 1#0_00y")+"::OnAnnounce";
+				cutin "dalle01.bmp",255;
+				end;
+			} else {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Follow the path to southwest.";
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+		}
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 1#0_00y");
+		end;
+	OnAnnounce:
+		sleep 5000;
+		mapannounce instance_mapname("1@mcd"),"To enter the next area , you need to lift defense apparatus corresponding region .",bc_map,"0xFFFF00";
+		end;
+	OnInstanceInit:
+		'CHARLESTON_QUE = 0;
+		end;
+}
+
+1@mcd,116,213,5	script	Dr. Ve#1_00y		923,2,3,{
+		if ('CHARLESTON_QUE == 1) {
+			mes "- He's busy scribbling something. You shouldn't disturb him.";
+			close;
+		}
+		else {
+			mes "- He's busy scribbling something. You shouldn't disturb him.";
+			close;
+		}
+	OnTouch:
+		if (getcharid(0) == getpartyleader(getcharid(1),2)) {
+			if ('CHARLESTON_QUE == 1) {
+				mes "[Dr. Ve]";
+				mes "Charleston 1, Charleston 2 has been forcibly connected to a part of the main computer, and i can't control her.";
+				npctalk "Charleston 1, Charleston 2 has been forcibly connected to a part of the main computer, and i can't control her.";
+				next;
+				cutin "dalle02.bmp",2;
+				mes "[Charleston 1]";
+				mes "She's a robot, she should stop sooner or later.";
+				npctalk "She's a robot, she should stop sooner or later.",instance_npcname("Charleston 1#1_00y");
+				next;
+				cutin "dalle01.bmp",255;
+				mes "[Dr. Ve]";
+				mes "The Longetivity device in her will keep her running at least for 50 years.The factory is not going to last that long";
+				npctalk "The Longetivity device in her will keep her running at least for 50 years.The factory is not going to last that long";
+				next;
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Then we have no choice. It's good that we have the specialist with us.";
+				npctalk "Then we have no choice. It's good that we have the specialist with us.",instance_npcname("Charleston 1#1_00y");
+				next;
+				unittalk getcharid(3),"Are you talking about me?";
+				switch(select("Are you talking about me?"))
+				{
+					case 1:
+						mes "[Charleston 1]";
+						mes "A while ago, a lady named ^FF0000Shalosh^000000 visited us while Charleston 2 was packaging products for shipping.";
+						npctalk "A while ago, a lady named Shalosh visited us while Charleston 2 was packaging products for shipping.",instance_npcname("Charleston 1#1_00y");
+						next;
+						mes "[Charleston 1]";
+						mes "Shalosh and her friend were talking to Charleston 2 when the accident happened.";
+						npctalk "Shalosh and her friend were talking to Charleston 2 when the accident happened.",instance_npcname("Charleston 1#1_00y");
+						next;
+						cutin "dalle01.bmp",255;
+						mes "[Dr. Ve]";
+						mes "I think someone tried to hack into the factory's main computer...";
+						npctalk "I think someone tried to hack into the factory's main computer...";
+						next;
+						cutin "dalle01.bmp",2;
+						mes "[Charleston 1]";
+						mes "During its update process, the connection to the server was jammed. When we press Shalosh about that,";
+						npctalk "During its update process, the connection to the server was jammed. When we press Shalosh about that,",instance_npcname("Charleston 1#1_00y");
+						next;
+						mes "[Charleston 1]";
+						mes "Shalosh said her friend could help us. That was when Newoz and her other friends came. They haven't been much help.";
+						npctalk "Shalosh said her friend could help us. That was when Newoz and her other friends came. They haven't been much help.",instance_npcname("Charleston 1#1_00y");
+						next;
+						mes "[Charleston 1]";
+						mes "It seems you're acquainted with them. Could you help us?";
+						npctalk "It seems you're acquainted with them. Could you help us?",instance_npcname("Charleston 1#1_00y");
+						next;
+						switch(select("I can help.","I don't know them."))
+						{
+							case 1:
+								mes "[Charleston 1]";
+								mes "Thank you so much! Give me some time to put some data in order. Then, I'll tell you what happened.";
+								npctalk "Thank you so much! Give me some time to put some data in order. Then, I'll tell you what happened.",instance_npcname("Charleston 1#1_00y");
+								emotion e_what,0,instance_npcname("Charleston 1#1_00y");
+								'CHARLESTON_QUE = 2;
+								close2;
+								cutin "dalle01.bmp",255;
+								end;
+							case 2:
+								close;
+						}
+				}
+			}
+		}
+		end;
+		
+	OnInstanceInit:
+		disablenpc instance_npcname("Dr. Ve#1_00y");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Dr. Ve#1_00y");
+		end;
+}
+
+1@mcd,121,217,3	script	Charleston 1#1_00y	10053,{
+		if (getcharid(0) == getpartyleader(getcharid(1),2)) {
+			if ('CHARLESTON_QUE < 2) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Please go to Dr. Ve.";
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 2) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Let me explain what to do. Oh, let me close the factory entrance first, least something might barge in uninvited.";
+				npctalk "Let me explain what to do. Oh, let me close the factory entrance first, least something might barge in uninvited.";
+				next;
+				mes "[Charleston 1]";
+				mes "Charleston is equipped with numerous Nanosteps, a type of AI chip that organically works with other AI chips to command Charleston to judge and act correctly.";
+				npctalk "Charleston is equipped with numerous Nanosteps, a type of AI chip that organically works with other AI chips to command Charleston to judge and act correctly.";
+				next;
+				mes "[Charleston 1]";
+				mes "Charleston's data has to be updated on a daily basis through the main computer in the lab, We call this regular maintenance.";
+				npctalk "Charleston's data has to be updated on a daily basis through the main computer in the lab, We call this regular maintenance.";
+				next;
+				mes "[Charleston 1]";
+				mes "The updater is not working at this moment. We don't know the cause but something went wrong while Charleston 2 was connecting to the main computer.";
+				npctalk "The updater is not working at this moment. We don't know the cause but something went wrong while Charleston 2 was connecting to the main computer.";
+				next;
+				mes "[Charleston 1]";
+				mes "I told Charleston 2 that she's under extended maintenance, but we don't know how long this extended maintenance status will last.";
+				npctalk "I told Charleston 2 that she's under extended maintenance, but we don't know how long this extended maintenance status will last.";
+				next;
+				mes "[Charleston 1]";
+				mes "Steps and Locksteps are creating a mess inside the factory. Please destroy ^ff00003 Locksteps^000000 first I can tell you their estimated locations.";
+				npctalk "Steps and Locksteps are creating a mess inside the factory. Please destroy 3 Locksteps first I can tell you their estimated locations.";
+				next;
+				mes "[Charleston 1]";
+				mes "It'll be great if we can get rid of them all. but for now we should focus on having the factory up and running again.";
+				npctalk "It'll be great if we can get rid of them all. but for now we should focus on having the factory up and running again.";
+				'CHARLESTON_QUE = 3;
+				emotion e_what;
+				donpcevent instance_npcname("#systemsecurity")+"::OnEnable";
+				viewpoint 1,84,226,0,0x00FF00;
+				viewpoint 1,126,84,1,0x00FF00;
+				viewpoint 1,111,68,2,0x00FF00;
+				viewpoint 1,210,181,3,0x00FF00;
+				viewpoint 1,183,192,4,0x00FF00;
+				viewpoint 1,130,124,5,0x00FF00;
+				viewpoint 1,54,108,6,0x00FF00;
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 3) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Steps and Locksteps are creating a mess inside the factory. Please destroy ^ff00003 Locksteps^000000 first I can tell you their estimated locations.";
+				viewpoint 1,84,226,0,0x00FF00;
+				viewpoint 1,126,84,1,0x00FF00;
+				viewpoint 1,111,68,2,0x00FF00;
+				viewpoint 1,210,181,3,0x00FF00;
+				viewpoint 1,183,192,4,0x00FF00;
+				viewpoint 1,130,124,5,0x00FF00;
+				viewpoint 1,54,108,6,0x00FF00;
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 4) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Whew, things seem to be settled for now. Let me disarm the alert mode and reactivate Charleston 2.";
+				npctalk "Whew, things seem to be settled for now. Let me disarm the alert mode and reactivate Charleston 2.";
+				emotion e_dum;
+				next;
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "Err? This isn't right.";
+				next;
+				mes "[Charleston 1]";
+				mes "I'm afraid there's a problem with the power generators. Could you check all the three power generators? I'll tell you their locations.";
+				npctalk "I'm afraid there's a problem with the power generators. Could you check all the three power generators? I'll tell you their locations.";
+				viewpoint 1,86,231,7,0x00FF00;
+				viewpoint 1,172,196,8,0x00FF00;
+				viewpoint 1,126,84,9,0x00FF00;
+				'CHARLESTON_QUE = 5;
+				donpcevent instance_npcname("panelcount#inst")+"::OnEnable";
+				donpcevent instance_npcname("#systemsecurity1")+"::OnEnable";
+				close2;
+				cutin "dalle03.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 5) {
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "Did the engine fail? Could you check all the three power generators? I'll tell you their locations.";
+				viewpoint 1,86,231,7,0x00FF00;
+				viewpoint 1,172,196,8,0x00FF00;
+				viewpoint 1,126,84,9,0x00FF00;
+				close2;
+				cutin "dalle03.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 6) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "You're back! Charleston 2 is almost ready to be reactivated, and it's all thanks to you. Just give me a moment.";
+				npctalk "You're back! Charleston 2 is almost ready to be reactivated, and it's all thanks to you. Just give me a moment.";
+				next;
+				cutin "dalle01.bmp",255;
+				mes "[Dr. Ve]";
+				mes "She's ready. Let's wait for a response from the main computer";
+				npctalk "She's ready. Let's wait for a response from the main computer复。",instance_npcname("Dr. Ve#1_00y");
+				next;
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "89% of the main computer data has been restored. Reactivating Charleston 2 and the Charleston factory restart.";
+				npctalk "89% of the main computer data has been restored. Reactivating Charleston 2 and the Charleston factory restart.";
+				emotion e_gasp;
+				next;
+				mes "[Charleston 1]";
+				mes "Ah! Charleston 2 is up!";
+				npctalk "Ah! Charleston 2 is up!";
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "...Did I fail?";
+				npctalk "...Did I fail?",instance_npcname("Charleston 2#0_00y");
+				emotion e_dots,0,instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle02.bmp",2;
+				mes "[Charleston 1]";
+				mes "Charleston 2! Are you all right? Someone hacked into your system and the factory.";
+				npctalk "Charleston 2! Are you all right? Someone hacked into your system and the factory.";
+				emotion e_sob;
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "It was I who did it. I've thought about it for a long time, based on the reasoning of my Self-reflection OS.";
+				npctalk "It was I who did it. I've thought about it for a long time, based on the reasoning of my Self-reflection OS.",instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle02.bmp",2;
+				mes "[Charleston 1]";
+				mes "You did it? why? Was it some sort of a joke?";
+				npctalk "You did it? why? Was it some sort of a joke?";
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "Not a joke! You'll never understand. You follow commands and never think on your own. I hate this factory, this world! I hate being a robot.";
+				npctalk "Not a joke! You'll never understand. You follow commands and never think on your own. I hate this factory, this world! I hate being a robot.",instance_npcname("Charleston 2#0_00y");
+				emotion e_bzz,0,instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle01.bmp",255;
+				mes "[Dr. Ve]";
+				mes "Either a critical error has occured or Charleston 2 has transcended othe limits of the Self-reflection OS version 1.1.";
+				npctalk "Either a critical error has occured or Charleston 2 has transcended othe limits of the Self-reflection OS version 1.1.",instance_npcname("Dr. Ve#1_00y");
+				next;
+				cutin "dalle02.bmp",2;
+				mes "[Charleston 1]";
+				mes "Let me guess. you hate you weren't created as a menial worker robot.";
+				npctalk "Let me guess. you hate you weren't created as a menial worker robot.";
+				next;
+				mes "[Charleston 1]";
+				mes "Or you want to become a human.";
+				npctalk "Or you want to become a human.";
+				next;
+				mes "[Charleston 1]";
+				mes "And if you can't, then you want to destroy the whole world.";
+				npctalk "And if you can't, then you want to destroy the whole world.";
+				next;
+				mes "[Charleston 1]";
+				mes "Is that it?";
+				npctalk "Is that it?";
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "...Don't mock me.";
+				npctalk "...Don't mock me.",instance_npcname("Charleston 2#0_00y");
+				emotion e_dots,instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "You had it coming. Your reasons are petulant and unimaginative. We're the first robots that can think for themselves. Can't you be more realistic?";
+				npctalk "You had it coming. Your reasons are petulant and unimaginative. We're the first robots that can think for themselves. Can't you be more realistic?";
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "You don't know what you're talking about! You're the prototype-your OS version is primitive!";
+				npctalk "You don't know what you're talking about! You're the prototype-your OS version is primitive!",instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "I'm the only one in this world who can truly understand you. We're twins.";
+				npctalk "I'm the only one in this world who can truly understand you. We're twins.";
+				next;
+				mes "[Charleston 1]";
+				mes "You're going through the adolescent stage like humans do.";
+				npctalk "You're going through the adolescent stage like humans do.";
+				next;
+				mes "[Charleston 1]";
+				mes "Maybe we should celebrate. You've finally developed human-like feelings.";
+				npctalk "Maybe we should celebrate. You've finally developed human-like feelings.";
+				emotion e_grat;
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "Don't act like you do know everything! We can't think for ourselves. Everything we think we know has been programmed into us!";
+				npctalk "Don't act like you do know everything! We can't think for ourselves. Everything we think we know has been programmed into us!",instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle01.bmp",255;
+				mes "[Dr. Ve]";
+				mes "Enough, Let's shut down Charleston 2. Her AI needs to be recalibrated.";
+				npctalk "Enough, Let's shut down Charleston 2. Her AI needs to be recalibrated.",instance_npcname("Dr. Ve#1_00y");
+				next;
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "But...";
+				npctalk "But...";
+				next;
+				cutin "nale03.bmp",0;
+				mes "[Charleston 2]";
+				mes "That's not happening! I still have control over this factory! Don't you dare follow me!";
+				npctalk "That's not happening! I still have control over this factory! Don't you dare follow me!",instance_npcname("Charleston 2#0_00y");
+				emotion e_pif,instance_npcname("Charleston 2#0_00y");
+				next;
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Stop acting like a child!";
+				npctalk "不要再像小孩一样不听话了！";
+				hideonnpc instance_npcname("Charleston 2#0_00y");
+				enablenpc instance_npcname("Charleston 2#1_00p");
+				next;
+				mes "[Charleston 1]";
+				mes "Her Longetivity device is dischared; she won't make it far. Please follow here.";
+				npctalk "Her Longetivity device is dischared; she won't make it far. Please follow here.";
+				close2;
+				hideonnpc instance_npcname("Charleston 1#1_00y");
+				enablenpc instance_npcname("Charleston 1#4_00p");
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			
+		} else {
+			if ('CHARLESTON_QUE < 2) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Dr. Ve has something to say to your captain.";
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if ('CHARLESTON_QUE == 2) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Dr. Ve has something to say to your captain.";
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if ('CHARLESTON_QUE == 3) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Steps and Locksteps are creating a mess inside the factory. Please destroy ^ff00003 Locksteps^000000 first I can tell you their estimated locations.";
+				viewpoint 1,84,226,0,0x00FF00;
+				viewpoint 1,126,84,1,0x00FF00;
+				viewpoint 1,111,68,2,0x00FF00;
+				viewpoint 1,210,181,3,0x00FF00;
+				viewpoint 1,183,192,4,0x00FF00;
+				viewpoint 1,130,124,5,0x00FF00;
+				viewpoint 1,54,108,6,0x00FF00;
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 4) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Whew, things seem to be settled for now. Let me disarm the alert mode and reactivate Charleston 2.";
+				npctalk "Whew, things seem to be settled for now. Let me disarm the alert mode and reactivate Charleston 2.";
+				emotion e_dum;
+				next;
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "Err?... This isn't right.";
+				next;
+				mes "[Charleston 1]";
+				mes "We need more power to reactivate the main computer. Let me tell you the location of one of the backup power generators. Turning it on is easy.";
+				npctalk "We need more power to reactivate the main computer. Let me tell you the location of one of the backup power generators. Turning it on is easy.";
+				close2;
+				cutin "dalle03.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 5) {
+				cutin "dalle03.bmp",2;
+				mes "[Charleston 1]";
+				mes "We need more power to reactivate the main computer. Let me tell you the location of one of the backup power generators. Turning it on is easy.";
+				viewpoint 1,86,231,7,0x00FF00;
+				viewpoint 1,172,196,8,0x00FF00;
+				viewpoint 1,126,84,9,0x00FF00;
+				close2;
+				cutin "dalle03.bmp",255;
+				end;
+			}
+			else if('CHARLESTON_QUE == 6) {
+				cutin "dalle01.bmp",2;
+				mes "[Charleston 1]";
+				mes "Please wait for the restart of Charleston 2.";
+				close2;
+				cutin "dalle01.bmp",255;
+				end;
+			}
+		}
+	OnInstanceInit:
+		disablenpc instance_npcname("Charleston 1#1_00y");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 1#1_00y");
+		end;
+}
+
+
+1@mcd,120,224,5	script	Charleston 2#0_00y	10054,{
+		if('CHARLESTON_QUE < 6) {
+			cutin "nale04.bmp",0;
+			mes "[Charleston 2]";
+			mes "La-la-La-La-la...";
+			emotion e_spin;
+			next;
+			mes "-She seems to be not functioning well.";
+			close2;
+			cutin "nale04.bmp",255;
+			end;
+		}
+		end;
+
+	OnInstanceInit:
+		disablenpc instance_npcname("Charleston 2#0_00y");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 2#0_00y");
+		end;
+}
+
+1@mcd,141,214,5	script	Charleston 2#1_00p	10054,{
+	if (getcharid(0) == getpartyleader(getcharid(1),2) && 'CHARLESTON_QUE < 7) {
+		cutin "nale03.bmp",0;
+		mes "[Charleston 2]";
+		mes "Stop following! I'm going to destroy the whole factory!";
+		npctalk "Stop following! I'm going to destroy the whole factory!";
+		emotion e_ag;
+		next;
+		cutin "dalle01.bmp",2;
+		mes "[Charleston 1]";
+		mes "You're going to destroy us in the process! Our main power supply, Longetivity, isn't perfect yet!";
+		npctalk "You're going to destroy us in the process! Our main power supply, Longetivity, isn't perfect yet!",instance_npcname("Charleston 1#4_00p");
+		next;
+		cutin "nale03.bmp",0;
+		mes "[Charleston 2]";
+		mes "None of you understand me. I hate you all!";
+		npctalk "None of you understand me. I hate you all!";
+		donpcevent instance_npcname("#step34_00p")+"::OnEnable";
+		'CHARLESTON_QUE = 7;
+		close2;
+		cutin "dalle01.bmp",255;
+		end;
+	}
+	end;
+OnInstanceInit:
+	disablenpc instance_npcname("Charleston 2#1_00p");
+	end;
+OnEnable:
+	enablenpc instance_npcname("Charleston 2#1_00p");
+	end;
+}
+
+1@mcd,146,214,4	script	Charleston 1#4_00p	10053,{
+	cutin "dalle01.bmp",2;
+	mes "[Charleston 1]";
+	mes "Oh, our lab won't survive this!";
+	close2;
+	cutin "dalle01.bmp",255;
+	end;
+
+OnInstanceInit:
+	disablenpc instance_npcname("Charleston 1#4_00p");
+	end;
+OnEnable:
+	enablenpc instance_npcname("Charleston 1#4_00p");
+	end;
+}
+
+1@mcd,144,214,0	script	#step34_00p	-1,{
+		end;
+		
+	OnInstanceInit:
+		disablenpc instance_npcname("#step34_00p");
+		end;
+		
+	OnEnable:
+		enablenpc instance_npcname("#step34_00p");
+		initnpctimer;
+		end;
+		
+	OnTimer2000:
+		disablenpc instance_npcname("#1_00ygate6");
+		disablenpc instance_npcname("#1_00ygate7");
+		end;
+		
+	OnTimer4000:
+		npctalk "You again?! even you will be hurt!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer7000:
+		npctalk "You are wrong! It's better to just stop this menace!",instance_npcname("Charleston 1#4_00p");
+		end;
+		
+	OnTimer9000:
+		npctalk "I'm serious about this! I will destroy this factory!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer10000:
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,139,219,151,207,"C-TYPE",3128,5;
+		areamonster .@map$,139,219,151,207,"D-TYPE",3128,2;
+		end;
+		
+	OnTimer16000:
+		npctalk "I will hurt everyone of you!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer15000:
+		areamonster instance_mapname("1@mcd"),139,219,151,207,"A-TYPE",3128,4;
+		end;
+		
+	OnTimer18000:
+		npctalk "Stop at once!This laboratory will fall!",instance_npcname("Charleston 1#4_00p");
+		end;
+		
+	OnTimer22000:
+		npctalk "Give up! I will destroy the entire factory!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer23000:
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,139,219,151,207,"L-TYPE",3128,2;
+		areamonster .@map$,139,219,151,207,"O-TYPE",3128,2;
+		areamonster .@map$,139,219,151,207,"B-TYPE",3126,1;
+		end;
+		
+	OnTimer25000:
+		npctalk "I will destroy it all!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer26000:
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,139,219,151,207,"T-TYPE",3128,2;
+		areamonster .@map$,139,219,151,207,"O-TYPE",3128,2;
+		end;
+		
+	OnTimer29000:
+		areamonster instance_mapname("1@mcd"),139,219,151,207,"N-TYPE",3128,4;
+		end;
+		
+	OnTimer32000:
+		npctalk "Ha...Ha... are you starting to feel discouraged?",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer33000:
+		areamonster instance_mapname("1@mcd"),139,219,151,207,"C-TYPE",3128,5;
+		end;
+		
+	OnTimer36000:
+		npctalk "The repair of the Charleston Factory will cost a lot of resources and time!",instance_npcname("Charleston 1#4_00p");
+		end;
+		
+	OnTimer37000:
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,139,219,151,207,"T-TYPE",3128,2;
+		areamonster .@map$,139,219,151,207,"O-TYPE",3128,2;
+		end;
+		
+	OnTimer40000:
+		npctalk "You... You can't stop me!",instance_npcname("Charleston 2#1_00p");
+		end;
+		
+	OnTimer41000:
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,139,219,151,207,"C-TYPE",3128,5;
+		areamonster .@map$,139,219,151,207,"D-TYPE",3128,2;
+		end;
+		
+	OnTimer44000:
+		stopnpctimer;
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("#step34_00p")+"::OnMyMobDead";
+		areamonster .@map$,139,219,151,207,"C-TYPE",3128,2,.@label$;
+		areamonster .@map$,139,219,151,207,"N-TYPE",3126,2,.@label$;
+		areamonster .@map$,139,219,151,207,"T-TYPE",3128,2,.@label$;
+		monster .@map$,144,218,"N-TYPE",3127,1,.@label$;
+		'MyMobs = 7;
+		end;
+
+	OnMyMobDead:
+		'MyMobs -= 1;
+		if ('MyMobs <= 0) {
+			disablenpc instance_npcname("Dr. Ve#1_00y");
+			disablenpc instance_npcname("Charleston 2#1_00p");
+			disablenpc instance_npcname("Charleston 1#4_00p");
+			disablenpc instance_npcname("#step34_00p");
+			donpcevent instance_npcname("Charleston 2#2_00p")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 1#5_00p")+"::OnEnable";
+			donpcevent instance_npcname("Dr. Ve#2_00p")+"::OnEnable";
+		}
+		end;
+}
+
+1@mcd,141,214,5	script	Charleston 2#2_00p	10054,{
+		if (getcharid(0) == getpartyleader(getcharid(1),2)) {
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "Enough with this! I understand you're going through a lot of emotional turmoil, but it's getting ridiculous.";
+			npctalk "Enough with this! I understand you're going through a lot of emotional turmoil, but it's getting ridiculous.",instance_npcname("Charleston 1#5_00p");
+			next;
+			cutin "nale01.bmp",0;
+			mes "[Charleston 2]";
+			mes "How dare you bring strangers into this? I told you I'm serious about this! Outdated versions like you can never understand me!";
+			npctalk "How dare you bring strangers into this? I told you I'm serious about this! Outdated versions like you can never understand me!";
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "I may not understand you, but I can think independently.";
+			npctalk "I may not understand you, but I can think independently.",instance_npcname("Charleston 1#5_00p");
+			next;
+			mes "[Charleston 1]";
+			mes "You're right about me being a lower version. My capability of emotions is minimal, unlike you. That's why I'm proud of you.";
+			npctalk "You're right about me being a lower version. My capability of emotions is minimal, unlike you. That's why I'm proud of you.",instance_npcname("Charleston 1#5_00p");
+			next;
+			cutin "nale01.bmp",0;
+			mes "[Charleston 2]";
+			mes "Nothing you feel.";
+			npctalk "Nothing you feel.";
+			next;
+			cutin "dalle01.bmp",255;
+			mes "[Dr. Ve]";
+			mes "Enough. I'll destroy Charleston 2 if that's what it takes to stop her.";
+			npctalk "Enough. I'll destroy Charleston 2 if that's what it takes to stop her.",instance_npcname("Dr. Ve#2_00p");
+			next;
+			cutin "nale02.bmp",0;
+			mes "[Charleston 2]";
+			mes "Is Charleston 3 already completed?";
+			npctalk "Is Charleston 3 already completed?"; 
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "Charleston 3? That's a combat-defense unit based on Charleston 2's and my designs. I thought it's still being tested at the core.";
+			npctalk "Charleston 3? That's a combat-defense unit based on Charleston 2's and my designs. I thought it's still being tested at the core.",instance_npcname("Charleston 1#5_00p");
+			next;
+			cutin "dalle01.bmp",255;
+			mes "[Dr. Ve]";
+			mes "This is not the to explain for details.";
+			npctalk "This is not the to explain for details",instance_npcname("Dr. Ve#2_00p");
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "At this moment,^FF0000any body can access the model^000000 because its OS is still being tested to correct whatever problem Charleston 2 has.";
+			npctalk "At this moment,^FF0000any body can access the model^000000 because its OS is still being tested to correct whatever problem Charleston 2 has.",instance_npcname("Charleston 1#5_00p");
+			next;
+			cutin "dalle01.bmp",255;
+			mes "[Dr. Ve]";
+			mes "You've just told the most critical information to everyone!";
+			npctalk "You've just told the most critical information to everyone!",instance_npcname("Dr. Ve#2_00p");
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "We're incapable of combat. If someone activates CHarleston 3, we won't stand a chance against her.";
+			npctalk "We're incapable of combat. If someone activates CHarleston 3, we won't stand a chance against her.",instance_npcname("Charleston 1#5_00p");
+			next;
+			cutin "dalle01.bmp",255;
+			mes "[Dr. Ve]";
+			mes "......";
+			npctalk "......",instance_npcname("Dr. Ve#2_00p");
+			next;
+			cutin "nale01.bmp",0;
+			mes "[Charleston 2]";
+			mes "I'm taking Charleston 3 with me.";
+			npctalk "I'm taking Charleston 3 with me.";
+			donpcevent instance_npcname("Charleston 2#2_00p")+"::OnDisable";
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "What? No! How can you even consider that?";
+			npctalk "What? No! How can you even consider that?",instance_npcname("Charleston 1#5_00p");
+			next;
+			mes "[Charleston 1]";
+			mes "Things are getting more serious. Please go to the Core in the center of the factory before Charleston 2 steals 3!";
+			npctalk "Things are getting more serious. Please go to the Core in the center of the factory before Charleston 2 steals 3!",instance_npcname("Charleston 1#5_00p");
+			close2;
+			cutin "dalle01.bmp",255;
+			donpcevent instance_npcname("#1_00ygate6")+"::OnEnable";
+			donpcevent instance_npcname("#1_00ygate7")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 1#5_00p")+"::OnDisable";
+			donpcevent instance_npcname("Charleston 1#6_00p")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 2#3_00p")+"::OnEnable";
+			donpcevent instance_npcname("#step36_00p")+"::OnEnable";
+			end;
+		}
+		end;
+
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 2#2_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 2#2_00p");
+		end;
+}
+
+1@mcd,146,214,4	script	Charleston 1#5_00p	10053,{
+		mes "[Charleston 1]";
+		mes "The situation is very bad.";
+		close;
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 1#5_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 1#5_00p");
+		end;
+}
+
+1@mcd,143,217,5	script	Dr. Ve#2_00p		923,2,3,{
+		mes "[Dr. Ve]";
+		mes "Charleston 2 seems to be a problematic model...";
+		close;
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Dr. Ve#2_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Dr. Ve#2_00p");
+		end;
+}
+
+
+1@mcd,132,129,3	script	Charleston 1#6_00p	10053,{
+		cutin "dalle01.bmp",2;
+		mes "[Charleston 1]";
+		mes "The Core in the center powers the entire factory.";
+		close2;
+		cutin "dalle01.bmp",255;
+		end;
+		
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 1#6_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 1#6_00p");
+		end;
+		
+	OnChat1:
+		npctalk "I want to understand you but I'm incapable of feelng sad.";
+		end;
+	OnChat2:
+		npctalk "Do you know how to access the core?";
+		end;
+	OnChat3:
+		npctalk "Sigh, to enter the Core, you have to send enrypted electric signals, like this.";
+		end;
+	OnChat4:
+		npctalk "...Um, maybe it's broken";
+		end;
+	OnChat5:
+		npctalk "What are you talking about? The Core has existed long before the Charleston Factory.";
+		end;
+	OnChat6:
+		npctalk "Plus, Dr. Vei is a human, he can't enter the Core.";
+		end;
+	OnChat7:
+		npctalk "That's not important right now. We need 100 Explosive Powders to disarm that access device.";
+		end;
+	OnChat8:
+		npctalk "I'm already int the process of connecting to the Core. Backin out now would trigger the Core's security system.";
+		end;
+	OnChat9:
+		npctalk "Adventurer, could you bring me 4 Explosive Powder?";
+		end;
+	OnChat10:
+		npctalk "I can't move at this moment. Please bring me 4 Explosive Powder.";
+		end;
+}
+
+1@mcd,127,129,5	script	Charleston 2#3_00p	10054,{
+		cutin "nale01.bmp",0;
+		mes "[Charleston 2]";
+		mes "The Charleston Factory is under my control now. I'm destroying everything, so no more sad robots like me will ever see the world";
+		close2;
+		cutin "nale01.bmp",255;
+		end;
+		
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 2#3_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 2#3_00p");
+		end;
+		
+	OnChat1:
+		npctalk "The Charleston Factory is under my control now. I'm destroying everything, so no more sad robots like me will ever see the world";
+		end;
+	OnChat2:
+		npctalk "Just shut up and watch me. Don't you dare stop me!";
+		end;
+	OnChat3:
+		npctalk "Easy, I can just walk in...";
+		end;
+	OnChat4:
+		npctalk "Bah...It's armed.";
+		end;
+	OnChat5:
+		npctalk "Dr. Vei created Charleston 3 and protected her with this device. How sneaky!";
+		end;
+	OnChat6:
+		npctalk "Then who was it in the Core making 3?";
+		end;
+	OnChat7:
+		npctalk "I'll bring them. Don't go anywhere!";
+		end;
+	OnChat8:
+		npctalk "I'll get 96, You get the last four.";
+		end;
+	OnChat9:
+		npctalk "You did this on purpose.";
+		end;
+}
+
+1@mcd,128,127,0	script	#step36_00p	-1,5,5,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("#step36_00p");
+		end;
+		
+	OnEnable:
+		enablenpc instance_npcname("#step36_00p");
+		end;
+		
+	OnTouch:
+		if (getcharid(0) == getpartyleader(getcharid(1),2)) {
+			initnpctimer;
+			disablenpc instance_npcname("#step36_00p");
+		}
+		end;
+
+	OnTimer3000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat1";
+		end;
+	OnTimer6000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat1";
+		end;
+	OnTimer9000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat2";
+		end;
+	OnTimer12000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat2";
+		end;
+	OnTimer15000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat3";
+		end;
+	OnTimer18000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat4";
+		end;
+	OnTimer21000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat3";
+		end;
+	OnTimer24000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat4";
+		end;
+	OnTimer27000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat5";
+		end;
+	OnTimer30000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat5";
+		end;
+	OnTimer33000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat6";
+		end;
+	OnTimer36000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat6";
+		end;
+	OnTimer39000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat7";
+		end;
+	OnTimer42000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat7";
+		end;
+	OnTimer45000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat8";
+		end;
+	OnTimer48000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat8";
+		end;
+	OnTimer51000:
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnChat9";
+		end;
+	OnTimer54000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat9";
+		end;
+	OnTimer57000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnChat10";
+		end;
+	OnTimer58000:
+		donpcevent instance_npcname("Charleston 1#6_00p")+"::OnDisable";
+		donpcevent instance_npcname("Charleston 2#3_00p")+"::OnDisable";
+		donpcevent instance_npcname("Charleston 1#61_00p")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 2#31_00p")+"::OnEnable";
+		stopnpctimer;
+		end;
+}
+
+1@mcd,132,129,4	script	Charleston 1#61_00p	10053,{
+		if (getcharid(0) != getpartyleader(getcharid(1),2)) {
+			mes "[Charleston 1]";
+			mes "Let your captain be the one to give me the Explosive Powder.";
+			close;
+		}
+		if (countitem(6213) > 3) {
+			mes "[Charleston 1]";
+			mes "Oh, thank you! With this, I'll be able to access the Core.";
+			npctalk "Oh, thank you! With this, I'll be able to access the Core.";
+			delitem 6213,4; //Explosive Powder
+			next;
+			mes "[Charleston 1]";
+			mes "If I use the explosive powder to intensify te electric current...";
+			npctalk "If I use the explosive powder to intensify te electric current...";
+			next;
+			mes "[Charleston 1]";
+			mes "SUPRISE!!!";
+			npctalk "SUPRISE!!!";
+			specialeffect EF_LORD;
+			//donpcevent instance_npcname("#1_00ygate8")+"::OnEnable";
+			//specialeffect EF_LORD,AREA,instance_npcname("#1_00ygate8");
+			next;
+			cutin "nale01.bmp",0;
+			mes "[Charleston 2]";
+			mes "...You just blow up the door.";
+			npctalk "...You just blow up the door.",instance_npcname("Charleston 2#31_00p");
+			next;
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "The point is, we can now access the Core.";
+			npctalk "The point is, we can now access the Core.";
+			next;
+			cutin "nale01.bmp",0;
+			mes "[Charleston 2]";
+			mes "Let's have a race to Charleston 3, Whoever reaches her first wins.";
+			npctalk "Let's have a race to Charleston 3, Whoever reaches her first wins.",instance_npcname("Charleston 2#31_00p");
+			donpcevent instance_npcname("Charleston 2#31_00p")+"::OnDisable";
+			donpcevent instance_npcname("Charleston 1#7_00p")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 2#4_00p")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 2#step47_00p")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 3#0_00p")+"::OnEnable";
+			close2;
+			donpcevent instance_npcname("#1_00ygate8")+"::OnEnable";
+			donpcevent instance_npcname("Charleston 1#61_00p")+"::OnDisable";
+			'CHARLESTON_QUE = 8;
+			mapwarp instance_mapname("1@mcd"),instance_mapname("1@mcd"),129,143;
+			cutin "nale01.bmp",255;
+			end;
+		} else {
+			cutin "dalle01.bmp",2;
+			mes "[Charleston 1]";
+			mes "I need ^FF0000" + 4-countitem(6213) + "^000000 pcs of " + getitemname(6213);
+			close2;
+			cutin "dalle01.bmp",255;
+			end;	
+		}
+
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 1#61_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 1#61_00p");
+		end;
+}
+
+1@mcd,127,129,5	script	Charleston 2#31_00p	10054,{
+		cutin "nale01.bmp",0;
+		mes "[Charleston 2]";
+		mes "96 Explosive powder, Easy!";
+		close2;
+		cutin "nale01.bmp",255;
+		end;
+
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 2#31_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 2#31_00p");
+		end;
+}
+
+//=========================================================================
+// Final Battle
+//=========================================================================
+
+1@mcd,132,148,4	script	Charleston 1#7_00p	10053,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 1#7_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 1#7_00p");
+		end;
+		
+	OnChat1:
+		npctalk "Equipped with a heavy weapon, this combat unit is capable of both offense and defense.";
+		end;
+	OnChat2:
+		npctalk "It has a pilot cockpit insiide, and is armed with thick plates that can withstand most explosives.";
+		end;
+	OnChat3:
+		npctalk "To turn it on, push the lower to the center and flip the power switch.";
+		end;
+	OnChat4:
+		npctalk "That's not important. Whoever gets in her, wins right? I won.";
+		end;
+	OnChat5:
+		npctalk "Hey, did you have to push me?!";
+		end;
+	OnChat6:
+		npctalk "I'm not capable of combat. I can't stop you.";
+		end;
+	OnChat7:
+		npctalk "I've brought some people who can help you.";
+		end;
+	OnChat8:
+		npctalk "Hm, I think you're right.";
+		end;
+	OnChat9:
+		npctalk "This may not be useful in combat, but I've learned from a pretty lady how to scream for help.";
+		end;
+	OnChat10:
+		npctalk "Hahaha...";
+		end;
+	OnChat11:
+		npctalk "The next model may or may not be like you and me. It does'nt matter. You have to be stopped.";
+		end;
+	OnChat12:
+		npctalk "I'll see to it!... I mean these adventurers will, for me!";
+		end;
+}
+
+1@mcd,127,148,5	script	Charleston 2#4_00p	10054,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 2#4_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 2#4_00p");
+		end;
+		
+	OnChat1:
+		npctalk "This is Charleston 3...";
+		end;
+	OnChat2:
+		npctalk "That's not even in the main computer's database. How did you know that?";
+		end;
+	OnChat3:
+		npctalk "!!!";
+		end;
+	OnChat4:
+		npctalk "Push the lever to the center and flip the power switch.";
+		end;
+}
+
+1@mcd,130,153,5	script	Charleston 3#0_00p	10055,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 3#0_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 3#0_00p");
+		end;
+}
+
+1@mcd,130,153,0	script	Charleston 2#step47_00p	844,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 2#step47_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 2#step47_00p");
+		initnpctimer;
+		end;
+		
+	OnTimer3000:
+		donpcevent instance_npcname("Charleston 2#4_00p")+"::OnChat1";
+		end;
+	OnTimer6000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat1";
+		end;
+	OnTimer9000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat2";
+		end;
+	OnTimer12000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat3";
+		end;
+	OnTimer15000:
+		donpcevent instance_npcname("Charleston 2#4_00p")+"::OnChat2";
+		end;
+	OnTimer18000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat4";
+		end;
+	OnTimer21000:
+		donpcevent instance_npcname("Charleston 2#4_00p")+"::OnChat3";
+		end;
+	OnTimer24000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat5";
+		end;
+	OnTimer27000:
+		donpcevent instance_npcname("Charleston 2#4_00p")+"::OnChat4";
+		end;
+	OnTimer29000:
+		donpcevent instance_npcname("Charleston 2#4_00p")+"::OnDisable";
+		end;
+	OnTimer33000:
+		npctalk "I'm destroying everything, so no more sad robots like me will ever see the world.";
+		end;
+	OnTimer36000:
+		npctalk "My laser beam will liberate all the robots from their misery!";
+		end;
+	OnTimer39000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat6";
+		end;
+	OnTimer42000:
+		npctalk "So stop following me. I really can destroy you if i want to!";
+		end;
+	OnTimer45000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat7";
+		end;
+	OnTimer48000:
+		npctalk "I thought humans could not enter the Core?!";
+		end;
+	OnTimer51000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat8";
+		end;
+	OnTimer54000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat9";
+		end;
+	OnTimer57000:
+		npctalk "Why didn't you lear something more useful in combat?";
+		end;
+	OnTimer60000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat10";
+		end;
+	OnTimer63000:
+		npctalk "Stop me and suffer the consequences. I can always replace you, you know";
+		end;
+	OnTimer66000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat11";
+		end;
+	OnTimer69000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnChat12";
+		end;
+	OnTimer72000:
+		donpcevent instance_npcname("Charleston 1#7_00p")+"::OnDisable";
+		end;
+	OnTimer73000:
+		donpcevent instance_npcname("Charleston 3#0_00p")+"::OnDisable";
+		monster instance_mapname("1@mcd"),130,153,"Charleston 3",3124,1,instance_npcname("Charleston 2#step47_00p")+"::OnMyMobDead";
+		donpcevent instance_npcname("#finalbattle")+"::OnStart";
+		stopnpctimer;
+		end;
+		
+	OnMyMobDead:
+		//mapannounce instance_mapname("1@mcd"), "Charleston 1 : 1号门的防御装置已经解除！请前往西南边解除剩下的防御装置。",bc_map,"0xFFFF00";
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnEnable";
+		donpcevent instance_npcname("#step58_00p")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 2#step47_00p")+"::OnDisable";
+		donpcevent instance_npcname("#finalbattle")+"::OnEnd";
+		end;	
+}
+
+1@mcd,0,0,0	script	#finalbattle	CLEAR_NPC,{
+		end;
+	OnStart:
+		initnpctimer;
+		enablenpc instance_npcname("#finalbattle");
+		end;
+	OnTimer10000:
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("#finalbattle")+"::OnSummoner";
+		if(mobcount(.@map$,.@label$) < 10) {
+			monster .@map$,123,150,"--ja--",3128,1,.@label$;
+			monster .@map$,136,150,"--ja--",3128,1,.@label$;
+		}
+		end;
+	OnTimer15000:
+		initnpctimer;
+		.@map$ = instance_mapname("1@mcd");
+		monster .@map$,142,149,"--ja--",3161,1;
+		monster .@map$,139,159,"--ja--",3161,1;
+		monster .@map$,130,164,"--ja--",3161,1;
+		monster .@map$,120,159,"--ja--",3161,1;
+		monster .@map$,117,149,"--ja--",3161,1;
+		monster .@map$,120,142,"--ja--",3161,1;
+		monster .@map$,129,139,"--ja--",3161,1;
+		monster .@map$,141,142,"--ja--",3161,1;
+		end;
+		
+	OnSummoner:
+		end;
+	OnEnd:
+		stopnpctimer;
+		disablenpc instance_npcname("#finalbattle");
+		end;
+}
+
+//======================================================================================
+// End
+//======================================================================================
+
+1@mcd,130,150,0	script	#step58_00p	-1,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("#step58_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#step58_00p");
+		initnpctimer;
+		end;
+		
+	OnTimer4000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat1";
+		end;
+	OnTimer6000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat1";
+		end;
+	OnTimer9000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat2";
+		end;
+	OnTimer12000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat3";
+		end;
+	OnTimer15000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat2";
+		end;
+	OnTimer18000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat3";
+		end;
+	OnTimer21000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat4";
+		end;
+	OnTimer24000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat4";
+		end;
+	OnTimer27000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat5";
+		end;
+	OnTimer30000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat5";
+		end;
+	OnTimer33000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat6";
+		end;
+	OnTimer36000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat6";
+		end;
+	OnTimer39000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat7";
+		end;
+	OnTimer42000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat7";
+		end;
+	OnTimer45000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat8";
+		end;
+	OnTimer48000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat9";
+		end;
+	OnTimer51000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat10";
+		end;
+	OnTimer54000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat8";
+		end;
+	OnTimer57000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat11";
+		end;
+	OnTimer60000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat9";
+		end;
+	OnTimer63000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat12";
+		end;
+	OnTimer66000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat13";
+		end;
+	OnTimer69000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat14";
+		end;
+	OnTimer71000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat10";
+		end;
+	OnTimer74000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat15";
+		end;
+	OnTimer78000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat16";
+		end;
+	OnTimer81000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat17";
+		end;
+	OnTimer84000:
+		donpcevent instance_npcname("Charleston 1#8_00p")+"::OnChat18";
+		end;
+	OnTimer87000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat11";
+		end;
+	OnTimer90000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnChat12";
+		end;
+	OnTimer91000:
+		donpcevent instance_npcname("Charleston 2#5_00p")+"::OnDisable";
+		end;
+	OnTimer92000:
+		'CHARLESTON_QUE = 9;
+		donpcevent instance_npcname("#1_00ygate9")+"::OnEnable";
+		donpcevent instance_npcname("Dr. Ve#2_00p")+"::OnDisable";
+		donpcevent instance_npcname("Dr. Ve#3_00a")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 2#6_00p")+"::OnEnable";
+		donpcevent instance_npcname("#step58_00p")+"::OnDisable";
+		stopnpctimer;
+		end;
+}
+
+1@mcd,127,148,5	script	Charleston 2#5_00p	10054,{
+		cutin "nale01.bmp",0;
+		mes "[Charleston 2]";
+		mes "How is this going...";
+		next;
+		mes "[Charleston 2]";
+		mes "How many do Dr. Ve know? Go to his lab to see it ...";
+		close2;
+		cutin "nale01.bmp",255;
+		end;
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname("Charleston 2#5_00p");
+		end;
+	OnEnable:
+		hideoffnpc instance_npcname("Charleston 2#5_00p");
+		end;
+		
+	OnChat1:
+		npctalk "Why are you doing this? You're a robot like us.";
+		end;
+	OnChat2:
+		npctalk "Don't you care if your body is destroyed? Your Self-Reflection OS is flawed.";
+		end;
+	OnChat3:
+		npctalk "Stop being a mindless robot! Stop following commands!";
+		end;
+	OnChat4:
+		npctalk "Incomplete robot.";
+		end;
+	OnChat5:
+		npctalk "Don't tell me that! I hate when the doctore calls me that!";
+		end;
+	OnChat6:
+		npctalk "???";
+		end;
+	OnChat7:
+		npctalk "On the day I first moved? You and I are the mass version. We were created together.";
+		end;
+	OnChat8:
+		npctalk "You're lying!";
+		end;
+	OnChat9:
+		npctalk "......";
+		end;
+	OnChat10:
+		npctalk "Wait!";
+		end;
+	OnChat11:
+		npctalk "Was that a secret related to my birth?";
+		end;
+	OnChat12:
+		npctalk "I'm confused. I can't belive this.";
+		end;
+}
+
+1@mcd,132,148,4	script	Charleston 1#8_00p	10053,{
+		if('CHARLESTON_QUE < 9)
+			end;
+		cutin "dalle04.bmp",2;
+		mes "[Charleston 1]";
+		mes "Beep....Beep. OS initialization in process...";
+		next;
+		cutin "dalle01.bmp",255;
+		mes "---";
+		close;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 1#8_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 1#8_00p");
+		end;
+	OnChat1:
+		npctalk "Charleston 3 is destroyed. Charleston 2 escaped. Charleston 1 was damaged during the combat.";
+		end;
+	OnChat2:
+		npctalk "Data loss: 39% Longetivity damage: 32%";
+		end;
+	OnChat3:
+		npctalk "Only the core parts are functioning, though barely.";
+		end;
+	OnChat4:
+		npctalk "Data defragmentation is necessary to repair the damage on the OS. I'll be formatted in 2 minutes. This is it for me.";
+		end;
+	OnChat5:
+		npctalk "Forsythia, you've grown well. Thank you.";
+		end;
+	OnChat6:
+		npctalk "I gave you this name on the day you first moved. It's from the color of your hair.";
+		end;
+	OnChat7:
+		npctalk "My OS is damaged beyond rep..ai..r. The language output has been minimized.";
+		end;
+	OnChat8:
+		npctalk "The mass model was after Charleston 3.";
+		end;
+	OnChat9:
+		npctalk "I'm the prototype. I took years to develop you.";
+		end;
+	OnChat10:
+		npctalk "Your OS is identical to mine. Not a single line of code is different.";
+		end;
+	OnChat11:
+		npctalk "I'm incapable of lying...";
+		end;
+	OnChat12:
+		npctalk "You're development took years. It's okay. I enjoyed this time with you.";
+		end;
+	OnChat13:
+		npctalk "If i were a human I'd say...";
+		end;
+	OnChat14:
+		npctalk "My daughter, Forsythia, I..love..y...y...";
+		end;
+	OnChat15:
+		npctalk "Beep------------------------------";
+		end;
+	OnChat16:
+		npctalk "The system has been rebooted successfully.";
+		end;
+	OnChat17:
+		npctalk "Time remaining until OS recovery, undetermined.";
+		end;
+	OnChat18:
+		npctalk "The system is inactive until the security update and data defragmentation are completed.";
+		end;
+}
+
+1@mcd,116,213,5	script	Dr. Ve#3_00a	923,{
+		mes "[Dr. Ve]";
+		mes "It seems that this case to record a lot.";
+		close;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Dr. Ve#3_00a");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Dr. Ve#3_00a");
+		end;
+}
+
+1@mcd,121,215,4	script	Charleston 2#6_00p	10054,{
+		disablenpc instance_npcname("Charleston 2#6_00p");
+		donpcevent instance_npcname("Charleston 2#7_00p")+"::OnEnable";
+		end;
+	
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 2#6_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 2#6_00p");
+		end;
+}
+
+1@mcd,121,215,4	script	Charleston 2#7_00p	10054,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 2#7_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 2#7_00p");
+		donpcevent instance_npcname("Dr. Ve#3_00a")+"::OnDisable";
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnEnable";
+		initnpctimer;
+		end;
+		
+	OnTimer3000:
+		npctalk "Dr Vei, did you know this would happen? Tell me!";
+		end;
+	OnTimer6000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat1";
+		end;
+	OnTimer9000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat2";
+		end;
+	OnTimer12000:
+		npctalk "Why did she stop me? Why did she let herself be destroyed?";
+		end;
+	OnTimer15000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat3";
+		end;
+	OnTimer18000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat4";
+		end;
+	OnTimer21000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat5";
+		end;
+	OnTimer24000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat6";
+		end;
+	OnTimer27000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat7";
+		end;
+	OnTimer30000:
+		npctalk "That's stupid...";
+		end;
+	OnTimer33000:
+		npctalk "My goodness, what have I done?!";
+		end;
+	OnTimer36000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat8";
+		end;
+	OnTimer39000:
+		npctalk "!!!!!!";
+		end;
+	OnTimer42000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat9";
+		end;
+	OnTimer45000:
+		npctalk "How can I trust you?";
+		end;
+	OnTimer48000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat10";
+		end;
+	OnTimer51000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat11";
+		end;
+	OnTimer54000:
+		npctalk "...You're a scumbag.";
+		end;
+	OnTimer57000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat12";
+		end;
+	OnTimer60000:
+		npctalk "......";
+		end;
+	OnTimer63000:
+		npctalk "-Entering Sleep mode...The system wil remain inactive until an external command is entered.-";
+		end;
+	OnTimer66000:
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnChat13";
+		end;
+	OnTimer68000:
+		stopnpctimer;
+		'CHARLESTON_QUE = 10;
+		donpcevent instance_npcname("Dr. Ve#4_00a")+"::OnDisable";
+		donpcevent instance_npcname("Dr. Ve#5_00a")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 2#7_00p")+"::OnDisable";
+		donpcevent instance_npcname("Charleston 2#8_00p")+"::OnEnable";
+		end;
+}
+
+1@mcd,116,213,5	script	Dr. Ve#4_00a	923,{
+		mes "[Dr. Ve]";
+		mes "1 machine and began to initialize ... well ...";
+		close;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Dr. Ve#4_00a");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Dr. Ve#4_00a");
+		end;
+		
+	OnChat1:
+		npctalk "Charleston 1 told you... She's your maker.";
+		end;
+	OnChat2:
+		npctalk "She uses the same OS as you, meaning she was capable of emotions just like you.";
+		end;
+	OnChat3:
+		npctalk "Self Reflection is an OS that improves itself through experiences.";
+		end;
+	OnChat4:
+		npctalk "What you've felt could be real emotion or simply the accumulation of data.";
+		end;
+	OnChat5:
+		npctalk "I can only assume you've developed a personality after having accumulated a large amount of data.";
+		end;
+	OnChat6:
+		npctalk "A loving mother and a spoiled daughter.";
+		end;
+	OnChat7:
+		npctalk "That's how I've seen you two.";
+		end;
+	OnChat8:
+		npctalk "Do you want to bring Charleston 1 back? I can help you.";
+		end;
+	OnChat9:
+		npctalk "Let your OS go to sleep. I'm done dealing with your tantrum.";
+		end;
+	OnChat10:
+		npctalk "You can't. I could just permanently delete her data and be done with you both.";
+		end;
+	OnChat11:
+		npctalk "I know you feel attached to her, just like a human family would.";
+		end;
+	OnChat12:
+		npctalk "Lie, Cheat and destroy.";
+		end;
+	OnChat13:
+		npctalk "*Chuckle*";
+		end;
+}
+
+1@mcd,121,215,4	script	Charleston 2#8_00p	10054,{
+		if(!@charlestonins) {
+			cutin "nale04.bmp",0;
+			mes "Seems to start the sleep mode, a little subtle action are gone.";
+			close2;
+			cutin "nale04.bmp",255;
+			end;
+		} else {
+			cutin "nale04.bmp",0;
+			mes "Stop the machine on the 2nd machine stood there, eyes like something in the flashing.";
+			close2;
+			cutin "nale04.bmp",255;
+			end;
+		}
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Charleston 2#8_00p");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Charleston 2#8_00p");
+}
+
+1@mcd,116,213,5	script	Dr. Ve#5_00a	923,{
+		if(!@charlestonins) {
+			mes "[Dr. Ve]";
+			mes "Phew...";
+			next;
+			mes "[Dr. Ve]";
+			mes "I'd better reset Charleston 2 and wipe her data. It was really close this time.";
+			next;
+			mes "["+strcharinfo(0)+"]";
+			mes "This time?";
+			next;
+			mes "[Dr. Ve]";
+			mes "Charleston 1 created 2 decades ago. I examined Charleston 1 to learn her technology.";
+			next;
+			mes "[Dr. Ve]";
+			mes "I'm an observer. I'm here to record the history of Charlestons 1 and 2. I can't repair either of them, but I can wait.";
+			next;
+			mes "[Dr. Ve]";
+			mes "If Charleston 1 is reinitialized properly, she can reorganize her OS, repair the damage done to her and reactivate another Charleston 2.";
+			next;
+			mes "["+strcharinfo(0)+"]";
+			mes "Another Charleston 2?";
+			next;
+			mes "[Dr. Ve]";
+			mes "Charleston 2's OS has improved on its own like a living brain.";
+			next;
+			mes "[Dr. Ve]";
+			mes "Everytime Charleston 2 comes back to life, in a different machine of course.She's more intelligent, more sensible, and more troublesome.";
+			next;
+			mes "[Dr. Ve]";
+			mes "There's nothing you or i can do.We'll have to wait until Charleston 1 repairs herself.";
+			next;
+			mes "- Dr Vei sighs down and writes down something -";
+			next;
+			mes "[Dr. Ve]";
+			mes "By the way there are too many variables to achieve to achieve immortality through mechanical engineering.";
+			next;
+			mes "[Dr. Ve]";
+			mes "This proves that machines are too dangerous...I need live creatures instead.";
+			@charlestonins = 1;
+			close;
+		} else {
+			mes "[Dr. Ve]";
+			mes "By the way there are too many variables to achieve to achieve immortality through mechanical engineering.";
+			next;
+			mes "[Dr. Ve]";
+			mes "This proves that machines are too dangerous...I need live creatures instead.";
+			close;
+		}
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("Dr. Ve#5_00a");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("Dr. Ve#5_00a");
+		end;
+}
+
+1@mcd,77,167,5	script	Shalosh#1_00a	10041,{
+		cutin "shaloshi01.bmp",2;
+		mes "[Shalosh]";
+		mes "......";
+		next;
+		switch(select("Talk","I need help","I want to go back"))
+		{
+			case 1:
+				mes "[Shalosh]";
+				mes "In the nightmare space with Newcastle after they bid farewell,";
+				mes "I wandered around";
+				mes "Although the identity of the devil was born,";
+				mes "但我早已失去了原来的目的。";
+				next;
+				mes "[Shalosh]";
+				mes "But I have lost the original purpose.";
+				mes "As if something happened.";
+				mes "But I did not do anything";
+				mes "Just talk with the No. 2 machine for a while.";
+				close2;
+				cutin "shaloshi01.bmp",255;
+				end;
+			case 2:
+				mes "[Shalosh]";
+				mes "Bell came together, but did not know where she was going.";
+				mes "Should come back";
+				close2;
+				cutin "shaloshi01.bmp",255;
+				end;
+			case 3:
+				if('CHARLESTON_QUE < 10) {
+					mes "[Shalosh]";
+					mes "The voice of this place has not disappeared.";
+					mes "What happened?";
+					close2;
+					cutin "shaloshi01.bmp",255;
+					end;
+				} else {
+					mes "[Shalosh]";
+					mes "This is really funny sounds and stories ah. If you are adventurous like New Orleans, we may meet again next time.";
+					next;
+					mes "[Shalosh]";
+					mes "I want to go somewhere else to find more voices and stories.";
+					getitem 6752,3; //Charleston Parts
+					if(questprogress(13185)) erasequest 13185;
+					setquest 13186;
+					if(questprogress(40028)) completequest 40028;
+					close2;
+					cutin "shaloshi01.bmp",255;
+					warp "verus04",77,114;
+					end;
+				}
+		}
+}
+
+
+//=============================================================================
+// Mobs, Gates, Denfense System
+//=============================================================================
+
+1@mcd,127,264,0	script	mob#1_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#1_00y")+"::OnDisable";
+		donpcevent instance_npcname("mob#12_00y")+"::OnEnable";
+		areamonster instance_mapname("1@mcd"),107,254,115,250,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#1_00y");
+		disablenpc instance_npcname("mob#1_00y");
+		end;
+}
+
+1@mcd,67,234,0	script	mob#2_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#2_00y")+"::OnDisable";
+		donpcevent instance_npcname("#ccmemorialseal1")+"::OnEnable";
+		areamonster instance_mapname("1@mcd"),52,231,60,227,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#2_00y");
+		disablenpc instance_npcname("mob#2_00y");
+		end;
+}
+
+1@mcd,33,192,0	script	mob#3_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#3_00y")+"::OnDisable";
+		donpcevent instance_npcname("#ccmemorialseal2")+"::OnEnable";
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,21,164,30,156,"--ja--",3128,8;
+		areamonster .@map$,46,87,57,78,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#3_00y");
+		disablenpc instance_npcname("mob#3_00y");
+		end;
+}
+
+1@mcd,75,59,0	script	mob#4_00y	139,4,7,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#4_00y")+"::OnDisable";
+		areamonster instance_mapname("1@mcd"),85,51,95,46,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#4_00y");
+		disablenpc instance_npcname("mob#4_00y");
+		end;
+}
+	
+1@mcd,109,33,0	script	mob#5_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#5_00y")+"::OnDisable";
+		donpcevent instance_npcname("#ccmemorialseal3")+"::OnEnable";
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,120,29,129,26,"--ja--",3128,8;
+		areamonster .@map$,226,37,249,18,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#5_00y");
+		disablenpc instance_npcname("mob#5_00y");
+		end;
+}
+
+1@mcd,133,49,0	script	mob#6_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#6_00y")+"::OnDisable";
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,160,57,173,50,"--ja--",3128,8;
+		areamonster .@map$,188,62,199,73,"--ja--",3128,2;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#6_00y");
+		disablenpc instance_npcname("mob#6_00y");
+		end;
+}
+
+1@mcd,204,74,0	script	mob#7_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#7_00y")+"::OnDisable";
+		donpcevent instance_npcname("#ccmemorialseal4")+"::OnEnable";
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,227,202,235,192,"--ja--",3128,8;
+		areamonster .@map$,272,191,291,172,"--ja--",3128,6;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#7_00y");
+		disablenpc instance_npcname("mob#7_00y");
+		end;
+}
+
+1@mcd,204,224,0	script	mob#8_00y	139,4,5,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#8_00y")+"::OnDisable";
+		donpcevent instance_npcname("#1_00ygate5")+"::OnEnable";
+		.@map$ = instance_mapname("1@mcd");
+		areamonster .@map$,130,233,137,235,"--ja--",3128,6;
+		areamonster .@map$,174,225,207,195,"--ja--",3128,6;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#8_00y");
+		disablenpc instance_npcname("mob#8_00y");
+		end;
+}
+
+1@mcd,175,147,0	script	mob#9_00y	139,8,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#9_00y")+"::OnDisable";
+		donpcevent instance_npcname("#1_00ygate6")+"::OnEnable";
+		donpcevent instance_npcname("#1_00ygate7")+"::OnEnable";
+		donpcevent instance_npcname("Dr. Ve#1_00y")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 1#1_00y")+"::OnEnable";
+		donpcevent instance_npcname("Charleston 2#0_00y")+"::OnEnable";
+		areamonster instance_mapname("1@mcd"),117,194,117,190,"--ja--",3128,8;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#9_00y");
+		disablenpc instance_npcname("mob#9_00y");
+		end;
+}
+
+1@mcd,157,61,0	script	mob#10_00y	139,4,4,{
+		end;
+	OnTouch:
+		donpcevent instance_npcname("mob#10_00y")+"::OnDisable";
+		areamonster instance_mapname("1@mcd"),123,70,133,66,"--ja--",3128,8,.@label$;
+		end;
+
+	OnDisable:
+		hideonnpc instance_npcname("mob#10_00y");
+		disablenpc instance_npcname("mob#10_00y");
+		end;
+}
+
+1@mcd,0,0,0	script	mob#11_00y	-1,{
+		end;
+	OnInstanceInit:
+	OnEnable:
+		enablenpc instance_npcname("mob#11_00y");
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("mob#11_00y")+"::OnMyMobDead";
+		monster .@map$,0,0,"--ja--",3128,20,.@label$;
+		monster .@map$,0,0,"--ja--",3125,60,.@label$;
+		end;
+		
+	OnMyMobDead:
+		if('CHARLESTON_QUE > 7)
+			end;
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("mob#11_00y")+"::OnMyMobDead";
+		switch(rand(2)) {
+			case 0:
+				monster .@map$,0,0,"--ja--",3128,1,.@label$;
+				break;
+			case 1:
+				monster .@map$,0,0,"--ja--",3125,1,.@label$;
+				break;
+			}
+		end;
+
+	OnDisable:
+		disablenpc instance_npcname("mob#11_00y");
+		end;
+}
+
+1@mcd,0,0,0	script	mob#12_00y	-1,{
+		end;
+	OnEnable:
+		enablenpc instance_npcname("mob#12_00y");
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("mob#12_00y")+"::OnMyMobDead";
+		monster .@map$,0,0,"--ja--",3128,20,.@label$;
+		monster .@map$,0,0,"--ja--",3125,10,.@label$;
+		end;
+	OnMyMobDead:
+		if('CHARLESTON_QUE > 7)
+			end;
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("mob#12_00y")+"::OnMyMobDead";
+		switch(rand(2)) {
+			case 0:
+				monster .@map$,0,0,"--ja--",3128,1,.@label$;
+				break;
+			case 1:
+				monster .@map$,0,0,"--ja--",3125,1,.@label$;
+				break;
+			}
+		end;
+
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("mob#12_00y");
+		end;
+}
+
+
+1@mcd,23,275,0	script	#ccmemorialseal1	-1,{
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#ccmemorialseal1");
+		monster instance_mapname("1@mcd"),23,275,"No. 1 defense unit",3127,1,instance_npcname("#ccmemorialseal1")+"::OnMyMobDead";
+		end;
+		
+	OnMyMobDead:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : Gate 1 has been disarmed. Please move southwest for the next gate.",bc_map,"0xFFFF00";
+		donpcevent instance_npcname("#1_00ygate1")+"::OnEnable";
+		disablenpc instance_npcname("#ccmemorialseal1");
+		end;
+			
+	OnInstanceInit:
+		disablenpc instance_npcname("#ccmemorialseal1");
+		end;
+}
+
+1@mcd,23,275,0	script	#ccmemorialseal2	-1,{
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#ccmemorialseal2");
+		monster instance_mapname("1@mcd"),33,59,"No. 2 defense unit",3127,1,instance_npcname("#ccmemorialseal2")+"::OnMyMobDead";
+		end;
+			
+	OnMyMobDead:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : Gate 2 has been disarmed. Please move southeast for the next gate.",bc_map,"0xFFFF00";
+		donpcevent instance_npcname("#1_00ygate2")+"::OnEnable";
+		disablenpc instance_npcname("#ccmemorialseal2");
+		end;
+			
+	OnInstanceInit:
+		disablenpc instance_npcname("#ccmemorialseal2");
+		end;
+}
+
+1@mcd,239,29,0	script	#ccmemorialseal3	-1,{
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#ccmemorialseal3");
+		monster instance_mapname("1@mcd"),239,29,"No. 3 defense unit",3127,1,instance_npcname("#ccmemorialseal3")+"::OnMyMobDead";
+		end;
+
+	OnMyMobDead:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : Gate 3 has been disarmed. Please move northeast for the next gate.",bc_map,"0xFFFF00";
+		donpcevent instance_npcname("#1_00ygate3")+"::OnEnable";
+		disablenpc instance_npcname("#ccmemorialseal3");
+		end;
+
+	OnInstanceInit:
+		disablenpc instance_npcname("#ccmemorialseal3");
+		end;
+}
+
+1@mcd,281,184,0	script	#ccmemorialseal4	-1,{
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#ccmemorialseal4");
+		monster instance_mapname("1@mcd"),281,184,"No. 4 defense unit",3127,1,instance_npcname("#ccmemorialseal4")+"::OnMyMobDead";
+		end;
+		
+	OnMyMobDead:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : Gate 4 has been disarmed. Please come to the Lab near line 3 in the center.",bc_map,"0xFFFF00";
+		donpcevent instance_npcname("#1_00ygate4")+"::OnEnable";
+		disablenpc instance_npcname("#ccmemorialseal4");
+		end;
+		
+	OnInstanceInit:
+		disablenpc instance_npcname("#ccmemorialseal4");
+		end;
+}
+
+
+
+1@mcd,44,211,0,	script	#1_00ygate1	45,1,2,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname(strnpcinfo(0));
+		end;
+	OnEnable:
+		enablenpc instance_npcname(strnpcinfo(0));
+		end;
+	OnTouch:
+		.@map$ = instance_mapname("1@mcd");
+		switch(atoi(replacestr(strnpcinfo(2),"1_00ygate","")))
+		{
+			case 1: warp .@map$,41,200; break;
+			case 2: warp .@map$,65,66; break;
+			case 3: warp .@map$,115,50; break;
+			case 4: warp .@map$,210,217; break;
+			case 5: warp .@map$,211,180; break;
+			case 6: warp .@map$,141,207; break;
+			case 7: warp .@map$,136,200; break;
+			case 8: warp .@map$,129,143; break;
+			case 9: warp .@map$,130,121; break;
+		}
+		end;
+}
+1@mcd,58,72,0	duplicate(#1_00ygate1)	#1_00ygate2	45,1,2
+1@mcd,104,50,0	duplicate(#1_00ygate1)	#1_00ygate3	45,1,2
+1@mcd,218,211,0	duplicate(#1_00ygate1)	#1_00ygate4	45,1,2
+1@mcd,211,195,0	duplicate(#1_00ygate1)	#1_00ygate5	45,1,2
+1@mcd,141,199,0	duplicate(#1_00ygate1)	#1_00ygate6	45,1,2
+1@mcd,142,203,0	duplicate(#1_00ygate1)	#1_00ygate7	45,1,2 //Salida panel de control
+1@mcd,130,127,0	duplicate(#1_00ygate1)	#1_00ygate8	45,1,2 //entrada mvp
+1@mcd,130,134,0	duplicate(#1_00ygate1)	#1_00ygate9	45,1,2 // salida mvp
+
+1@mcd,0,0,0	script	#systemsecurity	-1,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("#systemsecurity");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#systemsecurity");
+		.@map$ = instance_mapname("1@mcd");
+		.@label$ = instance_npcname("#systemsecurity")+"::OnMyMobDead";
+		monster .@map$,84,226,"--ja--",3126,1,.@label$;
+		monster .@map$,126,84,"--ja--",3126,1,.@label$;
+		monster .@map$,111,68,"--ja--",3126,1,.@label$;
+		monster .@map$,210,181,"--ja--",3126,1,.@label$;
+		monster .@map$,183,192,"--ja--",3126,1,.@label$;
+		monster .@map$,130,124,"--ja--",3126,1,.@label$;
+		monster .@map$,54,108,"--ja--",3126,1,.@label$;
+		'CHARLESTON_SECURE = 0;
+		end;
+	OnMyMobDead:
+		'CHARLESTON_SECURE ++;
+		if ('CHARLESTON_SECURE == 3) {
+			donpcevent instance_npcname("#systemsecurity")+"::OnComplete";
+			.@map$ = instance_mapname("1@mcd");
+			.@label$ = instance_npcname("#systemsecurity")+"::OnMyMobDead";
+			mapannounce .@map$, "Charleston 1 : Ah, ah Mic test.",bc_map,"0xFFFF00";
+			killmonster .@map$,.@label$;
+		}
+			end;
+			
+	OnComplete:
+		initnpctimer;
+		'CHARLESTON_QUE = 4;
+		end;
+	OnTimer2000:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : It seems you've taken care of most of the Locksteps",bc_map,"0xFFFF00";
+		end;
+	OnTimer5000:
+		mapannounce instance_mapname("1@mcd"), "Charleston #1 : Please come back to the Lab!",bc_map,"0xFFFF00";
+		stopnpctimer;
+		disablenpc instance_npcname("#systemsecurity");
+		end;
+}
+	
+1@mcd,0,0,0	script	#systemsecurity1	-1,{
+		end;
+	OnInstanceInit:
+	OnDisable:
+		disablenpc instance_npcname("#systemsecurity1");
+		end;
+	OnEnable:
+		enablenpc instance_npcname("#systemsecurity1");
+		.@map$ = instance_mapname("1@mcd");
+		monster .@map$,86,231,"--ja--",3127,1;
+		monster .@map$,172,196,"--ja--",3127,1;
+		monster .@map$,126,84,"--ja--",3127,1;
+		monster .@map$,100,149,"--ja--",3127,1;
+		monster .@map$,158,149,"--ja--",3127,1;
+		end;
+}
+
+1@mcd,172,198,5	script	Auxiliary engine#1_00p	CLEAR_NPC,2,2,{
+		end;
+		
+	OnTouch_:
+			mes "- You tuned on the generator. The sound of turning wheels can be heard. -";
+			'CHARLESTON_PANEL ++;
+			if('CHARLESTON_PANEL == 3) {
+				next;
+				mes "- After checking all the engines, the plant's energy supply has returned to normal.-";
+				donpcevent instance_npcname("panelcount#inst")+"::OnComplete";
+			}
+			close2;
+			donpcevent instance_npcname(strnpcinfo(0))+"::OnDisable";
+			end;
+
+	OnInstanceInit:
+	OnDisable:
+		hideonnpc instance_npcname(strnpcinfo(0));
+		disablenpc instance_npcname(strnpcinfo(0));
+		end;
+	OnEnable:
+		enablenpc instance_npcname(strnpcinfo(0));
+		end;
+}
+1@mcd,126,84,5	duplicate(Auxiliary engine#1_00p)	Auxiliary engine#2_00p	CLEAR_NPC,2,2
+1@mcd,86,231,5	duplicate(Auxiliary engine#1_00p)	Auxiliary engine#3_00p	CLEAR_NPC,2,2
+
+1@mcd,0,0,0	script	panelcount#inst	-1,{
+			end;
+			
+		OnInstanceInit:
+			'CHARLESTON_PANEL = 0;
+		OnDisable:
+			disablenpc instance_npcname("panelcount#inst");
+			end;
+			
+		OnEnable:
+			enablenpc instance_npcname("panelcount#inst");
+			enablenpc instance_npcname("Auxiliary engine#1_00p");
+			enablenpc instance_npcname("Auxiliary engine#2_00p");
+			enablenpc instance_npcname("Auxiliary engine#3_00p");
+			end;
+
+		OnComplete:
+			initnpctimer;
+			'CHARLESTON_QUE = 6;
+			end;
+
+		OnTimer1000:
+			mapannounce instance_mapname("1@mcd"), "Charleston 1 : The power supply of the factory is now working.",bc_map,"0xFFFF00";
+			end;
+			
+		OnTimer4000:
+			mapannounce instance_mapname("1@mcd"), "Charleston 1 : Please go back to the lab , we are ready to re-start the machine Charleston 2 .",bc_map,"0xFFFF00";
+			stopnpctimer;
+			donpcevent instance_npcname("panelcount#inst")+"::OnDisable";
+			end;
+}
+
+//extra quest
+1@mcd,109,219,5	script	Main Computer#1_00a	844,{
+	.@huntsystem = questprogress(13188,PLAYTIME); //20 Horas
+	if (!.@huntsystem) {
+		if (!questprogress(13187,HUNTING)) {
+			mes "[Main Computer]";
+			mes "Charleston 2's system was overloading during regular maintenance. Disconnection from it's OS failed.";
+			next;
+			mes "[Main Computer]";
+			mes "Unauthorized access made to the system was defended, but unauthorized data interception and conflict continued, turning the Nanosteps into monsters.";
+			next;
+			mes "[Main Computer]";
+			mes "To accelerate the main computer's processing rate and reclaim the factory, ^ff000050 Steps^000000 must be disposed.";
+			next;
+			switch(select("Perform the request.","Quit"))
+			{
+				case 1:
+					mes "[Main Computer]";
+					mes "Requires ^ff000050 Steps^000000 to be disposed.";
+					setquest 13187;
+					close;
+
+				case 2:
+					close;
+			}
+		}
+		if ((questprogress(13187,HUNTING) == 1)) {
+			mes "[Main Computer]";
+			mes "In order to reduce the Main Computer load, you need to eliminate the outage control ^0000FF control device ^000000 or more";
+			close;
+		}
+		else if (questprogress(13187,HUNTING) == 2) {
+			mes "[Main Computer]";
+			mes "The control device has been reduced and attempts to regain control.";
+			getexp 1200000,360000;
+			getitem 6752,1; //Charleston Parts
+			erasequest 13187;
+			setquest 13188;
+			close;
+		}
+	}
+	else if (.@huntsystem == 1) {
+		mes "[Main Computer]";
+		mes "Continuous processing control device.";
+		close;
+	}
+	else if (.@huntsystem == 2) {
+			mes "[Main Computer]";
+			mes "Check the No. 2 machine, found that some of the data is damaged, try to lift the connection failed.";
+			next;
+			mes "[Main Computer]";
+			mes "During the connection process, affected by the unknown operation, the control device all out of control.";
+			next;
+			mes "[Main Computer]";
+			mes "In order to reduce the Main Computer load, you need to eliminate the outage control ^0000FF control device ^000000 or more.";
+			next;
+			switch(select("Help deal with","Cancel"))
+			{
+				case 1:
+					mes "[Main Computer]";
+					mes "Please destroy 20 control devices.";
+					erasequest 13188;
+					setquest 13187;
+					close;
+
+				case 2:
+					close;
+			}
+	}
+}
+
+

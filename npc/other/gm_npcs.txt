@@ -90,8 +90,6 @@ List of GM Management NPCs (incomplete)
 - Bangungot Gate (RE)
 - Horror Toy Factory (RE)
 - Faceworm's Nest (RE)
-- Central Laboratory (RE)
-- Morse's Cave (RE)
 
 [ Job-related ]
 ----- 3rd Class (RE) -----
@@ -138,13 +136,13 @@ List of GM Management NPCs (incomplete)
 - Extra Story Patch
 - boss::boss_aru_monas
 - Koshei GlobalVar#admin
-- Morocc GlobalVar Admin::MoroccAdmin_sec
-- Morocc GlobalVar Admin::MoroccAdmin_moc
-- Morocc Invasion Manager (disabled)
+- Morroc GlobalVar Admin::MorrocAdmin_sec
+- Morroc GlobalVar Admin::MorrocAdmin_moc
+- Morroc Invasion Manager (disabled)
 
 [ Other ]
 -------- Marriage --------
-- The King of Rune-Midgarts
+- The King of Midgart
 - Divorce Staff
 - Remarry Staff
 ------ Izlude Arena ------

@@ -1,0 +1,111 @@
+//===== eAthena Script =======================================
+//= Quest Maker v3.0 Script
+//===== By: ==================================================
+//= daily quest [QM]
+//===== Current Version: =====================================
+//= 1.0
+//===== Compatible With: =====================================
+//=     
+//===== Additional Comments: =================================
+//=        
+//============================================================
+
+ra_temsky,124,92,5	script	Satan Morroc	1917,{
+	mes "[^FF0000Satan Morroc^000000]";
+	mes "What !! you want to take a pice of my skin !! ";
+	mes "do you know what I will take to give you it 5 pice of my skin ?";
+	mes " „«–« ø Â·  —Ìœ ﬁÿ⁄… „‰ Ã·œÌ √‰  ≈Ì÷« ø";
+	mes " « ⁄·„ „«–« √—Ìœ „ﬁ«»· 5 ﬁÿ⁄ „‰ Ã·œÌø";
+	mes "^FF0000Note: Skin can not be trade or storage^000000 ";
+	mes "^FF0000„·«ÕŸ… :- «·Ã·œ ·« Ì„ﬂ‰  Œ“Ì‰… «Ê ‰ﬁ·… »Ì‰ «·‘Œ’Ì« ^000000 ";
+	next;
+	menu "Change",L_check,"What I want ",L_required,"Close",L_partir;
+
+	L_required:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "^FF00001^000000 Atlas Weapon [1]"; //1175
+		mes "^FF00002^000000 Tiger's Footskin"; //1030
+		mes "^FF000010^000000 Special Exchange Ticket"; //6153
+		mes "^FF000015^000000 Aloe Leaflet"; //521
+		close;
+
+	L_check:
+		if(countitem(1175) < 1) goto L_manque;
+		if(countitem(1030) < 2) goto L_manque;
+		if(countitem(6153) < 10) goto L_manque;
+		if(countitem(521) < 15) goto L_manque;
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "Good - —«∆⁄";
+		delitem 1175,1;
+		delitem 1030,2;
+		delitem 6153,10;
+		delitem 521,15;
+		getitem 7820,5;
+		close;
+
+	L_manque:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "you dont have what I want !! - √‰  ·«  „ ·ﬂ „« √—Ìœ";
+		if(countitem(1175) < 1) mes "^FF0000"+(1 - countitem(1175)) +"^000000 Atlas Weapon [1]";
+		if(countitem(1030) < 2) mes "^FF0000"+(2 - countitem(1030)) +"^000000 Tiger's Footskin";
+		if(countitem(6153) < 10) mes "^FF0000"+(10 - countitem(6153)) +"^000000 Special Exchange Ticket";
+		if(countitem(521) < 15) mes "^FF0000"+(15 - countitem(521)) +"^000000 Aloe Leaflet";
+
+		close;
+
+	L_partir:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "Go away before I kill you - √–Â» „‰ Â‰« «·√‰ ﬁ»· √‰ √ÃÊ⁄";
+		close;
+}
+
+
+
+dewata,182,176,5	script	Satan Morroc	1917,{
+	mes "[^FF0000Satan Morroc^000000]";
+	mes "What !! you want to take a pice of my skin !! ";
+	mes "do you know what I will take to give you it 5 pice of my skin ?";
+	mes " „«–« ø Â·  —Ìœ ﬁÿ⁄… „‰ Ã·œÌ √‰  ≈Ì÷« ø";
+	mes " « ⁄·„ „«–« √—Ìœ „ﬁ«»· 5 ﬁÿ⁄ „‰ Ã·œÌø";
+	mes "^FF0000Note: Skin can not be trade or storage^000000 ";
+	mes "^FF0000„·«ÕŸ… :- «·Ã·œ ·« Ì„ﬂ‰  Œ“Ì‰… «Ê ‰ﬁ·… »Ì‰ «·‘Œ’Ì« ^000000 ";
+	next;
+	menu "Change",L_check,"What I want ",L_required,"Close",L_partir;
+
+	L_required:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "^FF00001^000000 Atlas Weapon [1]"; //1175
+		mes "^FF00002^000000 Tiger's Footskin"; //1030
+		mes "^FF000010^000000 Special Exchange Ticket"; //6153
+		mes "^FF000015^000000 Aloe Leaflet"; //521
+		close;
+
+	L_check:
+		if(countitem(1175) < 1) goto L_manque;
+		if(countitem(1030) < 2) goto L_manque;
+		if(countitem(6153) < 10) goto L_manque;
+		if(countitem(521) < 15) goto L_manque;
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "Good - —«∆⁄";
+		delitem 1175,1;
+		delitem 1030,2;
+		delitem 6153,10;
+		delitem 521,15;
+		getitem 7820,5;
+		close;
+
+	L_manque:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "you dont have what I want !! - √‰  ·«  „ ·ﬂ „« √—Ìœ";
+		if(countitem(1175) < 1) mes "^FF0000"+(1 - countitem(1175)) +"^000000 Atlas Weapon [1]";
+		if(countitem(1030) < 2) mes "^FF0000"+(2 - countitem(1030)) +"^000000 Tiger's Footskin";
+		if(countitem(6153) < 10) mes "^FF0000"+(10 - countitem(6153)) +"^000000 Special Exchange Ticket";
+		if(countitem(521) < 15) mes "^FF0000"+(15 - countitem(521)) +"^000000 Aloe Leaflet";
+
+		close;
+
+	L_partir:
+		mes "[^FF0000Satan Morroc^000000]";
+		mes "Go away before I kill you - √–Â» „‰ Â‰« «·√‰ ﬁ»· √‰ √ÃÊ⁄";
+		close;
+}

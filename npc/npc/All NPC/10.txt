@@ -1,0 +1,180 @@
+-	script	Sample	-1,{
+OnClock0100:
+OnClock0500:
+OnClock0900:
+OnClock1300:
+OnClock1700:
+	for( set .@i,0; .@i < 3; set .@i,.@i + 1 ){
+		announce "Bossnia Event will Open within "+( 3 - .@i )+" Minutes.",0;
+		sleep 60000;
+	}
+OnWhisperGlobal:
+	enablenpc "bossnia Staff";
+	announce "Bossnia Event Opened.",0;
+	sleep ( 30 * 60000 );
+	announce "Bossnia Event Closed.",0;
+OnInit:
+	disablenpc "bossnia Staff";
+	end;
+}
+
+
+prontera,150,179,5	script	bossnia Staff	105,{
+	function CheckBaseLevel;
+	function CheckPartyOnline;
+	mes "[Red]";
+	mes "Halt! Who approaches?";
+	mes "I know a Place where chaos rules the land.";
+	mes "I found it while wondering the plains of RObust.";
+	mes "I am an adventurer.";
+	mes "Haha~";
+	next;
+	mes "[Red]";
+	mes "What? My name is...";
+	mes "'RObustnia Staff'?? Urghh no...";
+	mes "Well, my name is not so important.";
+	mes "Sometimes you should be generous.";
+	mes "No time for considering that kind of small stuff";
+	mes "when you have to concentrate on more important things.";
+	next;
+	mes "[Red]";
+	mes "Hum... anyway I want to say... something..";
+	mes "While I was travelling through some places,";
+	mes "I found a really dreadful and fearful place.";
+	next;
+	mes "[Red]";
+	mes "Most of the time when you come to a place,";
+	mes "there is one strong and fearful monster.";
+	mes "Isn't it?";
+	next;
+	mes "[Red]";
+	mes "But... but... in there...";
+	mes "There are lots of fearful and strong monsters in there...";
+	mes "That was really frightful, i even heared rumors of Satan being spotted there.";
+	next;
+	mes "[Red]";
+	mes "If I had reacted a bit later... a few seconds...";
+	mes "I might have been killed.";
+	next;
+	mes "[Red]";
+	mes "What?";
+	mes "You want to go in there?";
+	mes "Oh~ Boy~ you didn't get me.";
+	mes "In there.......";
+	next;
+	mes "[Red]";
+	mes "Uh... you already know?";
+	mes "Although you know the place, you want to go in...";
+	mes "Good, I will send you there.";
+	mes "But after you went there, don't hold";
+	mes "a grudge against me. Also it costs 5,000 zeny.";
+	next;
+	mes "[Riss]";
+
+	if( !getcharid(1) ){
+		mes "You need a Party.";
+	}else{
+		mes "Would you really like to take the challenge??";
+		mes "Ok, just choose the course.";
+		set .@room, select("First","Second","Third","Fourth");
+		getpartymember getcharid(1),1;
+		if( getcharid(0) != getpartyleader( getcharid(1),2 ) ){
+			mes "Only Party Leader can decide to go or not.";
+		}else if( !CheckBaseLevel( getcharid(1) ) ){
+			mes "All party Member must be level 150.";
+		}else if( $@partymembercount < 4 || $@partymembercount > 10 ){
+			mes "You need total of 4 - 10 Party Members.";
+		}else if( CheckPartyOnline( getcharid(1) ) < 4 ) {
+			mes "You need at least 4 party member online";
+		}else if (Zeny < 5000){
+			mes "You need 5,000 Zeny.";
+		}else{
+			set Zeny, Zeny - 5000;
+			warpparty "bossnia_0"+.@room,rand(199,200),rand(199,200),getcharid(1);
+			addtimer 30 * 60000, "bossnia Staff::Ontimeup";
+			end;
+		}
+	}
+	close;
+
+	function	CheckBaseLevel	{
+		set .@Leader,getpartyleader( getarg(0),1 );
+		getpartymember getarg(0),2;
+		for( set .@i,0; .@i < $@partymembercount; set .@i,.@i + 1 )
+			if( attachrid( $@partymemberaid[.@i] ) )
+				if( BaseLevel < 150 ) {
+					attachrid(.@Leader);
+					return 0;
+				}
+		attachrid(.@Leader);
+		return 1;
+	}
+	function	CheckPartyOnline	{
+		getpartymember getarg(0),1;
+		getpartymember getarg(0),2;
+		for( set .@i,0; .@i < $@partymembercount; set .@i,.@i + 1 )
+			if ( isloggedin( $@partymemberaid[.@i], $@partymembercid[.@i] ) )
+				set .@count, .@count +1;
+		return .@count;
+	}
+OnPCLogoutEvent:
+OnPCDieEvent:
+	if ( compare( strcharinfo(3),"bossnia_0" ) ) {
+		getpartymember getcharid(1), 1;
+		getpartymember getcharid(1), 2;
+		for ( .@i = 0; .@i < $@partymembercount; .@i++ )
+			if ( isloggedin( $@partymemberaid[.@i], $@partymembercid[.@i] ) )
+				warpchar "prontera",155,181, $@partymembercid[.@i] ;
+		if ( !attachrid( getpartyleader( getcharid(1), 1 ) ) ) end;
+		deltimer "bossnia Staff::Ontimeup";
+	}
+	end;
+Ontimeup:
+	announce strcharinfo(1) +" survive for 30 * 60000 seconds !!", 0; // wahahah me lazy
+	getpartymember getcharid(1), 1;
+	getpartymember getcharid(1), 2;
+	for ( .@i = 0; .@i < $@partymembercount; .@i++ ) {
+		if ( isloggedin( $@partymemberaid[.@i], $@partymembercid[.@i] ) ) {
+			getitem 501, 1, $@partymemberaid[.@i]; // reward item
+			warpchar "prontera",155,181, $@partymembercid[.@i] ;
+		}
+	}
+	end;
+}
+
+bossnia_01	mapflag	partylock
+bossnia_02	mapflag	partylock
+bossnia_03	mapflag	partylock
+bossnia_04	mapflag	partylock
+bossnia_01	mapflag	pvp
+bossnia_02	mapflag	pvp
+bossnia_03	mapflag	pvp
+bossnia_04	mapflag	pvp
+bossnia_01	mapflag	pvp_noguild
+bossnia_02	mapflag	pvp_noguild
+bossnia_03	mapflag	pvp_noguild
+bossnia_04	mapflag	pvp_noguild
+bossnia_01	mapflag	nowarpto
+bossnia_02	mapflag	nowarpto
+bossnia_03	mapflag	nowarpto
+bossnia_04	mapflag	nowarpto
+bossnia_01	mapflag	nowarp
+bossnia_02	mapflag	nowarp
+bossnia_03	mapflag	nowarp
+bossnia_04	mapflag	nowarp
+bossnia_01	mapflag	nomemo
+bossnia_02	mapflag	nomemo
+bossnia_03	mapflag	nomemo
+bossnia_04	mapflag	nomemo
+bossnia_01	mapflag	nobranch
+bossnia_02	mapflag	nobranch
+bossnia_03	mapflag	nobranch
+bossnia_04	mapflag	nobranch
+bossnia_01	mapflag	noreturn
+bossnia_02	mapflag	noreturn
+bossnia_03	mapflag	noreturn
+bossnia_04	mapflag	noreturn
+bossnia_01	mapflag	nosave	SavePoint
+bossnia_02	mapflag	nosave	SavePoint
+bossnia_03	mapflag	nosave	SavePoint
+bossnia_04	mapflag	nosave	SavePoint

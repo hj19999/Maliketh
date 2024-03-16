@@ -1,0 +1,55 @@
+dewata,190,176,5	script	Skin Shop#leveling	660,{
+if( select("Move:Cancel") == 1 ){
+		warp "ra_temsky",134,97;
+setcell "ra_temsky",123,101,123,94,cell_walkable,0;
+}
+end;
+}
+
+5@tower,76,87,5	script	Cash Shop#leveling	660,{
+if( select("Move:Cancel") == 1 ){
+		warp "ra_temsky",71,97;
+setcell "ra_temsky",77,101,77,94,cell_walkable,0;
+}
+end;
+}
+
+dew1ata,193,176,5	script	«·„Ê·#leveling	661,{
+if( select("Move:Cancel") == 1 ){
+		warp "ra_temsky",54,139;
+}
+end;
+}
+
+
+
+ra_temsky,124,101,5	script	Exit#leveling	660,{
+if( select("Move:Cancel") == 1 ){
+		warp "dewata",206,174;
+}
+end;
+}
+
+
+ra_temsky,56,140,4	script	Exit#leveling	661,{
+if( select("Move:Cancel") == 1 ){
+		warp "dewata",206,174;
+}
+end;
+}
+
+ra_temsky,73,97,4	script	Exit#leveling	661,{
+if( select("Move:Cancel") == 1 ){
+		warp "dewata",206,174;
+}
+end;
+}
+
+
+
+
+ra_temsky	mapflag	nomemo
+ra_temsky	mapflag	nobranch
+ra_temsky	mapflag	nosave
+ra_temsky	mapflag	nowarp
+ra_temsky	mapflag	noteleport

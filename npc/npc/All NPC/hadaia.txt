@@ -1,0 +1,26 @@
+dewata,209,182,4	script	Freebies Item	865,{
+   query_sql ("SELECT `last_ip` FROM `login` WHERE `account_id`= '" + getcharid(3) + "'", .@lip$);
+	mes "[Hello]";
+	mes "I will give you a freebies for 1 time only ";
+
+  if(!#Freebie && ( getd("$" + .@lip$ + "_ASD") == 0 )) {
+		mes "are you sure you want to take it in this account ?";
+		next;
+		switch(select("take item ")) {
+			case 1:
+				getitem 7820,20;
+				getitem 674,2;
+				break;
+
+
+				
+			}
+			set #Freebie, 1;
+			setd "$" + .@lip$ + "_ASD", getd("$" + .@lip$ + "_ASD") + 1;
+			close;
+	}
+	OnInit:
+	waitingroom "Freebies Item",0;
+	end;
+}
+

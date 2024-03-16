@@ -1,0 +1,42 @@
+skycity,150,157,6	script	Halloween Event	471,{
+
+mes "Hellow i can teleport you to Halloween Town do you want to go ?";
+
+if( select("Yes i want :Cancel") == 1 ){
+		warp "hallow01",106,98;
+
+
+OnInit:
+
+	end;
+}
+end;
+}
+
+
+hallow01,106,103,4	script	Halloween Event	471,{
+
+mes "Hellow i can teleport you out of Halloween Town do you want to get out ?";
+
+if( select("Yes i want :Cancel") == 1 ){
+		warp "skycity",150,173;
+
+
+OnInit:
+
+	end;
+}
+end;
+}
+
+
+
+
+hallow01,0,0,0,0	monster	Halloween Deviling  	2933,80,0,0,0
+hallow01,0,0,0,0	monster	Halloween Jakk  	1722,40,0,0,0
+hallow01,0,0,0,0	monster	Halloween lude  	1812,20,0,0,0
+
+
+
+1849
+

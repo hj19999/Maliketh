@@ -1,0 +1,25 @@
+skycity,127,135,2	script	Nothing	645,{
+   if(getgmlevel()<60) goto L_lvl;	
+	mes "What you want to summon ?";
+   .@s = select( .menu$ ) -1;
+   mes "input amount to summon";
+   if ( input( .@amount, 1, .max_summon ) ) {
+       mes "invalid amount";
+       close;
+   }
+   mes "Summon "+ .@amount +"x "+ .mob_name$[.@s] +" ?";
+   if ( select ( "Yes", "No" ) == 2 ) close;
+   close2;
+   monster "this", 0,0, "--ja--", .mob_id[.@s], .@amount;
+   end;
+OnInit:
+   setarray .mob_id, 1206, 1163, 1836, 1771, 1772, 1999, 1989, 1987, 1002, 1986, 2092,2085,2086,2917,1389,1115,1252,1086,1251,1147,1059,1150,1087,1190,1038,1157,1159,1583,1312; // configuration here
+   .max_summon = 3000;
+
+   while ( .mob_id[.@i] ) {
+       .mob_name$[.@i] = getmonsterinfo( .mob_id[.@i], 0 );
+       .@i++;
+   }
+   .menu$ = implode( .mob_name$, ":" );
+   end;
+}

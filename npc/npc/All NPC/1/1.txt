@@ -1,0 +1,104 @@
+//===== rAthena Script ======================================= 
+//= Feast Day Of Ramadan Idul Fitri Event
+//===== By: ================================================== 
+//= $ephiroth
+//===== Current Version: ===================================== 
+//= 1.1
+//===== Compatible With: ===================================== 
+//= rAthena Project
+//===== Description: ========================================= 
+//= Info : Official idRO
+//= 2006/10/16: 1.0 Release and fully working. [$ephiroth]
+//= 1.1 Replaced effect numerics with constants. [Samuray22]
+//============================================================
+
+prontera,150,257,2	script	Lettered Moon Snack 01	1505,{
+	mes "[Staff Idul Fitri]";
+	if((gettime(DT_MONTH)==JUNE && (gettime(DT_DAYOFMONTH)==16 || gettime(DT_DAYOFMONTH)==18))==0) {
+		mes "ãÑÍÈÇ Èß";
+		mes "åá ÊÑíÏ ÇäÊ ÊÕäÚ Lettered Moon Snack 01 ¿";
+		specialeffect EF_SANDMAN;
+		next;
+		mes "[Info Events Raya]";
+		mes " ÇÑíÏ ÈÚÖ ÇáÇÏæÇÊ ";
+		mes "æåí :-";
+		mes "^D5A500Lettered Moon Snack 01 Ingredient :^000000";
+		mes "^00B6FF~50 Jellopy, 30 Garlet~,^000000";
+		mes "^CC6633~30 Potato, 20 Meat~,^000000";
+		mes "^000088~30 Green Herb, 30 Stem~.^000000";
+		next;
+		mes "[Info Events Raya]";
+		mes "ÇĞÇ ÌãÚÊ ßá ÇáÇÏæÇÊ ÓÇÚØíß ÇíÇåÇ";
+		mes "Óæİ ÇÚØíß ^D5A500 Lettered Moon Snack 01^000000";
+		mes "æ åí ÇÏÇÉ ãä ÇáÇÏæÇÊ ÇáÇÒãå áÕäÚ åÇáÉ ÇáŞãÑ ^D5A500 Lettered Moon Snack 01^000000 ?";
+		next;
+		OnStartMenu:
+		menu "no",Y_info,"yes",N_info;
+Y_info:
+	mes "[Info Events Raya]";
+	mes "^D5A500Ketupat Sayur :^000000";
+	mes "Óæİ ÊÓÇÚÏß";
+	mes "Úáì ÕäÚ åÇáÉ ÇáŞãÑ";
+end;
+
+N_info:
+	mes "[Info Events Raya]";
+	mes "ÍÓäÇ, ÇÊãäì Çä äáÊŞí ãÑå ÇÎÑì";
+
+	}
+	mes "ãÑÍÈÇ......^FF8800"+strcharinfo(0)+"^000000!!";
+	mes "ÑãÖÇä ßÑíã";
+	mes "åá ÊÑíÏ ÕäÚåÇ ¿";
+	mes "ÇáÍÏË İŞØ İí ÑãÖÇä";
+	next;
+	mes "[Staff Lettered Moon Snack 01]";
+	mes "ÍÏË Çáíæã .....^009500Lettered Moon Snack 01!^000000";
+	next;
+	mes "[Staff Lettered Moon Snack 01]";
+	mes "ÇĞÇ ÇäÊ ãåÊã Óæİ ÇÕäÚåÇ áß";
+	next;
+	switch(select("Allright. I like that!!","Next time.... Thanks.")){
+	case 1:
+		mes "[Staff Lettered Moon Snack 01]";
+		mes "ÚäÏí ÔÆ Óæİ íÍãÓß";
+		mes "ÇÑíÏ åĞÉ ÇáÇÔíÇÁ";
+		mes "^D5A500Lettered Moon Snack 01 Ingredient :^000000";
+		mes "^00B6FF~50 Jellopy, 30 Garlet~,^000000";
+		mes "^CC6633~30 Potato, 20 Meat~,^000000";
+		mes "^000088~30 Green Herb, 30 Stem~.^000000";
+		next;
+		mes "[Staff Lettered Moon Snack 01]";
+		if ( (countitem(909)<49 || countitem(910 )<29 ||countitem(516)<29 || countitem(517)<19 || countitem(511)<29 || countitem(905)<29) ) { 
+			mes "ÇäÊ áÇ Êãáß ÇáãÊØáÈÇÊ";
+			mes "ÊÚÇá ãÑå ÇÎÑì ÚäÏãÇ ÊÌãÚåã";
+			close;
+		}
+		delitem 909,50;
+		delitem 910,30;
+		delitem 516,30;
+		delitem 517,20;
+		delitem 511,30;
+		delitem 905,30;
+		mes "ÇÑì Çäß ÌÇåÒ";
+		mes "ÇÚØäí ÏŞÇÆŞ áæ ÓãÍÊ";
+		next;
+		mes "^009500-Plupping snapping bubbling~^000000";
+		next;
+		mes "^009500-Clinking clingking~^000000";
+		next;
+		mes "^009500-Clang clang~^000000";
+		getitem 7589,1;
+		next;
+		mes "[Staff Lettered Moon Snack 01]";
+		mes "ÔßÑÇ áß";
+		close;
+	case 2:
+		mes "[Staff Lettered Moon Snack 01]";
+		mes "ÔßÑÇ áß";
+		close;
+	}
+
+	OnInit:
+	waitingroom "Lettered Moon Snack 01",0;
+	end;
+}

@@ -10,6 +10,7 @@
 //============================================================
 
 // WOE:TE Castles =========
+prtg_cas01	mapflag	nocostume
 te_prtcas01	mapflag	nocostume
 te_prtcas02	mapflag	nocostume
 te_prtcas03	mapflag	nocostume

@@ -1,0 +1,151 @@
+// UVP 2
+dewata,194,167,6	script	PVP	615,{
+	if (.pvp_square$=="") donpcevent "Ultimate PVP warper::OnClock0000";
+ 
+	mes "[PvP Warper]";
+	mes "to any map want me to warp you ?";
+	switch(select("Warriors Room ["+getmapusers("guild_vs3")+"/100]:Warriors Room II ["+getmapusers("guild_vs2")+"/100]:Warriors Room III ["+getmapusers("pvp_n_5-5")+"/100]:Warriors Room IV ["+getmapusers("guild_vs1")+"/100]:Warriors Room V ["+getmapusers("1@orcs")+"/100]:Warriors Room VI ["+getmapusers("pvp_y_1-2")+"/100]")) {
+	case 1:	// Warriors Room
+		if (getmapusers(.pvp_square$) > 99) callsub S_full;
+		warp "guild_vs3",0,0;
+		end;
+ 
+	case 2:	// PVP Warriors Room II
+		if (getmapusers("guild_vs3") > 99) callsub S_full;
+		warp "guild_vs2",0,0;
+		end;
+ 
+	case 3:	// Warriors Room III
+		if (getmapusers(.pvp_square$) > 99) callsub S_full;
+		warp "pvp_n_5-5",0,0;
+		end;
+
+ 
+	case 4:	// Warriors Room IV
+		if (getmapusers(.pvp_square$) > 99) callsub S_full;
+		warp "",0,0;
+		end;
+
+ 
+	case 5:	// Warriors Room V
+		if (getmapusers(.pvp_square$) > 99) callsub S_full;
+		warp "1@orcs",0,0;
+		end;
+	Case 6: // Warriors Room VI
+		if (getmapusers(.pvp_square$) > 99) callsub S_full;
+		warp "pvp_y_1-2",0,0;
+		end;
+L_NotBaby:
+		mes "Only baby can enter this room";
+		close;	
+ 
+	}
+ 
+S_full:
+	mes " ";
+	mes "I'm sorry, this arena is full.  Please try again later...";
+	close;
+
+OnInit:
+	OnTimer5000:
+	delwaitingroom;
+	switch(rand(1,6)) {
+Case 1:
+	waitingroom getmapusers(.pvp_square$)+" player"+( getmapusers(.pvp_square$) > 1 ? "s":"") +" are in the PvP Square", 0;
+	goto Timer;
+	end;
+	break;
+Case 2:
+	waitingroom getmapusers("guild_vs3")+" player"+( getmapusers("guild_vs3") > 1 ? "s":"") +" are in the PvP Warriors Room", 0;
+	goto Timer;
+	end;
+	break;
+Case 3:
+	waitingroom getmapusers("guild_vs1")+" player"+( getmapusers("guild_vs1") > 1 ? "s":"") +" are in the PvP Lowlvl", 0;	
+	goto Timer;
+	end;
+	break;
+Case 4:
+	waitingroom getmapusers("pvp_y_8-2")+" player"+( getmapusers("pvp_y_8-2") > 1 ? "s":"") +" are in the PvP NoPotion", 0;
+	goto Timer;
+	end;
+	break;
+Case 5:	
+	waitingroom getmapusers("1@orcs")+" player"+( getmapusers("1@orcs") > 1 ? "s":"") +" are in the PvP NoDonator", 0;	
+	goto Timer;
+	end;
+	break;
+Case 6:
+	waitingroom getmapusers("pvp_y_1-2")+" player"+( getmapusers("pvp_y_1-2") > 1 ? "s":"") +" are in the Baby PvP", 0;	
+	goto Timer;
+	end;
+	break;
+Timer:
+	initnpctimer;
+}
+OnClock0000:
+	// set the "PVP Square" map, based on day of the weeek
+	switch(gettime(4)) {
+	case 0:	// Sunday
+	case 1:	// Monday
+		set .pvp_square$, "pvp_n_5-5";
+		break;
+	case 2:	// Tuesday
+	case 3:	// Wednesday
+		set .pvp_square$, "guild_vs5";
+		break;
+	case 4:	// Thursday
+	case 5:	// Friday
+		set .pvp_square$, "guild_vs4";
+		break;
+	case 6:	// Saturday
+		set .pvp_square$, "guild_vs1-2";
+		break;
+	}
+ 
+	// items not allowed in PVP NoPotion
+	setarray .NoPotion_ids[0], 607, 608;
+ 
+	// items not allowed in Non Donator PVP
+	setarray .NoDonator_ids[0], 2410, 1530;
+	end;
+}
+ 
+moscovia.gat,226,198,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#1	871
+askydun.gat,96,113,3	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#2	871 // Kliwa
+alberta.gat,110,140,3	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#3	871 // Kliwa
+aldebaran.gat,147,115,1	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#4	871 // Kliwa
+amatsu.gat,207,86,3	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#5	871 // Kliwa
+ayothaya.gat,155,117,2	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#6	871 // Kliwa
+comodo.gat,206,80,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#7	871 // Kliwa
+einbech.gat,198,83,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#8	871 // Taas Kaliwa
+einbroch.gat,174,172,5	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#9	871 // Taas Kaliwa
+geffen.gat,125,71,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#10	871
+gonryun.gat,162,120,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#11	871
+hugel.gat,89,151,5	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#12	871
+izlude.gat,134,90,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#13	871
+lighthalzen.gat,166,101,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#14	871
+louyang.gat,214,120,5	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#15	871
+xmas.gat,154,136,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#16	871
+morocc.gat,160,97,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#17	871
+payon.gat,148,226,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#18	871
+rachel.gat,135,115,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#19 	871
+veins.gat,219,127,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#20	871
+yuno.gat,163,170,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#21	871
+umbala.gat,106,159,3	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#22	871
+poring_c02,139,81,4	duplicate(Ultimate PvP Warper)	Ultimate PvP Warper#23	871
+ 
+// Mapflags
+guild_vs2	mapflag	pvp
+guild_vs5	mapflag	pvp
+guild_vs4	mapflag	pvp
+guild_vs1-2	mapflag	pvp
+pvp_n_5-5	mapflag	pvp
+guild_vs3	mapflag	pvp
+guild_vs1	mapflag	pvp
+pvp_y_8-2	mapflag	pvp
+1@orcs	mapflag	pvp
+pvp_n_5-5	mapflag	noreturn
+pvp_n_5-5	mapflag	nowarp
+pvp_n_5-5	mapflag	noteleport
+guild_vs3	mapflag	pvp

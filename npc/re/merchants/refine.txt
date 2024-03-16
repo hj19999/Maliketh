@@ -406,30 +406,30 @@ malangdo,224,172,6	script	Clink#mal_normal	544,{
 	if (!getequipisequiped(.@part)) {
 		mes "[Clink]";
 		switch(.@part) {
-		case EQI_HEAD_TOP:
+		case 1:
 			mes "Dad said. There's no cure for stupidity...";
 			break;
-		case EQI_ARMOR:
+		case 2:
 			mes "There's nothing to see here!!";
 			break;
-		case EQI_HAND_L:
+		case 3:
 			mes "What an arrogant left hand this is!";
 			break;
-		case EQI_HAND_R:
+		case 4:
 			mes "What an arrogant right hand this is!";
 			break;
-		case EQI_GARMENT:
+		case 5:
 			mes "Get that dirty thing off my face!!";
 			break;
-		case EQI_SHOES:
+		case 6:
 			mes "Kyaong~! Do not provoke me.";
 			break;
-		case EQI_ACC_L:
-		case EQI_ACC_R:
+		case 7:
+		case 8:
 			mes "Where is the accessory?";
 			break;
-		case EQI_HEAD_MID:
-		case EQI_HEAD_LOW:
+		case 9:
+		case 10:
 			mes "Are you talking about the other head part?";
 			break;
 		}

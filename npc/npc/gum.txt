@@ -1,0 +1,21 @@
+skycity,172,169,6	script	Battle Manual Trader	939,{
+	mes "[Battle Manual Trader]";
+	mes "I can change 3^ff0000  Battle Manual ^000000  for 1^ff0000  Bubble Gum ^000000 .";
+next;
+if( select("Change:Cancel") == 1 ){
+if( countitem(12208) < 2 ) {
+	mes "[Battle Manual Trader]";
+	mes "you dont have 3 Battle Manual .";
+}
+
+if( countitem(12208) > 2 ) {
+        delitem 12208,3;
+        getitem 12210,1;
+	mes "[Battle Manual Trader]";
+	mes "Done .";
+}
+}
+
+
+end;
+}

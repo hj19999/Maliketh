@@ -1,0 +1,16 @@
+-	script	news_main	-1,{
+	OnInit:
+		// Random Message to be Announced
+		setarray .news_list$,	
+			"«Â·« »ﬂ„ ›Ì ”Ì—›— „Ê·« —Ì‰Ê«· «· Ã—Ì»Ì",
+			"«·«”ﬁ«ÿ ›Ì «·”Ì—›— «· Ã—Ì»Ì 100% ",
+			"«–« ﬂ«‰ ·œÌﬂ «Ì «ﬁ —«Õ ·«   —œœ Ê«—”·Â ⁄·Ï «·œ”ﬂÊ—œ",
+			"«–« Ê«ÃÂ ﬂ «Ì „‘ﬂ·… «·—Ã«¡ «· »·Ì€ ⁄‰Â« ›Ì «·œ”ﬂÊ—œ";
+		.news_list_size = getarraysize(.news_list$);
+		initnpctimer;
+		
+	OnTimer60000: // announce every 60 seconds.
+		announce .news_list$[rand(.news_list_size)], bc_all;
+		initnpctimer;
+		end;
+}

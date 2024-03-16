@@ -15,7 +15,7 @@
 //= 1.9 Migrate/Integrate to Global Functions Platinum Skills. [mazvi]
 //============================================================
 
-doubrius,56,36,4	script	Job Master	404,{
+skycity,132,169,6	script	Job Master	999,{
 function Get_Job_Equip;
 // Checks if the Player has the required level.
 // closes if not, returns if yes
@@ -36,6 +36,7 @@ function	Require_Level	{
 	}
 	return;
 }
+
 if( eaclass() == EAJ_STAR_GLADIATOR){
 mes "No more jobs are available . ";
 end;}
@@ -44,11 +45,6 @@ if( eaclass() == EAJ_SOUL_LINKER){
 mes "No more jobs are available . ";
 end;}
 Else
-if( eaclass() == EAJ_GUNSLINGER){
-mes "No more jobs are available . ";
-end;}
-Else
-
 // Checks if the given eac is a baby class
 function Is_Baby	{
 	return ((getarg(0, eaclass())&EAJL_BABY)>0);
@@ -83,8 +79,8 @@ function	Can_Rebirth	{
 		return false; // Rebirth disabled
 	if( !(eaclass()&EAJL_2) )
 		return false; // Not second Class
-	if( eaclass()&(EAJL_UPPER|EAJL_THIRD) )
-		return false; // Already Rebirthed/ Third Class
+	if( eaclass()&EAJL_UPPER )
+		return false; // Already Rebirthed
 	if( roclass(eaclass()|EAJL_UPPER) < 0 )
 		return false; // Job has no transcended class
 	if( Is_Baby() && !.BabyClass )
@@ -138,6 +134,7 @@ function	Job_Options	{
 	Check_SkillPoints();
 
 	// initialisation
+	deletearray .@job_opt[0],getarraysize(.@job_opt);
 	.@eac = eaclass();
 	.@third_possible = Can_Change_Third();
 	.@rebirth_possible = Can_Rebirth();
@@ -311,7 +308,6 @@ function	Job_Menu	{
 
 // Executes the actual jobchange and closes.
 function	Job_Change	{
-	.@previous_class = Class;
 	.@to_cls = getarg(0);
 	next;
 	mes .NPCName$;
@@ -328,12 +324,10 @@ function	Job_Change	{
 	}
 	specialeffect2 EF_ANGEL2;
 	specialeffect2 EF_ELECTRIC;
-	if (.@previous_class != Class) {
-		if (.Platinum)
-			callfunc "F_GetPlatinumSkills";
-		if (.GetJobEquip)
-			Get_Job_Equip();
-	}
+	if (.Platinum)
+		callfunc "F_GetPlatinumSkills";
+	if (.GetJobEquip)
+		Get_Job_Equip();
 	close; // Always closes after the change
 }
 
@@ -341,7 +335,7 @@ function	Confirm_Change	{
 	// Player confirms he want to change into .@class
 	.@class = getarg(0, -1);
 	.@back = getarg(1, false);
-	if( .@class < 0 || eaclass(.@class) == -1 ) {
+	if( .@class < 0 ) {
 		mes "Unknown Class Error.";
 		close;
 	}
@@ -432,6 +426,10 @@ function	Get_Job_Equip	{
 				getitem 1960,1;	break;	//	Whip [1]
 			case Job_Super_Novice:
 				getitem 1208,1;	break;	//	Main Gauche [4]
+			case Job_Gunslinger:
+				getitem 13101,1; break;	//	Six Shooter [2]
+			case Job_Ninja:
+				getitem 13010,1; break;	//	Asura [2]
 			case Job_Star_Gladiator:
 				getitem 1550,1;	break;	//	Book [3]
 			case Job_Soul_Linker:
@@ -447,18 +445,13 @@ function	Get_Job_Equip	{
 			case Job_Mage:
 				getitem 1602,1;	break;	//	Rod [4]
 			case Job_Archer:
-				getitem 1705,1;  	//	Composite Bow [4]
-				getitem 1750,500;break;	//	Composite Bow [4]
+				getitem 1705,1;	break;	//	Composite Bow [4]
 			case Job_Acolyte:
 				getitem 1505,1;	break;	//	Mace [4]
 			case Job_Merchant:
 				getitem 1302,1;	break;	//	Axe [4]
 			case Job_Thief:
 				getitem 1208,1;	break;	//	Main Gauche [4]
-			case Job_Gunslinger:
-				getitem 13101,1; break;	//	Six Shooter [2]
-			case Job_Ninja:
-				getitem 13010,1; break;	//	Asura [2]
 		}
 	}
 	return;
@@ -477,8 +470,8 @@ OnInit:
 	.BabyThird = false;				// Enable Baby third classes?
 	.BabyExpanded = false;			// Enable Baby Expanded classes: Ex. Baby Ninja, Baby Taekwon, etc.
 	.BabySummoner = false;			// Enable Baby Summoner?
-	.LastJob = true;				// Enforce linear class changes?
-	.SkillPointCheck = true;		// Force player to use up all skill points?
+	.LastJob = false;				// Enforce linear class changes?
+	.SkillPointCheck = false;		// Force player to use up all skill points?
 	.Platinum = true;				// Get platinum skills automatically?
 	.GetJobEquip = true;			// Get job equipment (mostly weapons) on job change?
 

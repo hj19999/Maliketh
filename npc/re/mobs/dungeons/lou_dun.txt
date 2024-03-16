@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Luoyang Dungeon Monster Spawn Script
+//= Louyang Dungeon Monster Spawn Script
 //===== By: ==================================================
 //= Athena (1.0)
 //===== Current Version: =====================================

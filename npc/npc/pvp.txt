@@ -1,12 +1,92 @@
-doubrius,31,45,6	script	PVP	686,{
-if( select("Room 1 (Ranked) ["+getmapusers("pvp_n_1-5")+"/100]:Cancel") == 1 ){
+// UVP 2
+skycity,163,177,3	script	PVP	469,{
+	if (.pvp_square$=="") donpcevent "Ultimate PVP warper::OnClock0000";
+ 
+	mes "[PvP Warper]";
+	mes "to any map want me to warp you ?";
+	switch(select("Room 1 (Ranked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 2 ["+getmapusers("pvp_n_1-3")+"/100]:Room 3 ["+getmapusers("pvp_n_1-4")+"/100]")) {
+	case 1:	// Room I
+		if (getmapusers("pvp_n_1-5") > 99) callsub S_full;
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
  
+	case 2:	// Room II
+		if (getmapusers("pvp_n_1-3") > 99) callsub S_full;
+		warp "pvp_n_1-3",0,0;
+announce strcharinfo(0)+ " has entered PVP Room 2",0,0xFF3399;
+		end;
+ 
+	case 3:	// Room III
+		if (getmapusers("pvp_n_1-4") > 99) callsub S_full;
+		warp "pvp_n_1-4",0,0;
+announce strcharinfo(0)+ " has entered PVP Room 3",0,0xFF3399;
+		end;
 
+ 
+
+ 
+
+L_NotBaby:
+		mes "Only baby can enter this room";
+		close;	
+ 
+	}
+ 
+S_full:
+	mes " ";
+	mes "I'm sorry, this arena is full.  Please try again later...";
+	close;
+
+OnInit:
+	OnTimer5000:
+	delwaitingroom;
+	switch(rand(1,6)) {
+Case 1:
+	waitingroom getmapusers("pvp_n_1-5")+" player"+( getmapusers("pvp_n_1-5") > 1 ? "s":"") +" are in the PvP Room 1", 0;
+	goto Timer;
+	end;
+	break;
+Case 2:
+	waitingroom getmapusers("pvp_n_1-3")+" player"+( getmapusers("pvp_n_1-3") > 1 ? "s":"") +" are in the PvP  Room 2", 0;
+	goto Timer;
+	end;
+	break;
+Case 3:
+	waitingroom getmapusers("pvp_n_1-4")+" player"+( getmapusers("pvp_n_1-4") > 1 ? "s":"") +" are in the PvP Room 3", 0;	
+	goto Timer;
+	end;
+	break;
+
+Timer:
+	initnpctimer;
 }
-end;
+OnClock0000:
+	// set the "PVP Square" map, based on day of the weeek
+	switch(gettime(4)) {
+	case 0:	// Sunday
+	case 1:	// Monday
+		set .pvp_square$, "pvp_n_5-5";
+		break;
+	case 2:	// Tuesday
+	case 3:	// Wednesday
+		set .pvp_square$, "guild_vs5";
+		break;
+	case 4:	// Thursday
+	case 5:	// Friday
+		set .pvp_square$, "guild_vs4";
+		break;
+	case 6:	// Saturday
+		set .pvp_square$, "guild_vs1-2";
+		break;
+	}
+ 
+	// items not allowed in PVP NoPotion
+	setarray .NoPotion_ids[0], 607, 608;
+ 
+	// items not allowed in Non Donator PVP
+	setarray .NoDonator_ids[0], 2410, 1530;
+	end;
 }
  
 

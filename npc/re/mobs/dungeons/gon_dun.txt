@@ -1,5 +1,5 @@
 //===== rAthena Script =======================================
-//= Kunlun Dungeon Monster Spawn Script
+//= Gonryun Dungeon Monster Spawn Script
 //===== By: ==================================================
 //= Athena (1.0)
 //===== Current Version: =====================================

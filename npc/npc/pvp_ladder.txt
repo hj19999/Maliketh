@@ -47,7 +47,7 @@
 //= [Happy] 
 // 	Email: http://hercules.ws/board/user/164-happy/
 //============================================================
-doubrius,27,50,6	script	PvP Rank	656,{
+skycity,187,165,4	script	PvP Rank	620,{
 	mes "[Ladder Event]";
 OnPvpLadder:
 	mes "Ranking";
@@ -171,6 +171,7 @@ OnInit:
 		//   64: Warp to Save on abuse
 		// Example: "1+2+4 = 7" No Forced Map, Disables Record Holding during WOE and Announces New Record Holders
 	bindatcmd("PvpLadder"	,"Pvp_Ladder::OnPvpLadder",0,99);
+		waitingroom "PvP Rank",0;
 	end;
 }
 

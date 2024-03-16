@@ -1,0 +1,72 @@
+//============================================================
+//= Healer & Buffs NPC
+//===== By: ==================================================
+//= Nasagnilac
+//===== Current Version: =====================================
+//= 1
+//===== Compatible With: =====================================
+//= rAthena/hercules Project
+//===== Description: =========================================
+//= A npc where you can take a free buffs and heal depends on
+//= the level required added in the settings. You can also add
+//= delay time to avoid spamming the npc. Buffs is optional and
+//= can be on and off in the settings.
+
+//===== Contact: =============================================
+//= If there is a problem or request for the script you can
+//= contact me on the following:
+//= Skype: nasagnilac.lerion
+//= Facebook: nl073092
+
+-	script	Healer	-1,{
+
+OnTouch:
+	set .@price, (.Price * BaseLevel);
+	if(BaseLevel <= LevelPay){
+		.@price = 0;
+	}
+	if (#BuffCooldown > gettimetick(2)){
+		set .@k,#BuffCooldown - gettimetick(2);
+			set .@m,.@k % 3600 / 60;
+			set .@s,.@k % 60;
+		set .@m$, .@m+" minute"+((.@m <= 1)?"":"s");
+		set .@s$, .@s+" second"+((.@s <= 1)?"":"s");
+		set .@time$,""+((.@m >= 1 )?""+.@m$+" ":"")+""+((.@s >=1 )?""+.@s$+"":"")+"";
+		npctalk strnpcinfo(1)+ ": Please wait "+.@time$+" before you can heal again!",strnpcinfo(0),bc_self;
+		end;
+	}
+
+	if (.@price && !vip_status(1)) {
+		if (Zeny < .@price){
+			message strcharinfo(0), "You will need " + callfunc("F_InsertComma",.@price) + " Zeny for Heal and Buffs.";
+			end;
+		}
+		Zeny -= .@price;
+	}
+
+	specialeffect2 EF_HEAL2;
+	percentheal 100,100;
+
+	if (.Buffs) {
+		specialeffect2 EF_INCAGILITY;
+		sc_start SC_INCREASEAGI,600000,10;
+		specialeffect2 EF_BLESSING;
+		sc_start SC_BLESSING,600000,10;
+	}
+
+	if (.Delay){
+		#BuffCooldown = gettimetick(2) + .Delay;
+	}
+
+end;
+
+OnInit:
+	set .LevelPay, 60; 	// Maximum level for free access or else you will pay zeny based on your level.
+	set .Price, 50;		// Zeny required for heal but premium user will not require it.
+	set .Buffs, 1;		// Also buff players? (1: yes / 0: no)
+	set .Delay, 10;		// Heal delay, in seconds
+end;
+
+}
+
+prontera,124,75,3	duplicate(Healer)	Stefanie#prt	624

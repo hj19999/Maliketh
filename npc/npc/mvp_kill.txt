@@ -15,12 +15,12 @@
 -	script	#mvp_kill	-1,{
 
 OnInit:
-	setarray .p_rwd, 56001,1;	// Party reward <item>,<amount>
-	setarray .s_rwd, 56001,1;	// Solo reward <item>,<amount>
+	setarray .p_rwd, 50004,1;	// Party reward <item>,<amount>
+	setarray .s_rwd, 50004,1;	// Solo reward <item>,<amount>
 	.chance = 100;	// Drop rate chances %
 	.gm = 50;  // Prevents gm level and above to trigger the event
 	// MVP Map list
-	setarray .t_maps$[0],"moc_pryd06","lhz_dun03","gld2_prt","abbey02","ayo_dun02","lhz_dun04","ra_fild02","xmas_fild01","dic_dun02","beach_dun","iz_dun05","tur_dun04","lhz_dun02","jupe_core","moc_fild22","anthell02","odin_tem03","gon_dun03","gef_fild02","thana_boss","gef_fild10","ein_dun02","gef_fild14","moc_pryd04","dew_dun01","in_sphinx5","niflheim","moc_fild17","xmas_dun02","ice_dun03","kh_dun02","treasure02","moc_prydn2","pay_dun04","ra_san05","mosk_dun03","ama_dun03","thor_v03","gef_dun01","mjolnir_04","abyss_03","dic_dun03","prt_sewb4","pay_fild11","gef_dun02","gl_chyard","ra_fild03","ra_fild04","ve_fild01","ve_fild02","lou_dun03","prt_maze03","bra_dun02","mellina","pay_fild10";
+	setarray .t_maps$[0],"moc_pryd06","lhz_dun03","gld2_prt","abbey02","ayo_dun02","lhz_dun04","ra_fild02","xmas_fild01","dic_dun02","beach_dun","iz_dun05","tur_dun04","lhz_dun02","jupe_core","moc_fild22","anthell02","odin_tem03","gon_dun03","gef_fild02","thana_boss","gef_fild10","ein_dun02","gef_fild14","moc_pryd04","dew_dun01","in_sphinx5","niflheim","moc_fild17","xmas_dun02","ice_dun03","kh_dun02","treasure02","moc_prydn2","pay_dun04","ra_san05","mosk_dun03","ama_dun03","thor_v03","gef_dun01","mjolnir_04","abyss_03","dic_dun03","prt_sewb4","pay_fild11","gef_dun02","gl_chyard","ra_fild03","ra_fild04","ve_fild01","ve_fild02","lou_dun03","prt_maze03","bra_dun02","skycity","pay_fild10";
 	end;
 
 OnNPCKillEvent:
@@ -64,7 +64,7 @@ if ( getmonsterinfo( killedrid, MOB_MVPEXP )) {
 
 	
 }
-doubrius,27,54,6	script	MVP Ladder#Euphy	505,{
+skycity,187,161,4	script	MVP Ladder#Euphy	856,{
 	mes "[Rank MVP]";
 	mes "Hello.";
 	mes "What are you doing here";
@@ -98,4 +98,7 @@ doubrius,27,54,6	script	MVP Ladder#Euphy	505,{
 			close;
 	}
 	
+OnInit:
+		waitingroom "MVP LADDER!",0;
+		end;
 }

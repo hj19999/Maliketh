@@ -1,0 +1,173 @@
+lunar01,146,229,4	script	To Main Town	939,{
+if( select("Move:Cancel") == 1 ){
+		warp "askald",158,241;
+
+		savepoint "askald",145,240,1,1;
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To askald Main Town",0;
+	end;
+}
+end;
+}
+
+
+
+
+lunar01,0,0,0,0	monster	Poring  	1002,150,0,0,0
+lunar01,0,0,0,0	monster	Poporing	1031,30,0,0,0
+lunar01,0,0,0,0	monster	Lunatic 	1063,30,0,0,0
+lunar01,0,0,0,0	monster	Drops   	1113,30,0,0,0
+lunar01,0,0,0,0	monster	Picky   	1050,30,0,0,0
+lunar01,0,0,0,0	monster	Spore   	1014,30,0,0,0
+lunar01,0,0,0,0	monster	Condor   	1009,30,0,0,0
+
+
+
+
+
+
+
+
+
+
+
+lunar01,140,235,4	script	Healer	936,{
+emotion 21;
+ 
+while( .@i < .sc_size ){
+sc_end .sc_status[.@i];
+set .@i,.@i + 1;
+}
+ 
+sc_start SC_BLESSING,.buff_duration,10;
+sc_start SC_INCREASEAGI,.buff_duration,10;
+percentheal 100,100;
+ 
+dispbottom "Thanks.";
+ 
+while( getbrokenid(1) )
+// repair getbrokenid(1);
+repairall;
+// atcommand "@repairall";
+end;
+ 
+ 
+OnInit:
+set .buff_duration,600000;
+ 
+setarray .sc_status,
+SC_STONE,SC_FREEZE,SC_STUN,SC_SLEEP,SC_POISON,SC_CURSE,SC_SILENCE,SC_CONFUSION,SC_BLIND,SC_BLEEDING,
+SC_QUAGMIRE,SC_AETERNA,SC_HALLUCINATION,SC_SLOWDOWN,SC_BERSERK,SC_CHANGEUNDEAD,
+SC_STRIPWEAPON,SC_STRIPSHIELD,SC_STRIPARMOR,SC_STRIPHELM;
+set .sc_size,getarraysize( .sc_status );
+ 
+
+end;
+}
+
+
+lunar01,134,224,4	script	To Swordman Quest	65,{
+if( select("Move:Cancel") == 1 ){
+		warp "izlude_in",74,165;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To Swordman Quest",0;
+	end;
+}
+end;
+}
+
+
+
+
+lunar01,130,224,4	script	To Thief Quest	118,{
+if( select("Move:Cancel") == 1 ){
+		warp "moc_prydb1",47,124;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To Thief Quest",0;
+	end;
+}
+end;
+}
+
+
+
+
+lunar01,126,224,4	script	To Merchant Quest	726,{
+if( select("Move:Cancel") == 1 ){
+		warp "alberta_in",65,43;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To Merchant Quest",0;
+	end;
+}
+end;
+}
+
+
+
+lunar01,145,224,4	script	To Mage Quest	937,{
+if( select("Move:Cancel") == 1 ){
+		warp "geffen_in",164,121;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To Mage Quest",0;
+	end;
+}
+end;
+}
+
+
+
+
+
+
+lunar01,149,224,4	script	To archer Quest	634,{
+if( select("Move:Cancel") == 1 ){
+		warp "payon_in02",64,64;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To archer Quest",0;
+	end;
+}
+end;
+}
+
+
+
+
+
+lunar01,153,224,4	script	To Acolyte Quest	412,{
+if( select("Move:Cancel") == 1 ){
+		warp "prt_church",184,36;
+
+
+OnInit:
+                .map$ = "novice";
+		setmapflag .map$,mf_nomobloot;
+	waitingroom "To Acolyte Quest",0;
+	end;
+}
+end;
+}
+
+

@@ -1,0 +1,125 @@
+/*=========================================================
+@reward command
+by Missingno
+===========================================================
+Request: http://goo.gl/NCHzvi
+===========================================================
+Description:
+Allows for preset or user-defined rewards via atcommand.
+Announce and logging options are also available.
+===========================================================
+SQL table:
+CREATE TABLE IF NOT EXISTS `rewardlog` (
+	`id` int(11) unsigned NOT NULL auto_increment,
+	`account_id` int(11) NOT NULL,
+	`staff_name` varchar(255) NOT NULL,
+	`item_amount` int(11) NOT NULL,
+	`item_id` int(11) NOT NULL,
+	`item_name` varchar(255) NOT NULL,
+	`char_id` int(11) NOT NULL,
+	`player_name` varchar(255) NOT NULL,
+	`when` datetime NOT NULL,
+	PRIMARY KEY	(`id`)
+) ENGINE=MyISAM;
+===========================================================
+Compatibility:
+Optimised for rAthena emulators.
+===========================================================
+Changelog:
+v1.0 - First version.
+	v1.1 - Some housekeeping.
+		v1.1.1 - Replaced ++.@j with (.@i / 2 + 1).
+=========================================================*/
+
+-	script	reward	-1,{
+
+	OnInit:
+		// Configuration
+		bindatcmd "reward", strnpcinfo(3) +"::OnAtcommand", 40, 40;
+	
+		// Enable preset items? 1 = yes, 0 = no
+		.preset = 1;
+		
+		// Announce reward? 1 = yes, 0 = no
+		.announce = 1;
+		
+		// Log reward? 1 = yes, 0 = no
+		.log = 1;
+		
+		// Define preset item IDs and amounts
+		setarray .preset_id[0],
+			7720, 1,	// 1: Gold Coin
+			7307, 50;	// 2: Spiritual Whispers
+			
+		end;
+		
+	
+	OnAtcommand:
+		// Reward with preset items (syntax: @reward <preset> <player name>)
+		if (.preset) {
+			// Check if preset is defined
+			if (!atoi(.@atcmd_parameters$[0]) || (atoi(.@atcmd_parameters$[0]) - 1) * 2 > .@atcmd_numparameters) {
+				message strcharinfo(0), "Invalid preset defined.";
+				
+				// List presets
+				for (.@i = 0; .@i < getarraysize(.preset_id); .@i += 2) {
+					message strcharinfo(0), (.@i / 2 + 1) +": "+ .preset_id[.@i + 1] +" "+ getitemname(.preset_id[.@i]);
+				}
+				
+				message strcharinfo(0), .@atcmd_command$ +" failed.";
+				end;
+			}
+			
+			// Select preset item ID and amount
+			.@item_id = .preset_id[(atoi(.@atcmd_parameters$[0]) - 1) * 2];
+			.@amount = .preset_id[(atoi(.@atcmd_parameters$[0]) - 1) * 2 + 1];
+			
+		// Reward with user-defined items (syntax: @reward <item id> <amount> <player name>
+		} else {
+			// Define item ID and amount
+			.@item_id = atoi(.@atcmd_parameters$[0]);
+			.@amount = atoi(.@atcmd_parameters$[1]);
+		}
+		
+		// Check for proper input
+		if (.@atcmd_numparameters < (.preset ? 2 : 3)) {
+			message strcharinfo(0), "Invalid syntax (usage: "+ .@atcmd_command$ +" "+ (.preset ? "<preset>" : "<item id> <amount>") +" <player name>).";
+			message strcharinfo(0), .@atcmd_command$ +" failed.";
+			end;
+		}
+	
+		// Determine target player name
+		for (.@i = (.preset ? 1 : 2); .@i < .@atcmd_numparameters; .@i++) {
+			.@player_name_tmp$[.@j++] = .@atcmd_parameters$[.@i];
+		}
+	
+		// Define target player name
+		.@player_name$ = implode(.@player_name_tmp$, " ");
+		
+		// Check if target player is online
+		if (!getcharid(3, .@player_name$)) {
+			message strcharinfo(0), "The player '"+ .@player_name$ +"' is not online or does not exist.";
+			message strcharinfo(0), .@atcmd_command$ +" failed.";
+			
+		// Reward target player
+		} else {
+			getitem .@item_id, .@amount, getcharid(3, .@player_name$);
+			
+			// Announce reward
+			if (.announce) {
+				announce strcharinfo(0) +" has rewarded '"+ .@player_name$ +"' with "+ .@amount +" "+ getitemname(.@item_id) +".", bc_all;
+			}
+			
+			// Log reward
+			if (.log) {
+				query_logsql
+				"INSERT INTO `rewardlog` VALUES (NULL, '"+ getcharid(3) +"', '"+ escape_sql(strcharinfo(0)) +"', '"+ .@amount +"', '"+ .@item_id +"', "+
+				"'"+ escape_sql(getitemname(.@item_id)) +"', '"+ getcharid(0, .@player_name$) +"', '"+ escape_sql(.@player_name$) +"', NOW())";
+				
+				message strcharinfo(0), "Reward has been logged.";
+			}
+		}
+		
+		end;
+
+}

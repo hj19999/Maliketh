@@ -134,7 +134,7 @@ OnInit:
 	.s_idle_time = 1800; //	this the time for idle in secend  , DEFAULT = 1800 (30 min)
 	.s_vip = 0; //	1 = only for VIP / 0 = for everyone  , DEFAULT = 0
 	.s_time = 3600000; //	1000 = 1 secend | 60000 = 1 min | 3600000 = 1 houre  , DEFAULT = 3600000 (1 hr)
-	.s_hourly_level = 30; //	Minimam level to get the Houerly rewards / 0 = no minimem level  , DEFAULT 0
+	.s_hourly_level = 0; //	Minimam level to get the Houerly rewards / 0 = no minimem level  , DEFAULT 0
 	.s_GePard_ip = 0; //	0 = no Gepard / 1 = Gepard / 2 = IP  , DEFAULT 0
 	.s_vinding = 7; //	DEFAULT 7 / 0 = will give the reward even if vending / 1 = no normal vending / 2 = no @autotrade / 4 = no buyingstore | Example: if you want to ban normal vend and buying store you add the numbers 1+4=5
 	query_logsql("CREATE TABLE IF NOT EXISTS `sader_variables_log` (`unique_id` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0',`ip` VARCHAR(100) NOT NULL,`variable` VARCHAR(32) NOT NULL, `index` INT NOT NULL, `value` INT NOT NULL,`account_id` INT NOT NULL,`char_id` INT NOT NULL,`char_name` VARCHAR(30) NOT NULL) ENGINE=MyISAM");
@@ -144,12 +144,12 @@ end;
 
 Hourly_Rewads:
 	//put the Hourly Rewards here
-	#HourlyRewards += 1;
+	#HourlyRewards += 2;
 	//getitem 905,1; //	if you want to add items as reward you can add them here like that
 	//getexp 10000,5000; //	if you wanna add exp as reward add them here like that
 	//if(#Hourly_Rewads_Check == 5){getitem 905,1;} //	like this you can add reward for Xhr and this reward will be given for that X in this example 5 mean that the player did pass 5hr
 	//if(#Hourly_Rewads_Check >= 5){getitem 905,1;} //	like this you can add reward for Xhr and this reward will be given for that X in this example 5 mean that the player did pass 5hr or more
 return;
 }
-doubrius,35,37,6	pointshop	Hourly Rewards Shop	528,#HourlyRewards,7619:10,7620:20,7040:50,12210:555,14533:222,12903:222,12904:222,12905:222,12906:222,12907:222,12908:222,5403:333,5286:222
+skycity,187,170,4	pointshop	Hourly Rewards Shop	667,#HourlyRewards,12208:25,12210:25,12214:15,12221:25,7619:40,7620:40,20265:100,20273:100,20171:100,20451:100,20452:100,20467:100,19857:100
 //<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>

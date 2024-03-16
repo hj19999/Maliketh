@@ -1,4 +1,4 @@
-doubrius,39,51,5	script	Kafra Employee#main	894,{
+skycity,141,184,5	script	Kafra Employee::prt_fild05	114,{
 	cutin "kafra_04",2;
 	mes "[Kafra Employee]";
 	mes "Welcome!";
@@ -8,7 +8,7 @@ doubrius,39,51,5	script	Kafra Employee#main	894,{
 	mes "with its excellent service. So";
 	mes "what can I do for you today?";
 	callfunc "F_Kafra",5,1,1,0,0;
-	savepoint "doubrius",46,43,1,1;
+	savepoint "skycity",150,174,1,1;
 	callfunc "F_KafEnd",0,1,"at the Prontera Culverts";
 
 }

@@ -1,0 +1,39 @@
+// == Release 0.1 - Norm Hmuryj(Melbou)
+prontera,150,151,6	script	Kill for your Life	999,{
+	if($kfyl == 0){
+		mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+		mes "Sorry, but have not yet started the event. Come back later.";
+		close;
+	}else if($kfyl == 2 && strcharinfo(0) != $@kfyl_win$){
+		mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+		mes "I'm sorry, event has ended. And you are not the winner.";
+		close;
+	}else if($kfyl == 2 && strcharinfo(0) == $@kfyl_win$){
+		mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+		mes "Welcome. You are a winner of Event ^FF0000Kill for ^0000FFyour Life^000000";
+		mes "Here is your prize.";
+		set .cp,rand(5);
+		set #CASHPOINTS,#CASHPOINTS + .cp;
+		dispbottom "Credited to your account"+.cp+" Cash Points. Now you have "+#CASHPOINTS+" Cash Points.";
+		set $@kfyl_win$, "";
+		close;
+	}else if($kfyl == 1){
+		mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+		mes "Welcome. Would you like to register for the event?";
+		next;
+		if(select("Yes.:No.") == 2) close;
+		
+		if(BaseLevel < 50 || Class == 0){
+			mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+			mes "I'm sorry. But you do not meet the rules of entry.";
+			close;
+		}else{
+			set $KFYL_PL$[getarraysize($KFYL_PL$)], strcharinfo(0);
+			mes "[^FF0000Kill for ^0000FFyour Life^000000]";
+			mes "Wait for the start.";
+			close;
+		}
+	}
+}
+		
+	

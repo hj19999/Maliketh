@@ -16,10 +16,11 @@
 // Blacksmith Mighty Hammer (+7~9) :: cash_smelting79
 //============================================================
 -	script	::MightyHammer	-1,{
+	waitingroom "HD Refiner",0;
 	disable_items;
 	mes "[Blacksmith Mighty Hammer]";
 	mes "Unlike others, I am a blacksmith who refines a very limited number of items.";
-	mes "I refine only items that are ^CC0000+7 to +9^000000.";
+	mes "I refine only items that are ^CC0000+4 to +9^000000.";
 	next;
 	mes "[Blacksmith Mighty Hammer]";
 	mes "My specialty is that even if my refining fails, the refine level decreases by 1 without losing the gear. Isn't it great?";
@@ -34,30 +35,30 @@
 	if (!getequipisequiped(.@part)) {
 		mes "[Blacksmith Mighty Hammer]";
 		switch(.@part) {
-		case EQI_HEAD_TOP:
+		case 1:
 			mes "I'm a blacksmith, not a hairstylist.";
 			break;
-		case EQI_ARMOR:
+		case 2:
 			mes "With my hammer, I will make you a star of the sky.";
 			break;
-		case EQI_HAND_L:
-		case EQI_HAND_R:
+		case 3:
+		case 4:
 			mes "Making artificial hands is not my specialty.";
 			break;
-		case EQI_GARMENT:
+		case 5:
 			mes "Bring out the item so I can refine it!";
 			break;
-		case EQI_SHOES:
+		case 6:
 			mes "Where is this foot odor coming from?";
 			break;
-		case EQI_ACC_L:
-		case EQI_ACC_R:
+		case 7:
+		case 8:
 			mes "Where is the accessory?";
 			break;
-		case EQI_HEAD_MID:
+		case 9:
 			mes "What do you want me to refine?";
 			break;
-		case EQI_HEAD_LOW:
+		case 10:
 			mes "Huh? What do you want me to do?";
 			break;
 		}
@@ -68,9 +69,9 @@
 		mes "This item can't be refined.";
 		close;
 	}
-	if (getequiprefinerycnt(.@part) < 7 || getequiprefinerycnt(.@part) > 9) {
+	if (getequiprefinerycnt(.@part) < 4 || getequiprefinerycnt(.@part) > 9) {
 		mes "[Blacksmith Mighty Hammer]";
-		mes "I only handle items with refine levels from +7 to +9.";
+		mes "I only handle items with refine levels from +4 to +9.";
 		close;
 	}
 	
@@ -109,6 +110,8 @@
 	delitem .@material,1;
 	set Zeny, Zeny-.@price;
 
+
+
 	// anti-hack
 	if (callfunc("F_IsEquipIDHack", .@part, .@refineitemid) || callfunc("F_IsEquipCardHack", .@part, .@card[0], .@card[1], .@card[2], .@card[3]) ||
 		callfunc("F_IsEquipRefineHack", .@part, .@refinerycnt)) {
@@ -140,15 +143,15 @@
 	mes "[Blacksmith Mighty Hammer]";
 	mes "I am sure a person like you would never blame me for a decrease in refine level by 1. Hmm.";
 	close;
+
 }
-prt_in,59,54,3	duplicate(MightyHammer)	Mighty Hammer#prt	826
+skycity,172,157,4	duplicate(MightyHammer)	Mighty Hammer#prt	826
 morocc_in,65,30,3	duplicate(MightyHammer)	Mighty Hammer#morocc	826
 payon,148,176,3	duplicate(MightyHammer)	Mighty Hammer#pay	826
 alberta_in,16,56,3	duplicate(MightyHammer)	Mighty Hammer#alb	826
 yuno_in01,171,18,3	duplicate(MightyHammer)	Mighty Hammer#yuno	826
 ein_in01,22,82,3	duplicate(MightyHammer)	Mighty Hammer#ein	826
 lhz_in02,280,19,3	duplicate(MightyHammer)	Mighty Hammer#lhz	826
-doubrius,44,29,3	duplicate(MightyHammer)	Mighty Hammer#dou	928
 
 // iRO NPC locations:
 // payon,174,133,4	duplicate(MightyHammer)	Mighty Hammer#im	826
@@ -157,6 +160,7 @@ doubrius,44,29,3	duplicate(MightyHammer)	Mighty Hammer#dou	928
 //============================================================
 -	script	::Basta	-1,{
 	disable_items;
+	waitingroom "+ 10 HD Refiner",0;
 	mes "[Basta]";
 	mes "I'm the best Blacksmith in the whole world, Basta.";
 	mes "But I don't provide a normal refine service.";
@@ -172,30 +176,30 @@ doubrius,44,29,3	duplicate(MightyHammer)	Mighty Hammer#dou	928
 	if (!getequipisequiped(.@part)) {
 		mes "[Basta]";
 		switch(.@part) {
-		case EQI_HEAD_TOP:
+		case 1:
 			mes "Is your head an equipment?";
 			break;
-		case EQI_ARMOR:
+		case 2:
 			mes "What do you want me to do?";
 			break;
-		case EQI_HAND_L:
-		case EQI_HAND_R:
+		case 3:
+		case 4:
 			mes "Making artificial hands is not my specialty.";
 			break;
-		case EQI_GARMENT:
+		case 5:
 			mes "Do you even know what a robe is?";
 			break;
-		case EQI_SHOES:
+		case 6:
 			mes "If you want to refine your feet, don't come to me, try running a marathon.";
 			break;
-		case EQI_ACC_L:
-		case EQI_ACC_R:
+		case 7:
+		case 8:
 			mes "Where is the accessory?";
 			break;
-		case EQI_HEAD_MID:
+		case 9:
 			mes "Well... I don't see any equipment worth refining.";
 			break;
-		case EQI_HEAD_LOW:
+		case 10:
 			mes "I can't make you smart. Go see a school teacher for that.";
 			break;
 		}
@@ -282,7 +286,30 @@ doubrius,44,29,3	duplicate(MightyHammer)	Mighty Hammer#dou	928
 		mes "Do you think I'm stupid?!";
 		mes "You switched the item while I wasn't looking! Get out of here!";
 		close;
+	}{
+		if (getequiprefinerycnt(.@part) == 10) {
+	mes "Pow! Pow! Pow! Pow!";
+	if (getequippercentrefinery(.@part, true) > rand(100)) {
+		successrefitem .@part;
+		next;
+		emotion ET_BEST;
+		mes "[Basta]";
+		mes "Great! Nicely done!!";
+		mes "I really am the best blacksmith in the whole wide world!";
+		close;
 	}
+	
+
+
+	next;
+		successrefitem .@part;
+		next;
+		emotion ET_BEST;
+		mes "[Basta]";
+		mes "Great! Nicely done!!";
+		mes "I really am the best blacksmith in the whole wide world!";
+		close;
+	} }
 
 	mes "Pow! Pow! Pow! Pow!";
 	if (getequippercentrefinery(.@part, true) > rand(100)) {
@@ -314,7 +341,6 @@ prt_in,57,54,3	duplicate(Basta)	Basta#prt	826
 morocc_in,68,30,3	duplicate(Basta)	Basta#morocc	826
 payon,148,174,3	duplicate(Basta)	Basta#payon	826
 alberta_in,18,56,3	duplicate(Basta)	Basta#alberta	826
-yuno_in01,173,18,3	duplicate(Basta)	Basta#yuno	826
+skycity,177,157,3	duplicate(Basta)	Basta#yuno	826
 ein_in01,24,82,3	duplicate(Basta)	Basta#einbroch	826
 lhz_in02,280,17,3	duplicate(Basta)	Basta#lighthalzen	826
-doubrius,47,29,3	duplicate(Basta)	Basta#dou	826

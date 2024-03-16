@@ -1,0 +1,79 @@
+﻿-	script	RankingWoE	-1,{
+end;
+
+OnPCKillEvent:
+if( strcharinfo(3) == "arug_cas03" || strcharinfo(3) == "arug_cas01"){
+			getmapxy .map$,.x,.y;
+				if( 
+				.map$ == "arug_cas03" && .x > 134 && .x < 149 && .y > 40 && .y < 63 ||
+					.map$ == "arug_cas01" && .x > 281 && .x < 268 && .y > 97 && .y < 88
+				)
+					end;
+				
+				if( $lastimaMultiplier < 1 ){
+				$lastimaMultiplier = 1;
+				set $lastimaMultiplier, 1;
+				}
+				
+				.playerGuild = getcharid(2); // Pega os membros da Guild
+				addrid(4,1,(.x - 14),(.y - 14),(.x + 14),(.y + 14)); // Pega quem esta na area 14 por 14 de quem mata
+				if( getcharid(2) == .playerGuild ) {			
+					switch(Class) { // Classes e a quantidade que ganha
+						// Arch Bishop
+						case 4099:
+						case 4057:
+						case 4063:
+						// Clown / Wanderer
+						case 4104:
+						case 4105:
+						case 4075:
+						case 4076:
+						case 4069:
+						case 4068:
+						// Shadow Chaser
+						case 4108:
+						case 4079:
+						case 4072:
+						// Soul Linker
+						case 4049:
+							set .@getEmp, 3;	
+							break;
+						// Sorcerer
+						case 4067:
+						case 4074:
+						case 4103:
+						// Sura
+						case 4106:
+						case 4077:
+						case 4070:
+						// RG
+						case 4066:
+						case 4073:
+						case 4102:
+						// Genético
+						case 4107:
+						case 4078:
+						case 4071:
+						// Warlock
+						case 4097:
+						case 4061:
+						case 4055:						
+							set .@getEmp, 2;
+							break;
+							
+						default:
+							set .@getEmp, 2;		
+							break;			
+					}			
+					
+					getitem 50003,( .@getEmp * $lastimaMultiplier );
+				}
+			end;			
+		
+
+
+}
+end;
+
+
+}

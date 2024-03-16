@@ -1,0 +1,32 @@
+dewata,200,167,3	script	€“Ê «·ÊÕÊ‘ 	492,{
+	
+	if ( BaseLevel > 175 ) {
+		mes "Only lvl 20 and less can enter - ›ﬁÿ «·–Ì‰ „” Ê«Â„ 20 Ê«ﬁ· Ì” ÿÌ⁄Ê‰ «·œŒÊ·";
+	}
+	else {
+		warp .map$,156,186;
+	}
+	close;
+	
+	OnInit:
+		.map$ = "pvp_y_1-1";
+		setmapflag .map$,mf_nosave;
+		setmapflag .map$,mf_nomobloot;
+		end;
+	
+	OnPCBaseLvUpEvent:
+		if ( strcharinfo(3) == .map$ && BaseLevel > 175 ) {
+			warp "SavePoint",0,0;
+		}
+		end;
+}
+
+
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1379,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	2838,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1098,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1713,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1716,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1193,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1769,1000,0,0,0
+pvp_y_1-1,0,0,0,0	monster	ÊÕ‘ €“Ê  	1198,1000,0,0,0
