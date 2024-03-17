@@ -39,6 +39,7 @@ if (#AssumptioBuff > gettimetick(2)){
 				                if(Assumptiobbbb) {
 								end;
 								}
+								else
 			sc_start SC_ASSUMPTIO,1200000,5;
 			}			
 	if (@HD > gettimetick(2))
