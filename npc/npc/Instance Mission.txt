@@ -262,4 +262,4 @@ end;
 end;
 }
 
--	pointshop	Hunting_Quest_Shop	-1,Instance_POINTS,6225:250,6226:333,7776:333,5389:333,2202:111,5800:111,2576:111;
+-	pointshop	Hunting_Quest_Shop	-1,Instance_POINTS,6225:35,6226:35,7776:35,2202:500,5800:400,2576:400,5389:335;

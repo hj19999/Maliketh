@@ -151,5 +151,5 @@ Hourly_Rewads:
 	//if(#Hourly_Rewads_Check >= 5){getitem 905,1;} //	like this you can add reward for Xhr and this reward will be given for that X in this example 5 mean that the player did pass 5hr or more
 return;
 }
-doubrius,35,37,6	pointshop	Hourly Rewards Shop	528,#HourlyRewards,7619:10,7620:20,12221:50,12210:555,14533:222,12903:222,12904:222,12905:222,12906:222,12907:222,12908:222,5403:333,5286:222
+doubrius,35,37,6	pointshop	Hourly Rewards Shop	528,#HourlyRewards,5286:375,5403:250,12210:55,14533:25,7619:25,7620:25,12221:20,12903:50,12904:50,12905:50,12906:50,12907:50,12908:50
 //<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>

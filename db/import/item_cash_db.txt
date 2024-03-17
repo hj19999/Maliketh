@@ -26,8 +26,8 @@
 0,2168,1300   // Immune Shield [1]
 0,5286,1100   // Pecopeco Hairband
 0,5800,1200   // Blush of Groom
-0,18561,1200  // Black Feather Beret
-0,5376,1100   // Flying Evil Wing
+0,18561,1400  // Black Feather Beret
+0,5376,1000   // Flying Evil Wing
 0,2589,2000   // Fallen Angel Wings
 0,2202,1500   // Sunglasses [1]
 0,5325,900    // Robo Eye
@@ -35,7 +35,7 @@
 0,18539,1000   // Skull Cap [1] 
 0,5462,850    // Spiked Scarf
 0,5463,850     // Rainbow Scarf 
-0,5359,800       // Airship Captain's Hat
+0,5359,900       // Airship Captain's Hat
 0,5389,1000      // Angel Spirit
 0,5490,900       // Anubis Helm
 0,5481,900     // Hermode Cap
@@ -47,13 +47,13 @@
 
 
 
-5,14545,175  // Battle Manual X3
+5,14545,190  // Battle Manual X3
 5,14533,75  //Field Manual 100%
 5,12208,35   // Battle manual
 5,12412,250  // HE Bubble Gum
 5,7776,100  // Gym Pass
 5,13710,900  // Gym Pass Box
-5,12221,35   // Megaphone
+5,12221,55   // Megaphone
 5,12214,35  // Convex Mirror
 5,12212,30  // Giant Fly Wing
 5,12910,250   // Giant Fly Wing Box
