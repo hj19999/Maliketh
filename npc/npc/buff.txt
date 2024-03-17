@@ -281,13 +281,14 @@ mes "Select Buff.";next;
 switch(select("Assumptio:kahii:Aspersio:Impositio Manus:Magnificat:Gloria")) {
 
 case 1:
-switch(select("on:off"))
+switch(select("on:off")){
 case 1:
 set Assumptiobbbb,0;
 mes "Done";
 case 2:
 set Assumptiobbbb,1;
 mes "Done";
+}
 }
 }
 }
