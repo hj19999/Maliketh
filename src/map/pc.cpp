@@ -5447,7 +5447,20 @@ void pc_putitemtocart(struct map_session_data *sd,int idx,int amount)
 
 	item_data = &sd->inventory.u.items_inventory[idx];
 
+// (^~_~^) Gepard Shield Start
+/*
+// (^~_~^) Gepard Shield End
 	if( item_data->nameid == 0 || amount < 1 || item_data->amount < amount || sd->state.vending )
+// (^~_~^) Gepard Shield Start
+*/
+// (^~_~^) Gepard Shield End
+
+// (^~_~^) Gepard Shield Start
+
+	if (item_data->nameid == 0 || amount < 1 || item_data->amount < amount || sd->state.vending || sd->state.prevend)
+
+// (^~_~^) Gepard Shield End
+
 		return;
 
 	if( item_data->equipSwitch ){
@@ -5497,7 +5510,20 @@ void pc_getitemfromcart(struct map_session_data *sd,int idx,int amount)
 
 	item_data=&sd->cart.u.items_cart[idx];
 
+// (^~_~^) Gepard Shield Start
+/*
+// (^~_~^) Gepard Shield End
 	if(item_data->nameid == 0 || amount < 1 || item_data->amount < amount || sd->state.vending )
+// (^~_~^) Gepard Shield Start
+*/
+// (^~_~^) Gepard Shield End
+
+// (^~_~^) Gepard Shield Start
+
+	if (item_data->nameid == 0 || amount < 1 || item_data->amount < amount || sd->state.vending || sd->state.prevend)
+
+// (^~_~^) Gepard Shield End
+
 		return;
 	if((flag = pc_additem(sd,item_data,amount,LOG_TYPE_NONE)) == 0)
 		pc_cart_delitem(sd,idx,amount,0,LOG_TYPE_NONE);
