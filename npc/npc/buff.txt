@@ -1,7 +1,7 @@
 doubrius,40,61,3	script	Buff NPC	403,{
 mes "[ Buff NPC ]";
 mes "Hello Select time you want for Buff ";next;
-switch(select("1 Day:1 Week:1 Month")) {
+switch(select("1 Day:1 Week:1 Month:remove Buff")) {
 case 1:
 mes "[ Buff NPC ]";
 mes "Hello , Which Buff you want ? each buff cost 8000000 Zeny .";next;
@@ -274,5 +274,19 @@ switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)
 							
 
 }
+case 4:
+
+mes "[ Buff NPC ]";
+mes "Select Buff.";next;
+switch(select("Assumptio:kahii:Aspersio:Impositio Manus:Magnificat:Gloria"))
+
+case 1:
+switch(select("on:off"))
+case 1:
+set Assumptiobbbb,0;
+mes "Done";
+case 2:
+set Assumptiobbbb,1;
+mes "Done";
 }
 }

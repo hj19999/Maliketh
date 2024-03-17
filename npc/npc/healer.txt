@@ -34,7 +34,11 @@ if (#MagnificatBuff > gettimetick(2)){
 if (#GloriaBuff > gettimetick(2)){
 			sc_start SC_GLORIA,30000,5;
 			}
+
 if (#AssumptioBuff > gettimetick(2)){
+				                if(Assumptiobbbb) {
+								end;
+								}
 			sc_start SC_ASSUMPTIO,1200000,5;
 			}			
 	if (@HD > gettimetick(2))
