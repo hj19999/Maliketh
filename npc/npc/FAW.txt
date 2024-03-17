@@ -1,5 +1,5 @@
 // https://rathena.org/board/topic/112186-faw-enchant-error-script/
-moc_para01,179,27,3	script	Dark Luhir	403,{
+doubrius,63,58,4	script	Dark Luhir	403,{
 	disable_items;
 	mes .@npc_name$ = "[^AA0000Valkyrie^000000]";
 	mes "I am here to enchant the",
@@ -182,5 +182,5 @@ OnInit:
 	//Cost for Enchanting. It's free in iRO
 	.enchant_cost = 0;
 	//Cost to reset | Costs 1Mz in iRO
-	.reset_cost = 2000000;
+	.reset_cost = 10000000;
 }
