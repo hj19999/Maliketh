@@ -18,6 +18,7 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
                                 Zeny -= .@cost;
                                 mes " Done . ";
                                 #AssumptioBuff = gettimetick(2) + 86400;
+								set Assumptiobbbb,0;
                                 end; }
                          else
                                 mes " You Don't have zeny ";
@@ -32,6 +33,7 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
                                 Zeny -= .@cost;
                                 mes " Done . ";
                                 #KahiiBuff = gettimetick(2) + 86400;
+								set kahiibbbb,0;
                                 end; }
                          else
                                 mes " You Don't have zeny ";
@@ -288,6 +290,17 @@ mes "Done";
 end;
 case 2:
 set Assumptiobbbb,1;
+mes "Done";
+end;
+}
+case 2:
+switch(select("on:off")){
+case 1:
+set kahiibbbb,0;
+mes "Done";
+end;
+case 2:
+set kahiibbbb,1;
 mes "Done";
 end;
 }

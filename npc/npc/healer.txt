@@ -69,6 +69,10 @@ set .sc_size,getarraysize( .sc_status );
 	if (Assumptiobbbb == 0){
 			sc_start SC_ASSUMPTIO,1200000,5;
 			}}
+if (#KahiiBuff > gettimetick(2)){
+	if (kahiibbbb == 0){
+			sc_start SC_KAAHI,1200000,7;
+			}}				
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
 	end;
