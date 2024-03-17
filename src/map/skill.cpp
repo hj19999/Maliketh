@@ -3893,7 +3893,7 @@ static int skill_check_unit_range2 (struct block_list *bl, int x, int y, uint16 
 				break;
 			case SC_MANHOLE:
 			case GN_HELLS_PLANT:
-				range = 0;
+				range = 1;
 				break;
 			default: {
 					int layout_type = skill_get_unit_layout_type(skill_id,skill_lv);
