@@ -15,7 +15,7 @@
 //= 5.1 Cleaned and standardized, mostly. [Euphy]
 //============================================================
 
-askald,148,229,4	script	Disguise Event	795,{
+doubrius,50,47,4	script	Disguise Event	795,{
 
 	// Currently set to run every two hours.
 	// To change times, edit the OnClock labels below.
@@ -49,7 +49,7 @@ askald,148,229,4	script	Disguise Event	795,{
 			set .EventON,1; set .Timer,1; setnpctimer 0; initnpctimer;
 			set .ResetCounter,.ResetCounter+1;
 			announce "The Disguise Event will begin in 3 minutes.",bc_all | bc_blue;
-			announce "The Event is being held in Main Town.",bc_all | bc_blue;
+			announce "The Event is being held in Prontera.",bc_all | bc_blue;
 			close;
 		case 2:
 			mes .@n$;
@@ -93,7 +93,7 @@ askald,148,229,4	script	Disguise Event	795,{
 				input .@amount;
 				mes .@n$;
 				if (.@amount<=0 || .@amount>=10000) {
-					mes "That amount is invalid. Using default ammount of 1.";
+					mes "That amount is invalid. Using default amount of 1.";
 					set .@amount,1;
 					next;
 					mes .@n$;
@@ -116,7 +116,7 @@ askald,148,229,4	script	Disguise Event	795,{
 	mes "At the start of the event, I will";
 	mes "disguise myself as a random";
 	mes "monster. You have to shout";
-	mes "that monter's name out loud.";
+	mes "that monster's name out loud.";
 	next;
 	mes "If you are correct, you will receive";
 	mes "a prize. If not, keep trying!";
@@ -129,8 +129,8 @@ OnInit:
 	set .Winner,0;
 	set .ResetCounter,0;
 	set .Rounds,10;
-	set .Prize,66501;
-	set .PrizeAmt,3;
+	set .Prize,56000;
+	set .PrizeAmt,1;
 	set .Rule,1;
 	setarray .MVP[0],1038,1039,1046,1059,1086,1087,1112,1115,1147,1150,1157,1159,1190,1251,1252,1272,1312,1373,
 	                  1389,1399,1418,1492,1502,1511,1583,1623,1630,1646,1647,1648,1649,1650,1651,1658,1685,1688,
@@ -147,24 +147,36 @@ OnInit:
 	    "2100,2101,2012,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113," + 
 	    "2114,2115,2116,2117,2118,2119,2120,2121,2123,2124,2125,1496,";
 	end;
-OnClock0000:
-OnClock0200:
-OnClock0400:
-OnClock0600:
-OnClock0800:
-OnClock1000:
-OnClock1200:
-OnClock1400:
-OnClock1600:
-OnClock1800:
-OnClock2000:
-OnClock2200:
+OnClock0030:
+OnClock0130:
+OnClock0230:
+OnClock0330:
+OnClock0430:
+OnClock0530:
+OnClock0630:
+OnClock0730:
+OnClock0830:
+OnClock0930:
+OnClock1030:
+OnClock1130:
+OnClock1230:
+OnClock1330:
+OnClock1430:
+OnClock1530:
+OnClock1630:
+OnClock1730:
+OnClock1830:
+OnClock1930:
+OnClock2030:
+OnClock2130:
+OnClock2230:
+OnClock2330:
 	set .ResetCounter,.ResetCounter+1;
 	set .EventON,1;
 	set .Timer,1;
 	set .Wait,1;
 	announce "The Disguise Event will begin in 3 minutes.",bc_all | bc_blue;
-	announce "The Event is being held in Main Town.",bc_all | bc_blue;
+	announce "The Event is being held in Prontera.",bc_all | bc_blue;
 	setnpctimer 0;
 	initnpctimer;
 	end;
@@ -177,7 +189,7 @@ OnTimer30000:
 	if (.Timer) end;
 	set .Change,0;
 	setnpcdisplay "Disguise Event",795;
-	npctalk "You took too long to guess what I was. Please wait 10 seconds while I disguise again.";
+	npctalk "Disguise Event : You took too long to guess what I was. Please wait 10 seconds while I disguise again.";
 	specialeffect EF_DETECT2;
 	set $MonsterName$,"";
 	deletepset 1;
@@ -188,17 +200,17 @@ OnTimer30000:
 OnTimer60000:
 	if (.Timer!=1) end;
 	announce "The Disguise Event will begin in 2 minutes.",bc_all | bc_blue;
-	announce "The Event is being held in Main Town.",bc_all | bc_blue;
+	announce "The Event is being held in Prontera.",bc_all | bc_blue;
 	end;
 OnTimer120000:
 	if (.Timer!=1) end;
 	announce "The Disguise Event will begin 1 minute.",bc_all | bc_blue;
-	announce "The Event is being held in Main Town.",bc_all | bc_blue;
+	announce "The Event is being held in Prontera.",bc_all | bc_blue;
 	end;
 OnTimer180000:
 	if (.Timer!=1) end;
 	announce "The Disguise Event has begun!",bc_all | bc_blue;
-	announce "The Event is being held in Main Town.",bc_all | bc_blue;
+	announce "The Event is being held in Prontera.",bc_all | bc_blue;
 	set .Timer,0; stopnpctimer;
 	setnpctimer 0; initnpctimer;
 iDisguise:
@@ -238,7 +250,7 @@ iCorrect:
 		setnpcdisplay "Disguise Event",795;
 		set .RoundCount,0; set .Change,0; set .EventON,0;
 		setnpctimer 0; stopnpctimer;
-		npctalk "Thank you all for playing. That was the last round of the Disguise Event. Come play again later.";
+		npctalk "Disguise Event : Thank you all for playing. That was the last round of the Disguise Event. Come play again later.";
 		end;
 	}
 	setnpcdisplay "Disguise Event",795;

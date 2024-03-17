@@ -4,7 +4,7 @@
 OnInit:
 	// item reward
 	setarray .item,
-		66501, 10;
+		56000, 10;
 
 	// @lmsstart - gm manual start
 	bindatcmd "lmsstart", strnpcinfo(0)+"::OnStart",60,60;
@@ -128,12 +128,12 @@ OnEndEvent:
 	announce strcharinfo(0)+" has won the Last Man Standing Event.",bc_all,0x0ceedb;
 	for ( .@j = 0; .@j < .@amt; .@j += 2 )
 		getitem .item[.@j], .item[.@j+1];				
-	warp "askald",151,239;
+	warp "doubrius",47,43;
 	end;
 	
 OnPCDieEvent:
 	if ( .start && strcharinfo(3) == "06guild_01" ) {
-		warp "askald",151,239;
+		warp "doubrius",47,43;
 		.@size = getmapusers("06guild_01");
 		if ( .@size > 1 )
 			mapannounce "06guild_01", "LMS: "+ .@size +" players left..", bc_blue;
