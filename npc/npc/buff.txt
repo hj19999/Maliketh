@@ -1,7 +1,7 @@
 doubrius,40,61,3	script	Buff NPC	403,{
 mes "[ Buff NPC ]";
 mes "Hello Select time you want for Buff ";next;
-switch(select("1 Day:1 Week:1 Month:remove Buff")) {
+switch(select("1 Day:1 Week:1 Month:Remove Buff")) {
 case 1:
 mes "[ Buff NPC ]";
 mes "Hello , Which Buff you want ? each buff cost 8000000 Zeny .";next;
