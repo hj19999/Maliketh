@@ -33,8 +33,8 @@
 0,5325,900    // Robo Eye
 0,5377,1100   // Gentleman's Pipe
 0,18539,1000   // Skull Cap [1] 
-0,5462,800    // Spiked Scarf
-0,5463,800     // Rainbow Scarf 
+0,5462,850    // Spiked Scarf
+0,5463,850     // Rainbow Scarf 
 0,5359,800       // Airship Captain's Hat
 0,5389,1000      // Angel Spirit
 0,5490,900       // Anubis Helm
