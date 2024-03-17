@@ -32,7 +32,7 @@ doubrius,71,67,6	script	Find the Mushroom	1084,{
 	mes "Start the event?";
 	next;
 	if (select("- No:- Yes") == 1) close;
-	donpcevent strnpcinfo(0) + "::OnMinute10";
+	donpcevent strnpcinfo(0) + "::OnMinute15";
 	mes "[ Find The Mushroom ]";
 	mes "Event started!";
 	close;
