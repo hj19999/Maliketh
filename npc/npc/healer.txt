@@ -19,18 +19,7 @@
 	.@Buffs = 1;	// Also buff players? (1: yes / 0: no)
 	.@Delay = 0;	// Heal delay, in seconds
 
-if (#AspersioBuff > gettimetick(2)){
-			sc_start SC_ASPERSIO,1200000,5;
-			}	
-if (#ImpositioBuff > gettimetick(2)){
-			sc_start SC_IMPOSITIO,1200000,5;
-			}	
-if (#MagnificatBuff > gettimetick(2)){
-			sc_start SC_MAGNIFICAT,1200000,5;
-			}	
-if (#GloriaBuff > gettimetick(2)){
-			sc_start SC_GLORIA,30000,5;
-			}
+
 
 			
 	if (@HD > gettimetick(2))
@@ -69,7 +58,23 @@ set .sc_size,getarraysize( .sc_status );
 if (#KahiiBuff > gettimetick(2)){
 	if (kahiibbbb == 0){
 			sc_start SC_KAAHI,1200000,7;
-			}}				
+			}}
+if (#AspersioBuff > gettimetick(2)){
+	if (Aspersiobbbb == 0){
+			sc_start SC_ASPERSIO,1200000,5;
+			}}	
+if (#ImpositioBuff > gettimetick(2)){
+	if (Impositiobbbb == 0){
+			sc_start SC_IMPOSITIO,1200000,5;
+			}}	
+if (#MagnificatBuff > gettimetick(2)){
+	if (Magnificat == 0){
+			sc_start SC_MAGNIFICAT,1200000,5;
+			}}	
+if (#GloriaBuff > gettimetick(2)){
+	if (Gloria == 0){
+			sc_start SC_GLORIA,30000,5;
+			}}			
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
 	end;
