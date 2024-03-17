@@ -19,9 +19,6 @@
 	.@Buffs = 1;	// Also buff players? (1: yes / 0: no)
 	.@Delay = 0;	// Heal delay, in seconds
 
-if (#KahiiBuff > gettimetick(2)){
-			sc_start SC_KAAHI,1200000,7;
-			}	
 if (#AspersioBuff > gettimetick(2)){
 			sc_start SC_ASPERSIO,1200000,5;
 			}	
