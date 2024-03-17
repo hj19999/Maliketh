@@ -285,9 +285,11 @@ switch(select("on:off")){
 case 1:
 set Assumptiobbbb,0;
 mes "Done";
+end;
 case 2:
 set Assumptiobbbb,1;
 mes "Done";
+end;
 }
 }
 }
