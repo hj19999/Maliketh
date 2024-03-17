@@ -65,9 +65,10 @@ SC_QUAGMIRE,SC_AETERNA,SC_HALLUCINATION,SC_SLOWDOWN,SC_BERSERK,SC_CHANGEUNDEAD,
 SC_STRIPWEAPON,SC_STRIPSHIELD,SC_STRIPARMOR,SC_STRIPHELM;
 set .sc_size,getarraysize( .sc_status );
 	}
-	if (#AssumptioBuff > gettimetick(2) & Assumptiobbbb == 1){
+	if (#AssumptioBuff > gettimetick(2)){
+	if (Assumptiobbbb == 0){
 			sc_start SC_ASSUMPTIO,1200000,5;
-			}
+			}}
 	if (.@Delay)
 		@HD = gettimetick(2) + .@Delay;
 	end;
