@@ -1,6 +1,6 @@
 // Interserver communication passwords, set in account.txt (or equiv.)
-userid: s1
-passwd: p1
+userid: dfgdgdsaa@1194
+passwd: RqawefZX@54AS3@64321
 
 // Character Server IP
 // The map server connects to the character server using this IP address.
