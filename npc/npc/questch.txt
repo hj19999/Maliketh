@@ -4,7 +4,7 @@ OnNPCKillEvent:
 // ----------------------------- Level 160 - 175 -----------------------------
 if (checkquest(64036,HUNTING) == 2) {
 		                    erasequest 64036;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -12,7 +12,7 @@ if (checkquest(64036,HUNTING) == 2) {
 }
 if (checkquest(64037,HUNTING) == 2) {
 		                    erasequest 64037;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -20,7 +20,7 @@ if (checkquest(64037,HUNTING) == 2) {
 }
 if (checkquest(64038,HUNTING) == 2) {
 		                    erasequest 64038;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -28,7 +28,7 @@ if (checkquest(64038,HUNTING) == 2) {
 }
 if (checkquest(64039,HUNTING) == 2) {
 		                    erasequest 64039;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -36,7 +36,7 @@ if (checkquest(64039,HUNTING) == 2) {
 }
 if (checkquest(64040,HUNTING) == 2) {
 		                    erasequest 64040;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -44,7 +44,7 @@ if (checkquest(64040,HUNTING) == 2) {
 }
 if (checkquest(64041,HUNTING) == 2) {
 		                    erasequest 64041;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -52,7 +52,7 @@ if (checkquest(64041,HUNTING) == 2) {
 }
 if (checkquest(64042,HUNTING) == 2) {
 		                    erasequest 64042;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -60,7 +60,7 @@ if (checkquest(64042,HUNTING) == 2) {
 }
 if (checkquest(64043,HUNTING) == 2) {
 		                    erasequest 64043;
-							getexp 350000000,350000000;
+							getexp 290000000,290000000;
 							getitem 599,100;
 							getitem 56002,30;
 							mes "[Leveling Board]";
@@ -142,7 +142,7 @@ if (checkquest(64028,HUNTING) == 2) {
 }
 if (checkquest(64029,HUNTING) == 2) {
 		                    erasequest 64029;
-							getexp 100000000,100000000;
+							getexp 80000000,80000000;
 							getitem 599,100;
 							getitem 56002,20;
 							mes "[Leveling Board]";
@@ -150,7 +150,7 @@ if (checkquest(64029,HUNTING) == 2) {
 }
 if (checkquest(64030,HUNTING) == 2) {
 		                    erasequest 64030;
-							getexp 100000000,100000000;
+							getexp 80000000,80000000;
 							getitem 599,100;
 							getitem 56002,20;
 							mes "[Leveling Board]";
@@ -158,7 +158,7 @@ if (checkquest(64030,HUNTING) == 2) {
 }
 if (checkquest(64031,HUNTING) == 2) {
 		                    erasequest 64031;
-							getexp 100000000,100000000;
+							getexp 80000000,80000000;
 							getitem 599,100;
 							getitem 56002,20;
 							mes "[Leveling Board]";

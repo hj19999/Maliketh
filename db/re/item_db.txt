@@ -12666,3 +12666,8 @@
 56004,Season_Ramadan_Coin,Ramadan ketupat,3,10,,0,,,,,,,,,,,,,{},{},{}
 56005,PassBox,Ramadan Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56003,1,Bound_Account;},{},{}
 50011,bodystyle,Body Style Ticket,3,0,,0,,,,,,,,,,,,,{},{},{}
+
+50012,Cashpoint10,Cash Point 10,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+10; dispbottom "You have received 10 Cash Points."; },{},{}
+50013,Cashpoint100,Cash Point 100,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+100; dispbottom "You have received 100 Cash Points."; },{},{}
+50014,Cashpoint500,Cash Point 500,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+500; dispbottom "You have received 500 Cash Points."; },{},{}
+50015,Cashpoint1000,Cash Point 1000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+1000; dispbottom "You have received 1000 Cash Points."; },{},{}
