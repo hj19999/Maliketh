@@ -1,4 +1,4 @@
-doubrius,60,41,4	script	Leveling Board	857,{ 
+doubrius,59,41,4	script	Leveling Board	857,{ 
 mes "[ Leveling Board ]";
 mes "Welcome to leveling board , This board give you misison in your level range .";next;
 mes "There is 6 Level Range:- .";

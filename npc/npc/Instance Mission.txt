@@ -1,4 +1,4 @@
-doubrius,60,36,4	script	Instance Quest	618,{
+doubrius,59,36,4	script	Instance Quest	618,{
 
              switch(select("Instance Mission:Instance Shop:Close")) {
 
