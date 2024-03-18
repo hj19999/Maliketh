@@ -13,6 +13,10 @@
 //============================================================
 doubrius,63,50,4	script	Reset Girl	124,{
 	//	 		Skills,	Stats,	Both,	Limit
+	if( BaseLevel < 130 ){
+		setarray .@Reset,	5000,	5000,	9000,	0;
+	}
+	else
 	setarray .@Reset,	5000000,	5000000,	8000000,	0;
 	mes "[Reset Girl]";
 	if(.@Reset[3] && reset_limit > .@Reset[3]) {
