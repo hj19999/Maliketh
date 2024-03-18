@@ -83,8 +83,8 @@
 7,14176,630  // Enriched Elunium Box
 7,14177,630  // Enriched Oridecon Box
 7,6241,90  // HD Elunium
-7,6240,810  // HD Oridecon
-7,16396,90  // HD Elunium 10 Box
+7,6240,90  // HD Oridecon
+7,16396,810  // HD Elunium 10 Box
 7,16394,810  // HD Oridecon 10 Box
 7,6225,95   //HD Carnium
 7,6226,95    //HD Bradium
