@@ -12,4 +12,4 @@ login_port: 6900
 console_silent: 7
 
 // Can you use _M/_F to make new accounts on the server?
-new_account: yes
+new_account: no
