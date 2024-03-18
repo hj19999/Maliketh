@@ -28,7 +28,7 @@
 //==== 1.3b Adding log database 'sader_variables_log' you can check who did get his reward from the npc , Changing some text .
 //==== 1.3c Hot Fix
 //============================================================
-doubrius,27,58,6	script	Kareem	654,{
+doubrius,27,58,6	script	Gift Reward	654,{
 OnMyReward:
 	if(getgroupid() >= 90 ){
 		switch( select("Add Reward:Check and Remove a Reward:Claim Reward:Close") ){
