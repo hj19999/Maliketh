@@ -12671,3 +12671,22 @@
 50013,Cashpoint100,Cash Point 100,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+100; dispbottom "You have received 100 Cash Points."; },{},{}
 50014,Cashpoint500,Cash Point 500,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+500; dispbottom "You have received 500 Cash Points."; },{},{}
 50015,Cashpoint1000,Cash Point 1000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+1000; dispbottom "You have received 1000 Cash Points."; },{},{}
+
+
+57000,Tobi_Mask,Tobi_Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3000,{},{},{}
+
+57001,bla_protect_cloth,bla_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3001,{}
+57002,blu_protect_cloth,blu_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3002,{}
+57003,g_protect_cloth,g_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3003,{}
+57004,lilac_protect_cloth,lilac_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3004,{}
+57005,pur_protect_cloth,pur_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3005,{}
+57006,red_protect_cloth,red_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3006,{}
+
+57007,Red_Incantation,Red_Incantation,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3007,{}
+57008,Incantation,Incantation,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3008,{}
+57009,Green_Incantation_Samurai,Green_Incantation_Samurai,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3009,{}
+57010,Blue_incantation,Blue_incantation,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3010,{}
+
+57011,hollow_mask,hollow_mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3011,{},{},{}
+57012,Hokage_Hat,Hokage_Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3012,{}
+57013,Warrior_Axe,Warrior_Axe,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3013,{}
