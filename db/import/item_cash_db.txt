@@ -19,7 +19,8 @@
 //    Item cost, in cash points (#CASHPOINTS).
 
 
-
+0,5374,1600
+0,5518,1600
 0,56005,1500
 0,50011,2000
 0,2576,1200   // Adventurer's Backpack [1]
@@ -52,9 +53,9 @@
 
 
 
-//5,14545,190  // Battle Manual X3
-//5,14533,75  //Field Manual 100%
-//5,12208,35   // Battle manual
+5,14545,190  // Battle Manual X3
+5,14533,75  //Field Manual 100%
+5,12208,35   // Battle manual
 5,12412,250  // HE Bubble Gum
 5,7776,100  // Gym Pass
 5,13710,900  // Gym Pass Box

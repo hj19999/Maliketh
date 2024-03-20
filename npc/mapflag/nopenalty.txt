@@ -18,6 +18,7 @@
 
 // Towns ====================
 ayo_in01	mapflag	nopenalty
+06guild_01	mapflag	nopenalty
 ayo_in02	mapflag	nopenalty
 alb_ship	mapflag	nopenalty
 alberta	mapflag	nopenalty

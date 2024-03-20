@@ -16,7 +16,7 @@
 
 doubrius,63,54,4	script	Wise Old Woman#eAcustom	78,{
 
-	set .zenycost,5000000;    // base cost of the card remover services (in Zeny)
+	set .zenycost,4000000;    // base cost of the card remover services (in Zeny)
 	set .percardcost,0;  // cost per card of the card remover services (in Zeny)
 	set .faildestroy,1;      // should the card remover have a chance of failure that destroys items? (1=yes, 0=no)
 

@@ -68,7 +68,7 @@ doubrius,63,58,4	script	Dark Luhir	403,{
 		case 3:
 			callsub S_Check;
 			mes .@npc_name$,
-				"This will cost 2 M zeny.",
+				"This will cost 6 M zeny.",
 				"Are you sure?";
 			next;
 			select("Yes");
@@ -77,7 +77,7 @@ doubrius,63,58,4	script	Dark Luhir	403,{
 				mes "You don't have zeny.";
 				close;
 			}
-			Zeny -= 2000000;
+			Zeny -= 6000000;
 			.@ref = getequiprefinerycnt(EQI_GARMENT);
 			.@card[0] = getequipcardid(EQI_GARMENT,0);
 			.@card[1] = getequipcardid(EQI_GARMENT,1);
@@ -182,5 +182,5 @@ OnInit:
 	//Cost for Enchanting. It's free in iRO
 	.enchant_cost = 0;
 	//Cost to reset | Costs 1Mz in iRO
-	.reset_cost = 10000000;
+	.reset_cost = 6000000;
 }

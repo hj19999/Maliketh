@@ -18,12 +18,12 @@
 //= 1.7 Removed re-roll behavior. [Secret]
 //============================================================
 
-doubrius,41,29,6	script	Suhnbi#cash	63,{
+doubrius,41,29,6	script	Enriched Refine#cash	63,{
 	disable_items;
 	mes "[Suhnbi]";
 	mes "I am the Armsmith";
 	mes "I can refine all kinds of weapons,";
-	mes "armor and equipment, so let me";
+	mes "armor and equipment  to + 7 for 100%, so let me";
 	mes "know what you want to refine.";
 	next;
 

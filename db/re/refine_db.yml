@@ -30,13 +30,13 @@ Armor:
       Price: 100000
       Material: 6223
     - Type: REFINE_COST_HD
-      Price: 20000
+      Price: 250000
       Material: 6241
     - Type: REFINE_COST_ENRICHED
-      Price: 2000
+      Price: 150000
       Material: 7619
     - Type: REFINE_COST_OVER10_HD
-      Price: 100000
+      Price: 250000
       Material: 6225
     - Type: REFINE_COST_HOLINK
       Price: 15000
