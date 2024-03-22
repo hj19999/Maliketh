@@ -81,7 +81,7 @@
 	.@material = getequiprefinecost(.@part, REFINE_COST_HD, REFINE_MATERIAL_ID);
 	
 	mes "[Blacksmith Mighty Hammer]";
-	mes "In order to refine the gear you selected you need ^ff9999"+getitemname(.@material)+"^000000 and 20,000 zeny as a fee.";
+	mes "In order to refine the gear you selected you need ^ff9999"+getitemname(.@material)+"^000000 and 250000 zeny as a fee.";
 	mes "Do you have them ready?";
 	next;
 	if(select("Yes:No") == 2) {
@@ -235,7 +235,7 @@ doubrius,44,29,3	duplicate(MightyHammer)	HD Refine#dou	928
 	}
 	mes "[Basta]";
 	mes "Hmm... is this the one you want to refine?";
-	mes "To refine this equipment, I need 1 ^ff9999"+getitemname(.@material)+"^000000 and 250000 zeny as a fee.";
+	mes "To refine this equipment, I need 1 ^ff9999"+getitemname(.@material)+"^000000 and " + callfunc("F_InsertComma",.@price) + " zeny as a fee.";
 	mes "Do you really want to refine this?";
 	next;
 	if(select("Yes:No") == 2) {
