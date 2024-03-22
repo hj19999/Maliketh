@@ -25,8 +25,6 @@
 50005,8,100	// White_Slim_Potion
 50003,8,100	// Light_Red_Pot
 50004,8,100	// Light_Orange_Pot
-603,8,100	// Old_Blue_Box
-617,8,100	// Old_Violet_Box
 671,507,100	// Gold_Coin
 675,507,100	// Silver_Coin
 744,1,100	// Bunch_Of_Flowers

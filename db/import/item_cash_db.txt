@@ -108,6 +108,7 @@
 5,14533,75  //Field Manual 100%
 5,12208,35   // Battle manual
 5,12412,250  // HE Bubble Gum
+5,12211,55 // kafra card
 5,7776,100  // Gym Pass
 5,13710,900  // Gym Pass Box
 5,12221,55   // Megaphone

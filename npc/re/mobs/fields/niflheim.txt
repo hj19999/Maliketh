@@ -164,6 +164,8 @@ OnInit:
 
 OnLoDDead:
 	killmonster "niflheim",strnpcinfo(3)+"::OnInvasionMonsters";
+		getitem 56001,1;
+announce "[ System ] : Player ["+ strcharinfo(0) +"] has killed "+ getmonsterinfo( killedrid, MOB_NAME ) +" at "+ strcharinfo(3), bc_all;
 	initnpctimer;
 OnInvasionMonsters:
 	end;

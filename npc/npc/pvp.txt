@@ -24,3 +24,13 @@ pvp_n_1-4	mapflag	pvp
 pvp_n_1-4	mapflag	noreturn
 pvp_n_1-4	mapflag	nowarp
 pvp_n_1-4	mapflag	noteleport
+
+
+pvp_n_1-5,95,139,4	script	Quit	686,{
+if( select("Quit:Cancel") == 1 ){
+	progressbar "0xFFFF00",10;
+		warp "doubrius",46,42;
+
+}
+end;
+}
