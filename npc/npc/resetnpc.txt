@@ -17,7 +17,7 @@ doubrius,63,50,4	script	Reset Girl	124,{
 		setarray .@Reset,	5000,	5000,	9000,	0;
 	}
 	else
-	setarray .@Reset,	2500000,	2500000,	4000000,	0;
+	setarray .@Reset,	500000,	500000,	750000,	0;
 	mes "[Reset Girl]";
 	if(.@Reset[3] && reset_limit > .@Reset[3]) {
 		mes "Sorry you can only reset "+callfunc("F_InsertPlural",.@Reset[3],"time")+" in your life.";
