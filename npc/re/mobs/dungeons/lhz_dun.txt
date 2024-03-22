@@ -160,6 +160,8 @@ OnInit:
 
 OnLhzMvPDead:
 	killmonster "lhz_dun04",strnpcinfo(3)+"::OnMy99Dead";
+		getitem 56001,1;
+announce "[ System ] : Player ["+ strcharinfo(0) +"] has killed "+ getmonsterinfo( killedrid, MOB_NAME ) +" at "+ strcharinfo(3), bc_all;
 	initnpctimer;
 OnMy99Dead:
 	end;

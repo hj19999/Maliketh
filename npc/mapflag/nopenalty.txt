@@ -17,6 +17,8 @@
 //============================================================
 
 // Towns ====================
+doubrius	mapflag	nopenalty
+pvp_n_1-5	mapflag	nopenalty
 ayo_in01	mapflag	nopenalty
 06guild_01	mapflag	nopenalty
 ayo_in02	mapflag	nopenalty
