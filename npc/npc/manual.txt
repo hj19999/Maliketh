@@ -1,8 +1,8 @@
 doubrius,53,61,6	script	Battle Manual	120,{
-if (BaseLevel >= 130) { mes .@name$,"I give battle manual to lvl 130 and less " ; close; }
+if (BaseLevel >= 130) { mes .@name$,"I give battle manual to lvl 130 and less " ; end; }
 mes "Hello i can give you battle manual every 24 hour to lvl 130 and less" ; next;
 mes ""do you want to use it now ?";
-switch(select("no:yes")) {
+             switch(select("No:Yes")) {
 case 1:
 end;
 case 2:
