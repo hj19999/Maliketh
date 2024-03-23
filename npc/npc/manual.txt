@@ -8,6 +8,7 @@ end;
 case 2:
 		if (#BattMan > gettimetick(2)){
 			mes "You need to wait ^2FFF3E"+Time2Str(#BattMan)+"^000000 until take it agine";
+			end;
 			}
 			else
 mes "ok i give you come after 24 hour ";
