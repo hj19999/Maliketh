@@ -2,12 +2,17 @@ doubrius,53,61,6	script	Battle Manual	120,{
 if (BaseLevel >= 130) { mes .@name$,"I give battle manual to lvl 130 and less " ; close; }
 mes "Hello i can give you battle manual every 24 hour to lvl 130 and less" ; next;
 mes ""do you want to use it now ?";
-	if (select("no:yes") == 1) close;
+switch(select("no:yes")) {
+case 1:
+end;
+case 2:
 		if (#BattMan > gettimetick(2)){
 			mes "You need to wait ^2FFF3E"+Time2Str(#BattMan)+"^000000 until take it agine";
 			}
+			else
 mes "ok i give you come after 24 hour ";
 		sc_start SC_EXPBOOST,1*60*30*1000,50;
                                 #BattMan = gettimetick(2) + 86400;
 								end;
+}
 }
