@@ -44,10 +44,6 @@ if( eaclass() == EAJ_SOUL_LINKER){
 mes "No more jobs are available . ";
 end;}
 Else
-if( eaclass() == EAJ_GUNSLINGER){
-mes "No more jobs are available . ";
-end;}
-Else
 
 // Checks if the given eac is a baby class
 function Is_Baby	{

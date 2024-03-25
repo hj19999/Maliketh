@@ -2395,8 +2395,8 @@
 4202,Civil_Servant_Card,Mao Guai Card,6,20,,10,,,,,,,,2,,,,,{ bonus2 bAddEle,Ele_Ghost,20; },{},{}
 4203,Mutant_Dragon_Card,Mutant Dragonoid Card,6,20,,10,,,,,,,,2,,,,,{ bonus bBaseAtk,15; bonus3 bAutoSpell,"MG_FIREBALL",3+7*(getskilllv("MG_FIREBALL")==10),50; },{},{}
 4204,Mini_Demon_Card,Mini Demon Card,6,20,,10,,,,,,,,64,,,,,{ bonus2 bSubRace,RC_Brute,-20; bonus2 bExpAddRace,RC_Brute,10; },{},{}
-4205,Mimic_Card,Mimic Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItem,603,10; },{},{}
-4206,Mystcase_Card,Myst Case Card,6,20,,10,,,,,,,,769,,,,,{ bonus2 bAddMonsterDropItem,644,30; },{},{}
+4205,Mimic_Card,Mimic Card,6,20,,10,,,,,,,,136,,,,,{ bonus2 bAddMonsterDropItem,603,100; },{},{}
+4206,Mystcase_Card,Myst Case Card,6,20,,10,,,,,,,,769,,,,,{ bonus2 bAddMonsterDropItem,644,200; },{},{}
 4207,Mysteltainn_Card,Mysteltainn Card,6,20,,10,,,,,,,,32,,,,,{ bonus2 bSubSize,Size_Small,25; bonus bDef,1; },{},{}
 4208,Miyabi_Ningyo_Card,Miyabi Doll Card,6,20,,10,,,,,,,,64,,,,,{ bonus bMaxSPrate,10; bonus2 bSkillAtk,"MG_FROSTDIVER",5; },{},{}
 4209,Violy_Card,Violy Card,6,20,,10,,,,,,,,136,,,,,{ bonus3 bAutoSpell,"BA_FROSTJOKER",1+4*(getskilllv("BA_FROSTJOKER")==5),20; },{},{}
@@ -12694,7 +12694,7 @@
 60001,arc_angel_balloon,arc angel balloon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1885,{},{},{}
 60002,Ayashas_Tail,Ayashas Tail,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1886,{},{},{}
 60003,bad_fury_balloon,bad fury balloon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1887,{},{},{}
-60004,Batring,Batring,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1888,{},{},{}
+60004,Batring,Batring,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1888,{},{},{}
 60005,blackchakra,blackchakra,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1889,{},{},{}
 60006,BlackRed_Fox_Tail,BlackRed Fox Tail,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1890,{},{},{}
 60007,Black_Fox_Tail,Black Fox Tail,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,1891,{},{},{}
