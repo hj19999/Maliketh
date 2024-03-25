@@ -537,7 +537,7 @@ lhz_dun_n,145,265,4	script	Silent Mind#JCv2	4_CENERE,{
 	}
 }
 
-lhz_dun_dn,134,265,2	script	Wandering Mind#JCv2	4_CENERE,{
+lhz_dun_n,134,265,2	script	Wandering Mind#JCv2	4_CENERE,{
 	disable_items;
 	npctalk "Kkk... I can... sense...", "", bc_self;
 	mes "[Wandering Mind]";
