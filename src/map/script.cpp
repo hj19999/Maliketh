@@ -24423,6 +24423,7 @@ BUILDIN_FUNC(isnpccloaked)
 	script_pushint(st, npc_is_cloaked(nd, sd));
 	return SCRIPT_CMD_SUCCESS;
 }
+
 #include "../custom/script.inc"
 
 // declarations that were supposed to be exported from npc_chat.cpp

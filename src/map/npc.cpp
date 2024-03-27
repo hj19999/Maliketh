@@ -1106,9 +1106,9 @@ int npc_touch_areanpc(struct map_session_data* sd, int16 m, int16 x, int16 y)
 
 		if (x >= mapdata->npc[i]->bl.x - xs && x <= mapdata->npc[i]->bl.x + xs && y >= mapdata->npc[i]->bl.y - ys && y <= mapdata->npc[i]->bl.y + ys) {
 			f = 0;
+
 			if (npc_is_cloaked(mapdata->npc[i], sd))
 				continue;
-
 			switch (mapdata->npc[i]->subtype) {
 			case NPCTYPE_WARP:
 				if ((!mapdata->npc[i]->trigger_on_hidden && (pc_ishiding(sd) || (sd->sc.count && sd->sc.data[SC_CAMOUFLAGE]))) || pc_isdead(sd))

@@ -33,6 +33,68 @@
 //----------------------------------------------------------------------------
 // Normal maps
 //----------------------------------------------------------------------------
+
+29091,6		// Biolab 5 arch
+29092,6		// Biolab 5 arch
+29093,6		// Biolab 5 arch
+29094,6		// Biolab 5 arch
+29095,6		// Biolab 5 arch
+29096,6		// Biolab 5 arch
+29097,6		// Biolab 5 arch
+29098,6		// Biolab 5 arch
+29099,6		// Biolab 5 arch
+29100,6		// Biolab 5 arch
+29061,6		// Biolab 5 Mettle
+29062,6		// Biolab 5 Mettle
+29063,6		// Biolab 5 Mettle
+29064,6		// Biolab 5 Mettle
+29065,6		// Biolab 5 Mettle
+29066,6		// Biolab 5 Mettle
+29067,6		// Biolab 5 Mettle
+29068,6		// Biolab 5 Mettle
+29069,6		// Biolab 5 Mettle
+29070,6		// Biolab 5 Mettle
+29071,6		// Biolab 5 Magic Essence
+29072,6		// Biolab 5 Magic Essence
+29073,6		// Biolab 5 Magic Essence
+29074,6		// Biolab 5 Magic Essence
+29075,6		// Biolab 5 Magic Essence
+29076,6		// Biolab 5 Magic Essence
+29077,6		// Biolab 5 Magic Essence
+29078,6		// Biolab 5 Magic Essence
+29079,6		// Biolab 5 Magic Essence
+29080,6		// Biolab 5 Magic Essence
+29101,6		// Biolab 5 Adamantine
+29102,6		// Biolab 5 Adamantine
+29103,6		// Biolab 5 Adamantine
+29104,6		// Biolab 5 Adamantine
+29105,6		// Biolab 5 Adamantine
+29106,6		// Biolab 5 Adamantine
+29107,6		// Biolab 5 Adamantine
+29108,6		// Biolab 5 Adamantine
+29109,6		// Biolab 5 Adamantine
+29110,6		// Biolab 5 Adamantine
+29111,6		// Biolab 5 Affection
+29112,6		// Biolab 5 Affection
+29113,6		// Biolab 5 Affection
+29114,6		// Biolab 5 Affection
+29115,6		// Biolab 5 Affection
+29116,6		// Biolab 5 Affection
+29117,6		// Biolab 5 Affection
+29118,6		// Biolab 5 Affection
+29119,6		// Biolab 5 Affection
+29120,6		// Biolab 5 Affection
+29081,6		// Biolab 5 Acute
+29082,6		// Biolab 5 Acute
+29083,6		// Biolab 5 Acute
+29084,6		// Biolab 5 Acute
+29085,6		// Biolab 5 Acute
+29086,6		// Biolab 5 Acute
+29087,6		// Biolab 5 Acute
+29088,6		// Biolab 5 Acute
+29089,6		// Biolab 5 Acute
+29090,6		// Biolab 5 Acute
+
 2483,1		// Siege_Greave
 2484,1		// Siege_Boots
 2485,1		// Siege_Shoes

@@ -1047,8 +1047,10 @@ static int clif_set_unit_idle(struct block_list* bl, unsigned char* buffer, bool
 	const char *name;
 #endif
 	sd = BL_CAST(BL_PC, bl);
-if (!option)
+
+	if (!option)
 		option_val = ((sc) ? sc->option : 0);
+	
 #if PACKETVER < 20091103
 	if(type)
 		WBUFW(buf,0) = spawn ? 0x7c : 0x78;
@@ -3990,8 +3992,6 @@ void clif_misceffect(struct block_list* bl,int type)
 /// 0229 <id>.L <body state>.W <health state>.W <effect state>.L <pk mode>.B (ZC_STATE_CHANGE3)
 void clif_changeoption_target(struct block_list* bl, struct block_list *target)
 {
-
-
 	nullpo_retv(bl);
 
 	struct status_change *sc = status_get_sc(bl);
@@ -4012,7 +4012,7 @@ void clif_changeoption_target(struct block_list* bl, struct block_list *target)
 	WBUFW(buf,6) = sc->opt1;
 	WBUFW(buf,8) = sc->opt2;
 	WBUFL(buf,10) = sc->option;
-	#if PACKETVER >= 7
+#if PACKETVER >= 7
 	WBUFB(buf,14) = (sd)? sd->status.karma : 0;
 #else
 	WBUFB(buf,12) = (sd)? sd->status.karma : 0;
@@ -4701,14 +4701,13 @@ static void clif_getareachar_pc(struct map_session_data* sd,struct map_session_d
 void clif_getareachar_unit(struct map_session_data* sd,struct block_list *bl)
 {
 	nullpo_retv(bl);
-	
 	uint8 buf[128];
 	struct unit_data *ud;
 	struct view_data *vd;
 	int len;
 	bool option = false;
 	unsigned int option_val = 0;
-	
+
 	vd = status_get_viewdata(bl);
 	if (!vd || vd->class_ == JT_INVISIBLE)
 		return;

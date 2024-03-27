@@ -21,7 +21,9 @@
 //	Only groups of group-level 50 and up can override this setting.
 
 
-
+56004,8,100
+20307,33,100
+598,33,100
 50005,8,100	// White_Slim_Potion
 50003,8,100	// Light_Red_Pot
 50004,8,100	// Light_Orange_Pot

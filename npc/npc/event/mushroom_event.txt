@@ -47,7 +47,7 @@ OnInit:
 OnMinute15:	// Start time (every hour)
 	if (.status) end;
 	.status = 1;
-	.@spawn = 5;	// How many Mushrooms should spawn?
+	.@spawn = 10;	// How many Mushrooms should spawn?
 	.event_map$ = .maps_list$[ rand(getarraysize(.maps_list$)) ];
 	.@label$ = strnpcinfo(0) + "::OnMobKilled";
 	killmonster .event_map$, .@label$;

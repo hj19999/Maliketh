@@ -4,7 +4,7 @@
 OnInit:
 	// item reward
 	setarray .item,
-		56000, 20;
+		56000, 40;
 
 	// @lmsstart - gm manual start
 	bindatcmd "lmsstart", strnpcinfo(0)+"::OnStart",60,60;
