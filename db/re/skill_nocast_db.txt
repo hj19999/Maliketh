@@ -31,6 +31,9 @@
 2430,1	//WM_SATURDAY_NIGHT_FEVER
 2455,1	//SO_ARRULLO
 2299,1	//SC_MANHOLE
+2300,1	//Dimension Door
+2301,1	//Chaos Panic
+2303,1	//Bloody Lust
 2383,1	//Harmonize 
 //----------------------------------------------------------------------------
 // PVP
