@@ -66,7 +66,7 @@ OnPvpLadder:
 			mes ".....";
 			cleararray $TOPPK$[0],0,127; 					// Clears array where top rank char names are stored.
 			cleararray $TOPPK[0],0,127; 					// Clears array where top rank kill count are stored.
-			query_sql("UPDATE `char_reg_num_db` SET `value` = '0' WHERE `key` = 'pl_pkcount'"); // Clears kills saved on character variables (NEW: on all characters it may be online or offline)
+			query_sql("UPDATE `char_reg_num` SET `value` = '0' WHERE `key` = 'pl_pkcount'"); // Clears kills saved on character variables (NEW: on all characters it may be online or offline)
 			mes "Cleared pvp data.";
 			close;
 		case 1: 											// View PvP Records
