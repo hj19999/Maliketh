@@ -12,3 +12,6 @@ doubrius,39,51,5	script	Kafra Employee#main	894,{
 	callfunc "F_KafEnd",0,1,"at the Prontera Culverts";
 
 }
+
+
+dicastes01,192,191,6	duplicate(Kafra Employee#main)	Kafra Employee#alb	894

@@ -126,3 +126,5 @@ mora,55,152,4	duplicate(Healer)	Healer#mora	909
 
 
 doubrius,59,61,0,0	monster	Barricade  	1905,1,0,0,0
+
+dicastes01,205,184,0,0	monster	Barricade  	1905,1,0,0,0
