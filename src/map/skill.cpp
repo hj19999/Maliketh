@@ -2709,16 +2709,13 @@ bool skill_strip_equip(struct block_list *src, struct block_list *target, uint16
 		case SC_STRIPACCESSARY:
 			location = EQP_ACC;
 			break;
-	case WL_EARTHSTRAIN:
-		{
-			uint16 i;
-			const int pos[5] = { EQP_WEAPON, EQP_HELM, EQP_SHIELD, EQP_ARMOR, EQP_ACC };
-
-			if (dmg_lv != ATK_DEF) // Only strip if we make a successful hit.
-				break;
-			for (i = 0; i < skill_lv; i++)
-					skill_strip_equip(src, bl, pos[i], 5 * skill_lv, skill_lv, skill_get_time2(skill_id, skill_lv));
-		}
+		case WL_EARTHSTRAIN:
+			location = EQP_SHIELD|EQP_ARMOR|EQP_HELM;
+			if (skill_lv >= 4)
+				location |= EQP_WEAPON;
+			if (skill_lv >= 5)
+				location |= EQP_ACC;
+			break;
 	}
 
 	for (uint8 i = 0; i < ARRAYLENGTH(pos); i++) {
