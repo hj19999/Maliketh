@@ -137,15 +137,17 @@ S_ChanceType:
 		//Decreasing Chance of Enchantment
 		//60% low, 30% mid, 10% high for 1st & 2nd enchant slot
 		//40% low, 30% mid, 20% high, 10% special for 3rd enchant slot
+//20% low, 50% mid, 30% high for 1st & 2nd enchant slot
+//20% low, 40% mid, 20% high, 20% special for 3rd enchant slot
 			.@rand = rand(1,10);
 			if(getarg(2) && getarg(3)) { //For 3rd & 4th Card Slot aka 2nd & 3rd Enchant Slot
-				if (.@rand < 5 ) .@x = 0; 
+				if (.@rand < 3 ) .@x = 0; 
 				else if (.@rand < 7) .@x = 1; 
 				else if (.@rand < 9) .@x = 2; 
 				else .@x = 3;	
 			} else {	//For 2nd Card slot aka 1st Enchant Slot
-				if (.@rand < 7) .@x=0; 
-				else if (.@rand < 10) .@x = 1; 
+				if (.@rand < 3) .@x=0; 
+				else if (.@rand < 8) .@x = 1; 
 				else .@x = 2; 
 			}
 			return .@x;
