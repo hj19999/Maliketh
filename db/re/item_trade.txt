@@ -21,6 +21,8 @@
 //	Only groups of group-level 50 and up can override this setting.
 
 
+
+50002,479,100
 56004,8,100
 20307,33,100
 598,33,100
