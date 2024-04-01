@@ -145,7 +145,7 @@ IG_New_Gift_Envelope,5841,40,1,1	// 1x Shaman_Hat_
 IG_New_Gift_Envelope,12247,80,1,1	// 1x Halohalo
 IG_New_Gift_Envelope,604,80,2,1	// 2x Branch_Of_Dead_Tree
 IG_New_Gift_Envelope,12755,100,1,1	// 1x Traditional_Firecrack
-IG_New_Gift_Envelope,12246,5,1,1	// 1x Magic_Card_Album
+
 
 IG_Passion_FB_Hat_Box,5856,0,1,0,0,60	// 1x Passion_FB_Hat
 
@@ -1224,7 +1224,6 @@ IG_Tw_October_Scroll,2702,21,1,1,0,0,1	// 1x Bison_Horn
 IG_Tw_October_Scroll,5367,20,1,1,0,0,1	// 1x Hyegun_Hat
 IG_Tw_October_Scroll,5403,9,1,1,0,0,1	// 1x Fish_In_Mouth
 IG_Tw_October_Scroll,5401,8,1,1,0,0,1	// 1x Black_Glasses
-IG_Tw_October_Scroll,12246,2,1,1,0,0,1	// 1x Magic_Card_Album
 IG_Tw_October_Scroll,12259,1,1,1,0,0,1	// 1x Miracle_Medicine
 
 IG_My_Scroll1,12900,1450,1,1,0,0,1	// 1x Battle_Manual_Box
@@ -1288,7 +1287,6 @@ IG_Majestic_Devil_Scroll,12210,80,6,1,0,0,1	// 6x Bubble_Gum
 IG_Majestic_Devil_Scroll,12033,80,5,1,0,0,1	// 5x Box_Of_Sunlight
 IG_Majestic_Devil_Scroll,7776,20,1,1,0,0,1	// 1x Max_Weight_Up_Scroll
 IG_Majestic_Devil_Scroll,12710,80,5,1,0,0,1	// 5x Guyak_Pudding
-IG_Majestic_Devil_Scroll,12246,10,1,1,0,0,1	// 1x Magic_Card_Album
 IG_Majestic_Devil_Scroll,2701,20,1,1,0,0,1	// 1x Orleans_Glove
 IG_Majestic_Devil_Scroll,5584,1,1,1,0,0,1	// 1x Majestic_Evil_Horn
 

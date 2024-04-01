@@ -50,7 +50,6 @@
 12194,2 //Hometown_Gift
 12240,2 //Old_Yellow_Box
 12244,2 //Old_Gift_Box
-12246,2 //Magic_Card_Album
 12248,2 //Masquerade_Ball_Box
 12281,2 //Tresure_Box_WoE
 12286,2 //Masquerade_Ball_Box2

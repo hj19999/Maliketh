@@ -6858,7 +6858,7 @@
 12584,Develop_Team_box,Development Team box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6398,1; },{},{}
 12585,Marketing_Team_Box,Marketing Team box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6399,1; },{},{}
 12586,Operating_Team_Box,Operation Team box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 6400,1; },{},{}
-12587,Summer_Night_box,A Summer Night's Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12246,1; },{},{}
+12587,Summer_Night_box,A Summer Night's Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 12588,Summer_Night_box2,A Summer Night's Box2,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12103,1; },{},{}
 12589,Summer_Night_box3,A Summer Night's Box3,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12106,1; },{},{}
 12591,Uni_Catalog_Bz,Universal Catalog Bronze,2,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ searchstores 10,1; },{},{}
@@ -7092,7 +7092,7 @@
 12808,Mother_Love_Box,Mother Love Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,40,,,{},{},{}
 12809,Level_Up_Box,Level Up Box,2,0,,0,,,,,0xFFFFFFFF,63,2,,,120,,,{ getitem 12263,5; getitem 12264,5; getitem 12265,5; getitem 12766,5; getitem 12819,1; },{},{}
 12810,Event_Gift_Box,Event Gift Box,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
-12811,Event_Gift_Box_,Event Gift Box,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 607,3; getitem callfunc("F_Rand",22528,22802,12246,6228,6229,6230,6232,6233,6234),1; },{},{}
+12811,Event_Gift_Box_,Event Gift Box,2,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 607,3; getitem callfunc("F_Rand",22528,22802,6228,6229,6230,6232,6233,6234),1; },{},{}
 12812,Snow_Flip,Snow Flip,11,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "ECL_SNOWFLIP",1; },{},{}
 12813,Peony_Mommy,Peony Mamy,11,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "ECL_PEONYMAMY",1; },{},{}
 12814,Slapping_Herb,Slapping Herb,11,0,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ itemskill "ECL_SADAGUI",1; },{},{}
@@ -11296,7 +11296,7 @@
 22753,Trans_Scroll_Kobold_Archer,Transformation Scroll(Kobold Archer),2,10,,10,,,,0,0xFFFFFFFF,63,2,,,,,,{ transform 1282,1200000,SC_MTF_RANGEATK2,30; },{},{}
 22754,Trans_Scroll_Necromancer,Transformation Scroll(Necromancer),2,10,,10,,,,0,0xFFFFFFFF,63,2,,,,,,{ transform 1870,1200000,SC_MTF_RANGEATK2,30; },{},{}
 22755,Trans_Scroll_Wind_Ghost,Transformation Scroll(Wind Ghost),2,10,,10,,,,0,0xFFFFFFFF,63,2,,,,,,{ transform 1263,1200000,SC_MTF_MATK2,50; },{},{}
-22756,August_Gift_Box,August Gift Box,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,,,,{ getitem 12246,1; },{},{}
+22756,August_Gift_Box,August Gift Box,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,,,,{},{},{}
 22757,Collection_Of_Scrolls_Magical_Transformation,Collection Of Scrolls Magical Transformation,18,10,,200,,,,0,0xFFFFFFFF,63,2,,,,,,{ getitem 22755,1; getitem 22754,1; },{},{}
 22758,Collection_Of_Scrolls_Shooting_Transformation,Collection Of Scrolls Shooting Transformation,18,10,,200,,,,0,0xFFFFFFFF,63,2,,,,,,{ getitem 22753,1; getitem 22752,1; },{},{}
 22759,Collection_Of_Scrolls_Attack_Speed_Transformation,Collection Of Scrolls Attack Speed Transformation,18,10,,0,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 22751,1; getitem 22750,1; },{},{}
@@ -11345,7 +11345,7 @@
 22854,May_Gift_Box_,May Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 22777,2; },{},{}
 22855,June_Gift_Box_,June Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{/*1 Potion Box*/},{},{}
 22856,July_Gift_Box_,July Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 20212,1; },{},{}
-22857,August_Gift_Box_,August Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12246,1; },{},{}
+22857,August_Gift_Box_,August Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 22858,September_Gift_Box,September Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{/*2 Lucky Eggs*/},{},{}
 22859,October_Gift_Box,October Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 12529,5; },{},{}
 22860,November_Gift_Box,November Gift Box,2,10,,100,,,,,0xFFFFFFFF,63,2,,,,,,{ rentitem callfunc("F_Rand",2566,2856,2857,15023),1209600; },{},{}
