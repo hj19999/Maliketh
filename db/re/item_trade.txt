@@ -837,7 +837,6 @@
 6413,475,100	// New_Insurance
 6415,507,100	// Strange_Embryo
 6416,499,100	// Pet_Exchange
-6417,475,100	// Silvervine
 6424,499,100	// Halloween_Fragment
 6425,499,100	// Halloween_Certificate
 6426,499,100	// Bad_Can
