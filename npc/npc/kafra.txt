@@ -14,4 +14,17 @@ doubrius,39,51,5	script	Kafra Employee#main	894,{
 }
 
 
-dicastes01,192,191,6	duplicate(Kafra Employee#main)	Kafra Employee#alb	894
+dicastes01,192,191,6	script	Kafra Employee#main4	894,{
+	cutin "kafra_04",2;
+	mes "[Kafra Employee]";
+	mes "Welcome!";
+	mes "The Kafra Corporation";
+	mes "will always support the";
+	mes "adventurers of Rune-Midgard";
+	mes "with its excellent service. So";
+	mes "what can I do for you today?";
+	callfunc "F_Kafra",5,1,1,0,0;
+	savepoint "dicastes01",198,185,1,1;
+	callfunc "F_KafEnd",0,1,"at the Prontera Culverts";
+
+}
