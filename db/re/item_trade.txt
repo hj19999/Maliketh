@@ -694,8 +694,6 @@
 6116,507,100	// Succu_Pet_Coupon
 6117,507,100	// Imp_Pet_Coupon
 6118,507,100	// Chung_E_Pet_Coupon
-6121,507,100	// Makeover_Brush
-6122,507,100	// Paint_Brush
 6124,507,100	// Wolf's_Flute
 6125,507,100	// Lucky_Box
 6126,507,100	// Happy_Box

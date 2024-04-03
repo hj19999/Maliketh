@@ -173,6 +173,13 @@ glast_01,212,273,4	script	Hugin's Magician#pa0829	1_F_01,{
 	case 22110:	// Modified_VIT_Boots
 	case 22111:	// Modified_DEX_Boots
 	case 22112:	// Modified_LUK_Boots
+	
+	case 22113:	// Modified_STR_Boots
+	case 22114:	// Modified_INT_Boots
+	case 22115:	// Modified_AGI_Boots
+	case 22116:	// Modified_VIT_Boots
+	case 22117:	// Modified_DEX_Boots
+	case 22118:	// Modified_LUK_Boots
 		.@equip_name$ = getequipname(EQI_SHOES);
 		setarray .@card[0],
 			getequipcardid(EQI_SHOES,0),
