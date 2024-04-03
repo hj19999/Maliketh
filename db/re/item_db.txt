@@ -12675,6 +12675,8 @@
 50013,Cashpoint100,Cash Point 100,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+100; dispbottom "You have received 100 Cash Points."; },{},{}
 50014,Cashpoint500,Cash Point 500,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+500; dispbottom "You have received 500 Cash Points."; },{},{}
 50015,Cashpoint1000,Cash Point 1000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+1000; dispbottom "You have received 1000 Cash Points."; },{},{}
+50016,Cashpoint5000,Cash Point 5000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+5000; dispbottom "You have received 5000 Cash Points."; },{},{}
+50017,Cashpoint10000,Cash Point 10000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+10000; dispbottom "You have received 10000 Cash Points."; },{},{}
 
 
 57000,Tobi_Mask,Tobi_Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3000,{},{},{}
