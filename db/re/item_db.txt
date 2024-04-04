@@ -12761,3 +12761,5 @@
 60061,Akatsuki_Cape,Akatsuki Cape,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,2004,{},{},{}
 60062,Demon_Wings,Demon Wings,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,2005,{},{},{}
 60063,Satan_Wings,Satan Wings,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,2006,{},{},{}
+
+50000,Equilibrium_Wings,Equilibrium_Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1882,{},{},{}
