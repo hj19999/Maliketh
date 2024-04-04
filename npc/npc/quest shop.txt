@@ -29,7 +29,7 @@ doubrius,35,41,6	script	Quest Shop#1	997,{ callfunc "qshop",1; }
 doubrius,35,29,6	script	Event Shop#1	459,{ callfunc "qshop",2; }
 doubrius,31,41,6	script	Ramadan Pass Shop#1	526,{ callfunc "qshop",3; }
 doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
-doubrius,35,25,6	script	WoE Shop#1	796,{ callfunc "qshop",5; }
+doubrius,35,25,6	script	WoE Shop#1	413,{ callfunc "qshop",5; }
 
 
 // Script Core
@@ -151,7 +151,7 @@ OnInit:
 	Add(5,6240,1,0,0,50002,5);	
 	Add(5,6225,1,0,0,50002,5);	
 	Add(5,6226,1,0,0,50002,5);	
-	Add(5,17315,1,0,0,50002,6);		
+	Add(5,17315,1,0,0,50002,20);		
 	Add(5,12903,1,0,0,50002,6);	
 	Add(5,12904,1,0,0,50002,6);	
 	Add(5,12905,1,0,0,50002,6);	
