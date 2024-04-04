@@ -29,6 +29,7 @@ doubrius,35,41,6	script	Quest Shop#1	997,{ callfunc "qshop",1; }
 doubrius,35,29,6	script	Event Shop#1	459,{ callfunc "qshop",2; }
 doubrius,31,41,6	script	Ramadan Pass Shop#1	526,{ callfunc "qshop",3; }
 doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
+doubrius,35,25,6	script	WoE Shop#1	796,{ callfunc "qshop",5; }
 
 
 // Script Core
@@ -60,7 +61,7 @@ OnInit:
 //	setarray .Shops$[1],"<Shop 1>","<Shop 2>"{,...};
 // -----------------------------------------------------------
 
-	setarray .Shops$[1],"Quest Shop","Event Shop","Ramadan Pass Shop","MVP Shop";
+	setarray .Shops$[1],"Quest Shop","Event Shop","Ramadan Pass Shop","MVP Shop","WoE Shop";
 
 // -----------------------------------------------------------
 //  Quest items -- do NOT use a reward item more than once!
@@ -138,6 +139,23 @@ OnInit:
 	Add(4,6240,1,0,0,56001,20);
 	Add(4,12214,1,0,0,56001,4);
 	Add(4,12212,1,0,0,56001,2);	
+	
+	
+	Add(5,18509,1,0,0,50002,2);	
+	Add(5,12412,1,0,0,50002,2);	
+	Add(5,7619,1,0,0,50002,2);	
+	Add(5,7620,1,0,0,50002,2);	
+	Add(5,6241,1,0,0,50002,2);	
+	Add(5,6240,1,0,0,50002,2);	
+	Add(5,6225,1,0,0,50002,2);	
+	Add(5,6226,1,0,0,50002,2);	
+	Add(5,12903,1,0,0,50002,2);	
+	Add(5,12904,1,0,0,50002,2);	
+	Add(5,12905,1,0,0,50002,2);	
+	Add(5,12906,1,0,0,50002,2);	
+	Add(5,12907,1,0,0,50002,2);	
+	Add(5,12908,1,0,0,50002,2);	
+	Add(5,17315,1,0,0,50002,2);	
 
 	
 
