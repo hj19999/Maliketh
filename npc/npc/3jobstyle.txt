@@ -11,18 +11,74 @@ if( select("yes") == 1 ){
 	next;
 }
 if( select("yes i want to change my body style:no i dont want") == 1 ){
-
-if( countitem(50011) ) {
-        delitem 50011,1;
-        set @bodystyle,1;
+	switch(select("First Class:Reborn Class:Normal Renewal Class:New Renewal Class:4th Class:close")) {
+	case 1:
+	mes "[ Body Style Change ]";
+    mes "Are you sure that you want to change your body style to First Class style ?";next;
+	if( select("yes i want to change my body style:no i dont want") == 1 ){
+	if( Bdstyle == 1 ){
+	set @bodystyle,2;
 	setlook 13,@bodystyle;
-	mes "done";
-
-end; }
-else
-	mes "[3rd body style]";
-	mes "you dont have ticket";
-end;}
+	end;
+	}}
+	else
+	mes "[ Body Style Change ]";
+	mes " You Dont have Ticket .";
+	end;
+	
+	case 2:
+	mes "[ Body Style Change ]";
+    mes "Are you sure that you want to change your body style to Reborn Class style ?";next;
+	if( select("yes i want to change my body style:no i dont want") == 1 ){
+	if( Bdstyle == 1 ){
+	set @bodystyle,3;
+	setlook 13,@bodystyle;
+	end;}}
+	else
+	mes "[ Body Style Change ]";
+	mes " You Dont have Ticket .";
+	end;
+	
+	case 3:
+	mes "[ Body Style Change ]";
+    mes "Are you sure that you want to change your body style to Renewal Class style ?";next;
+	if( select("yes i want to change my body style:no i dont want") == 1 ){
+	if( Bdstyle == 1 ){
+	set @bodystyle,0;
+	setlook 13,@bodystyle;
+	end;}}
+	else
+	mes "[ Body Style Change ]";
+	mes " You Dont have Ticket .";
+	end;
+	
+	case 4:
+	mes "[ Body Style Change ]";
+    mes "Are you sure that you want to change your body style to 2nd Renewal style ?";next;
+	if( select("yes i want to change my body style:no i dont want") == 1 ){
+	if( Bdstyle == 1 ){
+	set @bodystyle,1;
+	setlook 13,@bodystyle;
+	end;}}
+	else
+	mes "[ Body Style Change ]";
+	mes " You Dont have Ticket .";
+	end;
+	
+	case 5:
+	mes "[ Body Style Change ]";
+        mes "Are you sure that you want to change your body style to Fourth Class Style ?";next;
+	if( select("yes i want to change my body style:no i dont want") == 1 ){
+	if( Bdstyle == 1 ){
+	set @bodystyle,4;
+	setlook 13,@bodystyle;
+	end;}}
+	else
+	mes "[ Body Style Change ]";
+	mes " You Dont have Ticket .";
+	end;
+	case 6: end;
+	}}
 else
 	mes "[3rd body style]";
 	mes "see you next time";

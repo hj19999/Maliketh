@@ -21,7 +21,8 @@ doubrius,43,57,5	script	3rd Body Style	667,{
 	mes "[ Body Style Change ]";
     mes "Are you sure that you want to change your body style to Reborn Class style ?";next;
 	if( select("yes i want to change my body style:no i dont want") == 1 ){
-	if( Bdstyle == 1 ){
+if( countitem(50011) ) {
+        delitem 50011,1;
 	set @bodystyle,3;
 	setlook 13,@bodystyle;
 	end;}}
@@ -34,7 +35,8 @@ doubrius,43,57,5	script	3rd Body Style	667,{
 	mes "[ Body Style Change ]";
     mes "Are you sure that you want to change your body style to Renewal Class style ?";next;
 	if( select("yes i want to change my body style:no i dont want") == 1 ){
-	if( Bdstyle == 1 ){
+if( countitem(50011) ) {
+        delitem 50011,1;
 	set @bodystyle,0;
 	setlook 13,@bodystyle;
 	end;}}
@@ -47,7 +49,8 @@ doubrius,43,57,5	script	3rd Body Style	667,{
 	mes "[ Body Style Change ]";
     mes "Are you sure that you want to change your body style to 2nd Renewal style ?";next;
 	if( select("yes i want to change my body style:no i dont want") == 1 ){
-	if( Bdstyle == 1 ){
+if( countitem(50011) ) {
+        delitem 50011,1;
 	set @bodystyle,1;
 	setlook 13,@bodystyle;
 	end;}}
@@ -60,7 +63,8 @@ doubrius,43,57,5	script	3rd Body Style	667,{
 	mes "[ Body Style Change ]";
         mes "Are you sure that you want to change your body style to Fourth Class Style ?";next;
 	if( select("yes i want to change my body style:no i dont want") == 1 ){
-	if( Bdstyle == 1 ){
+if( countitem(50011) ) {
+        delitem 50011,1;
 	set @bodystyle,4;
 	setlook 13,@bodystyle;
 	end;}}
