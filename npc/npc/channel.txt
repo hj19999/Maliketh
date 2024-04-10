@@ -9,6 +9,7 @@ OnChannelJoin:
 OnPCLoginEvent:
 	if (!channel_join_off) {
 		atcommand "@join #global";
+		atcommand "@channel setcolor #global red";
 		atcommand "@join #support";
 		atcommand "@join #trade";
 	}

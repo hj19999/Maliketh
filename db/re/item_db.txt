@@ -2183,7 +2183,7 @@
 2990,Pendant_Of_Harmony,Pendant of Harmony,4,20,,100,,0,,0,0xFFFFFFFF,63,2,136,,130,,,{ bonus bMatkRate,6; bonus bHPrecovRate,50; bonus bSPrecovRate,50; bonus2 bSubEle,Ele_Holy,5; autobonus "{ bonus2 bHPRegenRate,1000,5000; }",100,90000,BF_NORMAL; bonus4 bAutoSpellWhenHit,"PR_SANCTUARY",3,100,0; bonus bStr,-5; },{},{}
 2991,Pendant_Of_Chaos,Pendant of Chaos,4,20,,100,,0,,0,0xFFFFFFFF,63,2,136,,130,,,{ bonus2 bAddClass,Class_All,6; bonus2 bSubEle,Ele_Dark,5; bonus2 bResEff,Eff_Confusion,10000; bonus2 bAddEff,Eff_Confusion,500; bonus3 bAutoSpellWhenHit,"NPC_WIDECONFUSE",2,30; bonus bInt,-5; },{},{}
 2992,Pendant_Of_Maelstorm,Pendant of Maelstrom,4,20,,100,,0,,1,0xFFFFFFFF,63,2,136,,130,,,{ bonus2 bAddClass,Class_All,6; bonus bMatkRate,6; bonus bAllStats,1; bonus5 bAutoSpellWhenHit,"SC_MAELSTROM",1,100,BF_MAGIC,0; },{},{}
-2995,Supplement_Part_Dex,Supplement Part Dex,4,25000,,100,,0,,1,0x00000400,56,2,136,,100,0,0,{ bonus bUseSPrate,-10; bonus bDelayrate,-10; bonus bVariableCastrate,-10; bonus2 bSkillCooldown,"NC_AXEBOOMERANG",-2000; },{},{}
+2995,Supplement_Part_Dex,Supplement Part Dex,4,25000,,100,,0,,1,0x00000400,56,2,136,,100,0,0,{ bonus bUseSPrate,-10; bonus bDelayrate,-10; bonus bVariableCastrate,-10;},{},{}
 2996,Upgrade_Part_Gun_Barrel,Reinforced Parts - Gun Barrel,4,10,,500,,,,1,0xFFFFFFFF,63,2,136,,100,,,{ bonus2 bAddClass,Class_All,4; bonus bHit,10; bonus2 bSkillAtk,"NC_BOOSTKNUCKLE",25; },{},{}
 2997,RWC_Gold_Brooch,RWC Gold Brooch,4,10,,200,,0,,1,0xFFFFFFFF,63,2,136,,0,0,,{ bonus bBaseAtk,25; bonus bMatk,20; },{},{}
 2998,Shining_Trapezohedron,Shining Trapezohedron,4,0,,100,,,,1,0xFFFFFFFF,63,2,136,,90,,,{ bonus2 bSubEle,Ele_Holy,10; },{},{}
@@ -12761,5 +12761,45 @@
 60061,Akatsuki_Cape,Akatsuki Cape,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,2004,{},{},{}
 60062,Demon_Wings,Demon Wings,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,2005,{},{},{}
 60063,Satan_Wings,Satan Wings,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,2006,{},{},{}
+
+60100,blue_angle_wing_garment,Blue Angle Wing Garment,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,51,{},{},{}
+60101,Demon_Wing,Demon Wing,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,52,{},{},{}
+
+60102,broly_Aura,broly Aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3014,{},{},{}
+60103,broly_Aura_Elect,broly_Aura_Elect,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3015,{},{},{}
+60104,broly_hair,broly_hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,3016,{},{},{}
+60105,goku_blue_Elect,goku_blue_Elect,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3017,{},{},{}
+60106,goku_blue_hair,goku_blue_hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,3018,{},{},{}
+60107,Kamba_Aura,Kamba_Aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3019,{},{},{}
+60108,Kamba_Hair,Kamba_Hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,3020,{},{},{}
+60109,Kamba_Mask,Kamba_Mask,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3021,{},{},{}
+60110,super_saiyan_god_aura,super_saiyan_god_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3022,{},{},{}
+60111,ultra_instinct_Aura,ultra_instinct_Aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3023,{},{},{}
+60112,ultra_instinct_Aura1,ultra_instinct_Aura1,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3024,{},{},{}
+60113,ultra_instinct_hair,ultra_instinct_hair,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,0,3025,{},{},{}
+
+
+60114,super_saiyan3_aura,super_saiyan3_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3026,{},{},{}
+60115,super_saiyan3_black_aura,super_saiyan3_black_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3027,{},{},{}
+60116,super_saiyan3_blue1_aura,super_saiyan3_blue1_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3028,{},{},{}
+60117,super_saiyan3_Cyan_aura,super_saiyan3_Cyan_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3029,{},{},{}
+60118,super_saiyan3_green_aura,super_saiyan3_green_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3030,{},{},{}
+60119,super_saiyan3_red_aura,super_saiyan3_red_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3031,{},{},{}
+60120,super_saiyan3_white_aura,super_saiyan3_white_aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3032,{},{},{}
+
+60121,Aura_Spirit,Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3033,{},{},{}
+60122,Black_Aura_Spirit,Black_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3034,{},{},{}
+60123,Blue_Aura_Spirit,Blue_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3035,{},{},{}
+60124,Green_Aura_Spirit,Green_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3036,{},{},{}
+60125,Purple_Aura_Spirit,Purple_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3037,{},{},{}
+60126,Red_Aura_Spirit,Red_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3038,{},{},{}
+60127,Yellow_Aura_Spirit,Yellow_Aura_Spirit,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3039,{},{},{}
+
+60128,Fusion_Wings_Garment,Fusion_Wings_Garment,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3040,{},{},{}
+60129,Purple_Fusion_Wings_Garment,Purple_Fusion_Wings_Garment,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3041,{},{},{}
+60130,RedB_Fusion_Wings_Garment,RedB_Fusion_Wings_Garment,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3042,{},{},{}
+60131,Silver_Fusion_Wings_Garment,Silver_Fusion_Wings_Garment,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3043,{},{},{}
+60132,WRed_Fusion_Wings_Garment,WRed_Fusion_Wings_Garment,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3044,{},{},{}
+60133,Skull_Wing,Skull_Wing,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,54,{},{},{}
 
 50000,Equilibrium_Wings,Equilibrium_Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1882,{},{},{}

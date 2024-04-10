@@ -1,29 +1,33 @@
 doubrius,31,45,6	script	PVP	686,{
-if( select("Room 1 (Ranked) ["+getmapusers("pvp_n_1-5")+"/100]:Cancel") == 1 ){
+switch(select("Room 1 (UnRanked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 2 (Ranked) (No Buff) ["+getmapusers("pvp_y_3-2")+"/100]:Cancel")){
+case 1:
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
- 
+case 2:
+SC_end    SC_ALL;
+		warp "pvp_y_3-2",0,0;
+announce strcharinfo(0)+ " has entered PVP Room 2",0,0xFF3399;
+		end;
+case 3:
+end;		
 
 }
-end;
 }
  
 
+ 
+ 
  
 // Mapflags
 pvp_n_1-5	mapflag	pvp
 pvp_n_1-5	mapflag	noreturn
 pvp_n_1-5	mapflag	nowarp
 pvp_n_1-5	mapflag	noteleport
-pvp_n_1-3	mapflag	pvp
-pvp_n_1-3	mapflag	noreturn
-pvp_n_1-3	mapflag	nowarp
-pvp_n_1-3	mapflag	noteleport
-pvp_n_1-4	mapflag	pvp
-pvp_n_1-4	mapflag	noreturn
-pvp_n_1-4	mapflag	nowarp
-pvp_n_1-4	mapflag	noteleport
+pvp_y_3-2	mapflag	pvp
+pvp_y_3-2	mapflag	noreturn
+pvp_y_3-2	mapflag	nowarp
+pvp_y_3-2	mapflag	noteleport
 
 
 pvp_n_1-5,95,139,4	script	Quit	686,{

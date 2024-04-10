@@ -85,6 +85,7 @@ OnPvpLadder:
 	}
 close;
 OnPCKillEvent:
+
 	if(.Options&2 && (agitcheck() || agitcheck2())){ 		// Check to disable during woe
 		end;
 	}
@@ -104,6 +105,7 @@ OnPCKillEvent:
 				}
 			}			
 			if(.@s < .RepeatCount){						// if not abusing kills according to repeatcount
+			announce "[PVP]: "+strcharinfo(0)+" has slain "+rid2name(killedrid)+" for the in Ranked PVP.",bc_all,0xFF3399;
 				set pl_pkcount,pl_pkcount + 1;
 				if(.Options&16) { 
 					set getd(.PointType$),getd(.PointType$) + .PvpEarned; // add points
@@ -157,7 +159,7 @@ OnInit:
 	set .GM,99;
 	set .MaxPlayers,20;		// Number of Players held in Records
 	set .GmLvl,99;			// Highest GM level Able to Hold a Record, if Option 8 is Disabled
-	set .Map$,"pvp_n_1-5";		// Map Pvp Must Take Place on in order to Count, if Option 1 is Disabled
+	set .Map$,"pvp_y_3-2";		// Map Pvp Must Take Place on in order to Count, if Option 1 is Disabled
 	set .RepeatCount,5;		// Number of kills on same person before it detects abuse, max of 128
 	set .PointType$,"#PvpPoints";	// Name of points earned, E.G. #Cash Points
 	set .PvpEarned,1;		// Number of Pvp Points Earned

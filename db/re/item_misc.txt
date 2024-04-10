@@ -1371,12 +1371,6 @@ IG_Mercenary,12180,1 // SpearMercenary_Scroll8
 IG_Mercenary,12181,1 // SpearMercenary_Scroll9
 IG_Mercenary,12182,1 // SpearMercenary_Scroll10
 // PrizeOfHero
-IG_PrizeOfHero,12075,7		// Str_Dish10
-IG_PrizeOfHero,12080,7		// Int_Dish10
-IG_PrizeOfHero,12085,7		// Vit_Dish10
-IG_PrizeOfHero,12090,7		// Agi_Dish10
-IG_PrizeOfHero,12095,7		// Dex_Dish10
-IG_PrizeOfHero,12100,7		// Luk_Dish10
 IG_PrizeOfHero,15093,1		// Hero_Plate
 IG_PrizeOfHero,15094,1		// Hero_Magic_Coat
 IG_PrizeOfHero,15095,1		// Hero_Judgement_Shawl

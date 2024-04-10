@@ -831,7 +831,6 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 2067) .@enchant = 4750; //Luck1
 				else if (.@r < 2086) .@enchant = 4751; //Luck2
 				else if (.@r < 2088) .@enchant = 4752; //Luck3
-				else if (.@r < 2491) .@enchant = 0;
 				else if (.@r < 2891) .@enchant = 4811; //Fighting_Spirit1
 				else if (.@r < 2931) .@enchant = 4810; //Fighting_Spirit2
 				else if (.@r < 2935) .@enchant = 4809; //Fighting_Spirit3
@@ -844,8 +843,7 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 3370) .@enchant = 4816; //Sharp3
 				else if (.@r < 3560) .@enchant = 4832; //Expert_Archer1
 				else if (.@r < 3579) .@enchant = 4833; //Expert_Archer2
-				else if (.@r < 3581) .@enchant = 4834; //Expert_Archer3
-				else                 .@enchant = 0;
+				else                 .@enchant = 4834; //Expert_Archer3
 				break;
 			case 2:	// Long Distance
 				.@r = rand(1, .@lhz_max_num);
@@ -867,8 +865,7 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 1834) .@enchant = 4750; //Luck1
 				else if (.@r < 1853) .@enchant = 4751; //Luck2
 				else if (.@r < 1855) .@enchant = 4752; //Luck3
-				else if (.@r < 2258) .@enchant = 0;
-				else if (.@r < 2448) .@enchant = 4811; //Fighting_Spirit1
+				else if (.@r < 2258) .@enchant = 4811; //Fighting_Spirit1
 				else if (.@r < 2467) .@enchant = 4810; //Fighting_Spirit2
 				else if (.@r < 2469) .@enchant = 4809; //Fighting_Spirit3
 				else if (.@r < 2669) .@enchant = 4815; //Spell1
@@ -880,8 +877,7 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 3137) .@enchant = 4816; //Sharp3
 				else if (.@r < 3537) .@enchant = 4832; //Expert_Archer1
 				else if (.@r < 3577) .@enchant = 4833; //Expert_Archer2
-				else if (.@r < 3581) .@enchant = 4834; //Expert_Archer3
-				else                 .@enchant = 0;
+				else                 .@enchant = 4834; //Expert_Archer3
 				break;
 			case 3:
 				.@r = rand(1, .@lhz_max_num);
@@ -903,7 +899,6 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 2078) .@enchant = 4750; //Luck1
 				else if (.@r < 2097) .@enchant = 4751; //Luck2
 				else if (.@r < 2099) .@enchant = 4752; //Luck3
-				else if (.@r < 2502) .@enchant = 0;
 				else if (.@r < 2692) .@enchant = 4811; //Fighting_Spirit1
 				else if (.@r < 2711) .@enchant = 4810; //Fighting_Spirit2
 				else if (.@r < 2713) .@enchant = 4809; //Fighting_Spirit3
@@ -917,7 +912,7 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 3560) .@enchant = 4832; //Expert_Archer1
 				else if (.@r < 3579) .@enchant = 4833; //Expert_Archer2
 				else if (.@r < 3581) .@enchant = 4834; //Expert_Archer3
-				else                 .@enchant = 0;
+				else                 .@enchant = 4834; //Expert_Archer3
 				break;
 			case 4:	// Armor
 				.@r = rand(1, .@lhz_max_num);
@@ -939,7 +934,6 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 1966) .@enchant = 4750; //Luck1
 				else if (.@r < 1996) .@enchant = 4751; //Luck2
 				else if (.@r < 1999) .@enchant = 4752; //Luck3
-				else if (.@r < 2399) .@enchant = 0;
 				else if (.@r < 2549) .@enchant = 4786; //Mdef2
 				else if (.@r < 2599) .@enchant = 4787; //Mdef4
 				else if (.@r < 2609) .@enchant = 4788; //Mdef6
@@ -949,15 +943,13 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 				else if (.@r < 2866) .@enchant = 4792; //Def6
 				else if (.@r < 2876) .@enchant = 4793; //Def9
 				else if (.@r < 2878) .@enchant = 4794; //Def12
-				else if (.@r < 3278) .@enchant = 0;
 				else if (.@r < 3428) .@enchant = 4859; //Evasion1
 				else if (.@r < 3478) .@enchant = 4860; //Evasion3
 				else if (.@r < 3488) .@enchant = 4762; //Evasion6
 				else if (.@r < 3498) .@enchant = 4800; //SP50
 				else if (.@r < 3734) .@enchant = 4795; //HP100
 				else if (.@r < 3834) .@enchant = 4796; //HP200
-				else if (.@r < 3884) .@enchant = 4797; //HP300
-				else                 .@enchant = 0;
+				else                 .@enchant = 4797; //HP300
 			break;
 		}
 		specialeffect EF_BEGINSPELL3;
@@ -974,7 +966,8 @@ lhz_cube,233,24,4	script	Sorcerer#Bio4Reward	4_M_UMDANCEKID,{
 		.@equip_card[(.@socket_type-1)] = .@enchant;
 		delequip .@part;
 		
-		if (.@enchant == 0){
+		.@f = rand(1,100);
+		if (.@f < 15){
 			specialeffect2 EF_SUI_EXPLOSION;
 			emotion ET_OTL;
 			mes "[Pudding]";

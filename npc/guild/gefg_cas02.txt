@@ -99,7 +99,7 @@ gefg_cas02,23,66,3	duplicate(guildkafra)	Kafra Staff#gefg_cas02	117
 
 // Steward
 //============================================================
-gefg_cas02,12,66,5	duplicate(cm)	Esmarehk#gefg_cas02	55
+//gefg_cas02,12,66,5	duplicate(cm)	Esmarehk#gefg_cas02	55
 
 // Treasure Room Exit
 //============================================================

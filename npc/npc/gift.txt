@@ -4,6 +4,9 @@
 
 
 -	script	Sample	-1,{
+if(checkvending()){
+end;
+}
 OnWhisperGlobal:
 if( getgmlevel() >= 99 ){
 	// check map
@@ -32,10 +35,16 @@ if( getgmlevel() >= 99 ){
 				if( .@type$ != "" ){
 					getmapxy( .@map$,.@x,.@y,0,.@name$[.@i] );
 					if( .@map$ == .@type$ ){
+if(checkvending()){
+end;
+}
 						getitem .@itemid,.@amount,.@aid[.@i];
 						set .@gave,.@gave + 1;
 					}
 				}else{
+if(checkvending()){
+end;
+}
 					getitem .@itemid,.@amount,.@aid[.@i];
 					set .@gave,.@gave + 1;
 				}

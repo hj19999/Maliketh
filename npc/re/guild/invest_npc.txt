@@ -43,7 +43,7 @@ aldeg_cas04,25,67,7	duplicate(Gate Manager#castle)	Gate Manager#alde_f04	421
 aldeg_cas05,54,200,3	duplicate(Gate Manager#castle)	Gate Manager#alde_f05	421
 
 gefg_cas01,39,49,4	duplicate(Gate Manager#castle)	Gate Manager#gef_f01	421
-gefg_cas02,10,65,4	duplicate(Gate Manager#castle)	Gate Manager#gef_f02	421
+//gefg_cas02,10,65,4	duplicate(Gate Manager#castle)	Gate Manager#gef_f02	421
 gefg_cas03,100,87,4	duplicate(Gate Manager#castle)	Gate Manager#gef_f03	421
 gefg_cas04,35,44,3	duplicate(Gate Manager#castle)	Gate Manager#gef_f04	421
 gefg_cas05,84,46,3	duplicate(Gate Manager#castle)	Gate Manager#gef_f05	421
