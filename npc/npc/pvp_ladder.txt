@@ -105,7 +105,7 @@ OnPCKillEvent:
 				}
 			}			
 			if(.@s < .RepeatCount){						// if not abusing kills according to repeatcount
-			announce "[PVP]: "+strcharinfo(0)+" has slain "+rid2name(killedrid)+" for the in Ranked PVP.",bc_all,0xFF3399;
+			announce "[PVP]: "+strcharinfo(0)+" has slain "+rid2name(killedrid)+" for the in Ranked PVP.",bc_all,0xfd855a;
 				set pl_pkcount,pl_pkcount + 1;
 				if(.Options&16) { 
 					set getd(.PointType$),getd(.PointType$) + .PvpEarned; // add points

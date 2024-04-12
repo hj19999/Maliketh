@@ -5,7 +5,9 @@ case 1:
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
 case 2:
-SC_end    SC_ALL;
+SC_end    SC_POEMBRAGI;
+SC_end    SC_APPLEIDUN;
+SC_end    SC_ASSNCROS;
 		warp "pvp_y_3-2",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 2",0,0xFF3399;
 		end;

@@ -7,6 +7,7 @@
 1166:2527:5467,{ bonus2 bAddRace,RC_Dragon,25; }
 1180:2527,{ bonus2 bAddRace,RC_Dragon,5; }
 1180:2527:5467,{ bonus2 bAddRace,RC_Dragon,25; }
+22044:20733:2996:15111,{ bonus2 bSkillAtk,"NC_ARMSCANNON",50; }
 1219:5782,{ bonus2 bAddClass,Class_All,3; }
 1220:5782,{ bonus2 bAddClass,Class_All,3; }
 1221:5782,{ bonus2 bAddClass,Class_All,3; }
