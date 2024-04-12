@@ -1,5 +1,5 @@
 doubrius,31,45,6	script	PVP	686,{
-switch(select("Room 1 (UnRanked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 2 (Ranked) ["+getmapusers("pvp_y_3-2")+"/100]:Cancel")){
+switch(select("Room 1 (UnRanked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 2 (Ranked) (No Bard Song) ["+getmapusers("pvp_y_3-2")+"/100]:Cancel")){
 case 1:
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
