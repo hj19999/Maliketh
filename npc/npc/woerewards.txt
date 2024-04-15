@@ -24,7 +24,7 @@ function	script	getcharid2	{
 	return 0;
 }
 
-doubrius,47,44,4	script	WoE Statistics	966,{
+doubrius,27,45,6	script	WoE Statistics	966,{
 	mes .npc$;
 	query_sql("SELECT DISTINCT `guild_id` FROM `woe_rank`",.@guildIds); // get participating guilds
 	mes getarraysize(.@guildIds)+" Guild join this Woe:";
