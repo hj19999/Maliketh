@@ -12804,3 +12804,4 @@
 60133,Skull_Wing,Skull_Wing,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,54,{},{},{}
 
 50000,Equilibrium_Wings,Equilibrium_Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1882,{},{},{}
+50018,ReEntrance,ReEntrance Instance,3,6,,10,,,,,,,,,,,,,{},{},{}

@@ -163,6 +163,32 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 		}
 	case 0:
 	case 1:
+	.@md_name$ = "Old Glast Heim";
+			switch(instance_create(.@md_name$) ) {
+			case -3:
+		if(countitem(50018)>0){
+		mes "Do you want to re-enter the instance?";
+		switch(select("Yes:No")) {
+		case 1:
+		delitem 50018,1;
+		instance_enter(.@md_name$);
+				end;
+		case 2:
+		mes "[Hugin]";
+		mes "Oh, my...";
+		mes "You still have after-effects of time travel. You can't travel again with this condition.";
+		next;
+		mes "[Hugin]";
+		mes "Staying healthy is important, so please take a break and come back again later.";
+		close;
+				end;
+				
+			}
+			
+			close;
+		}
+				close;
+			}
 		mes "[Hugin]";
 		mes "Oh, my...";
 		mes "You still have after-effects of time travel. You can't travel again with this condition.";
@@ -172,9 +198,9 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 		close;
 	case 2:
 		mes "^0000ffAll traces of access to Old Glast Heim have been removed. Now you can talk with Hugin again.^000000";
-		if (isbegin_quest(.@quest_id[1]) == 0)
-			setquest .@quest_id[1];// Corrupted Soul Hunt
-		erasequest .@quest_id[0];
+		if (isbegin_quest(12318) == 0)
+			setquest 12318;// Corrupted Soul Hunt
+		erasequest 12317;
 		close;
 	}
 }
