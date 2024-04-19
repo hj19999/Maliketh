@@ -1795,7 +1795,7 @@
 2579,Magic_Stole,Magic Stole,4,20,,700,,8,,1,0xFFFFFFFF,63,2,4,,0,1,0,{ bonus bMdef,3; bonus bUseSPrate,-5; bonus bMaxSPrate,((getrefine()>=4)?6:3); },{},{}
 2580,White_Wing_Manteau,White Wing Manteau,4,20,,200,,15,,0,0x00000800,63,2,4,,100,1,0,{ bonus bAgi,2; bonus bFlee,10; autobonus2 "{ bonus bFlee,20; }",20,7000,BF_LONG,"{ specialeffect2 EF_CHAINCOMBO; }"; },{},{}
 2581,Black_Wing_Manteau,Black Wing Manteau,4,20,,200,,15,,0,0x00000800,56,2,4,,100,1,0,{ .@r = getrefine(); bonus bInt,2; if(.@r>6) bonus bFlee2,.@r-6; },{},{}
-2582,Salvage_Cape,Salvage Cape,4,56000,,400,,1,,0,0x00000300,63,2,4,,130,1,0,{ skill "NJ_UTSUSEMI",1; bonus2 bSkillCooldown,"NJ_UTSUSEMI",300000; bonus bUseSPrate,100; },{},{ heal 0,-1200; }
+2582,Salvage_Cape,Salvage Cape,4,56000,,400,,1,,0,0x00000300,63,2,4,,130,1,0,{ skill "NJ_UTSUSEMI",1; bonus2 bSkillCooldown,"NJ_UTSUSEMI",30000; bonus bUseSPrate,100; },{},{ heal 0,-1200; }
 2583,Holy_Cape,Holy Cape,4,20,,100,,5,,1,0xFFFFFFFF,63,2,4,,50,1,0,{ bonus bDex,-5; bonus bMdef,5; },{},{}
 2584,Wanderer_Outer,Wanderer Outer,4,20,,500,,8,,1,0xFFFFFFFF,63,2,4,,0,1,0,{},{},{}
 2585,Muffler_Of_Valor,Muffler Of Valor,4,0,,0,,4,,0,0xFFFFFFFF,63,2,4,,0,0,0,{ bonus bSPrecovRate,10; },{},{}
