@@ -164,7 +164,7 @@ glast_01,212,273,4	script	Hugin's Magician#pa0829	1_F_01,{
 	case 22010:	// Temporal_AGI_Boots
 	case 22007:	// Temporal_VIT_Boots
 	case 22008:	// Temporal_DEX_Boots
-	case 220011:	// Temporal_LUK_Boots
+	case 22011:	// Temporal_LUK_Boots
 	
 
 	case 22107:	// Modified_STR_Boots
