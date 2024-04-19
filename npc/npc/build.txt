@@ -1,0 +1,166 @@
+//===== rAthena Script ======================================= 
+//= Build Manager
+//===== By: ==================================================
+//= Mastagoon
+//===== Description: =========================================
+//= YggdrasilRO's Build Manager script.
+//= Allows players to save and swtich between different builds
+//= Resets both stats AND skill builds to the selected build.
+//= Warning: This script needs the gethotkey/sethotkey source mod to function.
+//===== Current Version: =====================================
+//= 1.0
+//===== TODO: ================================================
+//============================================================
+prontera,120,126,4	script	«·„œ—¯» Ã«”„	483,{
+OnInit:
+    setarray .Length,4,26; // Min. ~ Max. Words.
+    .debugmes = 0;
+    .zeny_cost = 1000000;
+    end;
+
+    function ManageBuild;
+	cutin "3rd_sura_master",2;
+	if(BaseLevel < 185 || JobLevel < 65) {
+		mes "[«·„œ—¯» Ã«”„]";
+		mes "ÌÃ» √‰  ﬂÊ‰ ›Ì «·„” ÊÏ «·√”«”Ì «·√ﬁ’Ï";
+		mes "·«” ⁄„«· Â–Âˆ «·ÊŸÌ›… Ì«»ı‰Ì";
+		close3;
+	}
+	mes "[«·„œ—¯» Ã«”„]";
+	mes "√Â·« Ì« "+strcharinfo(0)+", ﬂÌ› √” ÿÌ⁄ „”«⁄œ ﬂ «·ÌÊ„ø";
+	next;
+	select("≈œ«—…  Ê“Ì⁄ «·Õ«·… Ê«·„Â«—« ");
+	for(.@i = 1; .@i < 5; .@i++) {
+		if(getd("BuildSlot_"+.@i+"$") == "") .@menu$ = .@menu$ + "^ff0000Œ«‰… ›«—€…^000000:";
+		else .@menu$ = .@menu$ + getd("BuildSlot_"+.@i+"$")+":";
+		// .@menu$ = .@menu$ + (getd("BuildSlot_"+.@i+"$") == "")? "^ff0000Œ«‰… ›«—€…^000000" : getd("BuildSlot_"+.@i+"$");
+		// .@menu$ = .@menu$ + ":";
+	}
+	.@slot = select(.@menu$);
+	mes "[«·„œ—¯» Ã«”„]";
+	if(getd("BuildSlot_"+.@slot+"$") == "") {
+		mes "^FF0000«·Œ«‰… —ﬁ„ "+.@slot+"^000000";
+		mes "Â·  —Ìœ Õ›Ÿ  Ê“Ì⁄Ú ÃœÌœø";
+		next;
+		if(select("≈Õ›Ÿ «· Ê“Ì⁄ «·Õ«·Ì:≈·€«¡") -1) close3;
+		mes "[«·„œ—¯» Ã«”„]";
+		//save new build
+		ManageBuild(.@slot,2); // save build
+		close3;
+	}
+	//there is a build
+	mes getd("BuildSlot_"+.@slot+"$");
+	.@option = select("«· ÕÊÌ· ≈·Ï Â–« «· Ê“Ì⁄","","Õ–› «· Ê“Ì⁄");
+	ManageBuild(.@slot,.@option);
+	close3;
+	// close3;
+
+function	ManageBuild	{
+    switch( getarg(1) ){
+        case 1:	//	Switch Build
+            ResetStatus;
+            set StatusPoint,getd( "STATS_"+getarg(0) );
+            statusup2 bStr,getd( "STR_"+getarg(0) ) - 1;
+            statusup2 bAgi,getd( "AGI_"+getarg(0) ) - 1;
+            statusup2 bVit,getd( "VIT_"+getarg(0) ) - 1;
+            statusup2 bInt,getd( "INT_"+getarg(0) ) - 1;
+            statusup2 bDex,getd( "DEX_"+getarg(0) ) - 1;
+            statusup2 bLuk,getd( "LUK_"+getarg(0) ) - 1;
+            ResetSkill;
+            freeloop(1);
+            for(.@i = 0; .@i < getd("skilllist_count_"+getarg(0)); .@i++) {
+                skill getd("skilllist_id_"+getarg(0)+"["+.@i+"]"),getd("skilllist_lv_"+getarg(0)+"["+.@i+"]"),getd("skilllist_flag_"+getarg(0)+"["+.@i+"]");
+                if(.debug) debugmes "getting skill: "+getd("skilllist_id_"+getarg(0)+"["+.@i+"]")+" of level "+getd("skilllist_lv_"+getarg(0)+"["+.@i+"]")+" this is btw "+ getd("skilllist_count_"+getarg(0));
+            }
+            for(.@i = 0; .@i < @hotkey_count; .@i++) {
+                // updatehotkey(@hotkey_type[.@i],@hotkey_id[.@i],@hotkey_lv[.@i],@hotkey_pos[.@i]);
+                setd("hotkey_type_"+getarg(0)+"["+.@i+"]"),@hotkey_type[.@i];
+                setd("hotkey_id_"+getarg(0)+"["+.@i+"]"),@hotkey_id[.@i];
+                setd("hotkey_lv"+getarg(0)+"["+.@i+"]"),@hotkey_lv[.@i];
+                setd("hotkey_pos"+getarg(0)+"["+.@i+"]"),@hotkey_pos[.@i];
+            }
+            for(.@i = 0; .@i < getd("hotkey_count_"+getarg(0)); .@i++) {
+                updatehotkey(getd("hotkey_type_"+getarg(0)+"["+.@i+"]"),getd("hotkey_id_"+getarg(0)+"["+.@i+"]"),getd("hotkey_lv_"+getarg(0)+"["+.@i+"]"),getd("hotkey_pos_"+getarg(0)+"["+.@i+"]"));
+            }
+            freeloop(0);
+            set SkillPoint,getd("SKILLS_"+getarg(0));
+            message strcharinfo(0)," „  Õ„Ì· «· Ê“Ì⁄ »‰Ã«Õ.";
+            break;
+        case 2:	//	Save Build
+            next;
+            mes "[«·„œ—¯» Ã«”„]";
+            mes "”Ìﬂ·¯ˆ›ﬂ Õ›Ÿ Â–« «· Ê“Ì⁄ ^0000ff1,000,000 “Ì‰Ì^000000";
+            mes "Â·  —Ìœ «·„ «»⁄…ø";
+            if(select("√Ã·:œ⁄‰Ì √›ﬂ— ﬁ·Ì·«") -1) close3;
+            next;
+            if(Zeny > .zeny_cost) {
+                Zeny = Zeny - .zeny_cost;
+            } else {
+                mes "[«·„œ—¯» Ã«”„]";
+                mes "·Ì” ·œÌﬂ “Ì‰Ì ﬂ«›Ì.";
+                close3;
+            }
+            setd( "STR_"+getarg(0) ),readparam(bStr);
+            setd( "AGI_"+getarg(0) ),readparam(bAgi);
+            setd( "VIT_"+getarg(0) ),readparam(bVIT);
+            setd( "INT_"+getarg(0) ),readparam(bInt);
+            setd( "DEX_"+getarg(0) ),readparam(bDex);
+            setd( "LUK_"+getarg(0) ),readparam(bLuk);
+            setd( "STATS_"+getarg(0) ),StatusPoint;
+            gethotkeys();
+            getskilllist(getcharid(0));
+            setd("SKILLS_"+getarg(0)),SkillPoint;
+            setd("skilllist_count_"+getarg(0)),@skilllist_count;
+            setd("hotkey_count_"+getarg(0)),@hotkey_count;
+            freeloop(1);
+            for(.@i = 0; .@i < @skilllist_count; .@i++) {
+                setd("skilllist_id_"+getarg(0)+"["+.@i+"]"),@skilllist_id[.@i];
+                setd("skilllist_lv_"+getarg(0)+"["+.@i+"]"),@skilllist_lv[.@i];
+                setd("skilllist_flag_"+getarg(0)+"["+.@i+"]"),@skilllist_flag[.@i];
+            }
+            for(.@i = 0; .@i < @hotkey_count; .@i++) {
+                // updatehotkey(@hotkey_type[.@i],@hotkey_id[.@i],@hotkey_lv[.@i],@hotkey_pos[.@i]);
+                setd("hotkey_type_"+getarg(0)+"["+.@i+"]"),@hotkey_type[.@i];
+                setd("hotkey_id_"+getarg(0)+"["+.@i+"]"),@hotkey_id[.@i];
+                setd("hotkey_lv_"+getarg(0)+"["+.@i+"]"),@hotkey_lv[.@i];
+                setd("hotkey_pos_"+getarg(0)+"["+.@i+"]"),@hotkey_pos[.@i];
+            }
+            freeloop(0);		
+            if( .Length[0] < .Length[1] && .Length[0] ){
+                mes "Ì—ÃÏ «Œ Ì«—Ò ≈”„Ú ·Â–« «· Ê“Ì⁄.";
+                mes "ÿÊ· «·≈”„ : "+.Length[0]+" ~ "+.Length[1]+" √Õ—›";
+                do{
+                    input getd( "BuildSlot_"+getarg(0)+"$" );
+                }while( getstrlen( getd( "BuildSlot_"+getarg(0)+"$" ) ) < .Length[0] || getstrlen( getd( "BuildSlot_"+getarg(0)+"$" ) ) > .Length[1] );
+            }else{
+                setd( "BuildSlot_"+getarg(0)+"$" ),"«· Ê“Ì⁄ —ﬁ„ "+getarg(0);
+            }
+            message strcharinfo(0)," „ Õ›Ÿ «· Ê“Ì⁄ »‰Ã«Õ.";
+            break;
+        case 3:	//	Remove Build
+            message strcharinfo(0)," „ Õ–› «· Ê“Ì⁄ »‰Ã«Õ.";
+                setd( "STR_"+getarg(0) ),0;
+                setd( "AGI_"+getarg(0) ),0;
+                setd( "VIT_"+getarg(0) ),0;
+                setd( "INT_"+getarg(0) ),0;
+                setd( "DEX_"+getarg(0) ),0;
+                setd( "LUK_"+getarg(0) ),0;
+                setd( "STATS_"+getarg(0) ),0;
+                setd( "Slot_"+getarg(0)+"$" ),"";
+                setd("SKILLS_"+getarg(0)),0;
+                setd("skilllist_count_"+getarg(0)),0;
+                setd("hotkey_count_"+getarg(0)),0;
+                deletearray getd("skilllist_id_"+getarg(0));
+                deletearray getd("skilllist_lv_"+getarg(0));
+                deletearray getd("skilllist_flag_"+getarg(0));
+                deletearray getd("hotkey_type_"+getarg(0));
+                deletearray getd("hotkey_id_"+getarg(0));
+                deletearray getd("hotkey_lv_"+getarg(0));
+                deletearray getd("hotkey_pos_"+getarg(0));
+                setd("BuildSlot_"+getarg(0)+"$"),"";
+            break;
+    }
+    return;
+}
+
+}

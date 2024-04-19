@@ -672,7 +672,7 @@ extern int battle_config_read(const char *cfgName);
 extern void battle_set_defaults(void);
 int battle_set_value(const char* w1, const char* w2);
 int battle_get_value(const char* w1);
-
+void do_battle_events(struct block_list *src, struct block_list *target, int64 damage);
 //
 struct block_list* battle_getenemyarea(struct block_list *src, int x, int y, int range, int type, int ignore_id);
 /**

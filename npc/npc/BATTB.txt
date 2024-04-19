@@ -1,0 +1,26 @@
+function	script	Deaddd	{
+if (strcharinfo(3) == "06guild_01") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_02") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_03") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_04") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_05") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_06") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_07") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+if (strcharinfo(3) == "06guild_08") { 
+monster "this",-1,-1,"--ja--",-1-MOBG_Branch_Of_Dead_Tree,1,"";
+}
+}

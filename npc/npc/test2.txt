@@ -1,0 +1,16 @@
+doubrius,51,45,5	script	Test	102,{
+	.@md_name$ = "Ghost Palace";
+			switch(instance_create(.@md_name$) ) {
+			case -3:
+		if(countitem(50018)>0){
+		mes "Do you want to re-enter the instance?";
+		switch(select("Yes:No")) {
+		case 1:
+		delitem 50018,1;
+		instance_enter(.@md_name$);
+				end;
+				}
+				}
+				}
+				}
+				

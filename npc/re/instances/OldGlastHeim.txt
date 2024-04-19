@@ -89,8 +89,6 @@ glast_01,204,273,5	script	Hugin	4_M_SAGE_C,{
 	else if(.@diff == 2)
 		setarray .@quest_id[0],12334,12336;
 	
-	if(isbegin_quest(.@quest_id[1]) == 1)
-		erasequest .@quest_id[1];
 	
 	switch( checkquest(.@quest_id[0],PLAYTIME) ) {
 	case -1:

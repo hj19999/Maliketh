@@ -13,16 +13,16 @@
 //= 1.0 First version, edited. [Euphy]
 //============================================================
 
-prontera,148,174,5	script	Private Room	100,{
+doubrius,63,64,4	script	Private Room	474,{
 	mes "[Private Room]";
-	mes "Please select a private room.";
-	if ( getvariableofnpc( .rentcost, "MVP Summoner" ) )
-		mes "The cost to rent a room for "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" minutes is "+ callfunc("F_InsertComma", getvariableofnpc( .rentcost, "MVP Summoner" ) ) +" zeny.";
+	mes "Please select a Private Room.";
+	if ( getvariableofnpc( .rentcost, "Helper" ) )
+		mes "The cost to rent a room for "+ getvariableofnpc( .timeout, "Helper" ) +" minutes is "+ callfunc("F_InsertComma", getvariableofnpc( .rentcost, "Helper" ) ) +" zeny.";
 	else
-		mes "You can only use the room for only "+ getvariableofnpc( .timeout, "MVP Summoner" ) +" minutes.";
+		mes "You can only use the room for only "+ getvariableofnpc( .timeout, "Helper" ) +" minutes.";
 	mes " ";
 	for ( .@i = 1; .@i <= 8; .@i++ )
-		if ( getvariableofnpc( .renttime[.@i], "MVP Summoner" ) )
+		if ( getvariableofnpc( .renttime[.@i], "Helper" ) )
 			mes "Room #"+ .@i +" = "+ .color$[ .type[.@i] ] + .whoinuse$[.@i] +"^000000";
 	next;
 	.@room = select(
@@ -34,7 +34,7 @@ prontera,148,174,5	script	Private Room	100,{
 		"Room 6 ["+ getmapusers("06guild_06") +"]",
 		"Room 7 ["+ getmapusers("06guild_07") +"]",
 		"Room 8 ["+ getmapusers("06guild_08") +"]");
-	if ( getvariableofnpc( .renttime[.@room], "MVP Summoner" ) ) {
+	if ( getvariableofnpc( .renttime[.@room], "Helper" ) ) {
 		if ( .inuseid[.@room] == getcharid( .type[.@room] ) ) {
 			warp "06guild_0"+ .@room, 0,0;
 			close;
@@ -55,17 +55,17 @@ prontera,148,174,5	script	Private Room	100,{
 		mes "You do not own a "+( ( .@type == 1 )? "Party" : "Guild" )+".";
 		close;
 	}
-	else if ( Zeny < getvariableofnpc( .rentcost, "MVP Summoner" ) ) {
+	else if ( Zeny < getvariableofnpc( .rentcost, "Helper" ) ) {
 		mes "You don't have enough zeny to rent a room.";
 		close;
 	}
-	else if ( getvariableofnpc( .renttime[.@room], "MVP Summoner" ) ) {
+	else if ( getvariableofnpc( .renttime[.@room], "Helper" ) ) {
 		mes "[Private Room]";
 		mes "I'm sorry, somebody else has already registered this room faster than you.";
 		close;
 	}
 	for ( .@i = 1; .@i <= 8; .@i++ ) {
-		if ( ( getvariableofnpc( .renttime[.@i], "MVP Summoner" ) ) && .@type == .type[.@i] && getcharid(.@type) == .inuseid[.@i] ) {
+		if ( ( getvariableofnpc( .renttime[.@i], "Helper" ) ) && .@type == .type[.@i] && getcharid(.@type) == .inuseid[.@i] ) {
 			mes "[Private Room]";
 			mes "You already rented Room#"+ .@i +". Use that room instead.";
 			close;
@@ -74,10 +74,10 @@ prontera,148,174,5	script	Private Room	100,{
 	set .type[.@room], .@type;
 	set .inuseid[.@room], getcharid(.@type);
 	set .whoinuse$[.@room], strcharinfo( ( .@type == 3 )? 0 : .@type );
-	Zeny -= getvariableofnpc( .rentcost, "MVP Summoner" );
+	Zeny -= getvariableofnpc( .rentcost, "Helper" );
 	warp "06guild_0"+ .@room, 0,0;
 	killmonsterall "06guild_0"+ .@room;
-	donpcevent "MVP Summoner#"+ .@room +"::OnEnterMap";
+	donpcevent "Helper#"+ .@room +"::OnEnterMap";
 	close;
 OnInit:
 	.color$[1] =  "^EE8800"; // party color
@@ -86,14 +86,14 @@ OnInit:
 	end;
 }
 
--	script	MVP Summoner	-1,{
-	mes "[Healer]";
+-	script	Helper	-1,{
+	mes "[Helper]";
 	mes "Time left: " + callfunc( "Time2Str", .renttime[ atoi( strnpcinfo(2) ) ] + .timeout * 60 );
 	mes "Hi, what can I do for you?";
 	next;
 	switch ( select(.menu$) ) {
 	case 1:
-		mes "[Healer]";
+		mes "[Helper]";
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
 			mes "I cannot offer heal service when there are monsters around.";
 			close;
@@ -126,22 +126,22 @@ OnInit:
 		close;
 	case 2:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
-			mes "[Healer]";
+			mes "[Helper]";
 			mes "I cannot summon another MVP when there are monsters around.";
 			close;
 		} else if ( .mvpcost ) {
-			mes "[Healer]";
+			mes "[Helper]";
 			mes "The cost to summon an MVP is "+ callfunc( "F_InsertComma", .mvpcost ) +" zeny.";
 			next;
 			set .@menu, select(.mvpid_menu$) -1;
-			mes "[Healer]";
+			mes "[Helper]";
 			if ( Zeny < .mvpcost ) {
 				mes "You don't have enough zeny to summon an MVP.";
 				close;
 			}
 		} else {
 			set .@menu, select(.mvpid_menu$) -1;
-			mes "[Healer]";
+			mes "[Helper]";
 		}
 		mes "Please get ready.";
 		close2;
@@ -151,22 +151,22 @@ OnInit:
 		end;
 	case 3:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) ) {
-			mes "[Healer]";
+			mes "[Helper]";
 			mes "I cannot summon another mini-boss when there are monsters around.";
 			close;
 		} else if ( .bosscost ) {
-			mes "[Healer]";
+			mes "[Helper]";
 			mes "The cost to summon a mini-boss is "+ callfunc( "F_InsertComma", .bosscost ) +" zeny.";
 			next;
 			set .@menu, select(.bossid_menu$) -1;
-			mes "[Healer]";
+			mes "[Helper]";
 			if ( Zeny < .bosscost ) {
 				mes "You doesn't have enough zeny to summon a mini-boss.";
 				close;
 			}
 		} else {
 			set .@menu, select(.bossid_menu$) -1;
-			mes "[Healer]";
+			mes "[Helper]";
 		}
 		mes "Please get ready.";
 		close2;
@@ -176,7 +176,7 @@ OnInit:
 		end;
 	case 4:
 		if ( mobcount( "this", strnpcinfo(3)+"::OnMobDead" ) > 0 ) {
-			mes "[Healer]";
+			mes "[Helper]";
 			mes "I cannot offer this service when there are monsters around.";
 			close;
 		}
@@ -184,14 +184,14 @@ OnInit:
 		callshop "MVP room#branch", 1;
 		end;
 	case 5:
-		mes "[Healer]";
+		mes "[Helper]";
 		mes "Are you sure you want to leave this room?";
 		next;
 		if ( select( "Yes:No") == 1 )
 			warp .respawnmap$, .respawnx, .respawny;
 		close;
 	case 6:
-		mes "[Healer]";
+		mes "[Helper]";
 		if ( getmapusers( strcharinfo(3) ) > 1 ) {
 			mes "There are still some players in this room. Make sure you are the last member in this room to use this option.";
 			close;
@@ -228,9 +228,9 @@ OnInit:
 	// Do NOT set this to zero!
 	set .timeout, 60;
 
-	set .rentcost, 100000;	// Zeny cost for renting a room (0 = free)
-	set .mvpcost, 100000;	// Zeny cost to summon an MVP (0 = free)
-	set .bosscost, 50000;	// Zeny cost to summon a boss monster (0 = free)
+	set .rentcost, 5000000;	// Zeny cost for renting a room (0 = free)
+	set .mvpcost, 1000000000;	// Zeny cost to summon an MVP (0 = free)
+	set .bosscost, 1000000000;	// Zeny cost to summon a boss monster (0 = free)
 
 	//	Options setting inside MVP room
 	set .@menu[1], 1;	// Turn Heal option On/Off
@@ -239,9 +239,9 @@ OnInit:
 	set .@menu[4], 0;	// Sell items (branches) On/Off (see shop below, before the mapflags)
 
 	// Respawn point when players leave the room
-	set .respawnmap$, "prontera";
-	set .respawnx, 150;
-	set .respawny, 174;
+	set .respawnmap$, "doubrius";
+	set .respawnx, 46;
+	set .respawny, 43;
 
 	setarray .mvpid[0],
 		1511,//	Amon Ra
@@ -350,14 +350,14 @@ OnInit:
 
 -	shop	MVP room#branch	-1,604:100000,12103:1000000
 
-06guild_01,49,49,4	duplicate(MVP Summoner)	Helper#1	116
-06guild_02,49,49,4	duplicate(MVP Summoner)	Helper#2	116
-06guild_03,49,49,4	duplicate(MVP Summoner)	Helper#3	116
-06guild_04,49,49,4	duplicate(MVP Summoner)	Helper#4	116
-06guild_05,49,49,4	duplicate(MVP Summoner)	Helper#5	116
-06guild_06,49,49,4	duplicate(MVP Summoner)	Helper#6	116
-06guild_07,49,49,4	duplicate(MVP Summoner)	Helper#7	116
-06guild_08,49,49,4	duplicate(MVP Summoner)	Helper#8	116
+06guild_01,49,49,4	duplicate(Helper)	Helper#1	116
+06guild_02,49,49,4	duplicate(Helper)	Helper#2	116
+06guild_03,49,49,4	duplicate(Helper)	Helper#3	116
+06guild_04,49,49,4	duplicate(Helper)	Helper#4	116
+06guild_05,49,49,4	duplicate(Helper)	Helper#5	116
+06guild_06,49,49,4	duplicate(Helper)	Helper#6	116
+06guild_07,49,49,4	duplicate(Helper)	Helper#7	116
+06guild_08,49,49,4	duplicate(Helper)	Helper#8	116
 
 06guild_01	mapflag	nowarpto
 06guild_02	mapflag	nowarpto

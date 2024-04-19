@@ -27,7 +27,7 @@ OnInit:
 		mf_noreturn;
 		
 	for ( .@i = 0; .@i < getarraysize(.@mapflag); .@i++)
-		setmapflag "06guild_01", .@mapflag[.@i];
+		setmapflag "guild_vs2", .@mapflag[.@i];
 		
 	.@min = gettime(DT_MINUTE)*60;
 	.@sec = gettime(DT_SECOND);
@@ -51,7 +51,7 @@ OnJoinEvent:
 			close;
 		}
 		else
-			warp "06guild_01",0,0;
+			warp "guild_vs2",0,0;
 	}
 	end;
 
@@ -63,7 +63,8 @@ OnMinute00: // runs hourly
 	if ( .event_time > .@time && !.@force || .start && !.@force ) end; // doesnt start if cd isn't done.
 	.event_time = (.@time - ( .@min + .@sec )) + .event_cd - 5;  
 	.start = 1;
-	pvpoff "06guild_01";
+	pvpoff "guild_vs2";
+	gvgoff "guild_vs2";
 	announce "LMS: We are going to have a Last Man Standing event.",0;
 	sleep 10000;
 	announce "LMS: For those who wants to join, use @lms",0;
@@ -73,39 +74,39 @@ OnMinute00: // runs hourly
 	announce "LMS: So please if you want to join. use @lms",0;
 	sleep 60000;
 	announce "LMS: The entry to the event is now closed.",bc_all,0x0ceedb;
-	if ( getmapusers("06guild_01") < 1 ) {
+	if ( getmapusers("guild_vs2") < 1 ) {
 		announce "LMS: Not enough participants.",bc_all,0x0ceedb;
 		.start = false;
 		end;
 	}
 	.start = 2;
 	sleep 3500;
-	mapannounce "06guild_01","We're about to begin the event.",bc_map,0x0ceedb;
+	mapannounce "guild_vs2","We're about to begin the event.",bc_map,0x0ceedb;
 	sleep 2500;
-	mapannounce "06guild_01","The rules are simple.",bc_map,0x0ceedb;
+	mapannounce "guild_vs2","The rules are simple.",bc_map,0x0ceedb;
 	sleep 2500;
-	mapannounce "06guild_01","Kill everyone in the map.",bc_map,0x0ceedb;
+	mapannounce "guild_vs2","Kill everyone in the map.",bc_map,0x0ceedb;
 	sleep 2500;
-	mapannounce "06guild_01","Last Man Standing wins!",bc_map,0x0ceedb;
+	mapannounce "guild_vs2","Last Man Standing wins!",bc_map,0x0ceedb;
 	sleep 2000;
-	mapannounce "06guild_01","That's all. Let's begin.",bc_map,0x0ceedb;
+	mapannounce "guild_vs2","That's all. Let's begin.",bc_map,0x0ceedb;
 	sleep 3000;
 	for (.@i = 10; .@i > 0; .@i--) {
-		mapannounce "06guild_01", "LMS: -- "+.@i+" --",bc_map,0x0ceedb;
+		mapannounce "guild_vs2", "LMS: -- "+.@i+" --",bc_map,0x0ceedb;
 		sleep 1000;
 	}
-	mapannounce "06guild_01", "LMS: Fight! ",bc_map,0x0ceedb;
-	pvpon "06guild_01";
+	mapannounce "guild_vs2", "LMS: Fight! ",bc_map,0x0ceedb;
+	pvpon "guild_vs2";
 	.timer = 0;
 	initnpctimer;
 	end;
 	
 OnTimer5000: // check every 5 secs..
 	.timer++;
-	.@size = getmapusers("06guild_01");
+	.@size = getmapusers("guild_vs2");
 	if ( .@size > 1 && .timer == 6 ) {
 		.timer = 0;
-		mapannounce "06guild_01", "LMS: "+ .@size +" players left..", bc_blue;
+		mapannounce "guild_vs2", "LMS: "+ .@size +" players left..", bc_blue;
 	} 
 	else if ( .@size <= 1 )
 		donpcevent strnpcinfo(3)+"::OnEndEvent";
@@ -115,10 +116,10 @@ OnTimer5000: // check every 5 secs..
 OnEndEvent:
 	stopnpctimer;
 	.start = false;
-	pvpoff "06guild_01";
-	mapannounce "06guild_01", "LMS: Event ended!",bc_map,0x0ceedb;
+	pvpoff "guild_vs2";
+	mapannounce "guild_vs2", "LMS: Event ended!",bc_map,0x0ceedb;
 	sleep 5000;
-	.@size = getmapunits(BL_PC,"06guild_01",.@aid);
+	.@size = getmapunits(BL_PC,"guild_vs2",.@aid);
 	if ( .@size == 0 ) {
 		announce "LMS: No winners.",0;
 		end;
@@ -132,11 +133,11 @@ OnEndEvent:
 	end;
 	
 OnPCDieEvent:
-	if ( .start && strcharinfo(3) == "06guild_01" ) {
+	if ( .start && strcharinfo(3) == "guild_vs2" ) {
 		warp "doubrius",47,43;
-		.@size = getmapusers("06guild_01");
+		.@size = getmapusers("guild_vs2");
 		if ( .@size > 1 )
-			mapannounce "06guild_01", "LMS: "+ .@size +" players left..", bc_blue;
+			mapannounce "guild_vs2", "LMS: "+ .@size +" players left..", bc_blue;
 		else if ( .@size <= 1 )
 			donpcevent strnpcinfo(3)+"::OnEndEvent";
 	}

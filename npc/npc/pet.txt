@@ -1,0 +1,18 @@
+-	script	petinfo	-1,{
+OnInit:
+    bindatcmd "petinfo",strnpcinfo(3)+"::OnAtcommand";
+    end;
+
+OnAtcommand:
+    if( getpetinfo(PETINFO_NAME) == "null") {
+        dispbottom "You need to capture a Pet!";
+        end;
+    } else {
+        dispbottom "=========== Information ===========";
+        dispbottom "Name: "+getpetinfo(PETINFO_NAME)+"";
+        dispbottom "Level: "+getpetinfo(PETINFO_LEVEL)+"";
+        dispbottom "Hungry: "+getpetinfo(PETINFO_HUNGRY)+"";
+        dispbottom "Intimacy: "+getpetinfo(PETINFO_INTIMATE)+"";
+        end;
+    }
+}

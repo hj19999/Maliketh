@@ -910,7 +910,6 @@
 6656,499,100	// Goast_Free_Charm
 6657,499,100	// Memory_Of_Jack
 6665,1,100	// RWC_Inicializer
-6671,467,100	// Geffen_Coin_Magic_Tournament
 6672,467,100	// Black_As_Night_Piece
 6673,507,100	// Bossnia_Tickets
 6674,499,100	// GM_Coin
