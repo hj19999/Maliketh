@@ -13,9 +13,9 @@
 //= 1.0 First version, edited. [Euphy]
 //============================================================
 
-doubrius,63,64,4	script	Private Room	474,{
-	mes "[Private Room]";
-	mes "Please select a Private Room.";
+doubrius,63,64,4	script	Dead Branch Room	474,{
+	mes "[Dead Branch Room]";
+	mes "Please select a Dead Branch Room.";
 	if ( getvariableofnpc( .rentcost, "Helper" ) )
 		mes "The cost to rent a room for "+ getvariableofnpc( .timeout, "Helper" ) +" minutes is "+ callfunc("F_InsertComma", getvariableofnpc( .rentcost, "Helper" ) ) +" zeny.";
 	else
@@ -39,19 +39,19 @@ doubrius,63,64,4	script	Private Room	474,{
 			warp "06guild_0"+ .@room, 0,0;
 			close;
 		} else {
-			mes "[Private Room]";
+			mes "[Dead Branch Room]";
 			mes "This room is reserved for ";
 			mes .color$[ .type[.@room] ] + .whoinuse$[.@room] +"^000000.";
 			mes "Please select another.";
 			close;
 		}
 	}
-	mes "[Private Room]";
+	mes "[Dead Branch Room]";
 	mes "Reserve this room for...";
 	next;
 	set .@type, select( "For my party members", "For my guild members", "For personal account use" );
 	if ( !getcharid(.@type) ) {
-		mes "[Private Room]";
+		mes "[Dead Branch Room]";
 		mes "You do not own a "+( ( .@type == 1 )? "Party" : "Guild" )+".";
 		close;
 	}
@@ -60,13 +60,13 @@ doubrius,63,64,4	script	Private Room	474,{
 		close;
 	}
 	else if ( getvariableofnpc( .renttime[.@room], "Helper" ) ) {
-		mes "[Private Room]";
+		mes "[Dead Branch Room]";
 		mes "I'm sorry, somebody else has already registered this room faster than you.";
 		close;
 	}
 	for ( .@i = 1; .@i <= 8; .@i++ ) {
 		if ( ( getvariableofnpc( .renttime[.@i], "Helper" ) ) && .@type == .type[.@i] && getcharid(.@type) == .inuseid[.@i] ) {
-			mes "[Private Room]";
+			mes "[Dead Branch Room]";
 			mes "You already rented Room#"+ .@i +". Use that room instead.";
 			close;
 		}
