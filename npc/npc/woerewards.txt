@@ -144,7 +144,6 @@ OnPCKillEvent:
 	if(!agitcheck() || !getcharid(2)) end;
 	if(inarray(.maps$,strcharinfo(3)) == -1) end;
 	dispbottom "You've recieved "+.kill_reward+" Points for killing "+rid2name(killedrid)+". Current points: "+woepoints;
-	woepoints += .kill_reward;
 	woekills++;
     .@color$ = getcharid(2) == getcastledata(strcharinfo(3),CD_GUILD_ID) ? .color_defenders$ :  .color_attackers$;
     if(.announce == 1) 
