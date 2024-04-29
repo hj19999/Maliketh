@@ -10444,7 +10444,7 @@ treasure01,27,115,0	script	Opened Treasure Chest#41	HIDDEN_NPC,{
 	end;
 }
 
-amatsu,233,234,3	script	Momotoro Publisher#rus42	4_F_JPN,{
+amatsu,236,250,3	script	Momotoro Publisher#rus42	4_F_JPN,{
 	if ((MaxWeight-Weight) < 3500) {
 		mes "[Momotoro Publisher]";
 		mes "What on earth do you have in your bag?";
