@@ -86,7 +86,7 @@ if (#GloriaBuff > gettimetick(2)){
 //============================================================
 alberta,25,240,6	duplicate(Healer)	Healer#alb	909
 aldebaran,135,118,6	duplicate(Healer)	Healer#alde	909
-amatsu,227,236,4	duplicate(Healer)	Healer#ama	909
+amatsu,227,236,4	duplicate(Healer)	Healer#ama	624
 ayothaya,207,169,6	duplicate(Healer)	Healer#ayo	909
 comodo,184,158,6	duplicate(Healer)	Healer#com	909
 einbech,57,36,6	duplicate(Healer)	Healer#einbe	909
