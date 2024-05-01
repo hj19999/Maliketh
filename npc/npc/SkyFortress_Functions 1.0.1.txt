@@ -1,4 +1,4 @@
-prt_q,249,76s,2	script	Vicious Mind Enchanter	750,{
+prt_q,249,76,2	script	Vicious Mind Enchanter	750,{
 
 mes .n$;
 mes "Hello, "+strcharinfo(0)+"!";
