@@ -57,7 +57,6 @@ announce "Maliketh Dang Will close after 10 min",0,0xFF3399;
 sleep 6000;
 announce "Maliketh Dang Close",0,0xFF3399;
 disablenpc "dewata000321";
-
 set .startt,0;
 end;
 OnInit:
@@ -69,7 +68,7 @@ if (.startt == 0) {
 warp "SavePoint",0,0;
 }
 }
-
+}
 
 
 
