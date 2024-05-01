@@ -3094,10 +3094,11 @@
 
 
 9418,0,3473,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
-9419,172800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
+9419,259200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
 9427,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Clearing the Sky Fortress for the Same Time"
 
-
+12364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Fallen Paros Lighthouse"
+12365,82800,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Gloomy Spirit of the Underground"
 
 // Old Glast Heim
 12316,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Meeting Hugin"
