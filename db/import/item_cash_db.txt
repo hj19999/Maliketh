@@ -20,6 +20,7 @@
 
 
 //0: New
+0,56027,2500 // Pass Box
 0,20448,2000
 0,19589,2000
 0,19859,2000
@@ -178,8 +179,8 @@
 
 
 //2: Equipment 
-2,18813,900
-2,18666,700
+
+
 2,2589,2000   // Fallen Angel Wings
 2,5374,1600
 2,5518,1600
@@ -196,6 +197,7 @@
 2,5389,1000      // Angel Spirit
 2,5359,900       // Airship Captain's Hat
 2,5325,900    // Robo Eye
+2,18813,900
 2,5490,900       // Anubis Helm
 2,5403,900     // Fish In Mouth
 2,5481,900     // Hermode Cap
@@ -203,6 +205,7 @@
 2,5463,850     // Rainbow Scarf 
 2,5388,800       // Snake Head Hat [1]
 2,5208,750
+2,18666,700
 2,5597,700      // Bubble Gum In Mouth
 
 
@@ -239,7 +242,6 @@
 
 //5: Etc
 5,50011,2000 // Body Style Ticket
-5,56005,1500 // Ramadan Pass Box
 5,6417,40
 5,17315,360
 5,7776,100  // Gym Pass

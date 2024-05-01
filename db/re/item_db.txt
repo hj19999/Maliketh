@@ -12689,7 +12689,7 @@
 
 56025,Pass2Ticket,Elden Ring Pass Ticket,3,10,,0,,,,,,,,,,,,,{},{},{}
 56026,Season_2_Coin,Rune Pass Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
-56027,Pass2Box,Elden Ring Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56025,1,Bound_Account;},{},{}
+56027,Pass2Box,Elden Ring Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitem 56025,1;},{},{}
 56028,BossBox,World Boss Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56025,1,Bound_Account;},{},{}
 56029,CostumeBox,Costume Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "cbox" ) ;},{},{}
 56030,CostumedBox,Dungeon Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "dbox" ) ;},{},{}

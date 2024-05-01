@@ -1,21 +1,30 @@
 doubrius,31,45,6	script	PVP	686,{
-switch(select("Room 1 (Ranked) (No Bard Song) ["+getmapusers("guild_vs3")+"/100]:Room 2 (UnRanked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 3 (UnRanked) ["+getmapusers("pvp_y_3-2")+"/100]:Cancel")){
+switch(select("Room 1 (Ranked) (No Bard Song) ["+getmapusers("pvp_n_1-3")+"/100]:Room 2 (unRanked)["+getmapusers("guild_vs3")+"/100]:Room 3 (UnRanked) ["+getmapusers("pvp_n_1-5")+"/100]:Room 4 (UnRanked) ["+getmapusers("pvp_y_3-2")+"/100]:Cancel")){
+
 case 1:
+SC_end    SC_POEMBRAGI;
+SC_end    SC_APPLEIDUN;
+SC_end    SC_ASSNCROS;
+		warp "pvp_n_1-3",0,0;
+announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
+		end;
+
+case 2:
 SC_end    SC_POEMBRAGI;
 SC_end    SC_APPLEIDUN;
 SC_end    SC_ASSNCROS;
 		warp "guild_vs3",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
-case 2:
+case 3:
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 2",0,0xFF3399;
 		end;
-case 3:
+case 4:
 		warp "pvp_y_3-2",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 3",0,0xFF3399;
 		end;
-case 4:
+case 5:
 end;		
 
 }
@@ -26,6 +35,11 @@ end;
  
  
 // Mapflags
+
+pvp_n_1-3	mapflag	pvp
+pvp_n_1-3	mapflag	noreturn
+pvp_n_1-3	mapflag	nowarp
+pvp_n_1-3	mapflag	noteleport
 guild_vs3	mapflag	pvp
 guild_vs3	mapflag	noreturn
 guild_vs3	mapflag	nowarp
