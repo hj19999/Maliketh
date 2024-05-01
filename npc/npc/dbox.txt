@@ -1,0 +1,29 @@
+function	script	dbox	{
+
+
+	.chance = rand(100);
+
+
+		// Super Rare Item 5%
+		if (.chance <= 5) {
+			getitem callfunc("F_Rand",12202,12203,12204,12205,12206,12207,12208),1;
+			end;
+		} 
+		// Super Rare Item 15%
+		if (.chance <= 20) {
+			getitem callfunc("F_Rand",12016,12679,12680,13989),1;
+			end;
+		} 
+
+		// Rare Item 30%
+		else if (.chance <= 50 && .chance >= 1){
+			getitem callfunc("F_Rand",607,678,12677,12114,12115,12117,12116,12031,12030),1;
+			end;
+		} 
+
+		// Common Items
+		else {
+			getitem callfunc("F_Rand",11548,11549,608,11547,12119,12121,12120,12118),1;
+
+	end; }
+}

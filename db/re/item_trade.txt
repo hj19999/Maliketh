@@ -4059,7 +4059,6 @@
 19522,1,100	// Mini_Crown1
 19523,475,100	// Donation_Ribbon
 19530,1,100	// C_Wild_Rose
-19531,475,100	// C_Cube_Mask
 19532,475,100	// C_Red_Bunny_Band
 19533,1,100	// C_Spore_Hat
 19534,1,100	// C_Tha_Despero_Mask
@@ -4094,7 +4093,6 @@
 19710,1,100	// C_Wings_Of_Victory
 19764,475,100	// C_Monster_Card
 19765,475,100	// C_Wing_Angels_Ears
-19853,507,100	// C_Filir_Wing_Ears
 19871,1,100	// C_Music_Decoration
 19938,1,100	// C_Love_Rabbit_Hood
 19996,467,100	// Horse_King
@@ -4119,8 +4117,6 @@
 20089,467,100	// C_Dragon_Cintamani_Hat4
 20110,467,100	// C_Coiledup_Snake
 20111,467,100	// C_Coiledup_Snake_Hat2
-20135,507,100	// C_12_Anniversary_Crown_Of_Saint
-20136,507,100	// C_12_Anniversary_Elf_Ears
 20139,467,100	// C_Horse_Hairpin
 20140,467,100	// C_Horse_Hairpin_
 20162,467,100	// C_Fleece_Hat
@@ -4792,7 +4788,6 @@
 28905,467,100	// Unity_Buckler
 //28914,467,100	//
 //28953,499,100	//
-31105,507,100	// C_RO_Celebration_Hat
 31140,467,100	// C_Cowboy_Hat_
 31141,467,100	// C_Rose_Corsage_
 31262,499,100	// C_Disposable_3D_Glasses

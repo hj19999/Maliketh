@@ -1,0 +1,82 @@
+doubrius,41,41,6	script	Food Trader	891,{
+	mes "[Food Trader]";
+	mes "Hello i can trade 6 +20 food and 200 k zeny for 1 +20 food 30 min .";
+next;
+switch(select("Str Food:Agi Food:Vit Food:Int Food:Dex Food:Luk Food:Cancel")) {
+
+case 1:
+
+if( countitem(12429) > 5 & Zeny>200000) {
+        delitem 12429,6;
+		Zeny -= 200000;
+        getitem 50019,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 2:
+
+if( countitem(12433) > 5 & Zeny>200000) {
+        delitem 12433,6;
+		Zeny -= 200000;
+        getitem 50020,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 3:
+
+if( countitem(12431) > 5 & Zeny>200000) {
+        delitem 12431,6;
+		Zeny -= 200000;
+        getitem 50021,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 4:
+
+if( countitem(12430) > 5 & Zeny>200000) {
+        delitem 12430,6;
+		Zeny -= 200000;
+        getitem 50022,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 5:
+
+if( countitem(12432) > 5 & Zeny>200000) {
+        delitem 12432,6;
+		Zeny -= 200000;
+        getitem 50023,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 6:
+
+if( countitem(12434) > 5 & Zeny>200000) {
+        delitem 12434,6;
+		Zeny -= 200000;
+        getitem 50024,1;
+        end;
+}
+else
+mes "[Food Trader]";
+mes "You dont have Requirements";
+end;
+case 7: 
+end;
+}
+}

@@ -16,6 +16,13 @@
 //    0x20 - Skill ignores target's defense (misc type always ignores)
 //    0x40 - Skill ignores target's flee (magic type always ignores)
 //    0x80 - Skill ignores target's def cards
+//0-9
+//A - 10
+//B - 11
+//C - 12
+//D - 13
+//E - 14
+//F - 15
 // 07 splash/effect range
 //      -1 - for screen-wide
 //       0 - no splash
@@ -532,7 +539,7 @@
 //****
 // Paladin
 367,9,8,1,0,0xD0,0,5,1,no,0,0x18000,0,misc,0,0x0,		PA_PRESSURE,Gloria Domini
-368,0,6,4,0,0x69,0,5,1,yes,0,0,0,weapon,0,0x300000,	PA_SACRIFICE, Martyr's Reckoning
+368,0,6,4,0,0xE9,0,5,1,yes,0,0,0,weapon,0,0x300000,	PA_SACRIFICE, Martyr's Reckoning
 369,0,6,4,0,0x41,0,10,1,yes,0,0,0,misc,0,0x0,	PA_GOSPEL,Battle Chant
 
 //****

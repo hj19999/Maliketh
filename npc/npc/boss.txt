@@ -1,0 +1,150 @@
+doubrius,52,45,5	script	Wolrd Boss	894,{
+	
+if (.bossspawn == 1) {
+mes "[Wolrd Boss]";
+mes "World Boss Event Start .";
+switch(select("Go:Leave")){
+case 1:
+		warp "darkmall",100,98;
+		end;
+case 2:
+end;
+
+}
+}
+if (.eventstart == 1) {
+mes "[Wolrd Boss]";
+mes "Boss Will Spawn At 7 PM .";
+end;
+}
+else
+mes "[Wolrd Boss]";
+mes "World Boss Count [^2FFF3E"+ .worldboss +"^000000/50000]";
+end;
+
+OnMobKilled:
+set .worldboss,0;
+set .eventstart,0;
+announce "World Boss Event End",0,0x0055ff;
+//    addrid(1);
+//    getitem 56028,1;
+//    end;
+end;
+
+
+OnClock1900:
+if (.eventstart == 1) {
+set .bossspawn,1;
+announce "World Boss Event Start",0,0x0055ff;
+monster "darkmall",0,0,"World Boss",25009,1,"Wolrd Boss::OnMobKilled";
+end;
+}
+else 
+end;
+
+OnEnable:
+set .eventstart,1;
+announce "World Boss Event Start",0,0x0055ff;
+monster "darkmall",0,0,"World Boss",25009,1,"Wolrd Boss::OnMobKilled";
+end;
+
+
+OnNPCKillEvent:
+set .worldboss, .worldboss + 1;
+if (.worldboss == 1000) {
+announce "World Boss Count [1000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 2000) {
+announce "World Boss Count [2000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 3000) {
+announce "World Boss Count [3000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 4000) {
+announce "World Boss Count [4000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 5000) {
+announce "World Boss Count [5000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 6000) {
+announce "World Boss Count [6000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 7000) {
+announce "World Boss Count [7000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 8000) {
+announce "World Boss Count [8000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 9000) {
+announce "World Boss Count [9000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 10000) {
+announce "World Boss Count [10000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 15000) {
+announce "World Boss Count [15000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 20000) {
+announce "World Boss Count [20000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 25000) {
+announce "World Boss Count [25000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 30000) {
+announce "World Boss Count [30000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 35000) {
+announce "World Boss Count [35000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 40000) {
+announce "World Boss Count [40000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 45000) {
+announce "World Boss Count [45000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 46000) {
+announce "World Boss Count [46000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 47000) {
+announce "World Boss Count [47000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 48000) {
+announce "World Boss Count [48000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 49000) {
+announce "World Boss Count [49000/50000]",0,0x0055ff;
+end;
+}
+if (.worldboss == 50000) {
+announce "World Boss Count [50000/50000]",0,0x0055ff;
+donpcevent "Wolrd Boss::OnEnable";
+end;
+}
+//if (.worldboss == 20) {
+//announce "World Boss Count [50000/50000]",0,0x0055ff;
+//sleep 6000;
+//donpcevent "Wolrd Boss::OnEnable";
+//end;
+//}
+
+}

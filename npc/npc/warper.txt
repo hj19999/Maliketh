@@ -137,7 +137,7 @@ menu	"Main Town",T38,"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "
 T1: Go("prontera",155,183);
 T2: Go("alberta",28,234);
 T3: Go("aldebaran",140,131);
-T4: Go("amatsu",227,229);
+T4: Go("amatsu",198,84);
 T5: Go("ayothaya",208,166);
 T6: Restrict("RE");
 	Go("brasilis",196,217);

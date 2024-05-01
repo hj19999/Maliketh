@@ -151,5 +151,26 @@ Hourly_Rewads:
 	//if(#Hourly_Rewads_Check >= 5){getitem 905,1;} //	like this you can add reward for Xhr and this reward will be given for that X in this example 5 mean that the player did pass 5hr or more
 return;
 }
-doubrius,35,37,6	pointshop	Hourly Rewards Shop	528,#HourlyRewards,31039:175,20147:150,31301:200,20010:175,31125:175,20155:150,20502:200,20737:200,20763:175,60001:150,60033:150,5286:375,5403:250,12210:55,14533:25,7619:25,7620:25,12221:20,12903:50,12904:50,12905:50,12906:50,12907:50,12908:50
+
+
+doubrius,35,37,6	script	Hourly Rewards Shop	528,{
+
+switch(select("Costume Item:Other:Close")) {
+
+        case 1:
+		callshop "Hourly_Custom_Shop",1;
+		end;
+		
+		case 2:
+		callshop "Hourly_Other_Shop",1;
+		end;
+		
+		case 3:
+		end;
+		}
+		}
+-	pointshop	Hourly_Other_Shop	-1,#HourlyRewards,5286:375,5403:250,12210:55,14533:25,7619:25,7620:25,12221:20,12903:50,12904:50,12905:50,12906:50,12907:50,12908:50		
+-	pointshop	Hourly_Custom_Shop	-1,#HourlyRewards,20104:200,31179:200,31432:200,20398:200,20349:200,19810:200,31165:175,20450:175,31134:175,20403:175,20218:175,19985:175,19949:175,20382:175,31378:150,31306:150,31190:150,31098:150,20381:150,19841:150,20014:150,19619:150,31332:150,19541:150,19639:150,19618:150,31039:175,20147:150,31301:200,20010:175,31125:175,20155:150,20502:200,20737:200,20763:175,60001:150,60033:150
 //<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>,<ITEM_ID>:<PRICE>
+
+

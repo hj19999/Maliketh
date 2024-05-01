@@ -40,4 +40,4 @@ doubrius,51,32,4	script	Universal Rental NPC	604,{
 
 
 dicastes01,192,178,6	duplicate(Universal Rental NPC)	Universal Rental NPC#alb	604
-amatsu,238,228,4	duplicate(Universal Rental NPC)	Universal Rental NPC#alb	604
+amatsu,238,228,4 duplicate(Universal Rental NPC) Universal Rental NPC#alb 604

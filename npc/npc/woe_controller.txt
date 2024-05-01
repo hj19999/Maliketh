@@ -450,4 +450,5 @@ while(1) {
 }
 
 
+dicastes01,203,178,6	duplicate(WOE Information)	WOE Information#alb	835
 amatsu,222,227,6	duplicate(WOE Information)	WOE Information#alb	835

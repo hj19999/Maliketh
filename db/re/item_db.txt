@@ -8108,7 +8108,7 @@
 13986,Bulging_Head_Box_1m,JJangu Magic Powder Box 30 Days,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ rentitem 12309,2592000; },{},{}
 13987,Ori_Stone_5_Box,Rough Oridecon 5 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 756,5; },{},{}
 13988,Ori_Stone_50_Box,Rough Oridecon 50 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 756,50; },{},{}
-13989,Acidbomb_10_Box,Acid Bomb 10 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getgroupitem(IG_Acidbomb_10_Box); /*getitem 7135,10; getitem 7136,10;*/ },{},{}
+13989,Acidbomb_10_Box,Acid Bomb 10 Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 7135,10; getitem 7136,10; },{},{}
 13990,Job_Manual50_Box,JOB Battle Manual Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 14592,10; },{},{}
 13991,Tiger_Mask_Box,Tiger Mask Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 5098,1; },{},{}
 13992,Cat_Hat_Box,Pussy Cat Bell Box,18,20,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ getitem 5099,1; },{},{}
@@ -10124,13 +10124,13 @@
 19526,C_Helm,Costume Helm,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,40,{ bonus bUnbreakableHelm; },{},{}
 19527,C_Sharp_Gear,Costume Spiky Band,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,43,{ bonus bUnbreakableHelm; },{},{}
 19528,C_Iron_Cane,Costume Iron Cain,4,0,,0,,0,,0,0xFFFFFFFF,63,2,4096,,1,0,53,{ bonus bUnbreakableHelm; },{},{}
-19529,C_Angelic_Chain,Costume Angel Wing,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,38,{ bonus bUnbreakableHelm; bonus bVit,1; bonus bAgi,1; },{},{}
-19530,C_Wild_Rose,Costume Wild Rose,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,541,{ bonus bUnbreakableHelm; bonus bBaseAtk,2; bonus bMatk,2; },{},{}
-19531,C_Cube_Mask,Costume Cube Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,0,0,472,{ bonus bUnbreakableHelm; bonus bFlee,1; },{},{}
-19532,C_Red_Bunny_Band,Red Bunny Band,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,640,{ bonus bUnbreakableHelm; bonus bDex,1; },{},{}
-19533,C_Spore_Hat,Costume Spore Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,114,{ bonus bUnbreakableHelm; bonus bVit,1; bonus2 bExpAddRace,RC_All,1; },{},{}
-19534,C_Tha_Despero_Mask,Costume Thanatos Despero Mask,4,20,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,693,{ bonus2 bAddClass,Class_All,1; bonus bMatkRate,1; bonus bHealPower,1; },{},{}
-19535,C_Sinsuncho_Hat,Costume Sinsuncho Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,730,{ bonus bUnbreakableHelm; bonus bStr,1; bonus2 bExpAddRace,RC_All,1; },{},{}
+19529,C_Angelic_Chain,Costume Angel Wing,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,38,{ bonus bUnbreakableHelm;},{},{}
+19530,C_Wild_Rose,Costume Wild Rose,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,541,{ bonus bUnbreakableHelm; },{},{}
+19531,C_Cube_Mask,Costume Cube Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,0,0,472,{ bonus bUnbreakableHelm;},{},{}
+19532,C_Red_Bunny_Band,Red Bunny Band,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,640,{ bonus bUnbreakableHelm; },{},{}
+19533,C_Spore_Hat,Costume Spore Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,114,{ bonus bUnbreakableHelm;},{},{}
+19534,C_Tha_Despero_Mask,Costume Thanatos Despero Mask,4,20,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,693,{},{},{}
+19535,C_Sinsuncho_Hat,Costume Sinsuncho Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,730,{ },{},{}
 19536,C_Rose_Corsage,Costume Rose Corsage,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,533,{ bonus bUnbreakableHelm; bonus bInt,1; },{},{}
 19537,C_Gryphon_Hat,Costume Gryphon Hat,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,591,{ bonus bUnbreakableHelm; },{},{}
 19538,Full_Moon,Full Moon,4,0,,0,,0,,0,0xFFFFFFFF,63,2,1024,,1,0,780,{ autobonus "{ bonus bBaseAtk,50; }",10,5000,BF_WEAPON,"{ specialeffect2 EF_POTION_BERSERK; /* showscript */ }"; autobonus "{ bonus bMatk,50; }",5,5000,BF_MAGIC,"{ specialeffect2 EF_ENERGYCOAT; /* showscript */ }"; },{},{}
@@ -10659,7 +10659,7 @@
 20145,C_Robo_Eye,Costume Robo Eye,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,345,{},{},{}
 20146,C_Angel_Spirit,Costume Angel of Ghost,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,394,{},{},{}
 20147,C_Bell_Pigeon,Costume Bell of Piegon,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,1034,{},{},{}
-20148,C_Musketeer_Hat,Costume Musketeer Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,466,{},{},{}
+20148,C_Musketeer_Hat,Costume Musketeer Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,466,{},{},{}
 20149,C_Hexagon_Glasses,Costume Hexagon Glasses,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,1,822,{},{},{}
 20150,C_Wind_Fan,Costume Wind Fan,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,1051,{},{},{}
 20151,C_Poison_Spore_Hat,Costume Poison Spore Hat,4,0,,0,,,,0,0xFFFFFFFF,63,2,1024,,1,1,899,{},{},{}
@@ -12679,6 +12679,20 @@
 50016,Cashpoint5000,Cash Point 5000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+5000; dispbottom "You have received 5000 Cash Points."; },{},{}
 50017,Cashpoint10000,Cash Point 10000,2,20,,0,,,,,0xFFFFFFFF,63,2,,,,,,{set #CASHPOINTS, #CASHPOINTS+10000; dispbottom "You have received 10000 Cash Points."; },{},{}
 
+50019,Savage_BBQ2,Savage Full Roast2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_SAVAGE_STEAK,1800000,20; },{},{}
+50020,Drocera_Herb_Stew2,Drosera Herb Salad2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_DROCERA_HERB_STEAMED,1800000,20; },{},{}
+50021,Minor_Brisket2,Minor Stew2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_MINOR_BBQ,1800000,20; },{},{}
+50022,Wug_Blood_Cocktail2,Cocktail Warg Blood2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_COCKTAIL_WARG_BLOOD,1800000,20; },{},{}
+50023,Siroma_Icetea2,Siroma Iced Tea2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_SIROMA_ICE_TEA,1800000,20; },{},{}
+50024,Petti_Tail_Noodle2,Petite Tail Noodles2,2,,,50,,,,,0xFFFFFFFF,63,2,,,,,,{ sc_start SC_PUTTI_TAILS_NOODLES,1800000,20; },{},{}
+
+
+56025,Pass2Ticket,Elden Ring Pass Ticket,3,10,,0,,,,,,,,,,,,,{},{},{}
+56026,Season_2_Coin,Rune Pass Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
+56027,Pass2Box,Elden Ring Pass Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56025,1,Bound_Account;},{},{}
+56028,BossBox,World Boss Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{  getitembound 56025,1,Bound_Account;},{},{}
+56029,CostumeBox,Costume Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "cbox" ) ;},{},{}
+56030,CostumedBox,Dungeon Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "dbox" ) ;},{},{}
 
 57000,Tobi_Mask,Tobi_Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3000,{},{},{}
 
@@ -12764,7 +12778,7 @@
 60063,Satan_Wings,Satan Wings,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,1,2006,{},{},{}
 
 60100,blue_angle_wing_garment,Blue Angle Wing Garment,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,51,{},{},{}
-60101,Demon_Wing,Demon Wing,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,52,{},{},{}
+60101,Demon_Wing_,Demon Wing,4,10,,0,,,,0,0xFFFFFFFF,63,2,8192,,1,1,52,{},{},{}
 
 60102,broly_Aura,broly Aura,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3014,{},{},{}
 60103,broly_Aura_Elect,broly_Aura_Elect,4,0,,0,,,,0,0xFFFFFFFF,63,2,2048,,1,0,3015,{},{},{}
@@ -12805,3 +12819,4 @@
 
 50000,Equilibrium_Wings,Equilibrium_Wings,4,0,,0,,0,,0,0xFFFFFFFF,63,2,2048,,1,0,1882,{},{},{}
 50018,ReEntrance,ReEntrance Instance,3,6,,10,,,,,,,,,,,,,{},{},{}
+

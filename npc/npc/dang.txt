@@ -1,0 +1,80 @@
+doubrius,47,54,0	warp	dewata000321	1,1,ja_yavin01,34,105
+
+doubrius,47,45,5	script	Maliketh Dungeon	894,{
+
+if (.startt == 1) {
+mes .@npc_name$;
+mes "Dungeon Open.";
+close;
+}
+mes .@npc_name$;
+mes "Hello do you want invest to open Maliketh Dungeon ?";next;
+switch(select("Invest.:Cancel")) {
+case 1:
+mes .@npc_name$;
+mes "How many zeny you want invest ?.";
+mes "you can invest from 1 ~ 10 M Zeny";
+mes "Now invest is ^2FFF3E"+ .opengate +"^000000";
+next;
+input .@zenyyyy;
+		if (Zeny < .@zenyyyy) {
+			mes .@npc_name$;
+			mes "You do not have enough money.";
+			close;
+		}
+		else if (.@zenyyyy == 0) {
+				mes .@npc_name$;
+				mes "Canceled.";
+				close;
+				}
+		else
+		mes "ty.";
+set Zeny, Zeny-.@zenyyyy;
+set .opengate, .opengate + .@zenyyyy;
+		if (.opengate > 199999999) {
+donpcevent "Maliketh Dungeon::OnEnable";
+			close;
+		}
+end;
+case 2:
+end;
+}
+OnEnable:
+set .opengate,0;
+set .startt,1;
+announce "Maliketh Dang Open",0,0xFF3399;
+enablenpc "dewata000321";
+sleep 600000;
+announce "Maliketh Dang Will close after 50 min",0,0xFF3399;
+sleep 600000;
+announce "Maliketh Dang Will close after 40 min",0,0xFF3399;
+sleep 600000;
+announce "Maliketh Dang Will close after 30 min",0,0xFF3399;
+sleep 600000;
+announce "Maliketh Dang Will close after 20 min",0,0xFF3399;
+sleep 600000;
+announce "Maliketh Dang Will close after 10 min",0,0xFF3399;
+sleep 600000;
+announce "Maliketh Dang Close",0,0xFF3399;
+disablenpc "dewata000321";
+set .startt,0;
+end;
+OnInit:
+    disablenpc "dewata000321";
+    end;
+}
+
+
+
+
+ja_yavin01,34,109,0	warp	dewata00021	1,1,doubrius,47,43 
+
+ja_yavin01,0,0	monster	Cobra Flower	25000,10,5000
+ja_yavin01,0,0	monster	Larva	25001,10,5000
+ja_yavin01,0,0	monster	Lotus Wormhole	25002,10,5000
+ja_yavin01,0,0	monster	Flora ill	25003,10,5000
+ja_yavin01,0,0	monster	Pochi	25004,10,5000
+ja_yavin01,0,0	monster	Sea Spirit	25005,10,5000
+ja_yavin01,0,0	monster	Simbatta	25006,10,5000
+ja_yavin01,0,0	monster	Curse Straw	25007,1,600000
+ja_yavin01,0,0	monster	Predator	25008,1,3600000
