@@ -598,7 +598,7 @@ dali02,122,63,2	script	Scientist Doyeon#a2	4_M_MAYOR,{
 			mes "the invaded Prontera.";
 			close;
 		}
-		if (rentalcountitem(14505) < 1 && rentalcountitem(14506) < 1) {// Sky Fortress Ticket
+		if (countitem(14505) < 1 && countitem(14506) < 1) {// Sky Fortress Ticket
 			mes "[Scientist Doyeon]";
 			mes "I don't think this works";
 			mes "without the -Dungeon Pass-.";
@@ -949,7 +949,7 @@ OnTouch:
 	mes "- Dreary warp -";
 	mes "- is brought up -";
 	mes "- shining in black -";
-	disablenpc();
+	disablenpc strnpcinfo(3);
 	enablenpc instance_npcname("Activated Warp#" + strnpcinfo(2));
 	close;
 }
@@ -1132,7 +1132,7 @@ OnTouch:
 	sleep2 3000;
 	if (is_party_leader() == false)
 		end;
-	disablenpc();
+	disablenpc strnpcinfo(3);
 	mes "- In that treasure box, -";
 	.@r = rand(100);
 	if (.@r < 32) {
@@ -1948,7 +1948,7 @@ OnEvent:
 	specialeffect EF_GUMGANG4;
 	progressbar_npc "000000",4;
 	specialeffect EF_NPC_EARTHQUAKE;
-	cloakoffnpc();
+	cloakoffnpc strnpcinfo(3);
 	initnpctimer;
 	end;
 OnTimer1000:
