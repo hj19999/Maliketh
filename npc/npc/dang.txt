@@ -63,7 +63,7 @@ OnInit:
     disablenpc "dewata000321";
     end;
 OnNPCKillEvent:
-if (strcharinfo(3) == "06guild_01") { 
+if (strcharinfo(3) == "ja_yavin01") { 
 if (.startt == 0) {
 warp "SavePoint",0,0;
 }
