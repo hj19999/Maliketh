@@ -1,4 +1,4 @@
-doubrius,52,45,5	script	Wolrd Boss	939,{
+doubrius,47,39,5	script	Wolrd Boss	470,{
 	
 if (.bossspawn == 1) {
 mes "[Wolrd Boss]";

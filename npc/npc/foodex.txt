@@ -1,5 +1,5 @@
-doubrius,41,41,6	script	Food Trader	510,{
-	mes "[Food Trader]";
+doubrius,27,62,6	script	Combine Food +20	510,{
+	mes "[Combine Food]";
 	mes "Hello i can trade 6 +20 food and 2 M zeny for 1 +20 food 30 min .";
 next;
 switch(select("Str Food:Agi Food:Vit Food:Int Food:Dex Food:Luk Food:Cancel")) {
@@ -13,7 +13,7 @@ if( countitem(12429) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 2:
@@ -25,7 +25,7 @@ if( countitem(12433) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 3:
@@ -37,7 +37,7 @@ if( countitem(12431) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 4:
@@ -49,7 +49,7 @@ if( countitem(12430) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 5:
@@ -61,7 +61,7 @@ if( countitem(12432) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 6:
@@ -73,7 +73,7 @@ if( countitem(12434) > 5 & Zeny>2000000) {
         end;
 }
 else
-mes "[Food Trader]";
+mes "[Combine Food]";
 mes "You dont have Requirements";
 end;
 case 7: 
