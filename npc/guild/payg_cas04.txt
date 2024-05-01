@@ -45,7 +45,7 @@
 		if(select("Return to the guild castle.:Quit.") == 1) {
 			close2;
 			if (getcharid(2) == GetCastleData("payg_cas04",1)) {
-					warp "payg_cas04",40,235;
+					warp "payg_cas04",72,231;
 				end;
 			}
 			end;
