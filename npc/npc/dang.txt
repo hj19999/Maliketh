@@ -31,7 +31,7 @@ input .@zenyyyy;
 		mes "ty.";
 set Zeny, Zeny-.@zenyyyy;
 set .opengate, .opengate + .@zenyyyy;
-		if (.opengate > 199999999) {
+		if (.opengate > 1999999) {
 donpcevent "Maliketh Dungeon::OnEnable";
 			close;
 		}
@@ -57,6 +57,8 @@ announce "Maliketh Dang Will close after 10 min",0,0xFF3399;
 sleep 600000;
 announce "Maliketh Dang Close",0,0xFF3399;
 disablenpc "dewata000321";
+atcommand "@doommap";
+warp "SavePoint",0,0;
 set .startt,0;
 end;
 OnInit:
