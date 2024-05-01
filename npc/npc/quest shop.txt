@@ -45,7 +45,7 @@ switch(select("Costume Item:Other:Close")) {
 		}
 doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
 doubrius,35,25,6	script	WoE Shop#1	413,{ callfunc "qshop",5; }
-doubrius,65,32,4	script	Test Cash Shop#1	498,{ callfunc "qshop",6; }
+//doubrius,65,32,4	script	Test Cash Shop#1	498,{ callfunc "qshop",6; }
 doubrius,31,41,6	script	Elden Ring Pass Shop	752,{
 
 switch(select("Costume Item:Other:Close")) {

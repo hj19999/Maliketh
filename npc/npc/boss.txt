@@ -23,6 +23,7 @@ mes "World Boss Count [^2FFF3E"+ .worldboss +"^000000/50000]";
 end;
 
 OnMobKilled:
+announce "[ System ] : Player ["+ strcharinfo(0) +"] has killed "+ getmonsterinfo( killedrid, MOB_NAME ) +" alone at "+ strcharinfo(3), bc_all;
 set .worldboss,0;
 set .eventstart,0;
 announce "World Boss Event End",0,0x0055ff;
