@@ -457,7 +457,7 @@ menu	"Airship Raid",I24,"Bakonawa Lake",I1,"Central Laboratory",I27,"Charleston 
 		"Hazy Forest",I10, "Horror Toy Factory",I11, "Isle Of Bios",I23 , "Morse's Cave",I22,
 		"Nidhoggur's Nest",I13, "Nightmarish Jitterbug",I21, "Old Glast Heim",I15,
 		"Orc's Memory",I16,"Sara Memory",I18,
-		"Sarah and Fenrir",I26,"Sealed Shrine",I19,"The Last Room",I28, "Wolfchev's Laboratory",I20;
+		"Sarah and Fenrir",I26,"Sealed Shrine",I19,"Sky Fortress",I29,"The Last Room",I28, "Wolfchev's Laboratory",I20;
 
 I1: Restrict("RE");
 	Go("ma_scene01",172,175);
@@ -503,6 +503,7 @@ I25: Go("verus04",78,118);
 I26: Go("dali02",95,143);
 I27: Go("verus01",152,151);
 I28: Go("verus01",123,185);
+I29: Go("prt_q",246,80);
 // --------------------------------------------------
 	Special:
 // --------------------------------------------------
