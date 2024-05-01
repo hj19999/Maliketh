@@ -129,4 +129,4 @@ doubrius,59,61,0,0	monster	Barricade  	1905,1,0,0,0
 
 dicastes01,205,184,0,0	monster	Barricade  	1905,1,0,0,0
 
-amatsu,238,223,0,0 monster Barricade 1905,1,0,0,0
+amatsu,238,223,0,0	monster	Barricade  	1905,1,0,0,0
