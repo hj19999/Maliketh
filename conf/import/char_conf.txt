@@ -51,7 +51,7 @@ char_new: 1
 // NOTE: For Doram, this requires client 20151001 or newer.
 start_point: doubrius,47,55
 start_point_pre: doubrius,47,55
-start_point_doram: lasa_fild01,48,297
+start_point_doram: doubrius,47,55
 
 // Starting items for new characters
 // Max number of items is MAX_STARTITEM in char.c (default 32)
