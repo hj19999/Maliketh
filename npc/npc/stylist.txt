@@ -14,7 +14,7 @@
 //============================================================
 
 doubrius,63,46,4	script	Stylist#custom_stylist	503,{
-if( eaclass() == EAJ_Doram){
+if( eaclass() == EAJ_SUMMONER){
 mes "No more jobs are available . ";
 end;}
 	setarray .@Styles[1],
