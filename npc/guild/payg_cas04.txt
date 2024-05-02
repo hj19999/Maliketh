@@ -20,6 +20,10 @@
 // Guild Flags (Outside Castle)
 //============================================================
 -	script	Sacred Altar#1::OutsideFlagsPA4	722,{
+if( eaclass() == EAJ_SUMMONER){
+mes "???";
+end;
+}
 
 	set .@GID, GetCastleData("payg_cas04",1);
 

@@ -65,6 +65,10 @@ arug_cas01,117,120,4	duplicate(LF_ar01_2)	Mardol#LF_ar01_13	722
 arug_cas01,233,140,4	duplicate(LF_ar01_2)	Mardol#LF_ar01_14	722
 
 aru_gld,164,270,4	script	Mardol#flag_Ar01_1::Ar01_Flag	722,{
+if( eaclass() == EAJ_SUMMONER){
+mes "???";
+end;
+}
 	callfunc "ReturnFlag","arug_cas01",1;
 	end;
 OnAgitInit2:
