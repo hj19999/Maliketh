@@ -1,9 +1,6 @@
 -	script	passdrop	-1,{
 
 OnNPCKillEvent:
-if ( rand( 1000 ) <= 1 ) {
-getitem 56029,1;
-}
 if (killedrid == 1097){
 end;
 }
@@ -15,6 +12,10 @@ end;
 }
 if (killedrid == 1085){
 end;
+}
+if ( rand( 1000 ) <= 1 ) {
+if ( checkidle() <= 3 ) {
+getitem 56029,1;
 }
 if ( rand( 100 ) <= 10 ) {
 if ( checkidle() <= 3 ) {
