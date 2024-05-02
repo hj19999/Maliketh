@@ -36,6 +36,16 @@ doubrius,51,32,4	script	Universal Rental NPC	604,{
 	}
 	specialeffect2 EF_TEIHIT3;
 	end;
+
+OnPCLoadMapEvent:
+if (strcharinfo(3) == "schg_cas03") { 
+if( eaclass() == EAJ_SUMMONER){
+warp "SavePoint",0,0;
+end;
+}
+}
+
+
 }
 
 
