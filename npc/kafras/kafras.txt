@@ -432,7 +432,7 @@ moscovia,223,191,3	script	Kafra Employee::kaf_mosk	114,{
 
 // Amatsu
 //============================================================
-amatsu,102,149,4	script	Kafra Employee::kaf_amatsu	116,{
+amatsu,222,234,4	script	Kafra Employee::kaf_amatsu	116,{
 	cutin "kafra_02",2;
 	mes "[Kafra Employee]";
 	mes "Welcome to the";
@@ -441,7 +441,7 @@ amatsu,102,149,4	script	Kafra Employee::kaf_amatsu	116,{
 	mes "always ready to serve you.";
 	mes "How can I help you today?";
 	callfunc "F_Kafra",5,3,1,50,700;
-	savepoint "amatsu",116,94,1,1;
+	savepoint "amatsu",231,227,1,1;
 	callfunc "F_KafEnd",0,1,"in the city of Amatsu";
 }
 
