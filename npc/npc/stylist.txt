@@ -14,9 +14,6 @@
 //============================================================
 
 doubrius,63,46,4	script	Stylist#custom_stylist	503,{
-if( eaclass() == EAJ_SUMMONER){
-mes "No more jobs are available . ";
-end;}
 	setarray .@Styles[1],
 		getbattleflag("max_cloth_color"),
 		getbattleflag("max_hair_style"),
@@ -40,6 +37,9 @@ end;}
 			set .@Style, ((.@Style != 1) ? .@Style-1 : .@Styles[.@s]);
 			break;
 		case 3:
+		if( eaclass() == EAJ_SUMMONER){
+mes "No more Style are available . ";
+end;}
 			message strcharinfo(0),"Choose a style between 1 - "+.@Styles[.@s]+".";
 			input .@Style,0,.@Styles[.@s];
 			if (!.@Style)
