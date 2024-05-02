@@ -432,7 +432,7 @@ moscovia,223,191,3	script	Kafra Employee::kaf_mosk	114,{
 
 // Amatsu
 //============================================================
-amatsu,222,234,4	script	Kafra Employee::kaf_amatsu	116,{
+amatsu,222,234,6	script	Kafra Employee::kaf_amatsu	116,{
 	cutin "kafra_02",2;
 	mes "[Kafra Employee]";
 	mes "Welcome to the";
