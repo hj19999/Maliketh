@@ -17,6 +17,7 @@ if ( rand( 1000 ) <= 1 ) {
 if ( checkidle() <= 3 ) {
 getitem 56029,1;
 }
+}
 if ( rand( 100 ) <= 10 ) {
 if ( checkidle() <= 3 ) {
 getitem 56026,1;
