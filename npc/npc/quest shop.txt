@@ -27,22 +27,6 @@
 //============================================================
 doubrius,35,41,6	script	Quest Shop#1	997,{ callfunc "qshop",1; }
 doubrius,35,29,6	script	Event Shop#1	459,{ callfunc "qshop",2; }
-doubrius,31,37,6	script	Ramadan Pass Shop#1	526,{
-
-switch(select("Costume Item:Other:Close")) {
-
-        case 1:
-		callfunc "qshop",3; 
-		end;
-		
-		case 2:
-		callfunc "qshop",7; 
-		end;
-		
-		case 3:
-		end;
-		}
-		}
 doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
 doubrius,35,25,6	script	WoE Shop#1	413,{ callfunc "qshop",5; }
 //doubrius,65,32,4	script	Test Cash Shop#1	498,{ callfunc "qshop",6; }
