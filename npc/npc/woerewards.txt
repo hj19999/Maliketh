@@ -67,7 +67,7 @@ function	AddPlayer	{ //player name , npc name
 }
 
 OnInit:
-	setarray .maps$ ,"gefg_cas02","schg_cas03"; //maps where the system is active
+	setarray .maps$ ,"gefg_cas02","schg_cas05"; //maps where the system is active
     .points_per_minute = 0; //number of points earned for each minute you spend in the castle
     for (.@i = 0 ; .@i < getarraysize(.maps$) ; .@i++)
         if (!getmapflag(.maps$[.@i],mf_loadevent)) setmapflag .maps$[.@i],mf_loadevent;
