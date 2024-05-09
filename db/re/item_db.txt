@@ -12694,6 +12694,8 @@
 56029,CostumeBox,Costume Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "cbox" ) ;},{},{}
 56030,CostumedBox,Dungeon Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "dbox" ) ;},{},{}
 
+56031,Farm_Coin,Meliketh Farm Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
+
 57000,Tobi_Mask,Tobi_Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3000,{},{},{}
 
 57001,bla_protect_cloth,bla_protect_cloth,4,0,,0,,,,0,0xFFFFFFFF,63,2,4096,,1,0,3001,{},{},{}
