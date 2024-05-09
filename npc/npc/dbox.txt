@@ -6,17 +6,17 @@ function	script	dbox	{
 
 		// Super Rare Item 5%
 		if (.chance <= 5) {
-			getitem callfunc("F_Rand",12202,12203,12204,12205,12206,12207,12208),1;
+			getitem callfunc("F_Rand",12202,12203,12204,12205,12206,12207,13989),1;
 			end;
 		} 
-		// Super Rare Item 15%
-		if (.chance <= 20) {
-			getitem callfunc("F_Rand",12016,12679,12680,13989),1;
+		// Super Rare Item 20%
+		if (.chance <= 25) {
+			getitem callfunc("F_Rand",12016,12679,12680),1;
 			end;
 		} 
 
 		// Rare Item 30%
-		else if (.chance <= 50 && .chance >= 1){
+		else if (.chance <= 55 && .chance >= 1){
 			getitem callfunc("F_Rand",607,678,12677,12114,12115,12117,12116,12031,12030),1;
 			end;
 		} 
