@@ -100,18 +100,17 @@ OnStart:
 
 prontera,154,178,5	script	Blue Team#bg_pvp	734,{
 	if(getd("$QID_" + get_unique_id())){
-
-	end;
+end;
+}
+	}else
+		setd("$QID_" + get_unique_id(),true);
 OnInit:
 	sleep 1;
 	set getvariableofnpc( .bluenpcname$, "bg_pvp#control" ), strnpcinfo(0);
 OnStart:
 	waitingroom "Blue Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
 	end;
-	}else{
-		//get something
-		setd("$QID_" + get_unique_id(),true);
-	}
+
 }
 
 guild_vs3	mapflag	gvg	off
