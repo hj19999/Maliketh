@@ -9,8 +9,7 @@
 OnInit:
 	// item reward
 	setarray .item,
-		501, 10,
-		502, 5;
+		56000, 20;
 
 	// @poringstart - gm manual start
 	bindatcmd "poringstart", strnpcinfo(0)+"::OnStart",60,60;
@@ -65,7 +64,7 @@ OnJoinEvent:
 	end;
 
 OnStart: .@force = true;
-OnMinute00: // runs hourly
+OnMinute40: // runs hourly
 	.@time = gettimetick(2);
 	.@min = gettime(DT_MINUTE)*60;
 	.@sec = gettime(DT_SECOND);

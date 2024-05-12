@@ -44,7 +44,7 @@ OnInit:
 	setarray .maps_list$[0],"doubrius","doubrius","doubrius","doubrius"; // Possible maps
 	end;
 
-OnMinute15:	// Start time (every hour)
+OnMinute10:	// Start time (every hour)
 	if (.status) end;
 	.status = 1;
 	.@spawn = 10;	// How many Mushrooms should spawn?
