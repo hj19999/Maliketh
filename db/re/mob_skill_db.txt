@@ -12091,7 +12091,6 @@
 25009,thanat@SM_BASH,attack,5,10,1000,0,5000,yes,target,always,0,,,,,,,
 25009,thanat@AL_HEAL,idle,28,11,10000,0,10000,yes,self,myhpltmaxrate,50,,,,,,,
 25009,thanat@SA_LANDPROTECTOR,attack,288,5,10000,0,30000,yes,target,always,0,,,,,,,
-25009,thanat@SA_DISPELL,attack,289,5,1000,0,30000,yes,target,always,,,,,,,,
 
 
 3476,ImmortalZombie@NPC_POISON,attack,176,1,500,800,5000,no,target,always,0,,,,,,,
