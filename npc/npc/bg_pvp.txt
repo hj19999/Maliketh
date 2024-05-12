@@ -107,13 +107,7 @@ OnInit:
 	sleep 1;
 	set getvariableofnpc( .bluenpcname$, "bg_pvp#control" ), strnpcinfo(0);
 OnStart:
-	waitingroom "Blue Team",	query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '"+ getcharid(3, .@char_name$[.@i] ) +"'", .@unique_id$);
-	for ( .@i = 0; .@i < getarraysize(.last_mac$); .@i++) {
-		if ( .@mac$ == .last_mac$[.@i] ) {
-			dispbottom "Dual Clients are not allowed for Battleground Events.";
-			end;
-		}
-	} getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
+	waitingroom "Blue Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
 	end;
 }
 
