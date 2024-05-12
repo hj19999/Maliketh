@@ -1,4 +1,4 @@
-doubrius,50,44,4	script	Battle Shop	635,{
+doubrius,50,39,4	script	Battle Shop	635,{
 		callshop "Battle_Shop",1;
 		end;	
 }
