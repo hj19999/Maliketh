@@ -16,11 +16,26 @@
 
 -	script	bg_pvp#control	-1,{
 OnInit:
-	.minplayer2start = 2;      // minimum players to start (ex. if 3vs3, set to 3)
+	.minplayer2start = 5;      // minimum players to start (ex. if 3vs3, set to 3)
 	.eventlasting    = 20*60;  // event duration before auto-reset (20 minutes * seconds)
 	setarray .rewarditem[0],   // rewards for the winning team: <item>,<amount>,...
 		56032, 5;
+    disablenpc "Blue Team#bg_pvp";
+    disablenpc "Red Team#bg_pvp";
 	end;
+
+OnFri1900:
+OnThu1900:
+announce "Battle Start For 1 Hour",0,0xFF3399;
+enablenpc "Blue Team#bg_pvp";
+enablenpc "Red Team#bg_pvp";
+end;
+
+OnFri2000:
+OnThu2000:
+announce "Battle End",0,0xFF3399;
+    disablenpc "Blue Team#bg_pvp";
+    disablenpc "Red Team#bg_pvp";
 OnStart:
 
 				
@@ -90,7 +105,7 @@ L_Quit:
 	end;
 }
 
-prontera,152,178,5	script	Red Team#bg_pvp	733,{
+prontera,56,59,5	script	Red Team#bg_pvp	733,{
 	end;
 OnInit:
 	sleep 1;
@@ -101,7 +116,7 @@ OnStart:
 	end;
 }
 
-prontera,154,178,5	script	Blue Team#bg_pvp	734,{
+prontera,37,59,5	script	Blue Team#bg_pvp	734,{
 	end;
 OnInit:
 	sleep 1;
