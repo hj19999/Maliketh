@@ -1,7 +1,7 @@
-doubrius,47,39,5	script	Wolrd Boss	470,{
+doubrius,47,39,5	script	MVP World Boss	470,{
 	
 if (.bossspawn == 1) {
-mes "[Wolrd Boss]";
+mes "[World Boss]";
 mes "World Boss Event Start .";
 switch(select("Go:Leave")){
 case 1:
@@ -13,44 +13,57 @@ end;
 }
 }
 if (.eventstart == 1) {
-mes "[Wolrd Boss]";
+mes "[World Boss]";
 mes "Boss Will Spawn At 7 PM .";
 end;
 }
 else
-mes "[Wolrd Boss]";
+mes "[World Boss]";
 mes "World Boss Count [^2FFF3E"+ .worldboss +"^000000/50000]";
 end;
 
-OnMobKilled:
-announce "[ System ] : Player ["+ strcharinfo(0) +"] has killed "+ getmonsterinfo( killedrid, MOB_NAME ) +" alone at "+ strcharinfo(3), bc_all;
+OnMVPKilled:
 set .worldboss,0;
 set .eventstart,0;
 announce "World Boss Event End",0,0x0055ff;
-//    addrid(1);
-//    getitem 56028,1;
-//    end;
+makeitem 12210,1,"darkmall",0,0;
+makeitem 12210,1,"darkmall",0,0;
+makeitem 12210,1,"darkmall",0,0;
+makeitem 12210,1,"darkmall",0,0;
+makeitem 12210,1,"darkmall",0,0;
+makeitem 12208,1,"darkmall",0,0;
 end;
 
 
-OnClock1900:
-if (.eventstart == 1) {
-set .bossspawn,1;
-announce "World Boss Event Start",0,0x0055ff;
-monster "darkmall",0,0,"World Boss",25009,1,"Wolrd Boss::OnMobKilled";
-end;
-}
-else 
-end;
 
 OnEnable:
 set .eventstart,1;
 announce "World Boss Event Start",0,0x0055ff;
-monster "darkmall",0,0,"World Boss",25009,1,"Wolrd Boss::OnMobKilled";
-end;
+//end;
 
+//OnClock1900:
+//if (.eventstart == 1) {
+set .bossspawn,1;
+announce "World Boss Event Start",0,0x0055ff;
+monster "darkmall",100,104,"World Boss",25009,1,"MVP World Boss::OnMVPKilled";
+end;
+//}
+//else 
+//end;
 
 OnNPCKillEvent:
+if (killedrid == 1097){
+end;
+}
+if (killedrid == 1068){
+end;
+}
+if (killedrid == 1084){
+end;
+}
+if (killedrid == 1085){
+end;
+}
 set .worldboss, .worldboss + 1;
 if (.worldboss == 1000) {
 announce "World Boss Count [1000/50000]",0,0x0055ff;
@@ -138,14 +151,14 @@ end;
 }
 if (.worldboss == 50000) {
 announce "World Boss Count [50000/50000]",0,0x0055ff;
-donpcevent "Wolrd Boss::OnEnable";
+donpcevent "MVP World Boss::OnEnable";
 end;
 }
-//if (.worldboss == 20) {
-//announce "World Boss Count [50000/50000]",0,0x0055ff;
-//sleep 6000;
-//donpcevent "Wolrd Boss::OnEnable";
-//end;
-//}
+if (.worldboss == 20) {
+announce "World Boss Count [50000/50000]",0,0x0055ff;
+sleep 6000;
+donpcevent "MVP World Boss::OnEnable";
+end;
+}
 
 }

@@ -14,7 +14,6 @@ abbey02,0,0	monster	Swift Zombie Slaughter	2603,2,300000
 gl_prison,0,0	monster	Solid Zombie Prisoner	2604,2,300000
 gld_dun04,0,0	monster	Zombie Master Ringleader	2605,2,300000
 pay_dun00,0,0	monster	Furious Zombie	2606,2,300000
-schg_dun01,0,0	monster	Elusive Zakudam	2607,2,300000
 prt_fild03,0,0	monster	Swift Yoyo	2608,2,300000
 ayo_fild02,0,0	monster	Solid Yoyo	2609,2,300000
 pay_fild06,0,0	monster	Wormtail Ringleader	2610,2,300000

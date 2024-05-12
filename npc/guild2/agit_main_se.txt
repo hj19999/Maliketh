@@ -1774,7 +1774,7 @@ function	script	ReturnFlag	{
 			else {
 				if (.@map$ == "schg_cas02") setarray .@i[0],136,188;
 				else if (.@map$ == "schg_cas03") setarray .@i[0],308,202;
-				else setarray .@i[0],104,239;	// Castles 1,4,5 are identical.
+				else setarray .@i[0],119,203;	// Castles 1,4,5 are identical.
 			}
 			warp .@map$,.@i[0],.@i[1];
 		}

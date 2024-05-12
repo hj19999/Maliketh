@@ -1155,12 +1155,6 @@ OnTouch:
 		.@item_id = 616;	// Old_Card_Album
 		specialeffect EF_ENHANCE;
 	}
-	else if (.@r  == 99) {
-		.@item_id = 12246;	// Magic_Card_Album
-		specialeffect EF_GUMGANG2;
-		specialeffect EF_VOLCANO;
-		specialeffect EF_PNEUMA;
-	}
 	getitem .@item_id, 1;
 	mes "- you've found the " + getitemname(.@item_id) + ". -";
 	close;

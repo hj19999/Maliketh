@@ -76,7 +76,7 @@ switch(select("Assumptio ^E806061 Day^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+"
                                 Zeny -= .@cost;
                                 mes " Done . ";
                                 #MagnificatBuff = gettimetick(2) + .@daycd;
-								set Magnificat,1;
+								set Magnificat,0;
                                 end; }
                          else
                                 mes " You Don't have zeny ";
@@ -172,7 +172,7 @@ switch(select("Assumptio ^E806061 Week^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)+
                                 Zeny -= .@weekcost;
                                 mes " Done . ";
                                 #MagnificatBuff = gettimetick(2) + .@weekcd;
-								set Magnificat,1;
+								set Magnificat,0;
                                 end; }
                          else
                                 mes " You Don't have zeny ";
@@ -269,7 +269,7 @@ switch(select("Assumptio ^E806061 Month^000000 ^2FFF3E"+Time2Str(#AssumptioBuff)
                                 Zeny -= .@monthcost;
                                 mes " Done . ";
                                 #MagnificatBuff = gettimetick(2) + .@Monthcd;
-								set Magnificat,1;
+								set Magnificat,0;
                                 end; }
                          else
                                 mes " You Don't have zeny ";

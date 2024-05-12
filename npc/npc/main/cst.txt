@@ -1,0 +1,24 @@
+doubrius,65,32,4	script	Test Cash Shop#warp	498,{
+
+switch(select("Go:Leave")){
+case 1:
+		warp "quiz_00",56,22;
+		end;
+case 2:
+end;
+
+}
+}
+
+
+quiz_00,50,16,4	script	Leave#warp	498,{
+
+switch(select("Go:Leave")){
+case 1:
+		warp "doubrius",46,42;
+		end;
+case 2:
+end;
+
+}
+}

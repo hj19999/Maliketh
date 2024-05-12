@@ -137,11 +137,11 @@ function	script	F_Invest_Abyss	{
 		case 4:
 			mes .@npc_name$;
 			mes "Please enter the amount you want to invest.";
-			mes "Please choose between 1 to 200.";
+			mes "Please choose between 1 to 5000.";
 			mes "Please enter 0 to cancel.";
 			next;
 			input .@units;
-			if (.@units < 0 || .@units > 200) {
+			if (.@units < 0 || .@units > 5000) {
 				mes .@npc_name$;
 				mes "You've exceeded the amount per investment.";
 				mes "Please try again.";
@@ -885,12 +885,6 @@ OnAgitInvest:
 			mes "You have too many Thank You Tickets to receive any more.";
 			mes "Cannot give you any more tickets. Please use your ticket and come back.";
 			mes "The ticket can be exchanged with various items in Malangdo.";
-			close;
-		}
-		if (callfunc("F_Invest_Status") != 1) {
-			mes .@n$;
-			mes "We do not receive investments now.";
-			mes "Please come back during the investment duration.";
 			close;
 		}
 		set .@guild, getcharid(2);

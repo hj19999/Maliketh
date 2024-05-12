@@ -159,7 +159,7 @@ OnInit:
 	set .GM,99;
 	set .MaxPlayers,20;		// Number of Players held in Records
 	set .GmLvl,99;			// Highest GM level Able to Hold a Record, if Option 8 is Disabled
-	set .Map$,"pvp_n_1-3";		// Map Pvp Must Take Place on in order to Count, if Option 1 is Disabled
+	set .Map$,"guild_vs5";		// Map Pvp Must Take Place on in order to Count, if Option 1 is Disabled
 	set .RepeatCount,5;		// Number of kills on same person before it detects abuse, max of 128
 	set .PointType$,"#PvpPoints";	// Name of points earned, E.G. #Cash Points
 	set .PvpEarned,1;		// Number of Pvp Points Earned

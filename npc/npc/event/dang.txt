@@ -1,10 +1,10 @@
 doubrius,47,54,0	warp	dewata000321	1,1,ja_yavin01,34,105
 
-doubrius,41,39,5	script	Maliketh Dungeon	784,{
+doubrius,41,39,5	script	Maliketh Farming Dungeon	784,{
 
 if (.startt == 1) {
 mes .@npc_name$;
-mes "Dungeon Open.";
+mes "Dungeon Open There is warp near healer .";
 close;
 }
 mes .@npc_name$;
@@ -43,20 +43,20 @@ end;
 OnEnable:
 set .opengate,0;
 set .startt,1;
-announce "Maliketh Dang Open",0,0xFF3399;
+announce "Maliketh Dungeon Open",0,0xFF3399;
 enablenpc "dewata000321";
 sleep 600000;
-announce "Maliketh Dang Will close after 50 min",0,0xFF3399;
+announce "Maliketh Dungeon Will close after 50 min",0,0xFF3399;
 sleep 600000;
-announce "Maliketh Dang Will close after 40 min",0,0xFF3399;
+announce "Maliketh Dungeon Will close after 40 min",0,0xFF3399;
 sleep 600000;
-announce "Maliketh Dang Will close after 30 min",0,0xFF3399;
+announce "Maliketh Dungeon Will close after 30 min",0,0xFF3399;
 sleep 600000;
-announce "Maliketh Dang Will close after 20 min",0,0xFF3399;
+announce "Maliketh Dungeon Will close after 20 min",0,0xFF3399;
 sleep 600000;
-announce "Maliketh Dang Will close after 10 min",0,0xFF3399;
+announce "Maliketh Dungeon Will close after 10 min",0,0xFF3399;
 sleep 600000;
-announce "Maliketh Dang Close",0,0xFF3399;
+announce "Maliketh Dungeon Close",0,0xFF3399;
 disablenpc "dewata000321";
 set .startt,0;
 end;

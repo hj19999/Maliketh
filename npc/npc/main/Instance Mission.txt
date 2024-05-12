@@ -4,7 +4,7 @@ doubrius,59,36,4	script	Instance Quest	618,{
 
                 case 1:
 
-                        switch(select("Airship raid:Bios island:Charleston Crisis:Devil's Tower:Endless Tower:Geffen Magic Tournament:Hazy Forest:Horror Toy Factory:Last Room:Morse's Cave:Nidhoggur's Nest:Nightmarish Jitterbug:Old Glast Heim:Old Glast Heim Hard:Sarah and Fenrir:Sara's Memory:Sealed Shrine:Cancel")) {
+                        switch(select("Airship raid:Bios island:Charleston Crisis:Devil's Tower:Endless Tower:Geffen Magic Tournament:Hazy Forest:Horror Toy Factory:Last Room:Morse's Cave:Nidhoggur's Nest:Nightmarish Jitterbug:Old Glast Heim:Old Glast Heim Hard:Sarah and Fenrir:Sara's Memory:Sealed Shrine:Sky Fortress:Infinity Space:Cancel")) {
 					
                         case 1://Airship raid
 						
@@ -455,8 +455,61 @@ doubrius,59,36,4	script	Instance Quest	618,{
 							}
 							else
 							end;
+
+			case 18://Sky Fortress
+							if (checkquest(65018,HUNTING) == 2) {
+		                    mes "[Instance Mission]";
+		                    mes "Congratulations You have complete your mission and you get ^ff00007 Instance Point^000000 .";
+		                    erasequest 65018;
+		                    Instance_POINTS += 7;
+		                    end;
+                            }
+							if (checkquest(65018,HUNTING) == 1) {
+							mes "[Instance Mission]";
+		                    mes "Do not waste time go and this complete mission .";
+							end;
+							}
+							else
+							mes "[Instance Mission]";
+		                    mes "Are you sure that you want to start this mission ? .";
+							mes "This Mission reward is^ff0000 7 Instance Point^000000 .";
+							if( select("yes:no") == 1 ){
+							mes "[Instance Mission]";
+		                    mes "Mission Start .";
+		                    setquest 65018;
+						    end;
+							}
+							else
+							end;	
+
+
+			case 19://infinity space
+							if (checkquest(65019,HUNTING) == 2) {
+		                    mes "[Instance Mission]";
+		                    mes "Congratulations You have complete your mission and you get ^ff00007 Instance Point^000000 .";
+		                    erasequest 65019;
+		                    Instance_POINTS += 7;
+		                    end;
+                            }
+							if (checkquest(65019,HUNTING) == 1) {
+							mes "[Instance Mission]";
+		                    mes "Do not waste time go and this complete mission .";
+							end;
+							}
+							else
+							mes "[Instance Mission]";
+		                    mes "Are you sure that you want to start this mission ? .";
+							mes "This Mission reward is^ff0000 7 Instance Point^000000 .";
+							if( select("yes:no") == 1 ){
+							mes "[Instance Mission]";
+		                    mes "Mission Start .";
+		                    setquest 65019;
+						    end;
+							}
+							else
+							end;	
 							
-							case 18:
+							case 20:
 							end;
 }	
         case 2:
@@ -468,4 +521,4 @@ end;
 end;
 }
 
--	pointshop	Hunting_Quest_Shop	-1,Instance_POINTS,6225:35,6226:35,7776:35,2202:500,5800:400,2576:400,5389:335;
+-	pointshop	Hunting_Quest_Shop	-1,Instance_POINTS,18894:600,18609:600,5985:430,5516:400,18559:400,5592:360,6225:35,6226:35,7776:35,2202:500,5800:400,2576:400,5389:335;

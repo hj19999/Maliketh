@@ -1104,7 +1104,7 @@ verus04,163,219,4	script	PLUTO_09#pa0829	4_SCR_AT_ROBOTS,{
 			.@fail = false;
 			.@reac_rnd = rand(1,100);
 			if (.@reac_rnd < 70) {
-switch(rand(20)) {
+switch(rand(22)) {
 case 0: 
 				specialeffect EF_SPELLBREAKER;
 				delitem 6962,5;// OldTank
@@ -1230,6 +1230,12 @@ case 20:
 			specialeffect EF_SPELLBREAKER;
 				delitem 6962,5;// OldTank
 				getitem 6985,1;	// Reactor_A_INT_
+				mes "Great, the design was made.";
+				end;
+case 21:
+			specialeffect EF_SPELLBREAKER;
+				delitem 6962,5;// OldTank
+				getitem 6986,1;	// Reactor_A_INT_
 				mes "Great, the design was made.";
 				end;
 }

@@ -1,0 +1,6 @@
+doubrius,50,44,4	script	Battle Shop	635,{
+		callshop "Battle_Shop",1;
+		end;	
+}
+
+-	pointshop	Battle_Shop	-1,Battle_POINTS,19083:99999,19116:99999,5900:99999,5901:99999,5902:99999,5904:99999,5905:99999,5906:99999,5907:99999,18791:99999,18793:99999;

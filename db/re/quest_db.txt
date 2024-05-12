@@ -101,6 +101,9 @@
 65013,0,2476,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Amdarias Hunt"
 65016,0,2542,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Doyen Irene Hunt"
 65017,0,1929,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Unsealed Baphomet Hunt"
+
+65018,0,3473,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Stefan J.E Wolf Hunt"
+65019,0,3430,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Infinite Tao Gunka Hunt"
 // 2010 Headgear Quests
 1100,0,1178,20,0,0,0,0,0,0,0,0,0,0,0,0,0,"Solo in the Sphinx Dungeon!"
 1101,0,1164,20,0,0,0,0,0,0,0,0,0,0,0,0,0,"Soloing Sphinx Dungeon!"
@@ -3094,7 +3097,7 @@
 
 
 9418,0,3473,1,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
-9419,259200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
+9419,86400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Attack Sky Fortress Invading Prontera"
 9427,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Clearing the Sky Fortress for the Same Time"
 
 12364,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"Fallen Paros Lighthouse"

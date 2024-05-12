@@ -24,7 +24,6 @@ switch(getequipid(.@part)) {
 	case 1800: // Knuckle
 	case 13455: // Saber
 	case 16041: // Mace
-	case 18121: // Bow
 	case 21016: // Two-Handed Sword
 	case 28008: // Katar
 	case 28107: // Two-Handed Axe
@@ -41,6 +40,7 @@ switch(getequipid(.@part)) {
 	case 1900: // Violin
 	case 1996: // Wire
 	case 13128: // Revolver
+	case 18121: // Bow
 	case 13328: // Huuma Shuriken
 	set .@Type$,"R";
 	break;

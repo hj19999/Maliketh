@@ -9,7 +9,7 @@
 // GvG Arenas =================
 guild_vs1	mapflag	gvg_noparty
 guild_vs4	mapflag	gvg_noparty
-guild_vs5	mapflag	gvg_noparty
+//guild_vs5	mapflag	gvg_noparty
 
 // RWC Maps ===============
 2009rwc_01	mapflag	gvg_noparty

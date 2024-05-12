@@ -99,7 +99,7 @@ guild_vs1	mapflag	hidemobhpbar
 guild_vs2	mapflag	hidemobhpbar
 guild_vs3	mapflag	hidemobhpbar
 guild_vs4	mapflag	hidemobhpbar
-guild_vs5	mapflag	hidemobhpbar
+//guild_vs5	mapflag	hidemobhpbar
 
 // Guild Castles ==============
 aldeg_cas01	mapflag	hidemobhpbar
