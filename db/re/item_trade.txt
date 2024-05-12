@@ -19,7 +19,7 @@
 // 1161,67,50
 //	Balmung cannot be dropped, traded, or placed in Guild Storage (1+2+64).
 //	Only groups of group-level 50 and up can override this setting.
-
+56032,511,100
 56025,479,100
 50001,479,100
 50002,479,100
