@@ -1,6 +1,6 @@
 doubrius,47,54,0	warp	dewata000321	1,1,ja_yavin01,34,105
 
-doubrius,41,39,5	script	Maliketh Farming Dungeon	784,{
+doubrius,41,39,5	script	Maliketh Farm Dungeon	784,{
 
 if (.startt == 1) {
 mes .@npc_name$;

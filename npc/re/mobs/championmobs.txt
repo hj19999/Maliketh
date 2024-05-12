@@ -65,6 +65,7 @@ yuno_fild06,0,0	monster	Elusive Sleeper	2655,2,300000
 yuno_fild02,0,0	monster	Swift Sleeper	2656,2,300000
 odin_tem02,0,0	monster	Solid Skogul	2657,2,300000
 gld2_pay,0,0	monster	Skeleton General Ringleader	2658,2,300000
+schg_dun01,0,0	monster	Skeleton General Ringleader	2658,2,300000
 gld_dun01_2,0,0	monster	Furious Skeleton General	2659,2,300000
 mjo_dun03,0,0	monster	Elusive Skeleton Worker	2660,2,300000
 ice_dun01,0,0	monster	Swift Siroma	2661,2,300000
