@@ -22,28 +22,13 @@ OnInit:
 		501, 10;
 	end;
 OnStart:
-		if ( getcharid(2, .@char_name$[.@i] ) == .@GID ) {
-				query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '"+ getcharid(3, .@char_name$[.@i] ) +"'", .@unique_id$);
-				.@gvg_gepard$[.@gsize++] = .@unique_id$;
-				if ( countinarray( .@gvg_gepard$[0], .@unique_id$ ) > 1 ) .@duplicate++;
-			.@current_mem++;
-			//.@aid[.@size++] = convertpcinfo(.@char_name$[.@i], CPC_ACCOUNT);
-			.@validmem$[.@size2++] = .@char_name$[.@i];
+	query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '"+getcharid(3)+"'",.@mac$);
+	for ( .@i = 0; .@i < getarraysize(.last_mac$); .@i++) {
+		if ( .@mac$ == .last_mac$[.@i] ) {
+			dispbottom "Dual Clients are not allowed for Battleground Events.";
+			end;
 		}
-				freeloop(false);	
-		if ( .@current_mem < $gvgevent_mem ) {
-			mes "You need at least "+$gvgevent_mem+" guild members around you"+(.gepard ? " with unique gepard id":"")+".";
-			close;
-		}
-		if ( .@current_mem > $gvgevent_mem ) {
-			mes "You need only need "+$gvgevent_mem+" guild members around you"+(.gepard ? " with unique gepard id":"")+".";
-			close;
-		}
-		if ( .gepard && .@duplicate ) {
-			mes "Gepard ID duplicate detected.";
-			mes "A member around you is using dual account.";
-			close;
-		}
+	}
 				
 	if ( getwaitingroomstate( 0, .rednpcname$ ) < .minplayer2start || getwaitingroomstate( 0, .bluenpcname$ ) < .minplayer2start )
 		end;
