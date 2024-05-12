@@ -12693,8 +12693,10 @@
 56028,BossBox,World Boss Box,18,1000,,10,,,,,0xFFFFFFFF,63,2,,,,,,{},{},{}
 56029,CostumeBox,Costume Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "cbox" ) ;},{},{}
 56030,CostumedBox,Dungeon Box,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  callfunc ( "dbox" ) ;},{},{}
-
 56031,Farm_Coin,Meliketh Farm Coin,3,10,,0,,,,,,,,,,,,,{},{},{}
+56032,battlecoin,Battle Coin,2,50,,50,,,,,0xFFFFFFFF,63,2,,,,,,{  Battle_POINTS += 1;},{},{}
+
+
 
 57000,Tobi_Mask,Tobi_Mask,4,0,,0,,0,,0,0xFFFFFFFF,63,2,6144,,1,0,3000,{},{},{}
 
