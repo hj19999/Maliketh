@@ -22,13 +22,7 @@ OnInit:
 		501, 10;
 	end;
 OnStart:
-	query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '"+getcharid(3)+"'",.@mac$);
-	for ( .@i = 0; .@i < getarraysize(.last_mac$); .@i++) {
-		if ( .@mac$ == .last_mac$[.@i] ) {
-			dispbottom "Dual Clients are not allowed for Battleground Events.";
-			end;
-		}
-	}
+
 				
 	if ( getwaitingroomstate( 0, .rednpcname$ ) < .minplayer2start || getwaitingroomstate( 0, .bluenpcname$ ) < .minplayer2start )
 		end;
@@ -102,6 +96,13 @@ OnInit:
 	sleep 1;
 	set getvariableofnpc( .rednpcname$, "bg_pvp#control" ), strnpcinfo(0);
 OnStart:
+	query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '"+getcharid(3)+"'",.@mac$);
+	for ( .@i = 0; .@i < getarraysize(.last_mac$); .@i++) {
+		if ( .@mac$ == .last_mac$[.@i] ) {
+			dispbottom "Dual Clients are not allowed for Battleground Events.";
+			end;
+		}
+	}
 	waitingroom "Red Team", getvariableofnpc( .minplayer2start, "bg_pvp#control" ) +1, "bg_pvp#control::OnStart", getvariableofnpc( .minplayer2start, "bg_pvp#control" );
 	end;
 }
