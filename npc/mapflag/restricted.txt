@@ -26,6 +26,7 @@ turbo_n_16	mapflag	restricted	1
 turbo_e_4	mapflag	restricted	1
 turbo_e_8	mapflag	restricted	1
 turbo_e_16	mapflag	restricted	1
+darkmall	mapflag	restricted	1
 //Jail
 sec_pri	mapflag	restricted	2
 
