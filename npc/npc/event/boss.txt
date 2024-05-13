@@ -51,31 +51,7 @@ makeitem 14533,1,"darkmall",85,100;
 makeitem 12221,1,"darkmall",85,95;
 makeitem 12214,1,"darkmall",85,90;
 makeitem 6417,1,"darkmall",85,85;
-makeitem 14533,1,"darkmall",110,110;
-makeitem 12210,1,"darkmall",110,105;
-makeitem 12412,1,"darkmall",110,100;
-makeitem 12221,1,"darkmall",110,95;
-makeitem 12214,1,"darkmall",110,90;
-makeitem 12211,1,"darkmall",110,85;
-makeitem 6417,1,"darkmall",105,85;
-makeitem 7621,1,"darkmall",105,110;
-makeitem 6417,1,"darkmall",105,105;
-makeitem 14533,1,"darkmall",105,100;
-makeitem 12210,1,"darkmall",105,95;
-makeitem 12221,1,"darkmall",105,90;
-makeitem 12214,1,"darkmall",105,85;
-makeitem 12211,1,"darkmall",90,110;
-makeitem 6417,1,"darkmall",90,105;
-makeitem 7621,1,"darkmall",90,100;
-makeitem 14533,1,"darkmall",90,95;
-makeitem 12210,1,"darkmall",90,90;
-makeitem 12221,1,"darkmall",90,85;
-makeitem 12214,1,"darkmall",85,110;
-makeitem 14545,1,"darkmall",85,105;
-makeitem 14533,1,"darkmall",85,100;
-makeitem 12221,1,"darkmall",85,95;
-makeitem 12214,1,"darkmall",85,90;
-makeitem 6417,1,"darkmall",85,85;
+
 end;
 
 
@@ -83,17 +59,17 @@ end;
 OnEnable:
 set .eventstart,1;
 announce "World Boss Event Start",0,0x0055ff;
-//end;
+end;
 
-//OnClock1900:
-//if (.eventstart == 1) {
+OnClock1900:
+if (.eventstart == 1) {
 set .bossspawn,1;
 announce "World Boss Event Start",0,0x0055ff;
 monster "darkmall",100,104,"World Boss",25009,1,"MVP World Boss::OnMVPKilled";
 end;
-//}
-//else 
-//end;
+}
+else 
+end;
 
 OnNPCKillEvent:
 if (killedrid == 1097){
@@ -198,11 +174,11 @@ announce "World Boss Count [50000/50000]",0,0x0055ff;
 donpcevent "MVP World Boss::OnEnable";
 end;
 }
-if (.worldboss == 20) {
-announce "World Boss Count [50000/50000]",0,0x0055ff;
-sleep 6000;
-donpcevent "MVP World Boss::OnEnable";
-end;
-}
+//if (.worldboss == 20) {
+//announce "World Boss Count [50000/50000]",0,0x0055ff;
+//sleep 6000;
+//donpcevent "MVP World Boss::OnEnable";
+//end;
+//}
 
 }
