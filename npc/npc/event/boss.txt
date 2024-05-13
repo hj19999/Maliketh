@@ -1,5 +1,5 @@
 doubrius,47,39,5	script	MVP World Boss	470,{
-	
+bindatcmd "bossstart", "MVP World Boss::OnEnable",60,60;	
 if (.bossspawn == 1) {
 mes "[World Boss]";
 mes "World Boss Event Start .";
