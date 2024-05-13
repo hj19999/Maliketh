@@ -19,9 +19,6 @@ OnClock2000:	// Close dungeons on Tuesday (1 hour before WoE)
 	if (gettime(DT_DAYOFWEEK) == TUESDAY)
 		disablenpc "Mysterious Sunflower#05";
 	end;
-OnInit:
-    disablenpc "Mysterious Sunflower#05";
-    end;
 }
 
 

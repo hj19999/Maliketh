@@ -5,22 +5,27 @@ case 1:
 SC_end    SC_POEMBRAGI;
 SC_end    SC_APPLEIDUN;
 SC_end    SC_ASSNCROS;
+SC_end    SC_Intravision;
 		warp "guild_vs5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
 case 2:
+SC_end    SC_Intravision;
 		warp "pvp_n_1-3",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
 case 3:
+SC_end    SC_Intravision;
 		warp "guild_vs3",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 1",0,0xFF3399;
 		end;
 case 4:
+SC_end    SC_Intravision;
 		warp "pvp_n_1-5",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 2",0,0xFF3399;
 		end;
 case 5:
+SC_end    SC_Intravision;
 		warp "pvp_y_3-2",0,0;
 announce strcharinfo(0)+ " has entered PVP Room 3",0,0xFF3399;
 		end;
