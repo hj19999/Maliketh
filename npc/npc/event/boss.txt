@@ -25,6 +25,7 @@ end;
 OnMVPKilled:
 set .worldboss,0;
 set .eventstart,0;
+set .bossspawn,0;
 announce "World Boss Event End",0,0x0055ff;
 makeitem 14533,1,"darkmall",110,110;
 makeitem 12210,1,"darkmall",110,105;
