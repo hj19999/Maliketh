@@ -20,8 +20,8 @@ OnInit:
 	.eventlasting    = 20*60;  // event duration before auto-reset (20 minutes * seconds)
 	setarray .rewarditem[0],   // rewards for the winning team: <item>,<amount>,...
 		56032, 5;
-    disablenpc "Blue Team#bg_pvp";
-    disablenpc "Red Team#bg_pvp";
+    //disablenpc "Blue Team#bg_pvp";
+    //disablenpc "Red Team#bg_pvp";
 	end;
 
 OnFri1900:
