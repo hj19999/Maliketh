@@ -105,7 +105,7 @@ L_Quit:
 	end;
 }
 
-prontera,36,46,5	script	Red Team#bg_pvp	733,{
+doubrius,36,46,5	script	Red Team#bg_pvp	733,{
 	end;
 OnInit:
 	sleep 1;
@@ -116,7 +116,7 @@ OnStart:
 	end;
 }
 
-prontera,54,46,5	script	Blue Team#bg_pvp	734,{
+doubrius,54,46,5	script	Blue Team#bg_pvp	734,{
 	end;
 OnInit:
 	sleep 1;
