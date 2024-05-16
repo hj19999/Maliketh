@@ -153,11 +153,7 @@ static void logclif_auth_ok(struct login_session_data* sd) {
 		WFIFOL(fd,header+n*size) = htonl((subnet_char_ip) ? subnet_char_ip : ch_server[i].ip);
 		WFIFOW(fd,header+n*size+4) = ntows(htons(ch_server[i].port)); // [!] LE byte order here [!]
 		
-		// Concatenate the server name with the online user count [Hergel]
-		char buffer[20];
-		int users = ch_server[i].users;
-		snprintf(buffer, 20, "%s (%d)", ch_server[i].name, users);
-		memcpy(WFIFOP(fd, header+n*size+6), buffer, 20);
+		memcpy(WFIFOP(fd,header+n*size+6), ch_server[i].name, 20);
 
 		WFIFOW(fd,header+n*size+26) = login_get_usercount( ch_server[i].users );
 		WFIFOW(fd,header+n*size+28) = ch_server[i].type;

@@ -31,22 +31,6 @@ doubrius,35,33,6	script	MVP Shop#1	796,{ callfunc "qshop",4; }
 doubrius,35,25,6	script	WoE Shop#1	413,{ callfunc "qshop",5; }
 doubrius,39,39,6	script	Maliketh Farm Shop#1	786,{ callfunc "qshop",10; }
 quiz_00,50,22,6	script	Test Cash Shop#1	498,{ callfunc "qshop",6; }
-doubrius,31,37,6	script	Ramadan Pass Shop#1	526,{
-
-switch(select("Costume Item:Other:Close")) {
-
-        case 1:
-		callfunc "qshop",3; 
-		end;
-		
-		case 2:
-		callfunc "qshop",7; 
-		end;
-		
-		case 3:
-		end;
-		}
-		}
 doubrius,31,41,6	script	Elden Ring Pass Shop	752,{
 
 switch(select("Costume Item:Other:Close")) {
