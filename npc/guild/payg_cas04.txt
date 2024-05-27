@@ -24,7 +24,10 @@ if( eaclass() == EAJ_SUMMONER){
 mes "???";
 end;
 }
-
+if (!strcharinfo(2) == "GM" || !strcharinfo(2) == "55") { 
+mes "???";
+end;
+}
 	set .@GID, GetCastleData("payg_cas04",1);
 
 	if (.@GID == 0) {
