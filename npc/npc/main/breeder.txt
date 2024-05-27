@@ -58,9 +58,11 @@ end;
 }
 if (strcharinfo(3) == "payg_cas04") { 
 if (strcharinfo(2) == "GM") { 
-warp "SavePoint",0,0;
 end;
 }
+else
+warp "SavePoint",0,0;
+end;
 }
 
 
