@@ -57,7 +57,7 @@ end;
 }
 }
 if (strcharinfo(3) == "payg_cas04") { 
-if (strcharinfo(2) == "GM" || strcharinfo(2) == "55") { 
+if (strcharinfo(2) == "Blue" || strcharinfo(2) == "Red") { 
 end;
 }
 else

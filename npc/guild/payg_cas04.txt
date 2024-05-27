@@ -24,7 +24,7 @@ if( eaclass() == EAJ_SUMMONER){
 mes "???";
 end;
 }
-if (strcharinfo(2) == "GM" || strcharinfo(2) == "55") { 
+if (strcharinfo(2) == "Red" || strcharinfo(2) == "Blue") { 
 	set .@GID, GetCastleData("payg_cas04",1);
 
 	if (.@GID == 0) {
