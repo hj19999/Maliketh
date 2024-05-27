@@ -24,6 +24,7 @@ if( eaclass() == EAJ_SUMMONER){
 mes "???";
 end;
 }
+if (strcharinfo(2) == "GM" || strcharinfo(2) == "55") { 
 	set .@GID, GetCastleData("payg_cas04",1);
 
 	if (.@GID == 0) {
@@ -66,6 +67,10 @@ end;
 	mes "If there is anyone who objects to this,";
 	mes "prove your strength and honor with a steel blade in your hand.";
 	close;
+}
+else
+mes "???";
+end;
 
 OnRecvCastlePy04:
 	FlagEmblem GetCastleData("payg_cas04",1);
