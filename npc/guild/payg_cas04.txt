@@ -24,9 +24,7 @@ if( eaclass() == EAJ_SUMMONER){
 mes "???";
 end;
 }
-if (strcharinfo(2) == "Red" || strcharinfo(2) == "Blue" || strcharinfo(2) == "0") { 
 	set .@GID, GetCastleData("payg_cas04",1);
-
 	if (.@GID == 0) {
 		mes "[ Edict of the Divine Rune-Midgarts Kingdom ]";
 		mes " ";
@@ -67,10 +65,6 @@ if (strcharinfo(2) == "Red" || strcharinfo(2) == "Blue" || strcharinfo(2) == "0"
 	mes "If there is anyone who objects to this,";
 	mes "prove your strength and honor with a steel blade in your hand.";
 	close;
-}
-else
-mes "???";
-end;
 
 OnRecvCastlePy04:
 	FlagEmblem GetCastleData("payg_cas04",1);
